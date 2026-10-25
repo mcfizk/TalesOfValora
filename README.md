@@ -18,7 +18,7 @@ Custom character sheets live in `private-opening/assets/fenris/`. Run `node priv
 
 The forest generates 384-pixel sections around the player, with no fixed map boundary. A new page load selects a random seed; revisiting an area or restarting the awakening within that visit preserves its terrain. Distant sections and ground textures are discarded and regenerated from the seed, keeping loaded terrain memory bounded. Groves, fern hollows, rocky patches, clearings, winding trails and recurring streams provide variation.
 
-The voices appear before Fenris begins rising. His first objective is to seek their source, and the search remains open after examining objects. Faint glowing baubles mark camp details, weathered stones, old stumps, flowers and undergrowth. Click or tap a bauble to approach and examine; E and the mobile interaction button also work nearby. Descriptions appear only after interaction and are kept in the session journal. Floating E prompts and object labels have been removed.
+The voices appear before Fenris begins rising. His first objective is to seek their source, and the search remains open after examining objects. Finding the source takes a couple of days, potentially including visits to a nearby village; those later events are not implemented yet. Faint glowing baubles mark camp details, weathered stones, old stumps, flowers and undergrowth. Click or tap a bauble to approach and examine; E and the mobile interaction button also work nearby. Descriptions appear only after interaction and are kept in the session journal. Floating E prompts and object labels have been removed.
 
 Run `node --test private-opening/world.test.mjs private-opening/fenris-animation.test.mjs` for generation, water speed, collision, reachability and animation checks. Run `node private-opening/forest-check.cjs` for streamed terrain and interaction browser checks.
 
@@ -52,6 +52,10 @@ The attached `01-The Story Begins.txt` inspires a forest awakening and voices. I
 
 `forest.js` creates the environment. Fur, bark, and leaf-litter image assets were generated with built-in image generation; exact prompts and local asset paths are recorded in `art-manifest.json`. The supplied character image guides the model and is not published. The full Valora manuscripts and royal portraits are not included. The repository contains only the curated lore handoff linked above; it is not part of the public game deployment.
 
+## Stats
+
+Both the current private 2D opening and the older 3D prototype load the shared D&D 5e (2014 SRD) scaffolding. `stats.js` holds the rules; `data/stats/*.csv` holds the numbers. Run `npm run stats` after editing the tables. Fenris's row remains a placeholder, not canon, and does not yet determine exploration speed or unlock abilities. The 2D diagnostics expose `window.__fenris2d.snapshot().stats`; restarting creates a fresh sheet. See [docs/STATS.md](docs/STATS.md).
+
 ## Running the earlier 3D prototype
 
 Run `node serve.cjs` from this directory, then open http://127.0.0.1:8766/index.html for the earlier 3D version. HTTP is required for JavaScript modules. The server binds only to loopback. No installation or API keys are required. Three.js 0.180.0 is included under `vendor/` with its MIT license. Renderer setup: https://threejs.org/manual/pages/installation.html.
@@ -70,7 +74,7 @@ Subtitles are always available. The start screen offers ambient audio and it can
 
 ## Verification
 
-`node --test tests/world.test.mjs` checks boundaries, obstacles, sliding, water restrictions, and paths including the bridge. `browser-test.cjs` uses the bundled Playwright and installed Edge to test wake-up, keyboard/click movement, voices/subtitles, observations, journal, pause, audio activation, camera, performance mode, restart, and mobile touch. `test-results.json` records the latest run. `window.__fenris` offers read-only diagnostics.
+`npm test` runs `tests/world.test.mjs` (the historical 3D boundaries, obstacles, sliding, water restrictions and bridge) and `tests/stats.test.mjs` (5e derived values, damage, death saves, rests, levelling, and that `stats-data.js` matches the CSVs). `browser-test.cjs` uses the bundled Playwright and installed Edge to test wake-up, keyboard/click movement, voices/subtitles, observations, journal, pause, audio activation, camera, performance mode, restart, and mobile touch. `test-results.json` records the latest run. `window.__fenris` offers read-only diagnostics.
 
 ## Historical 3D deployment
 
