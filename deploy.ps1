@@ -12,7 +12,7 @@ $preview=Join-Path $gamesRoot 'assets\Fenris-Awakening-Preview.png'
 if(Test-Path -LiteralPath $preview){Copy-Item -LiteralPath $preview -Destination (Join-Path $backupPath 'previous-preview.png')}
 New-Item -ItemType Directory -Path $gameTarget -Force | Out-Null
 foreach($folder in @('vendor','assets')){New-Item -ItemType Directory -Path (Join-Path $gameTarget $folder) -Force | Out-Null}
-$files=@('index.html','style.css','main.js','world.js','story.js','forest.js','character.js','visuals.js','audio.js','stats.js','stats-data.js','model-study.html','vendor\three.module.js','vendor\three.core.js','vendor\THREE-LICENSE.txt','assets\fur.png','assets\forest-floor.png','assets\bark.png','assets\fenris-sculpt.json')
+$files=@('index.html','style.css','main.js','world.js','story.js','forest.js','character.js','visuals.js','audio.js','stats.js','stats-data.js','resources.js','model-study.html','vendor\three.module.js','vendor\three.core.js','vendor\THREE-LICENSE.txt','assets\fur.png','assets\forest-floor.png','assets\bark.png','assets\fenris-sculpt.json')
 # Copy assets and modules before switching the entry page to this release.
 foreach($file in ($files | Where-Object {$_ -ne 'index.html'})){Copy-Item -LiteralPath (Join-Path $sceneSource $file) -Destination (Join-Path $gameTarget $file) -Force}
 Copy-Item -LiteralPath (Join-Path $sceneSource 'index.html') -Destination (Join-Path $gameTarget 'index.html') -Force

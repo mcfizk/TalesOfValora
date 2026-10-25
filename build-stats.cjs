@@ -33,10 +33,14 @@ function build(read=file=>fs.readFileSync(path.join(DIR,file),'utf8')){
   const skillsList=list(r,'skills',skillIds),expertise=list(r,'expertise',skillIds);
   for(const id of expertise)if(!skillsList.includes(id))fail(r,`expertise "${id}" also needs to be in skills`);
   const hitDie=int(r,'hit_die',4,20);if(!HIT_DICE.includes(hitDie))fail(r,`hit_die must be one of ${HIT_DICE.join(', ')}`);
+  const powerKind=r.power_kind||null,powerMax=r.power_max?int(r,'power_max',0,99999):0;
+  if(powerMax>0&&!powerKind)fail(r,'power_kind is required when power_max is positive');
+  const powerCurrent=r.power_start?int(r,'power_start',0,powerMax):powerMax;
   return [r.id,{id:r.id,name:r.name||r.id,level:int(r,'level',1,20),hitDie,
    abilities:Object.fromEntries(abilityIds.map(id=>[id,int(r,id,1,30)])),speed:int(r,'speed',0,200),
    saves:list(r,'saves',abilityIds),skills:skillsList,expertise,
    resistances:list(r,'resistances',damageTypes),immunities:list(r,'immunities',damageTypes),vulnerabilities:list(r,'vulnerabilities',damageTypes),
+   power:{kind:powerKind,max:powerMax,current:powerCurrent},
    maxHp:r.max_hp?int(r,'max_hp',1,9999):null,notes:r.notes||''}];}));
  return {abilities,skills,levels,damageTypes,actors};
 }

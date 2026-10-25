@@ -248,29 +248,37 @@ export const STATS={
    "level": 1,
    "hitDie": 10,
    "abilities": {
-    "str": 17,
-    "dex": 13,
-    "con": 15,
-    "int": 10,
-    "wis": 13,
-    "cha": 10
+    "str": 14,
+    "dex": 14,
+    "con": 16,
+    "int": 14,
+    "wis": 16,
+    "cha": 14
    },
    "speed": 30,
    "saves": [
     "str",
-    "con"
+    "wis",
+    "cha"
    ],
    "skills": [
     "athletics",
+    "intimidation",
     "perception",
+    "stealth",
     "survival"
    ],
    "expertise": [],
    "resistances": [],
    "immunities": [],
    "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
    "maxHp": null,
-   "notes": "PLACEHOLDER numbers, not canon. No class, Lupera traits, weapons or magic established."
+   "notes": "Opening stats confirmed by author. Shaman is the technical future class; no active class, armor, magic or power resource at the opening."
   }
  }
 };

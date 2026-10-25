@@ -1,2 +1,2 @@
-id,name,level,hit_die,str,dex,con,int,wis,cha,speed,saves,skills,expertise,resistances,immunities,vulnerabilities,max_hp,notes
-fenris,Fenris,1,10,17,13,15,10,13,10,30,str con,athletics perception survival,,,,,,"PLACEHOLDER numbers, not canon. No class, Lupera traits, weapons or magic established."
+id,name,level,hit_die,str,dex,con,int,wis,cha,speed,saves,skills,expertise,resistances,immunities,vulnerabilities,max_hp,notes,power_kind,power_max,power_start
+fenris,Fenris,1,10,14,14,16,14,16,14,30,str wis cha,athletics intimidation perception stealth survival,,,,,,"Opening stats confirmed by author. Shaman is the technical future class; no active class, armor, magic or power resource at the opening.",,,

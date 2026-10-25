@@ -1,6 +1,7 @@
 // D&D 5e character rules (2014 SRD 5.1 baseline; see docs/STATS.md). Pure logic: no DOM or Three.js, so it runs in node --test.
 // Numbers come from stats-data.js, generated from data/stats/*.csv. Pass `rng` (returns 0..1) to make rolls repeatable in tests.
 import {STATS} from './stats-data.js';
+import {createPowerPool} from './resources.js';
 export const abilityMod=score=>Math.floor((score-10)/2);
 export const die=(sides,rng=Math.random)=>1+Math.floor(rng()*sides);
 export function rollD20({advantage=false,disadvantage=false,rng=Math.random}={}){const a=die(20,rng);if(advantage===disadvantage)return {roll:a,rolls:[a]};const b=die(20,rng);return {roll:advantage?Math.max(a,b):Math.min(a,b),rolls:[a,b]};}
@@ -11,6 +12,7 @@ export const averageHp=(hitDie,level,conMod)=>Math.max(1,hitDie+conMod)+Math.max
 
 export function createCharacter(idOrDef,data=STATS){
  const def=typeof idOrDef==='string'?data.actors[idOrDef]:idOrDef;if(!def)throw new Error(`Unknown actor "${idOrDef}"`);
+ const power=createPowerPool(def.power);
  const skillAbility=Object.fromEntries(data.skills.map(s=>[s.id,s.ability])),mods=new Map(),listeners=new Set();
  let level=def.level,xp=data.levels[level-1].xp;
  // Modifier targets: an ability id ('str'), 'ac', 'speed', 'maxHp', 'initiative', 'check:<ability>', 'save:<ability>', 'skill:<skill>'.
@@ -34,6 +36,9 @@ export function createCharacter(idOrDef,data=STATS){
   get ac(){return 10+mod('dex')+bonus('ac');}, // Unarmored. Armor and shields replace this once equipment exists.
   get initiative(){return mod('dex')+bonus('initiative');},get speed(){return Math.max(0,def.speed+bonus('speed'));},
   get status(){return status();},get deathSaves(){return {successes:s.successes,failures:s.failures};},
+  get power(){return power.snapshot();},
+  spendPower(amount){const spent=power.spend(amount);if(spent)emit('power',{spent});return spent;},
+  restorePower(amount){const restored=power.restore(amount);if(restored)emit('power',{restored});return restored;},
   score,mod,checkBonus,skillBonus,saveBonus,passive:id=>10+skillBonus(id),
   // kind: 'check' (ability), 'skill' or 'save'. Returns the natural roll so callers can apply crit rules.
   roll(kind,id,opts={}){const b=kind==='skill'?skillBonus(id):kind==='save'?saveBonus(id):checkBonus(id),r=rollD20(opts);return {...r,bonus:b,total:r.roll+b,natural20:r.roll===20,natural1:r.roll===1};},
@@ -59,7 +64,7 @@ export function createCharacter(idOrDef,data=STATS){
   addModifier({id,target,add,source=''}){mods.set(id,{target,add,source});s.hp=Math.min(s.hp,maxHp());emit('modifiers');},
   removeModifier(id){mods.delete(id);s.hp=Math.min(s.hp,maxHp());emit('modifiers');},
   onChange(f){listeners.add(f);return()=>listeners.delete(f);},
-  snapshot:()=>({id:def.id,level,xp,proficiency:prof(),hp:s.hp,tempHp:s.tempHp,maxHp:maxHp(),hitDice:s.hitDice,ac:sheet.ac,initiative:sheet.initiative,speed:sheet.speed,status:status(),deathSaves:sheet.deathSaves,
+  snapshot:()=>({id:def.id,power:power.snapshot(),level,xp,proficiency:prof(),hp:s.hp,tempHp:s.tempHp,maxHp:maxHp(),hitDice:s.hitDice,ac:sheet.ac,initiative:sheet.initiative,speed:sheet.speed,status:status(),deathSaves:sheet.deathSaves,
    abilities:Object.fromEntries(data.abilities.map(a=>[a.id,{score:score(a.id),mod:mod(a.id),save:saveBonus(a.id)}])),passivePerception:10+skillBonus('perception'),modifiers:[...mods.keys()]})
  };
  return sheet;

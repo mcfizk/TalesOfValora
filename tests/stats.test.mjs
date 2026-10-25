@@ -47,3 +47,23 @@ test('diagnostic snapshots cannot mutate character state',()=>{
  copy.hp=0;copy.abilities.str.score=30;copy.deathSaves.failures=3;copy.modifiers.push('fake');
  assert.deepEqual(c.snapshot(),before);
 });
+
+
+test('approved opening stats derive AC 12, HP 13 and one d10 with no power',()=>{
+ const c=createCharacter('fenris');assert.equal(c.ac,12);assert.equal(c.hp,13);assert.equal(c.maxHp,13);assert.equal(c.hitDie,10);assert.equal(c.hitDice,1);
+ assert.deepEqual(['str','dex','con','int','wis','cha'].map(c.score),[14,14,16,14,16,14]);
+ assert.deepEqual(c.power,{kind:null,current:0,max:0,active:false});assert.equal(c.spendPower(1),0);
+});
+
+test('character resources support mana, energy and rage without sharing state',()=>{
+ for(const kind of ['mana','energy','rage']){
+  const c=createCharacter(actor({power:{kind,max:50,current:kind==='rage'?0:50}}));
+  assert.equal(c.power.kind,kind);assert.ok(c.power.active);
+  if(kind==='rage')assert.equal(c.restorePower(20),20);
+  const before=c.power.current;assert.equal(c.spendPower(10),10);assert.equal(c.power.current,before-10);
+  assert.equal(c.spendPower(999),0);assert.equal(c.power.current,before-10);
+  c.restorePower(999);assert.equal(c.power.current,50);
+  const copy=c.snapshot();copy.power.current=-1;assert.equal(c.power.current,50);
+ }
+ assert.equal(createCharacter('fenris').power.current,0);
+});

@@ -22,6 +22,10 @@ The voices appear before Fenris begins rising. His first objective is to seek th
 
 Run `node --test private-opening/world.test.mjs private-opening/fenris-animation.test.mjs` for generation, water speed, collision, reachability and animation checks. Run `node private-opening/forest-check.cjs` for streamed terrain and interaction browser checks.
 
+The bottom-right party HUD crops Fenris's existing sprite to his face, with health and power bars underneath. Cards support future companions and per-character mana, energy, rage or another resource. Fenris's power bar is inactive until a resource is established.
+
+The exploration clock starts at 22:00 on Day 1. One second of actual movement advances one game minute; idle, blocked movement, awakening and pauses do not advance it. The sun/moon dial follows the time, and forest light gently changes with dawn. At the first 06:00, a stable, seed-derived village waypoint appears on the compass. It shows direction and approximate paces (22 world pixels per pace); clicking toggles its screen marker. The village itself and encounters are not built by this waypoint feature. The source-of-voices objective remains open. Restart resets the clock and waypoint discovery. Clock tuning is in `private-opening/game-clock.js`; run `node private-opening/hud-clock-check.cjs` for desktop/mobile HUD, movement-clock and morning-reveal checks.
+
 ## Start here for another session
 
 All characters share the [character animation standard](docs/CHARACTER-ANIMATIONS.md): idle, eight-direction walking, sleeping, sitting, sleep-to-sit, and sit-to-stand. Fenris's opening now plays sleep → sit → stand using authored sprites rather than rotating the standing image. Sleep and sitting have their own breathing loops; these added actions support left/right views. Run `node private-opening/awakening-check.cjs` to check the sequence in the local game.
@@ -54,7 +58,7 @@ The attached `01-The Story Begins.txt` inspires a forest awakening and voices. I
 
 ## Stats
 
-Both the current private 2D opening and the older 3D prototype load the shared D&D 5e (2014 SRD) scaffolding. `stats.js` holds the rules; `data/stats/*.csv` holds the numbers. Run `npm run stats` after editing the tables. Fenris's row remains a placeholder, not canon, and does not yet determine exploration speed or unlock abilities. The 2D diagnostics expose `window.__fenris2d.snapshot().stats`; restarting creates a fresh sheet. See [docs/STATS.md](docs/STATS.md).
+Both the current private 2D opening and the older 3D prototype load the shared D&D 5e (2014 SRD) scaffolding. `stats.js` holds the rules; `data/stats/*.csv` holds the numbers. Run `npm run stats` after editing the tables. Fenris now uses the confirmed starting ability scores, derived AC 12 and HP 13, and one d10 hit die. Shaman is the technical class direction; no active class or powers are granted at the opening. Stats do not yet determine exploration speed. The 2D diagnostics expose `window.__fenris2d.snapshot().stats`; restarting creates a fresh sheet. See [docs/STATS.md](docs/STATS.md).
 
 ## Running the earlier 3D prototype
 

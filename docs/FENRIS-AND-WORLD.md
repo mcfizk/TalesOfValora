@@ -13,7 +13,7 @@ Keep three things separate: what the developer knows from later lore, what Fenri
 - Approximately **1468 DR**, before Valora exists and before Fenris meets Croft.
 - Fenris is a **large Lupera**. He is alone.
 - He has **no knowledge of who he is or where he came from**. The interface may name him for the player; that does not establish that he knows his name or history.
-- He begins with **no weapons or magical abilities**. Do not reinterpret this as merely having forgotten how to use existing powers.
+- He begins with **no weapons or magical abilities**. Do not reinterpret this as merely having forgotten how to use existing powers. Shaman is the technical class direction, but he currently has no active class or class powers. Starting stats are STR 14, DEX 14, CON 16, INT 14, WIS 16, CHA 14, AC 12, HP 13, and one d10 hit die.
 - **The voices wake Fenris. His first objective is to seek their source**, a search lasting a couple of days, potentially including visits to a nearby village. The spirits are not found in the current opening. Nearby observations do not complete this objective.
 - **Author-only knowledge, confirmed 25 October 2026:** the voices belong to spirits. This must not be revealed in opening dialogue, UI, journal entries, or interactions. Fenris does not yet know. The specific spirits, eventual encounter, cause of his amnesia, his origin, and exact location remain unspecified.
 

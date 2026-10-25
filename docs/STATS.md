@@ -1,6 +1,6 @@
 # Stats system (D&D 5e)
 
-Characters use D&D 5e rules, based on the **2014 System Reference Document (SRD 5.1)**. The rules live in code (`stats.js`). The numbers live in spreadsheets (`data/stats/*.csv`). The current private 2D opening and the historical 3D prototype each create a Fenris sheet and reset it when restarting. Read-only diagnostic snapshots expose it as `window.__fenris2d.snapshot().stats` (2D) and `window.__fenris.snapshot().stats` (3D). Exploration, interactions and animation do not consume stats yet. In particular, the placeholder walking speed does not change the existing pixel movement speeds or 30% water multiplier.
+Characters use D&D 5e rules, based on the **2014 System Reference Document (SRD 5.1)**. The rules live in code (`stats.js`). The numbers live in spreadsheets (`data/stats/*.csv`). The current private 2D opening and the historical 3D prototype each create a Fenris sheet and reset it when restarting. Read-only diagnostic snapshots expose it as `window.__fenris2d.snapshot().stats` (2D) and `window.__fenris.snapshot().stats` (3D). The party HUD reads health and power from each character sheet. Exploration and interactions do not yet consume health or power; the walking-speed field does not change pixel movement speeds or the 30% water multiplier.
 
 ## Editing numbers
 
@@ -31,6 +31,17 @@ Do not edit `stats-data.js` by hand.
 | `resistances` `immunities` `vulnerabilities` | Damage type ids, separated by spaces |
 | `max_hp` | Leave blank to use average HP. Set a number to override it (fixed; it ignores level-ups) |
 | `notes` | Free text, not used by code |
+| `power_kind` | Resource label such as `mana`, `energy` or `rage`; blank means no active resource |
+| `power_max` | Capacity, 0–99999; blank defaults to 0 |
+| `power_start` | Initial amount, 0–capacity; blank starts full, while rage can explicitly start at 0 |
+
+## Fenris at the opening
+
+Author-confirmed on 25 October 2026: level 1, STR 14, DEX 14, CON 16, INT 14, WIS 16, CHA 14; unarmored AC 12; maximum HP 13 (the full first-level d10 plus CON +3); one d10 hit die. No fixed HP override is needed. The supplied sheet's AC 20, HP 35, and 3d8 were stale values and are not imported.
+
+Shaman is the technical class direction, but Fenris currently has no active class, magic, or power resource. The supplied saving-throw and skill proficiencies are retained. His health bar begins at 13/13; the second bar reads Power and remains inactive. Future actors can name and populate their own resource without changing the party HUD.
+
+`resources.js` provides bounded power pools. `spendPower(amount)` refuses an unaffordable cost; `restorePower(amount)` clamps to capacity. Changes emit a `power` event and snapshots return copies.
 
 ## Rules implemented (`stats.js`)
 
@@ -60,16 +71,16 @@ The code follows 2014 rules where the editions differ. The differences that affe
 
 These need author decisions first, and canon currently excludes several of them for the opening:
 
-- Classes and class features (Fenris has no class: `hit_die 10` is a placeholder)
+- Classes and class features (technical Shaman direction; no active class in the opening)
 - Lupera species traits (size, darkvision, senses, natural weapons). Fenris is listed as *Medium-sized by default*; 5e "Large" has rules consequences
 - Equipment, armor and attacks (the opening has none)
 - Spellcasting (Fenris has no magic)
 - Conditions (prone, grappled, exhaustion and so on), concentration, and monster CR/XP awards
-- A HUD or character sheet panel, and saving between sessions
+- A detailed character sheet panel and saving between sessions (the local 2D party HUD now shows health and power)
 
 ## Open author decisions
 
-- [ ] Fenris's real ability scores, level, hit die, proficiencies (current row is **PLACEHOLDER**)
+- [x] Starting ability scores, level and d10 established; supplied sheet proficiencies retained
 - [ ] Lupera traits and size category
 - [ ] 2014 or 2024 rules
 - [ ] Average or rolled HP on level-up (currently average)
