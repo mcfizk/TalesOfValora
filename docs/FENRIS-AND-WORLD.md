@@ -14,10 +14,10 @@ Keep three things separate: what the developer knows from later lore, what Fenri
 - Fenris is a **large Lupera**. He is alone.
 - He has **no knowledge of who he is or where he came from**. The interface may name him for the player; that does not establish that he knows his name or history.
 - He begins with **no weapons or magical abilities**. Do not reinterpret this as merely having forgotten how to use existing powers.
-- The approved playable event is deliberately small: **Fenris wakes, hears voices, and can move around the scene**.
-- The source of the voices, the cause of his amnesia, his origin, and the exact location have not been established for this opening.
+- **The voices wake Fenris. His first objective is to seek their source**, a search lasting a couple of days, potentially including visits to a nearby village. The spirits are not found in the current opening. Nearby observations do not complete this objective.
+- **Author-only knowledge, confirmed 25 October 2026:** the voices belong to spirits. This must not be revealed in opening dialogue, UI, journal entries, or interactions. Fenris does not yet know. The specific spirits, eventual encounter, cause of his amnesia, his origin, and exact location remain unspecified.
 
-The current forest clearing, campfire, brook, bridge, trail, observation text, and voice lines are prototype choices. They are not automatically fixed geography or authored plot. Hearing a voice does not establish telepathy, spirit magic, or a supernatural bond. No companion, combat encounter, vision quest, or elemental trial is approved by this brief.
+The forest now generates as Fenris explores, with varied groves, undergrowth, clearings, stones and streams. Water is traversable at 30% movement speed; there is no bridge. Interactable objects use faint glowing baubles instead of floating labels. The starting clearing, campfire, observation text, and current voice lines remain prototype choices. They are not automatically fixed geography or authored plot. Hearing a voice does not establish telepathy, spirit magic, or a supernatural bond. No companion, combat encounter, vision quest, or elemental trial is approved by this brief.
 
 ## What a Lupera is [B, C]
 
@@ -25,7 +25,9 @@ Lupera are fully sapient, bipedal wolf-humanoids: people capable of speech, judg
 
 Their physical vocabulary includes a fully furred body, pronounced muzzle, upright expressive ears, digitigrade legs, clawed hands with full dexterity, and a tail used for balance and expression. Their smell and hearing are strong; the species reference also describes good low-light vision. These are descriptive traits, not an approved package of gameplay abilities or numerical bonuses.
 
-Fenris's supplied visual reference is the target for this game: tall and heavily built, muscular, grey-white fur, pale blue eyes, a natural wolf muzzle, expressive pointed ears, clawed hands and paws, a bare torso, and worn brown shorts tied with rope. His anatomy and silhouette matter more than surface texture. The current procedural model remains a placeholder for that standard. The reference image itself is not included in the repository.
+**Visual direction updated October 2026:** the author chose 2D pixel art and the extracted werewolf artwork for Fenris. The current private opening uses the approved white-and-grey Fenris with brown shorts, an upright build, and custom idle, walking, sleeping, sitting, and waking animations. The asset's source name does not change his established Lupera identity or establish a transformation backstory.
+
+The earlier 3D visual reference depicted him as tall and heavily built, muscular, with grey-white fur, pale blue eyes, a natural wolf muzzle, expressive pointed ears, clawed hands and paws, a bare torso, and worn brown shorts tied with rope. This description and the procedural model are historical visual references. The reference image itself is not included in the repository.
 
 Later biographies include exact measurements, ages, scars, ceremonial clothing, and weapons. Those details are not all confirmed for the amnesiac opening. In particular, do not equip the later battleaxe Gorehowl, armour, totems, royal insignia, or glowing magical marks. [A, C, D]
 
@@ -73,7 +75,7 @@ The supplied **01-The Story Begins.txt** provides a forest/campfire atmosphere a
 
 Older timelines also use “Valora Year 1” rather than DR. The current civic timeline explicitly converts those years with **Valora year + 1470 = DR**, placing the founding in 1471 DR. Do not mistake a later file's “present” for this game's opening era. [E]
 
-Still for the author to decide: the exact awakening location and circumstances; whether/how Fenris learns his name; who or what speaks; how his past is revealed; the first encounter after waking; when Croft appears; and how future abilities, equipment, relationships, and companions become part of the story. No answers are invented here.
+Still for the author to decide: the exact awakening location and circumstances; whether/how Fenris learns his name; the identities of the spirits and when their nature is revealed; how his past is revealed; the first encounter after waking; when Croft appears; and how future abilities, equipment, relationships, and companions become part of the story. No answers are invented here.
 
 ## Source provenance
 

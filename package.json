@@ -1,5 +1,5 @@
 {
   "name": "fenris-awakening", "private": true, "version": "0.1.0", "type": "module",
   "scripts": { "start": "node serve.cjs", "test": "node --test tests/world.test.mjs" },
-  "description": "A standalone 3D opening scene for Fenris. Three.js 0.180.0 is vendored locally."
+  "description": "Fenris Awakening: a private local pixel-art opening, with the earlier 3D prototype retained."
 }
