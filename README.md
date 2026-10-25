@@ -30,6 +30,10 @@ The attached `01-The Story Begins.txt` inspires a forest awakening and voices. I
 
 `forest.js` creates the environment. Fur, bark, and leaf-litter image assets were generated with built-in image generation; exact prompts and local asset paths are recorded in `art-manifest.json`. The supplied character image guides the model and is not published. The full Valora manuscripts and royal portraits are not included. The repository contains only the curated lore handoff linked above; it is not part of the public game deployment.
 
+## Stats
+
+Characters use D&D 5e (2014 SRD) rules. `stats.js` holds the rules; `data/stats/*.csv` holds the numbers. After editing a CSV, run `node build-stats.cjs` to regenerate `stats-data.js`. Fenris's current row is a placeholder, not canon. See [docs/STATS.md](docs/STATS.md) for the columns, implemented rules, open decisions and Codex handoff.
+
 ## Running locally
 
 Run `node serve.cjs` from this directory, then open http://127.0.0.1:8766. HTTP is required for JavaScript modules. The server binds only to loopback. No installation or API keys are required. Three.js 0.180.0 is included under `vendor/` with its MIT license. Renderer setup: https://threejs.org/manual/pages/installation.html.
@@ -48,7 +52,7 @@ Subtitles are always available. The start screen offers audio and it can be togg
 
 ## Verification
 
-`node --test tests/world.test.mjs` checks boundaries, obstacles, sliding, water restrictions, and paths including the bridge. `browser-test.cjs` uses the bundled Playwright and installed Edge to test wake-up, keyboard/click movement, voices/subtitles, observations, journal, pause, audio activation, camera, performance mode, restart, and mobile touch. `test-results.json` records the latest run. `window.__fenris` offers read-only diagnostics.
+`npm test` runs `tests/world.test.mjs` (boundaries, obstacles, sliding, water restrictions, paths including the bridge) and `tests/stats.test.mjs` (5e derived values, damage, death saves, rests, levelling, and that `stats-data.js` matches the CSVs). `browser-test.cjs` uses the bundled Playwright and installed Edge to test wake-up, keyboard/click movement, voices/subtitles, observations, journal, pause, audio activation, camera, performance mode, restart, and mobile touch. `test-results.json` records the latest run. `window.__fenris` offers read-only diagnostics.
 
 ## Deployment
 
