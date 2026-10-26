@@ -1,21 +1,13 @@
 {
-  "mode": "Built-in image_gen",
   "assets": [
     {
-      "file": "fur.png",
-      "prompt": "Create a seamless tileable PBR albedo texture, square 1024x1024, full-frame close-up of natural silver-white grey wolf fur. Fine dense directional individual strands flowing predominantly downward, soft ivory undercoat with sparse charcoal-grey guard hairs. Natural photorealistic surface detail. Flat diffuse lighting, no cast shadows, no highlights, no perspective, no body parts, no animal, no face, no text, no border, no props. This texture will wrap a real-time 3D anthropomorphic wolf model; neutral mid-bright grey-white, not pure blown-out white. Consistent scale and colour across all edges.",
-      "path": "C:\\Projects\\fenris-awakening\\assets\\fur.png"
+      "file": "assets/fur.png"
     },
     {
-      "file": "forest-floor.png",
-      "prompt": "Create a seamless tileable PBR albedo texture, square 1024x1024, overhead photorealistic forest floor of dark damp soil, decomposing oak leaves, pine needles, small twigs and moss in a temperate woodland. Microdetails, mostly earth and leaf litter, scattered muted olive moss, warm dark brown soil. Flat diffuse illumination, no baked directional shadows or bright light, no perspective, no scene, no horizon, no text, no border. Game environment material, evenly detailed edge to edge, natural irregular distribution, not a pattern of large repeated identical leaves.",
-      "path": "C:\\Projects\\fenris-awakening\\assets\\forest-floor.png"
+      "file": "assets/forest-floor.png"
     },
     {
-      "file": "bark.png",
-      "prompt": "Create a seamless tileable PBR albedo texture, square 1024x1024, close-up photorealistic rough old pine bark. Vertical deeply fissured layered bark, slate brown and charcoal grey with subtle lichen specks and reddish undertones. Flat diffuse illumination, no cast shadows, no perspective, no trunk silhouette, no moss dominating image, no text, no border. Full frame uniform scale, realistic fine detail, tileable edges, game environment material.",
-      "path": "C:\\Projects\\fenris-awakening\\assets\\bark.png"
+      "file": "assets/bark.png"
     }
-  ],
-  "reference": "User-supplied Pasted Image 1.jpg; grey-white muscular Lupera, icy blue eyes, bare torso, brown rope-tied shorts. The supplied image guides geometry and lighting; it is not used as a flat character sprite."
+  ]
 }

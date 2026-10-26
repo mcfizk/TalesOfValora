@@ -1,4 +1,4 @@
-// Optional authoring tool: copy approved exports from the separate local sprite archive.
+// Update the runtime animation sheets and frame metadata.
 const fs = require('node:fs');
 const path = require('node:path');
 const source = path.resolve(__dirname, '../../Sprites/Fenris white');
@@ -19,7 +19,6 @@ for (const [file, name] of copies) fs.copyFileSync(file, path.join(target, name)
 const manifestPath = path.join(assets, 'manifest.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8').replace(/^\uFEFF/, ''));
 manifest.fenrisFrames = 8;
-manifest.fenrisSource = 'Fenris white: idle, eight-direction walking, sleep, sit, and awakening transitions, October 2026';
 manifest.fenrisAnimations = {
   id: 'fenris', formatVersion: 1,
   displayHeight: 36,

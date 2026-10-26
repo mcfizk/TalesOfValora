@@ -26,7 +26,7 @@ Lupera are fully sapient, bipedal wolf-humanoids: people capable of speech, judg
 
 Their physical vocabulary includes a fully furred body, pronounced muzzle, upright expressive ears, digitigrade legs, clawed hands with full dexterity, and a tail used for balance and expression. Their smell and hearing are strong; the species reference also describes good low-light vision. These are descriptive traits, not an approved package of gameplay abilities or numerical bonuses.
 
-**Visual direction updated October 2026:** the author chose 2D pixel art and the extracted werewolf artwork for Fenris. The current opening uses the approved white-and-grey Fenris with brown shorts, an upright build, and custom idle, walking, sleeping, sitting, and waking animations. The asset's source name does not change his established Lupera identity or establish a transformation backstory.
+**Visual direction updated October 2026:** the author chose 2D pixel art for Fenris. The current opening uses the approved white-and-grey Fenris with brown shorts, an upright build, and custom idle, walking, sleeping, sitting, and waking animations. Fenris remains a Lupera; no transformation backstory is established.
 
 The earlier 3D visual reference depicted him as tall and heavily built, muscular, with grey-white fur, pale blue eyes, a natural wolf muzzle, expressive pointed ears, clawed hands and paws, a bare torso, and worn brown shorts tied with rope. This description and the procedural model are historical visual references. The reference image itself is not included in the repository.
 
@@ -78,7 +78,7 @@ Older timelines also use “Valora Year 1” rather than DR. The current civic t
 
 Still for the author to decide: the exact awakening location and circumstances; whether/how Fenris learns his name; the identities of the spirits and when their nature is revealed; how his past is revealed; the first encounter after waking; when Croft appears; and how future abilities, equipment, relationships, and companions become part of the story. No answers are invented here.
 
-## Source provenance
+## Reference archive
 
 These are archive-relative paths under the author's local `C:\Projects\Valora`. They identify the evidence for the summary; they are not repository dependencies or links to included manuscripts. Later-era biographies are used selectively and cannot override [A].
 

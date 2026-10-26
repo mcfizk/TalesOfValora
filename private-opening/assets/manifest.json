@@ -2,13 +2,6 @@
   "fireFrames": 32,
   "waterFrames": 8,
   "fenrisFrames": 8,
-  "fenrisSource": "Fenris white: idle, eight-direction walking, sleep, sit, and awakening transitions, October 2026",
-  "scenerySources": [
-    "vs_local_assets_westwoods.bundle",
-    "vs_local_assets_bg_forest.bundle",
-    "vs_local_assets_background_westwoods.bundle"
-  ],
-  "usage": "Complete 2D build included in the repository at the author's explicit request on 2026-10-26. Source provenance retained; website deployment is separate.",
   "fenrisAnimations": {
     "id": "fenris",
     "formatVersion": 1,

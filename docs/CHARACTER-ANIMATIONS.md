@@ -31,12 +31,12 @@ The current opening uses sleep (2 seconds), sleep-to-sit (1 second), sitting (1.
 
 The sequence is explicit manifest data. `validateCharacterAnimations` rejects missing clips, incomplete walking directions, invalid geometry/anchors, incorrect loop settings, and sequence durations that cut off transitions. `awakeningAt` selects the current stage without altering story or voice timing.
 
-## Sources and verification
+## Updating and verifying animations
 
-Fenris source exports live in the sibling `Sprites/Fenris white` folder. `Rest and awakening` includes left/right frames, sheets, GIF previews, the complete awakening preview, generation prompts, and reproducible export scripts. `node private-opening/import-fenris.cjs` copies these assets into the local game alongside the existing idle/walking sheets. Rebuilding scenery also runs this import.
+Run `node private-opening/import-fenris.cjs` to update the game’s animation sheets from the sibling `Sprites/Fenris white` authoring folder. Runtime sheets and their animation metadata are included in the game.
 
 Run `node --test private-opening/fenris-animation.test.mjs` for the shared contract and playback tests. With the local preview server running, `node private-opening/awakening-check.cjs` checks the sleep/sit/stand sequence, blocked movement, pause, restart, and mobile playback. Existing animation and functional browser checks cover directional movement and the rest of the opening.
 
 The first village humans use code-drawn canvas atlases with the same metadata and playback contract: all six clips, eight walking directions, 32 × 40 cells, eight frames per clip, and a 28-world-pixel standing height. `village-people.js` builds the atlases once on load; these generated canvas sources replace PNG loading for this prototype rig. The sleep-to-sit and sit-to-stand endpoints share the corresponding rest poses. `village.test.mjs` checks every human against the common validator and frame bounds.
 
-The complete scene and selected runtime artwork are included in source control at the author’s request on 26 October 2026. The historical `private-opening` directory name is retained for stable paths. Generated QA captures remain local; website deployment is a separate action.
+The `private-opening` directory name is retained for stable paths. Generated QA captures remain local.
