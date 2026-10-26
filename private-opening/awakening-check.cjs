@@ -1,0 +1,45 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{
+ const out=path.join(__dirname,'qa'),report={checks:[],errors:[]};
+ const browser=await chromium.launch({headless:true,channel:'msedge'});
+ const check=(name,value)=>{assert.ok(value,name);report.checks.push(name);};
+ try{
+  const page=await browser.newPage({viewport:{width:1440,height:900}});
+  page.on('pageerror',e=>report.errors.push(e.message));page.on('response',r=>{if(r.status()>=400)report.errors.push(`${r.status()} ${r.url()}`);});
+  await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);
+  const snapshot=()=>page.evaluate(()=>__fenris2d.snapshot());
+  check('Title scene shows sleeping Fenris',(await snapshot()).animation.clip==='sleep');
+  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();
+  const start=await snapshot();await page.keyboard.down('d');
+  await page.waitForFunction(()=>__fenris2d.snapshot().age>1.8);
+  await page.screenshot({path:path.join(out,'fenris-sleeping.png')});
+  await page.waitForFunction(()=>__fenris2d.snapshot().animation.clip==='sleepToSit');
+  check('Movement is blocked during awakening',(await snapshot()).position.x===start.position.x);
+  await page.keyboard.up('d');
+  await page.keyboard.press('Escape');const paused=await snapshot();await page.waitForTimeout(350);const frozen=await snapshot();
+  check('Pause freezes the transition frame and clock',frozen.age===paused.age&&frozen.animation.index===paused.animation.index);
+  await page.locator('#close-panel').click();
+  await page.waitForFunction(()=>__fenris2d.snapshot().animation.clip==='sit');
+  check('Sitting is a distinct resting state',await page.locator('#character-state').textContent()==='Sitting');
+  await page.screenshot({path:path.join(out,'fenris-sitting.png')});
+  await page.waitForFunction(()=>__fenris2d.snapshot().animation.clip==='sitToStand'&&__fenris2d.snapshot().animation.index>=2);
+  await page.screenshot({path:path.join(out,'fenris-standing-up.png')});
+  await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
+  const standing=await snapshot();check('Awakening finishes in standing idle',standing.animation.clip==='idle'&&standing.age>=6);
+  check('Awakening preserves the ground position',standing.position.x===start.position.x&&standing.position.y===start.position.y);
+  await page.keyboard.down('s');await page.waitForFunction(()=>__fenris2d.snapshot().animation.clip==='walk');await page.keyboard.up('s');
+  check('Movement unlocks after standing',(await snapshot()).distance>0);
+  await page.keyboard.press('Escape');await page.getByRole('button',{name:'Restart the awakening',exact:true}).click();
+  check('Restart begins asleep again',(await snapshot()).animation.clip==='sleep');
+  await page.close();
+  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'});
+  const mobile=await context.newPage();mobile.on('pageerror',e=>report.errors.push(e.message));
+  await mobile.goto('http://127.0.0.1:8766/');await mobile.waitForFunction(()=>window.__fenris2d);await mobile.locator('#enable-audio').uncheck();await mobile.locator('#begin').click();
+  await mobile.waitForFunction(()=>__fenris2d.snapshot().animation.clip==='sit');await mobile.screenshot({path:path.join(out,'fenris-sitting-mobile.png')});
+  await mobile.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
+  check('Mobile reduced-motion awakening reaches standing',await mobile.evaluate(()=>__fenris2d.snapshot().animation.clip==='idle'));
+  await context.close();check('No browser or asset errors',report.errors.length===0);
+  fs.writeFileSync(path.join(out,'awakening-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+ }finally{await browser.close();}
+})().catch(error=>{console.error(error);process.exitCode=1;});

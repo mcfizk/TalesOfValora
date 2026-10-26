@@ -1,6 +1,6 @@
 # Stats system (D&D 5e)
 
-Characters use D&D 5e rules, based on the **2014 System Reference Document (SRD 5.1)**. The rules live in code (`stats.js`). The numbers live in spreadsheets (`data/stats/*.csv`). The current private 2D opening and the historical 3D prototype each create a Fenris sheet and reset it when restarting. Read-only diagnostic snapshots expose it as `window.__fenris2d.snapshot().stats` (2D) and `window.__fenris.snapshot().stats` (3D). The party HUD reads health and power from each character sheet. Exploration does not consume health or power; village supplies and wound dressing can restore health; the walking-speed field does not change pixel movement speeds or the 30% water multiplier.
+Characters use D&D 5e rules, based on the **2014 System Reference Document (SRD 5.1)**. The rules live in code (`stats.js`). The numbers live in spreadsheets (`data/stats/*.csv`). The current 2D opening and the historical 3D prototype each create a Fenris sheet and reset it when restarting. Read-only diagnostic snapshots expose it as `window.__fenris2d.snapshot().stats` (2D) and `window.__fenris.snapshot().stats` (3D). The party HUD reads health and power from each character sheet. Exploration does not consume health or power; village supplies and wound dressing can restore health; the walking-speed field does not change pixel movement speeds or the 30% water multiplier.
 
 ## Editing numbers
 

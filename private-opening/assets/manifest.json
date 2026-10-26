@@ -1,0 +1,149 @@
+{
+  "fireFrames": 32,
+  "waterFrames": 8,
+  "fenrisFrames": 8,
+  "fenrisSource": "Fenris white: idle, eight-direction walking, sleep, sit, and awakening transitions, October 2026",
+  "scenerySources": [
+    "vs_local_assets_westwoods.bundle",
+    "vs_local_assets_bg_forest.bundle",
+    "vs_local_assets_background_westwoods.bundle"
+  ],
+  "usage": "Complete 2D build included in the repository at the author's explicit request on 2026-10-26. Source provenance retained; website deployment is separate.",
+  "fenrisAnimations": {
+    "id": "fenris",
+    "formatVersion": 1,
+    "displayHeight": 36,
+    "restFrame": 6,
+    "idle": {
+      "file": "fenris/idle.png",
+      "frameWidth": 400,
+      "frameHeight": 528,
+      "columns": 4,
+      "frames": 8,
+      "fps": 4,
+      "loop": true,
+      "anchor": [
+        200,
+        500
+      ],
+      "bodyHeight": 466
+    },
+    "walk": {
+      "files": {
+        "left": "fenris/walk-left.png",
+        "right": "fenris/walk-right.png",
+        "up-left": "fenris/walk-up-left.png",
+        "up-right": "fenris/walk-up-right.png",
+        "up": "fenris/walk-up.png",
+        "down-left": "fenris/walk-down-left.png",
+        "down-right": "fenris/walk-down-right.png",
+        "down": "fenris/walk-down.png"
+      },
+      "frameWidth": 512,
+      "frameHeight": 640,
+      "columns": 4,
+      "frames": 8,
+      "fps": 8,
+      "loop": true,
+      "anchor": [
+        256,
+        610
+      ],
+      "bodyHeight": 550
+    },
+    "sleep": {
+      "file": "fenris/sleep.png",
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "columns": 2,
+      "frames": 4,
+      "fps": 2,
+      "loop": true,
+      "directions": [
+        "left",
+        "right"
+      ],
+      "mirrorRight": true,
+      "anchor": [
+        320,
+        610
+      ],
+      "bodyHeight": 550
+    },
+    "sit": {
+      "file": "fenris/sit.png",
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "columns": 2,
+      "frames": 4,
+      "fps": 2,
+      "loop": true,
+      "directions": [
+        "left",
+        "right"
+      ],
+      "mirrorRight": true,
+      "anchor": [
+        320,
+        610
+      ],
+      "bodyHeight": 550
+    },
+    "sleepToSit": {
+      "file": "fenris/sleepToSit.png",
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "columns": 2,
+      "frames": 4,
+      "fps": 4,
+      "loop": false,
+      "directions": [
+        "left",
+        "right"
+      ],
+      "mirrorRight": true,
+      "anchor": [
+        320,
+        610
+      ],
+      "bodyHeight": 550
+    },
+    "sitToStand": {
+      "file": "fenris/sitToStand.png",
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "columns": 3,
+      "frames": 6,
+      "fps": 4,
+      "loop": false,
+      "directions": [
+        "left",
+        "right"
+      ],
+      "mirrorRight": true,
+      "anchor": [
+        320,
+        610
+      ],
+      "bodyHeight": 550
+    },
+    "wakeSequence": [
+      {
+        "clip": "sleep",
+        "seconds": 2
+      },
+      {
+        "clip": "sleepToSit",
+        "seconds": 1
+      },
+      {
+        "clip": "sit",
+        "seconds": 1.5
+      },
+      {
+        "clip": "sitToStand",
+        "seconds": 1.5
+      }
+    ]
+  }
+}

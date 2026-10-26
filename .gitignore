@@ -8,5 +8,6 @@
 .env.*
 !.env.example
 
-# Private sprite prototype and licensed local art; never publish these files.
-/private-opening/
+# Generated captures and reports; keep the output directory for browser checks.
+/private-opening/qa/*
+!/private-opening/qa/.gitkeep

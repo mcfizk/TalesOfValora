@@ -39,4 +39,4 @@ Run `node --test private-opening/fenris-animation.test.mjs` for the shared contr
 
 The first village humans use code-drawn canvas atlases with the same metadata and playback contract: all six clips, eight walking directions, 32 × 40 cells, eight frames per clip, and a 28-world-pixel standing height. `village-people.js` builds the atlases once on load; these generated canvas sources replace PNG loading for this prototype rig. The sleep-to-sit and sit-to-stand endpoints share the corresponding rest poses. `village.test.mjs` checks every human against the common validator and frame bounds.
 
-The private scene and its imported artwork remain excluded from public source control and deployment.
+The complete scene and selected runtime artwork are included in source control at the author’s request on 26 October 2026. The historical `private-opening` directory name is retained for stable paths. Generated QA captures remain local; website deployment is a separate action.

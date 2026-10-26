@@ -1,5 +1,14 @@
 {
-  "name": "fenris-awakening", "private": true, "version": "0.1.0", "type": "module",
-  "scripts": { "start": "node serve.cjs", "test": "node --test tests/world.test.mjs tests/stats.test.mjs tests/world-characters.test.mjs", "test:private": "node --test private-opening/world.test.mjs private-opening/fenris-animation.test.mjs private-opening/clock-navigation.test.mjs private-opening/village.test.mjs private-opening/conversations.test.mjs", "stats": "node build-stats.cjs" },
-  "description": "Fenris Awakening: a private local pixel-art opening, with the earlier 3D prototype retained."
+  "name": "fenris-awakening",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node serve.cjs",
+    "test": "node --test tests/world.test.mjs tests/stats.test.mjs tests/world-characters.test.mjs",
+    "test:private": "npm run test:game",
+    "stats": "node build-stats.cjs",
+    "test:game": "node --test private-opening/world.test.mjs private-opening/fenris-animation.test.mjs private-opening/clock-navigation.test.mjs private-opening/village.test.mjs private-opening/conversations.test.mjs"
+  },
+  "description": "Fenris Awakening: a playable pixel-art opening, with the earlier 3D prototype retained."
 }

@@ -1,16 +1,16 @@
 # Fenris Awakening
 
-The active local prototype is a **private 2D pixel-art opening**. Fenris wakes in a forest clearing, receives the existing voice cues as subtitles, and can explore and examine his surroundings. The user authors the story. Spoken voice playback is disabled and wind is at 50% of its previous level; audio production will be a separate project.
+The active local prototype is a **2D pixel-art opening**. Fenris wakes in a forest clearing, receives the existing voice cues as subtitles, and can explore and examine his surroundings. The user authors the story. Spoken voice playback is disabled and wind is at 50% of its previous level; audio production will be a separate project.
 
-## Current private opening
+## Current opening
 
 The forest uses deeper dusk shading with a faint canopy light and warm embers. The stream has no bridge and can be waded through at 30% of normal movement speed, including when running.
 
-Run `npm start` here and open **http://127.0.0.1:8766/**. On this workstation the local server opens `private-opening/index.html` automatically. It binds only to loopback. If the private folder is absent, the server opens the earlier 3D prototype.
+Run `npm start` here and open **http://127.0.0.1:8766/**. The local server opens `private-opening/index.html` automatically. It binds only to loopback. If the 2D folder is absent, the server opens the earlier 3D prototype.
 
 The scene uses the approved white-and-grey Fenris with brown shorts, an eight-frame idle, and eight-frame walking loops in all eight directions. Walking runs at 8 fps; Shift accelerates the same gait to match running speed. Left/right idle uses the 4 fps breathing loop; other directions hold a gathered-foot pose when stopped so Fenris keeps facing the last movement direction. Reconstructed forest scenery, animated water and fire, collision-aware click movement, keyboard controls, touch controls, subtitles, ambience, a journal, pause, and restart remain available. Controls: WASD/arrows to move, Shift to run, E to examine, J for journal, I for pack, Escape to pause, mouse wheel to zoom, or click ground to walk. Touch devices have a movement stick and examine button.
 
-`private-opening/` contains the local scene code, selected art, provenance, preparation script, and browser checks. It is excluded from Git because the user's asset permission is for private use. It is also outside the explicit file list in `deploy.ps1`. This version must remain local; do not add its assets to public source control or website deployment. There is no cloud connection or save service; discoveries last for the current visit.
+`private-opening/` contains the complete playable 2D scene, selected runtime artwork, provenance, preparation scripts, and browser checks. The author requested publication of this complete build on 26 October 2026, superseding the earlier local-only repository restriction. The folder retains its historical name to preserve paths and URLs. A clone includes the ready-to-use artwork: no extraction, sprite import, external source folders, API key, or Python installation is needed to play. Preparation scripts are optional authoring tools that use the author's separate source archives. Generated QA captures, local backups, and credentials are excluded. There is no cloud connection or save service; discoveries last for the current visit. `deploy.ps1` still targets the historical 3D website; publishing this repository does not deploy the 2D game to that website.
 
 The local art manifest is `private-opening/assets/manifest.json`. Browser validation is recorded in `private-opening/qa/functional-report.json`; desktop and mobile screenshots are in that same folder. `private-opening/prepare-art.py` can reproduce the selected images using the local extraction catalog and installed UnityPy tooling.
 
@@ -26,7 +26,7 @@ The bottom-right party HUD crops Fenris's existing sprite to his face, with heal
 
 The exploration clock starts at 22:00 on Day 1. One second of actual movement advances one game minute; idle, blocked movement, awakening and pauses do not advance it. The sun/moon dial follows the time, and forest light gently changes with dawn. At the first 06:00, a stable, seed-derived village waypoint appears on the compass. It shows direction and approximate paces (22 world pixels per pace); clicking toggles its screen marker. The waypoint leads to the playable village described below. The source-of-voices objective remains open. Restart resets the clock and waypoint discovery. Clock tuning is in `private-opening/game-clock.js`; run `node private-opening/hud-clock-check.cjs` for desktop/mobile HUD, movement-clock and morning-reveal checks.
 
-## Village visit (private local build)
+## Village visit
 
 The seeded settlement has an inn, general store, smithy, apothecary, produce stall, well, tool shed, and two homes. Its streets and building footprints are reserved during forest generation. Four businesses have walkable interiors with exits; private homes stay barred. Interactions use the same faint baubles as the forest, without floating labels or E prompts.
 
@@ -82,7 +82,7 @@ The attached `01-The Story Begins.txt` inspires a forest awakening and voices. I
 
 ## Stats
 
-Both the current private 2D opening and the older 3D prototype load the shared D&D 5e (2014 SRD) scaffolding. `stats.js` holds the rules; `data/stats/*.csv` holds the numbers. Run `npm run stats` after editing the tables. Fenris now uses the confirmed starting ability scores, derived AC 12 and HP 13, and one d10 hit die. Shaman is the technical class direction; no active class or powers are granted at the opening. Stats do not yet determine exploration speed. The 2D diagnostics expose `window.__fenris2d.snapshot().stats`; restarting creates a fresh sheet. See [docs/STATS.md](docs/STATS.md).
+Both the current 2D opening and the older 3D prototype load the shared D&D 5e (2014 SRD) scaffolding. `stats.js` holds the rules; `data/stats/*.csv` holds the numbers. Run `npm run stats` after editing the tables. Fenris now uses the confirmed starting ability scores, derived AC 12 and HP 13, and one d10 hit die. Shaman is the technical class direction; no active class or powers are granted at the opening. Stats do not yet determine exploration speed. The 2D diagnostics expose `window.__fenris2d.snapshot().stats`; restarting creates a fresh sheet. See [docs/STATS.md](docs/STATS.md).
 
 ## Running the earlier 3D prototype
 
@@ -106,6 +106,6 @@ Subtitles are always available. The start screen offers ambient audio and it can
 
 ## Historical 3D deployment
 
-`deploy.ps1` describes the older 3D website workflow and contains historical source paths. It is not the workflow for the private 2D opening. It backs up the existing game files and game shelf under `backups/`, copies its explicit list of public 3D game files and renderer into `D:\UlfheimData\games\FenrisAwakening\`, and adds a prototype card to the shelf. Source, tests, scripts, lore documents, and the private opening are outside its publication list.
+`deploy.ps1` describes the older 3D website workflow and contains historical source paths. It is not the workflow for the 2D opening. It backs up the existing game files and game shelf under `backups/`, copies its explicit list of public 3D game files and renderer into `D:\UlfheimData\games\FenrisAwakening\`, and adds a prototype card to the shelf. Source, tests, scripts, lore documents, and the private opening are outside its publication list.
 
 URL: https://ulfheim.dk/games/FenrisAwakening/
