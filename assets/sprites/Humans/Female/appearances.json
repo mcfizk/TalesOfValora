@@ -1,0 +1,113 @@
+{
+  "id": "human-female",
+  "base": "base.png",
+  "displayHeight": 28,
+  "pose": "left-facing three-quarter idle",
+  "stage": "single-pose appearance variants",
+  "variants": [
+    {
+      "file": "base.png",
+      "hair": "chestnut brown",
+      "hairstyle": "low ponytail",
+      "clothes": "olive",
+      "width": 1090,
+      "height": 1443
+    },
+    {
+      "file": "blond-blue.png",
+      "hair": "blond",
+      "hairstyle": "simple braid",
+      "clothes": "navy blue",
+      "width": 1089,
+      "height": 1444
+    },
+    {
+      "file": "black-burgundy.png",
+      "hair": "black",
+      "hairstyle": "compact bun",
+      "clothes": "burgundy",
+      "width": 1090,
+      "height": 1443
+    },
+    {
+      "file": "auburn-ochre.png",
+      "hair": "auburn",
+      "hairstyle": "shoulder-length loose",
+      "clothes": "ochre",
+      "width": 1090,
+      "height": 1443
+    },
+    {
+      "file": "grey-slate.png",
+      "hair": "silver grey",
+      "hairstyle": "low ponytail",
+      "clothes": "slate blue",
+      "width": 1090,
+      "height": 1443
+    },
+    {
+      "file": "brown-rust.png",
+      "hair": "dark brown",
+      "hairstyle": "short bob",
+      "clothes": "rust red",
+      "width": 1090,
+      "height": 1443
+    },
+    {
+      "file": "chestnut-teal.png",
+      "hair": "chestnut",
+      "hairstyle": "low braid",
+      "clothes": "teal",
+      "width": 1089,
+      "height": 1444
+    },
+    {
+      "file": "dress-blond-blue.png",
+      "hair": "blond",
+      "hairstyle": "simple braid",
+      "clothes": "navy blue dress",
+      "width": 1089,
+      "height": 1444
+    },
+    {
+      "file": "dress-black-burgundy.png",
+      "hair": "black",
+      "hairstyle": "compact bun",
+      "clothes": "burgundy dress",
+      "width": 1089,
+      "height": 1444
+    },
+    {
+      "file": "dress-auburn-ochre.png",
+      "hair": "auburn",
+      "hairstyle": "shoulder-length loose",
+      "clothes": "ochre dress with cream apron",
+      "width": 1089,
+      "height": 1444
+    },
+    {
+      "file": "dress-grey-slate.png",
+      "hair": "silver grey",
+      "hairstyle": "low ponytail",
+      "clothes": "slate blue dress",
+      "width": 1089,
+      "height": 1444
+    },
+    {
+      "file": "dress-brown-rust.png",
+      "hair": "dark brown",
+      "hairstyle": "short bob",
+      "clothes": "rust red dress",
+      "width": 1089,
+      "height": 1444
+    },
+    {
+      "file": "dress-chestnut-teal.png",
+      "hair": "chestnut",
+      "hairstyle": "low braid",
+      "clothes": "teal dress with tan apron",
+      "width": 1089,
+      "height": 1445
+    }
+  ]
+}
