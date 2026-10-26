@@ -37,4 +37,6 @@ Fenris source exports live in the sibling `Sprites/Fenris white` folder. `Rest a
 
 Run `node --test private-opening/fenris-animation.test.mjs` for the shared contract and playback tests. With the local preview server running, `node private-opening/awakening-check.cjs` checks the sleep/sit/stand sequence, blocked movement, pause, restart, and mobile playback. Existing animation and functional browser checks cover directional movement and the rest of the opening.
 
+The first village humans use code-drawn canvas atlases with the same metadata and playback contract: all six clips, eight walking directions, 32 × 40 cells, eight frames per clip, and a 28-world-pixel standing height. `village-people.js` builds the atlases once on load; these generated canvas sources replace PNG loading for this prototype rig. The sleep-to-sit and sit-to-stand endpoints share the corresponding rest poses. `village.test.mjs` checks every human against the common validator and frame bounds.
+
 The private scene and its imported artwork remain excluded from public source control and deployment.

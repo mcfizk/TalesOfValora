@@ -245,6 +245,7 @@ export const STATS={
   "fenris": {
    "id": "fenris",
    "name": "Fenris",
+   "species": "lupera",
    "level": 1,
    "hitDie": 10,
    "abilities": {
@@ -279,6 +280,352 @@ export const STATS={
    },
    "maxHp": null,
    "notes": "Opening stats confirmed by author. Shaman is the technical future class; no active class, armor, magic or power resource at the opening."
+  },
+  "harl": {
+   "id": "harl",
+   "name": "Harl",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "athletics"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human carpenter. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "edra": {
+   "id": "edra",
+   "name": "Edra",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "insight",
+    "perception"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human weaver. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "woodcutter": {
+   "id": "woodcutter",
+   "name": "Torren",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 12,
+    "dex": 10,
+    "con": 12,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "athletics",
+    "survival"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human woodcutter. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "farmer": {
+   "id": "farmer",
+   "name": "Mara",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "nature",
+    "survival"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human farmer. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "resident": {
+   "id": "resident",
+   "name": "Oren",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human villager. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "washer": {
+   "id": "washer",
+   "name": "Sella",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "perception"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human washerwoman. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "vendor": {
+   "id": "vendor",
+   "name": "Bessa",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "insight",
+    "persuasion"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human produce seller. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "innkeeper": {
+   "id": "innkeeper",
+   "name": "Vera",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "insight",
+    "persuasion"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human innkeeper. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "trader": {
+   "id": "trader",
+   "name": "Dain",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "insight",
+    "persuasion"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human shopkeeper. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+  },
+  "blacksmith": {
+   "id": "blacksmith",
+   "name": "Rusk",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 14,
+    "dex": 10,
+    "con": 14,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "athletics"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human blacksmith. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat. Tougher prominent villager through strength and constitution, not extra levels."
+  },
+  "herbalist": {
+   "id": "herbalist",
+   "name": "Ilen",
+   "species": "human",
+   "level": 1,
+   "hitDie": 8,
+   "abilities": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+   },
+   "speed": 30,
+   "saves": [],
+   "skills": [
+    "medicine",
+    "nature"
+   ],
+   "expertise": [],
+   "resistances": [],
+   "immunities": [],
+   "vulnerabilities": [],
+   "power": {
+    "kind": null,
+    "max": 0,
+    "current": 0
+   },
+   "maxHp": null,
+   "notes": "Level-1 human herbalist. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
   }
  }
 };

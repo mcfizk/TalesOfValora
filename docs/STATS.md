@@ -1,6 +1,6 @@
 # Stats system (D&D 5e)
 
-Characters use D&D 5e rules, based on the **2014 System Reference Document (SRD 5.1)**. The rules live in code (`stats.js`). The numbers live in spreadsheets (`data/stats/*.csv`). The current private 2D opening and the historical 3D prototype each create a Fenris sheet and reset it when restarting. Read-only diagnostic snapshots expose it as `window.__fenris2d.snapshot().stats` (2D) and `window.__fenris.snapshot().stats` (3D). The party HUD reads health and power from each character sheet. Exploration and interactions do not yet consume health or power; the walking-speed field does not change pixel movement speeds or the 30% water multiplier.
+Characters use D&D 5e rules, based on the **2014 System Reference Document (SRD 5.1)**. The rules live in code (`stats.js`). The numbers live in spreadsheets (`data/stats/*.csv`). The current private 2D opening and the historical 3D prototype each create a Fenris sheet and reset it when restarting. Read-only diagnostic snapshots expose it as `window.__fenris2d.snapshot().stats` (2D) and `window.__fenris.snapshot().stats` (3D). The party HUD reads health and power from each character sheet. Exploration does not consume health or power; village supplies and wound dressing can restore health; the walking-speed field does not change pixel movement speeds or the 30% water multiplier.
 
 ## Editing numbers
 
@@ -21,6 +21,7 @@ Do not edit `stats-data.js` by hand.
 | Column | Meaning |
 |---|---|
 | `id`, `name` | Code id (`fenris`) and display name |
+| `species` | Species identity (`human`, `lupera`); required for a registered world character |
 | `level` | 1–20. XP starts at that level's threshold |
 | `hit_die` | 6, 8, 10 or 12 |
 | `str` `dex` `con` `int` `wis` `cha` | Ability scores, 1–30 |
@@ -42,6 +43,26 @@ Author-confirmed on 25 October 2026: level 1, STR 14, DEX 14, CON 16, INT 14, WI
 Shaman is the technical class direction, but Fenris currently has no active class, magic, or power resource. The supplied saving-throw and skill proficiencies are retained. His health bar begins at 13/13; the second bar reads Power and remains inactive. Future actors can name and populate their own resource without changing the party HUD.
 
 `resources.js` provides bounded power pools. `spendPower(amount)` refuses an unaffordable cost; `restorePower(amount)` clamps to capacity. Changes emit a `power` event and snapshots return copies.
+
+## World characters and future combat
+
+Author direction, 26 October 2026: **every character in the world needs stats**, including non-hostile NPCs, because anyone could potentially become involved in combat. **Combat will be turn-based**, not a real-time attack loop. Initiative order, turns, actions, attacks and combat movement are not implemented by this change. Exploration retains its current continuous movement; the same persistent character sheets will be used when turn-based combat is added.
+
+The village has no guards. Harl is a carpenter, Edra a weaver, and the former watch building is a communal tool shed. Threats spread alarm among neighbours rather than summoning a guard force.
+
+All eleven villagers are level-1 humans with one d8 hit die, speed 30 and no active class, armor, weapon or power pool. The editable implementation baseline is six ability scores of 10: HP 8, unarmored AC 10, proficiency +2, and occupation-based skill proficiencies. This is a game baseline, not a claim that an official commoner stat block is a player-class character. Prominent or physically robust villagers can have stronger abilities without gaining levels:
+
+| Villager | STR | CON | HP | AC | Level |
+|---|---:|---:|---:|---:|---:|
+| Ordinary resident | 10 | 10 | 8 | 10 | 1 |
+| Torren, woodcutter | 12 | 12 | 9 | 10 | 1 |
+| Rusk, blacksmith | 14 | 14 | 10 | 10 | 1 |
+
+These exact NPC numbers are initial tuning choices implementing the author's direction; edit `actors.csv` to balance them. Role proficiencies distinguish craftspeople: for example Rusk has Athletics, Ilen has Medicine/Nature, and Dain has Insight/Persuasion. They do not receive class saving-throw proficiencies or magical abilities.
+
+`world-characters.js` provides `createCharacterRoster`. Register every world character with a stable instance id and a CSV stat definition; missing definitions and duplicate ids fail immediately. Multiple future characters can share a stat template while keeping independent sheets. Sprite updates, shop entry/exit and off-screen scheduling must reuse the roster's sheet rather than recreate it. Restart resets the roster. The current 2D scene registers Fenris and all villagers before play and validates each visible NPC against that roster.
+
+The shared sheet includes abilities, saves, skills, AC, initiative, HP, hit dice, speed, damage handling, death saves and power. Read-only diagnostics expose all persistent sheets at `window.__fenris2d.snapshot().characters`; each visible NPC also has `characterId` and `stats`. No attack control, encounter, or automatic combat is added. `tests/world-characters.test.mjs` verifies coverage, baseline values, missing-definition rejection, independent instances, damage/healing/death saves and resets.
 
 ## Rules implemented (`stats.js`)
 
@@ -71,6 +92,7 @@ The code follows 2014 rules where the editions differ. The differences that affe
 
 These need author decisions first, and canon currently excludes several of them for the opening:
 
+- Turn-based combat scheduling, actions, attacks, targeting and encounter transitions (turn-based direction is confirmed)
 - Classes and class features (technical Shaman direction; no active class in the opening)
 - Lupera species traits (size, darkvision, senses, natural weapons). Fenris is listed as *Medium-sized by default*; 5e "Large" has rules consequences
 - Equipment, armor and attacks (the opening has none)

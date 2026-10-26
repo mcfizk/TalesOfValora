@@ -1,2 +1,13 @@
-id,name,level,hit_die,str,dex,con,int,wis,cha,speed,saves,skills,expertise,resistances,immunities,vulnerabilities,max_hp,notes,power_kind,power_max,power_start
-fenris,Fenris,1,10,14,14,16,14,16,14,30,str wis cha,athletics intimidation perception stealth survival,,,,,,"Opening stats confirmed by author. Shaman is the technical future class; no active class, armor, magic or power resource at the opening.",,,
+id,name,level,hit_die,str,dex,con,int,wis,cha,speed,saves,skills,expertise,resistances,immunities,vulnerabilities,max_hp,notes,power_kind,power_max,power_start,species
+fenris,Fenris,1,10,14,14,16,14,16,14,30,str wis cha,athletics intimidation perception stealth survival,,,,,,"Opening stats confirmed by author. Shaman is the technical future class; no active class, armor, magic or power resource at the opening.",,,,lupera
+harl,Harl,1,8,10,10,10,10,10,10,30,,athletics,,,,,,"Level-1 human carpenter. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+edra,Edra,1,8,10,10,10,10,10,10,30,,insight perception,,,,,,"Level-1 human weaver. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+woodcutter,Torren,1,8,12,10,12,10,10,10,30,,athletics survival,,,,,,"Level-1 human woodcutter. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+farmer,Mara,1,8,10,10,10,10,10,10,30,,nature survival,,,,,,"Level-1 human farmer. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+resident,Oren,1,8,10,10,10,10,10,10,30,,,,,,,,"Level-1 human villager. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+washer,Sella,1,8,10,10,10,10,10,10,30,,perception,,,,,,"Level-1 human washerwoman. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+vendor,Bessa,1,8,10,10,10,10,10,10,30,,insight persuasion,,,,,,"Level-1 human produce seller. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+innkeeper,Vera,1,8,10,10,10,10,10,10,30,,insight persuasion,,,,,,"Level-1 human innkeeper. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+trader,Dain,1,8,10,10,10,10,10,10,30,,insight persuasion,,,,,,"Level-1 human shopkeeper. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human
+blacksmith,Rusk,1,8,14,10,14,10,10,10,30,,athletics,,,,,,"Level-1 human blacksmith. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat. Tougher prominent villager through strength and constitution, not extra levels.",,,,human
+herbalist,Ilen,1,8,10,10,10,10,10,10,30,,medicine nature,,,,,,"Level-1 human herbalist. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat.",,,,human

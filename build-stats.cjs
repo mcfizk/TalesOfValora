@@ -36,7 +36,7 @@ function build(read=file=>fs.readFileSync(path.join(DIR,file),'utf8')){
   const powerKind=r.power_kind||null,powerMax=r.power_max?int(r,'power_max',0,99999):0;
   if(powerMax>0&&!powerKind)fail(r,'power_kind is required when power_max is positive');
   const powerCurrent=r.power_start?int(r,'power_start',0,powerMax):powerMax;
-  return [r.id,{id:r.id,name:r.name||r.id,level:int(r,'level',1,20),hitDie,
+  return [r.id,{id:r.id,name:r.name||r.id,species:r.species||null,level:int(r,'level',1,20),hitDie,
    abilities:Object.fromEntries(abilityIds.map(id=>[id,int(r,id,1,30)])),speed:int(r,'speed',0,200),
    saves:list(r,'saves',abilityIds),skills:skillsList,expertise,
    resistances:list(r,'resistances',damageTypes),immunities:list(r,'immunities',damageTypes),vulnerabilities:list(r,'vulnerabilities',damageTypes),

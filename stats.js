@@ -30,7 +30,7 @@ export function createCharacter(idOrDef,data=STATS){
  const skillBonus=id=>{const ability=skillAbility[id];if(!ability)throw new Error(`Unknown skill "${id}"`);return checkBonus(ability)+prof()*(def.expertise.includes(id)?2:def.skills.includes(id)?1:0)+bonus('skill:'+id);};
  const saveBonus=id=>mod(id)+(def.saves.includes(id)?prof():0)+bonus('save:'+id);
  const sheet={
-  id:def.id,name:def.name,
+  id:def.id,name:def.name,species:def.species||null,
   get level(){return level;},get xp(){return xp;},get proficiency(){return prof();},
   get hp(){return s.hp;},get tempHp(){return s.tempHp;},get maxHp(){return maxHp();},get hitDice(){return s.hitDice;},get hitDie(){return def.hitDie;},
   get ac(){return 10+mod('dex')+bonus('ac');}, // Unarmored. Armor and shields replace this once equipment exists.
@@ -64,7 +64,7 @@ export function createCharacter(idOrDef,data=STATS){
   addModifier({id,target,add,source=''}){mods.set(id,{target,add,source});s.hp=Math.min(s.hp,maxHp());emit('modifiers');},
   removeModifier(id){mods.delete(id);s.hp=Math.min(s.hp,maxHp());emit('modifiers');},
   onChange(f){listeners.add(f);return()=>listeners.delete(f);},
-  snapshot:()=>({id:def.id,power:power.snapshot(),level,xp,proficiency:prof(),hp:s.hp,tempHp:s.tempHp,maxHp:maxHp(),hitDice:s.hitDice,ac:sheet.ac,initiative:sheet.initiative,speed:sheet.speed,status:status(),deathSaves:sheet.deathSaves,
+  snapshot:()=>({id:def.id,name:def.name,species:def.species||null,hitDie:def.hitDie,power:power.snapshot(),level,xp,proficiency:prof(),hp:s.hp,tempHp:s.tempHp,maxHp:maxHp(),hitDice:s.hitDice,ac:sheet.ac,initiative:sheet.initiative,speed:sheet.speed,status:status(),deathSaves:sheet.deathSaves,
    abilities:Object.fromEntries(data.abilities.map(a=>[a.id,{score:score(a.id),mod:mod(a.id),save:saveBonus(a.id)}])),passivePerception:10+skillBonus('perception'),modifiers:[...mods.keys()]})
  };
  return sheet;
