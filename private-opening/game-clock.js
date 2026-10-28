@@ -13,6 +13,7 @@ export function createGameClock({startMinutes=CLOCK_START,rate=GAME_MINUTES_PER_
     return{totalMinutes:total,day:Math.floor(total/1440)+1,hour,minute,time:`${String(hour).padStart(2,'0')}:${String(minute).padStart(2,'0')}`,phase,daylight,daylightStrength,arc,villageAvailable:total>=firstMorning};
   }
   return{
+    load(minutes){if(!Number.isFinite(minutes)||minutes<startMinutes)throw new Error('Invalid saved clock');total=minutes;return snapshot();},
     advance(seconds,moved){if(moved&&Number.isFinite(seconds)&&seconds>0)total+=seconds*rate;return snapshot();},
     reset(){total=startMinutes;},snapshot
   };

@@ -96,10 +96,10 @@ export function createRenderer(canvas,art,world) {
     const sorted=[...(state.interior?[]:[...world.trees,...world.village.buildings,{x:654,y:614,fire:true}]),...(state.people||[]),{x:state.player.x,y:state.player.y,player:true}].sort((a,b)=>a.y-b.y);
     for(const item of sorted){if(item.player)playerSprite(state);else if(item.fire)fire(state.time,state.reduced);else if(item.building)drawBuilding(ctx,item,art,state.player);else if(item.actorId)drawPerson(ctx,item,art);else sprite(item,state.player);}
     if(state.phase==='explore')for(const point of state.interactionPoints||world.points){
-      const d=Math.hypot(state.player.x-point.x,state.player.y-point.y);if(d>180)continue;
+      const d=Math.hypot(state.player.x-point.x,state.player.y-point.y);if(d>180&&point.type!=='perception-event')continue;
       const visited=state.found.has(point.id),pulse=state.reduced?1:.9+Math.sin(state.time*2)*.1;
       const y=point.y-26+(state.reduced?0:Math.sin(state.time*1.7)*1.5);
-      ctx.save();ctx.globalAlpha=(visited?.3:.65)*pulse*Math.min(1,(180-d)/45);
+      ctx.save();ctx.globalAlpha=(visited?.3:.65)*pulse*(point.type==='perception-event'?1:Math.min(1,(180-d)/45));
       const halo=ctx.createRadialGradient(point.x,y,0,point.x,y,12);halo.addColorStop(0,'#dedaa660');halo.addColorStop(1,'#dedaa600');ctx.fillStyle=halo;ctx.fillRect(point.x-12,y-12,24,24);
       ctx.strokeStyle='#dedaa6aa';ctx.lineWidth=.7;ctx.beginPath();ctx.arc(point.x,y,2.7,0,Math.PI*2);ctx.stroke();ctx.fillStyle='#f4eac966';ctx.fillRect(point.x-1,y-1,1,1);
       if(d<48){const light=ctx.createRadialGradient(point.x,point.y-6,1,point.x,point.y-6,24);light.addColorStop(0,'#e8d69c25');light.addColorStop(1,'#e8d69c00');ctx.fillStyle=light;ctx.fillRect(point.x-24,point.y-30,48,48);}
@@ -121,5 +121,5 @@ export function createRenderer(canvas,art,world) {
       for(const fly of glow){const a=Math.max(0,Math.sin(state.time*.9+fly.phase))*.65;ctx.fillStyle=`rgba(211,224,146,${a})`;ctx.fillRect(Math.round(camera.x-width/2+fly.x*width+Math.sin(state.time*.6+fly.phase)*7),Math.round(camera.y-height/2+fly.y*height+Math.cos(state.time*.4+fly.phase)*5),1,1);}ctx.restore();
     }
   }
-  return {render,resize,toScreen,toWorld,resetCamera(x,y){camera.x=x;camera.y=y;},get loadingRadius(){return Math.max(width,height)/2+300;},setZoom(delta){zoom=Math.max(.8,Math.min(1.6,zoom+delta));resize();},snapshot:()=>({width,height,zoom,camera:{...camera},groundTiles:groundCache.size})};
+  return {render,resize,toScreen,toWorld,resetWorld(){groundCache.clear();},resetCamera(x,y){camera.x=x;camera.y=y;},get loadingRadius(){return Math.max(width,height)/2+300;},setZoom(delta){zoom=Math.max(.8,Math.min(1.6,zoom+delta));resize();},snapshot:()=>({width,height,zoom,camera:{...camera},groundTiles:groundCache.size})};
 }

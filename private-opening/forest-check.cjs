@@ -10,7 +10,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   // Fix only the world seed to make this browser test repeatable.
   await page.addInitScript(()=>{const original=crypto.getRandomValues.bind(crypto);crypto.getRandomValues=a=>a instanceof Uint32Array&&a.length===1?(a[0]=1468,a):original(a);});
   await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);
-  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();
+  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();
   await page.waitForFunction(()=>__fenris2d.snapshot().voices.includes('first'));
   check('Voices begin while Fenris is still asleep',await page.evaluate(()=>__fenris2d.snapshot().animation.clip==='sleep'));
   check('Opening subtitle is above the waking veil',await page.locator('#subtitles').isVisible());
@@ -19,8 +19,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   check('Floating E prompt and object label are removed',await page.locator('#interaction, #interaction-label, #examine').count()===0);
   const ember=await page.evaluate(()=>__fenris2d.worldToScreen(654,614-26));await page.mouse.click(ember.x,ember.y);
   await page.waitForFunction(()=>__fenris2d.snapshot().found.includes('embers'),null,{timeout:15000});
-  check('Clicking a bauble approaches and examines the object',await page.locator('#panel-title').textContent()==='Dying embers');
-  await page.locator('#close-panel').click();
+  check('Clicking a bauble shows object text without a dialog',await page.locator('.event-text[data-event-id="embers"]').isVisible()&&!(await page.evaluate(()=>__fenris2d.snapshot().paused)));
   const candidate=await page.evaluate(()=>{
     const s=__fenris2d.snapshot();return s.points.filter(p=>p.id.includes(':')).map(p=>({...p,screen:__fenris2d.worldToScreen(p.x,p.y-26)})).filter(p=>p.screen.x>400&&p.screen.x<innerWidth-100&&p.screen.y>270&&p.screen.y<innerHeight-150).sort((a,b)=>Math.hypot(a.x-s.position.x,a.y-s.position.y)-Math.hypot(b.x-s.position.x,b.y-s.position.y))[0];
   });
@@ -32,8 +31,8 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   await page.waitForTimeout(350);
   const target=await page.evaluate(p=>__fenris2d.worldToScreen(p.x,p.y-26),candidate);await page.mouse.click(target.x,target.y);
   await page.waitForFunction(id=>__fenris2d.snapshot().found.includes(id),candidate.id,{timeout:15000}).catch(async error=>{console.error(JSON.stringify({candidate,errors:report.errors}));await page.screenshot({path:path.join(out,'forest-failure.png')});throw error;});
-  check('A generated forest object can be examined',await page.locator('#panel').isVisible());await page.locator('#close-panel').click();
-  await page.keyboard.press('j');check('Journal retains the generated discovery',await page.locator('#panel-content h3').count()===2);await page.locator('#close-panel').click();
+  check('A generated forest object shows inline text',await page.locator('.event-text[data-event-id="'+candidate.id+'"]').isVisible()&&await page.locator('#panel').isHidden());
+  await page.keyboard.press('j');check('Journal retains the generated discovery',(await page.locator('#panel-content').textContent()).includes(candidate.label)||await page.locator('#panel-content h3').count()>=2);await page.locator('#close-panel').click();
   check('Discoveries do not complete the search',!(await page.locator('#objective').textContent()).includes('complete'));
   check('Spirit identity is not revealed in visible text',!(/spirits?/i.test(await page.locator('body').innerText())));
   await page.screenshot({path:path.join(out,'endless-forest-interactions.png')});

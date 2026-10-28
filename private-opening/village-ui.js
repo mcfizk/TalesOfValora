@@ -1,9 +1,9 @@
 import {createConversations} from './conversations.js';
 import {createVillageEconomy,GOODS} from './village-economy.js';
 import {isOpen,SHOP_HOURS,makeInterior} from './village-layout.js';
-export function createVillageUI({state,world,getStats,dialog,paragraph,button,closePanel,notify,relocate}){
-  let economy=createVillageEconomy(),conversations=createConversations();
-  const show=(title,text,actions=[])=>{const content=document.createElement('div');content.append(paragraph(text),...actions,button('Leave',closePanel));dialog(title,content);};
+export function createVillageUI({state,world,getStats,dialog,paragraph,button,closePanel,notify,relocate,onObservation,onConversation=()=>{}}){
+  let economy=createVillageEconomy(),conversations=createConversations(),activePoint=null;
+  const show=(title,text,actions=[])=>{if(onObservation&&activePoint&&!actions.length){closePanel();onObservation(activePoint,{title,text});return;}const content=document.createElement('div');content.append(paragraph(text),...actions,button('Leave',closePanel));dialog(title,content);};
   function trade(shop){
     const s=economy.snapshot(),content=document.createElement('div');content.className='trade-panel';
     content.append(paragraph(`You have ${s.copper} copper. No credit.`));
@@ -61,6 +61,7 @@ export function createVillageUI({state,world,getStats,dialog,paragraph,button,cl
       const choose=button(option.label,()=>{
         const outcome=conversations.choose(point.actorId,node,option.id,getStats(),economy.snapshot());if(!outcome)return;
         if(outcome.fresh){economy.applyConversation(outcome.key,outcome.effects,point.shop);const id=`conversation:${outcome.key}`,r=outcome.roll;state.found.add(id);state.notes.set(id,{title:`${point.name} · ${point.role}`,text:`${outcome.choice} ${outcome.text}${r?` (${skillName(r.skill)} ${r.total}, DC ${r.dc}: ${outcome.success?'success':'failure'}.)`:''}`});document.getElementById('journal-dot').hidden=false;}
+        if(outcome.fresh)onConversation(point.actorId,outcome,conversations.snapshot().attitudes[point.actorId]||0);
         person(point,outcome.next,outcome);
       },'conversation-choice');
       if(option.check){const detail=document.createElement('small'),c=option.check;detail.textContent=`${skillName(c.skill)} ${c.bonus>=0?'+':''}${c.bonus} · DC ${c.dc}${option.resolved?' · Already attempted':' · One attempt this visit'}`;choose.append(detail);choose.disabled=option.resolved;}
@@ -74,6 +75,7 @@ export function createVillageUI({state,world,getStats,dialog,paragraph,button,cl
   }
   function interact(point){
     if(point.type!=='village')return false;
+    activePoint=point;
     if(point.actorId){person(point);return true;}
     if(point.id==='exit'){const target=state.interior.returnTo;state.interior=null;relocate(target);return true;}
     if(point.id==='woodpile'){
@@ -90,5 +92,5 @@ export function createVillageUI({state,world,getStats,dialog,paragraph,button,cl
     if(b.id==='market'){const vendor=state.people.find(p=>p.shop==='market');if(vendor)person(vendor);return true;}
     state.interior=makeInterior(b);relocate({x:120,y:155});notify(b.label);return true;
   }
-  return {interact,inventory,snapshot:(includeConversations=true)=>({...economy.snapshot(),...(includeConversations?{conversations:conversations.snapshot()}:{})}),reset(){economy=createVillageEconomy();conversations=createConversations();},gatherWood:id=>economy.gatherWood(id)};
+  return {interact,inventory,serialize:()=>({economy:economy.serialize(),conversations:conversations.snapshot()}),load(saved){const e=createVillageEconomy(),c=createConversations();e.load(saved.economy);c.load(saved.conversations);economy=e;conversations=c;},snapshot:(includeConversations=true)=>({...economy.snapshot(),...(includeConversations?{conversations:conversations.snapshot()}:{})}),reset(){economy=createVillageEconomy();conversations=createConversations();},gatherWood:id=>economy.gatherWood(id)};
 }

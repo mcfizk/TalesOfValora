@@ -119,3 +119,7 @@ For a new rule (e.g. conditions), describe it in this file first. Then Codex add
 ## License
 
 Rules text and tables such as the skill list, XP thresholds and death-save rules come from the System Reference Document 5.1 by Wizards of the Coast LLC, available at https://dnd.wizards.com/resources/systems-reference-document, licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/legalcode).
+
+## Creature reference import
+
+`data/stats/reference/critters.json` is authoritative for the supplied deer, wolf, hare and owl blocks. `node build-stats.cjs` combines it with stable actor IDs/proficiencies from the CSVs. It preserves source abilities, HP, AC (including natural armour), hit-die size/count and walking speed, and checks skill bonuses for consistency. Source senses, extra movement types, traits, actions, CR and XP remain available through each creature sheet’s `creature` data and `movement` getter. These are author-supplied reference values; attack effects and flight/burrowing AI are data for future combat/behaviour, not automatically implemented mechanics. Fenris and villagers keep their existing rules and numbers.

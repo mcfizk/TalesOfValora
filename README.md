@@ -1,6 +1,6 @@
 # Fenris Awakening
 
-The active local prototype is a **2D pixel-art opening**. Fenris wakes in a forest clearing, receives the existing voice cues as subtitles, and can explore and examine his surroundings. The user authors the story. Spoken voice playback is disabled and wind is at 50% of its previous level; audio production will be a separate project.
+The active local prototype is a **2D pixel-art opening**. Fenris wakes in a forest clearing, receives the existing voice cues as subtitles, and can explore and examine his surroundings. The user authors the story. Recorded Fenris reactions and forest effects are connected. The opening voices remain subtitle-only; wind stays at 50%.
 
 ## Current opening
 
@@ -10,7 +10,7 @@ Run `npm start` here and open **http://127.0.0.1:8766/**. The local server opens
 
 The scene uses the approved white-and-grey Fenris with brown shorts, an eight-frame idle, and eight-frame walking loops in all eight directions. Walking runs at 8 fps; Shift accelerates the same gait to match running speed. Left/right idle uses the 4 fps breathing loop; other directions hold a gathered-foot pose when stopped so Fenris keeps facing the last movement direction. Reconstructed forest scenery, animated water and fire, collision-aware click movement, keyboard controls, touch controls, subtitles, ambience, a journal, pause, and restart remain available. Controls: WASD/arrows to move, Shift to run, E to examine, J for journal, I for pack, Escape to pause, mouse wheel to zoom, or click ground to walk. Touch devices have a movement stick and examine button.
 
-`private-opening/` contains the complete playable 2D scene, runtime artwork, and browser checks. The folder name is retained to preserve paths and URLs. A clone contains everything needed to play with `npm start`. Generated QA captures, local backups, and credentials are excluded. There is no cloud connection or save service; discoveries last for the current visit. `deploy.ps1` targets the historical 3D website; the 2D game has a separate deployment workflow.
+`private-opening/` contains the complete playable 2D scene, runtime artwork, and browser checks. The folder name is retained to preserve paths and URLs. A clone contains everything needed to play with `npm start`. Generated QA captures, local backups, and credentials are excluded. Three local save slots preserve journeys in this browser; there is no cloud save service. `deploy.ps1` targets the historical 3D website; `build-site.cjs` and `deploy-site.ps1` publish the current 2D game.
 
 The local art manifest is `private-opening/assets/manifest.json`. Browser validation is recorded in `private-opening/qa/functional-report.json`; desktop and mobile screenshots are in that same folder.
 
@@ -18,13 +18,19 @@ Custom character sheets live in `private-opening/assets/fenris/`. Run `node priv
 
 The forest generates 384-pixel sections around the player, with no fixed map boundary. A new page load selects a random seed; revisiting an area or restarting the awakening within that visit preserves its terrain. Distant sections and ground textures are discarded and regenerated from the seed, keeping loaded terrain memory bounded. Groves, fern hollows, rocky patches, clearings, winding trails and recurring streams provide variation.
 
-The voices appear before Fenris begins rising. His first objective is to seek their source, and the search remains open after examining objects. Finding the source takes a couple of days, potentially including visits to a nearby village; the village visit is playable, while the later search and spirit encounters remain to be authored. Faint glowing baubles mark camp details, weathered stones, old stumps, flowers and undergrowth. Click or tap a bauble to approach and examine; E and the mobile interaction button also work nearby. Descriptions appear only after interaction and are kept in the session journal. Floating E prompts and object labels have been removed.
+The voices appear before Fenris begins rising. His first objective is to seek their source, and the search remains open after examining objects. Finding the source takes a couple of days, potentially including visits to a nearby village; the village visit is playable, while the later search and spirit encounters remain to be authored. Faint glowing baubles mark camp details, weathered stones, old stumps, flowers and undergrowth. Click or tap a bauble to approach and examine; E and the mobile interaction button also work nearby. Scenery descriptions appear beside the object after interaction, fade without pausing or dismissal, and remain in the journal. Perception discoveries appear automatically with baubles or off-screen arrows for noticed events. Floating E prompts and object labels have been removed.
 
 Run `node --test private-opening/world.test.mjs private-opening/fenris-animation.test.mjs` for generation, water speed, collision, reachability and animation checks. Run `node private-opening/forest-check.cjs` for streamed terrain and interaction browser checks.
 
 The bottom-right party HUD crops Fenris's existing sprite to his face, with health and power bars underneath. Cards support future companions and per-character mana, energy, rage or another resource. Fenris's power bar is inactive until a resource is established.
 
 The exploration clock starts at 22:00 on Day 1. One second of actual movement advances one game minute; idle, blocked movement, awakening and pauses do not advance it. The sun/moon dial follows the time, and forest light gently changes with dawn. At the first 06:00, a stable, seed-derived village waypoint appears on the compass. It shows direction and approximate paces (22 world pixels per pace); clicking toggles its screen marker. The waypoint leads to the playable village described below. The source-of-voices objective remains open. Restart resets the clock and waypoint discovery. Clock tuning is in `private-opening/game-clock.js`; run `node private-opening/hud-clock-check.cjs` for desktop/mobile HUD, movement-clock and morning-reveal checks.
+
+Forest encounters support [perception zones](docs/PERCEPTION-EVENTS.md): passive Perception against an event's base DC plus distance difficulty, followed by aware or surprised outcomes at its inner trigger. Definitions are in `private-opening/perception-events.js`; three temporary placeholders demonstrate leaves stirring, a loose branch and a deer, with DCs and distances awaiting author tuning. A future listening state can use a temporary Perception modifier.
+
+## Saved games
+
+Continue and New Game use three independent local slots. New Game confirms before replacing an occupied slot. Progress autosaves every ten seconds and on pause/exit; the pause menu also offers Save Game, Load Game and Save and return to title. Continue restores the world, journal, inventory, conversations and unit memories/relationships. Saves belong to this browser and site. See [saved games](docs/SAVES.md).
 
 ## Village visit
 
@@ -34,7 +40,7 @@ Eleven named townspeople cover residents, craftspeople and shopkeepers. Harl is 
 
 Fenris starts with an empty pack and no copper. Torren the woodcutter offers twelve copper to stack the firewood south of the smithy; the job can be paid only once per visit. Fallen wood from forest stumps can also be collected once per object and sold. Shops track stock, copper, purchases and sales. Bread, apples, herbs and bandages restore health through the pack (I); full-health use is disabled. The well restores one health once per game day when needed. The inn offers a seat and paid wound dressing. Sitting freezes time like other idle actions; movement begins only after the stand transition. None of these actions grants a class, weapon or magical power.
 
-The building atlas is `private-opening/assets/village/buildings.png`. Townspeople use a small code-drawn pixel rig in `village-people.js`, generating all six standard clips and eight walking directions into canvas atlases at load time. These are simple prototype human sprites; approved Fenris artwork remains unchanged. `village-layout.js`, `village-economy.js`, `village-ui.js` and `village-renderer.js` separate geography, transactions, interaction and drawing. Village stock, task progress and inventory are session-only and reset with the awakening.
+The building atlas is `private-opening/assets/village/buildings.png`. Townspeople use a small code-drawn pixel rig in `village-people.js`, generating all six standard clips and eight walking directions into canvas atlases at load time. These are simple prototype human sprites; approved Fenris artwork remains unchanged. `village-layout.js`, `village-economy.js`, `village-ui.js` and `village-renderer.js` separate geography, transactions, interaction and drawing. Village stock, task progress and inventory are saved with the journey and reset when starting again.
 
 Run `npm run test:private` for forest, animation, clock and village unit checks. `node private-opening/village-check.cjs` checks the paid job, cross-square click movement, all four interiors, purchases, healing, shop hours, sitting, restart and mobile UI in Edge. Scenario placement is injected only into test responses; the production game retains read-only diagnostics and begins at the forest camp. Screenshots and the report are in `private-opening/qa/village-*`.
 
@@ -82,6 +88,8 @@ The attached `01-The Story Begins.txt` inspires a forest awakening and voices. I
 
 ## Stats
 
+Authored [units](units/README.md) live under `units/characters/`, `units/npcs/`, `units/enemies/` and `units/critters/`. Fenris and all eleven villagers have individual definitions. The shared roster keeps each individual's stat sheet, knowledge, memories and directed affinity together across scenes; New Game or restarting resets the journey. Conversations record experiences for their participants, and perception events enter Fenris's memory. Numeric stats retain their existing CSV source; unit definitions reference those tables.
+
 Both the current 2D opening and the older 3D prototype load the shared D&D 5e (2014 SRD) scaffolding. `stats.js` holds the rules; `data/stats/*.csv` holds the numbers. Run `npm run stats` after editing the tables. Fenris now uses the confirmed starting ability scores, derived AC 12 and HP 13, and one d10 hit die. Shaman is the technical class direction; no active class or powers are granted at the opening. Stats do not yet determine exploration speed. The 2D diagnostics expose `window.__fenris2d.snapshot().stats`; restarting creates a fresh sheet. See [docs/STATS.md](docs/STATS.md).
 
 ## Running the earlier 3D prototype
@@ -98,11 +106,15 @@ This uses browser 3D to make the opening playable on the existing IIS website. I
 - E: examine. J: journal. Escape: pause / close dialog.
 - Touch: left joystick to move; drag elsewhere to look; E to examine.
 
-Subtitles are always available. The start screen offers ambient audio and it can be toggled. Spoken voice playback is disabled pending the separate audio project. Wind is at half its previous gain; water and footsteps retain their existing levels. Audio suspends while paused. Graphics can be reduced in the menu. Position and discoveries are session-only; restart or reload resets them.
+Subtitles are always available. The start screen offers ambient audio and it can be toggled. The 2D game uses recorded Fenris reactions and forest effects; the mysterious opening voices remain subtitle-only. Wind is at half gain, and water retains its existing level. Audio suspends while paused. Graphics can be reduced in the menu. Position and discoveries are session-only; restart or reload resets them.
 
 ## Verification
 
 `npm test` runs `tests/world.test.mjs` (the historical 3D boundaries, obstacles, sliding, water restrictions and bridge) and `tests/stats.test.mjs` (5e derived values, damage, death saves, rests, levelling, and that `stats-data.js` matches the CSVs). `browser-test.cjs` uses the bundled Playwright and installed Edge to test wake-up, keyboard/click movement, voices/subtitles, observations, journal, pause, audio activation, camera, performance mode, restart, and mobile touch. `test-results.json` records the latest run. `window.__fenris` offers read-only diagnostics.
+
+## Current 2D deployment
+
+See [deployment](docs/DEPLOYMENT.md). `node site-build-check.cjs` creates and tests a flat IIS release; `deploy-site.ps1` deploys that tested folder with a server backup and SHA-256 verification. Recorded sound mappings live in `audio-catalog.js`; see [audio assets](private-opening/assets/audio/README.md).
 
 ## Historical 3D deployment
 

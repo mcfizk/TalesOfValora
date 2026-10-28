@@ -1,0 +1,11 @@
+{
+  "id": "AUTHOR_UNIT_ID",
+  "kind": "critter",
+  "name": "AUTHOR_NAME",
+  "stats": {"template": "AUTHOR_STAT_TEMPLATE"},
+  "information": {"species": "AUTHOR_SPECIES", "role": "", "description": "", "traits": []},
+  "story": {"status": "draft", "summary": "", "reference": "", "authorOnly": []},
+  "presentation": {"portrait": null, "animation": null},
+  "behaviour": {"tags": []},
+  "initialState": {"knowledge": [], "memories": [], "affinity": {}, "flags": {}}
+}

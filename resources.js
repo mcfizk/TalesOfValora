@@ -4,6 +4,7 @@ export function createPowerPool({kind=null,max=0,current=max}={}){
   max=Math.floor(max);let value=Math.max(0,Math.min(max,Math.floor(current)));
   const amount=n=>{if(!Number.isFinite(n)||n<0)throw new Error('Invalid power amount');return Math.floor(n);};
   return{
+    load(saved){if(saved?.kind!==(kind||null)||saved.max!==max||!Number.isInteger(saved.current)||saved.current<0||saved.current>max)throw new Error('Invalid saved power');value=saved.current;},
     spend(n){n=amount(n);if(n>value)return 0;value-=n;return n;},
     restore(n){n=amount(n);const gained=Math.min(max-value,n);value+=gained;return gained;},
     snapshot:()=>({kind:kind||null,current:value,max,active:!!kind&&max>0})

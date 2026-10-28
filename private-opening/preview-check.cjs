@@ -8,7 +8,7 @@ const fs=require('node:fs');const path=require('node:path');
   page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
   await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);
   await page.screenshot({path:path.join(out,'title.png')});
-  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();
+  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();
   await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
   await page.screenshot({path:path.join(out,'scene.png')});
   console.log(JSON.stringify({url:page.url(),snapshot:await page.evaluate(()=>__fenris2d.snapshot()),errors}));

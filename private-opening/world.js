@@ -49,8 +49,9 @@ export function generateChunk(cx,cy,seed=1468){
   return{key:`${cx}:${cy}`,cx,cy,x,y,trees,details,points};
 }
 export function makeWorld(seed=1468){
-  const village=createVillageLayout(seed);const chunks=new Map();let region='',trees=[],details=[],points=[],colliders=[];
+  let village=createVillageLayout(seed);const chunks=new Map();let region='',trees=[],details=[],points=[],colliders=[];
   const world={seed,chunks,village,get trees(){return trees;},get details(){return details;},get points(){return points;},get colliders(){return colliders;},
+    reset(nextSeed){seed=nextSeed;world.seed=seed;village=createVillageLayout(seed);world.village=village;chunks.clear();region='';world.update(SPAWN.x,SPAWN.y);},
     update(x,y,radius=800){
       const minX=Math.floor((x-radius)/CHUNK_SIZE),maxX=Math.floor((x+radius)/CHUNK_SIZE),minY=Math.floor((y-radius)/CHUNK_SIZE),maxY=Math.floor((y+radius)/CHUNK_SIZE),next=`${minX}:${maxX}:${minY}:${maxY}`;
       if(next===region)return;region=next;

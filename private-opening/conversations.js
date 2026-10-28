@@ -75,6 +75,15 @@ export function createConversations({rng=Math.random}={}){
   const available=(option,context)=>!option.requires||(option.requires==='jobUnpaid'?['available','accepted'].includes(context.job):flags.has(option.requires));
   const difficulty=option=>option.check.dc+(flags.has('villagersAlarmed')&&option.check.skill==='persuasion'?2:0);
   return {
+    load(saved){
+      if(!saved||!Array.isArray(saved.flags)||saved.flags.some(f=>typeof f!=='string')||!Array.isArray(saved.history)||!saved.attitudes||Object.entries(saved.attitudes).some(([id,n])=>!CONVERSATIONS[id]||!Number.isInteger(n)||n<-3||n>3))throw new Error('Invalid saved conversations');
+      const next=new Map();for(const r of saved.history){
+        if(!CONVERSATIONS[r.npc]||typeof r.key!=='string'||!r.key.startsWith(r.npc+':')||next.has(r.key)||typeof r.text!=='string'||typeof r.choice!=='string'||!CONVERSATIONS[r.npc][r.next]||!r.effects)throw new Error('Invalid saved conversation history');
+        next.set(r.key,structuredClone(r));
+      }
+      resolved.clear();flags.clear();attitudes.clear();history.length=0;
+      for(const [id,r]of next){resolved.set(id,r);history.push(r);}for(const f of saved.flags)flags.add(f);for(const [id,n]of Object.entries(saved.attitudes))attitudes.set(id,n);
+    },
     view(npc,node='root',character,context={}){
       const data=CONVERSATIONS[npc]?.[node];if(!data)return null;
       return {text:data.text,attitude:attitudes.get(npc)||0,alert:flags.has('villagersAlarmed'),choices:data.choices.filter(o=>available(o,context)).map(o=>({id:o.id,label:o.label,risk:o.risk,check:o.check?{skill:o.check.skill,dc:difficulty(o),bonus:character.skillBonus(o.check.skill)}:null,resolved:resolved.has(key(npc,o))}))};

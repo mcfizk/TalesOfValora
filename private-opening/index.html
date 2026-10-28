@@ -4,7 +4,7 @@
 <canvas id="forest" aria-label="Forest clearing. Move with WASD or the arrow keys. Click the ground to walk. E examines nearby objects."></canvas>
 <div class="grain" aria-hidden="true"></div><div class="vignette" aria-hidden="true"></div><div id="veil" aria-hidden="true"></div>
 <section id="start" class="start">
-  <div class="title-copy"><p class="eyebrow">THE BOOK OF FENRIS</p><h1>FENRIS</h1><div class="chapter-rule"><span></span><b>I</b><span></span></div><h2>AWAKENING</h2><p class="prologue">An unfamiliar forest.<br>A voice beyond the trees.<br>No memory of how you came to be here.</p><button id="begin" class="primary" disabled><span>Preparing the forest…</span><b aria-hidden="true">→</b></button><label class="sound-choice"><input id="enable-audio" type="checkbox" checked> Forest ambience</label><p id="load-status" class="load-status" role="status">Gathering the last light…</p></div>
+  <div class="title-copy"><p class="eyebrow">THE BOOK OF FENRIS</p><h1>FENRIS</h1><div class="chapter-rule"><span></span><b>I</b><span></span></div><h2>AWAKENING</h2><p class="prologue">An unfamiliar forest.<br>A voice beyond the trees.<br>No memory of how you came to be here.</p><button id="continue-game" class="primary" disabled><span>Continue</span><b aria-hidden="true">→</b></button><button id="begin" class="primary" disabled><span>Preparing the forest…</span><b aria-hidden="true">→</b></button><label class="sound-choice"><input id="enable-audio" type="checkbox" checked> Forest sounds &amp; Fenris voice</label><p id="load-status" class="load-status" role="status">Gathering the last light…</p></div>
   <footer class="title-footer"><span>1468 DR <i>·</i> BEFORE VALORA</span><span>A story yet to be remembered</span></footer>
 </section>
 <div id="game-ui" hidden>
@@ -22,6 +22,7 @@
   <div id="touch-controls"><div id="joystick" aria-label="Drag to move Fenris"><div id="stick"></div></div><button id="touch-examine" aria-label="Examine nearby object">◇</button></div>
 </div>
 <section id="subtitles" hidden aria-live="polite" aria-atomic="true"><span>A DISTANT VOICE</span><p id="subtitle-text"></p></section>
+<div id="world-events" hidden aria-label="Forest observations"></div>
 <div id="notice" role="status"></div>
 <dialog id="panel" aria-labelledby="panel-title"><button id="close-panel" aria-label="Close dialog">×</button><div id="panel-content"></div></dialog>
 <noscript>This opening needs JavaScript enabled.</noscript><script type="module" src="opening.js"></script>

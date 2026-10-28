@@ -14,7 +14,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   check('White portrait loaded',await page.locator('.portrait img').evaluate(im=>im.complete&&im.naturalWidth===400&&im.src.endsWith('/fenris/portrait.png')));
   check('All nine animation sheets loaded',requests.filter(url=>/\/fenris\/(idle|walk-[\w-]+)\.png$/.test(url)).length===9);
   check('Legacy brown frames are not requested',!requests.some(url=>/\/fenris-\d\.png$/.test(url)));
-  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
+  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
   check('Opening uses the breathing idle',(await snapshot()).animation.clip==='idle');
   await page.screenshot({path:path.join(out,'fenris-white-idle.png')});
   const cases=[['left',['a']],['right',['d']],['up',['w']],['down',['s']],['up-left',['w','a']],['down-right',['s','d']],['up-right',['w','d']],['down-left',['s','a']]];

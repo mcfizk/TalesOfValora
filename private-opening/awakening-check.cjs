@@ -10,7 +10,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);
   const snapshot=()=>page.evaluate(()=>__fenris2d.snapshot());
   check('Title scene shows sleeping Fenris',(await snapshot()).animation.clip==='sleep');
-  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();
+  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();
   const start=await snapshot();await page.keyboard.down('d');
   await page.waitForFunction(()=>__fenris2d.snapshot().age>1.8);
   await page.screenshot({path:path.join(out,'fenris-sleeping.png')});
@@ -35,7 +35,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   await page.close();
   const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'});
   const mobile=await context.newPage();mobile.on('pageerror',e=>report.errors.push(e.message));
-  await mobile.goto('http://127.0.0.1:8766/');await mobile.waitForFunction(()=>window.__fenris2d);await mobile.locator('#enable-audio').uncheck();await mobile.locator('#begin').click();
+  await mobile.goto('http://127.0.0.1:8766/');await mobile.waitForFunction(()=>window.__fenris2d);await mobile.locator('#enable-audio').uncheck();await mobile.locator('#begin').click();await mobile.getByRole('button',{name:'Start in slot 1',exact:true}).click();
   await mobile.waitForFunction(()=>__fenris2d.snapshot().animation.clip==='sit');await mobile.screenshot({path:path.join(out,'fenris-sitting-mobile.png')});
   await mobile.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
   check('Mobile reduced-motion awakening reaches standing',await mobile.evaluate(()=>__fenris2d.snapshot().animation.clip==='idle'));

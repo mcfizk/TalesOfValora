@@ -1,0 +1,200 @@
+{
+  "deer": {
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "ac": 13,
+    "hp": {
+      "average": 4,
+      "formula": "1d8"
+    },
+    "speed": {
+      "walk": 50
+    },
+    "abilities": {
+      "str": 11,
+      "dex": 16,
+      "con": 11,
+      "int": 2,
+      "wis": 14,
+      "cha": 5
+    },
+    "skills": {
+      "perception": 4
+    },
+    "senses": {
+      "darkvision": 60,
+      "passive_perception": 14
+    },
+    "cr": 0,
+    "xp": 10,
+    "traits": [
+      {
+        "name": "Agile",
+        "description": "The deer doesn't provoke Opportunity Attacks when it moves out of an enemy's reach."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Ram",
+        "attack_bonus": 2,
+        "reach": 5,
+        "damage": {
+          "dice": "1d4",
+          "type": "bludgeoning"
+        }
+      }
+    ]
+  },
+  "wolf": {
+    "size": "Medium",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "ac": 13,
+    "hp": {
+      "average": 11,
+      "formula": "2d8+2"
+    },
+    "speed": {
+      "walk": 40
+    },
+    "abilities": {
+      "str": 12,
+      "dex": 15,
+      "con": 12,
+      "int": 3,
+      "wis": 12,
+      "cha": 6
+    },
+    "skills": {
+      "perception": 3,
+      "stealth": 4
+    },
+    "senses": {
+      "darkvision": 60,
+      "passive_perception": 13
+    },
+    "cr": 0.25,
+    "xp": 50,
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "description": "The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "attack_bonus": 3,
+        "reach": 5,
+        "damage": {
+          "dice": "1d6+1",
+          "type": "piercing"
+        },
+        "effect": "Target must succeed on a Strength save or be knocked prone."
+      }
+    ]
+  },
+  "hare": {
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "ac": 13,
+    "hp": {
+      "average": 1,
+      "formula": "1d4-1"
+    },
+    "speed": {
+      "walk": 20,
+      "burrow": 5
+    },
+    "abilities": {
+      "str": 2,
+      "dex": 16,
+      "con": 8,
+      "int": 2,
+      "wis": 14,
+      "cha": 4
+    },
+    "skills": {
+      "perception": 4
+    },
+    "senses": {
+      "darkvision": 30,
+      "passive_perception": 14
+    },
+    "cr": 0,
+    "xp": 10,
+    "traits": [
+      {
+        "name": "Evasive",
+        "description": "Opportunity Attacks against the hare are made with disadvantage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Hop",
+        "type": "Bonus Action",
+        "description": "The hare jumps without provoking Opportunity Attacks."
+      },
+      {
+        "name": "Bite",
+        "attack_bonus": 5,
+        "reach": 5,
+        "damage": {
+          "value": 1,
+          "type": "piercing"
+        }
+      }
+    ]
+  },
+  "owl": {
+    "size": "Tiny",
+    "type": "Beast",
+    "alignment": "Unaligned",
+    "ac": 11,
+    "hp": {
+      "average": 1,
+      "formula": "1d4-1"
+    },
+    "speed": {
+      "walk": 5,
+      "fly": 60
+    },
+    "abilities": {
+      "str": 3,
+      "dex": 13,
+      "con": 8,
+      "int": 2,
+      "wis": 12,
+      "cha": 7
+    },
+    "skills": {
+      "perception": 5,
+      "stealth": 3
+    },
+    "senses": {
+      "darkvision": 120,
+      "passive_perception": 15
+    },
+    "cr": 0,
+    "xp": 10,
+    "traits": [
+      {
+        "name": "Flyby",
+        "description": "The owl doesn't provoke Opportunity Attacks when it flies out of an enemy's reach."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Talons",
+        "attack_bonus": 3,
+        "reach": 5,
+        "damage": {
+          "value": 1,
+          "type": "slashing"
+        }
+      }
+    ]
+  }
+}

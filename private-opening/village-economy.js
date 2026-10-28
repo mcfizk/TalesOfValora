@@ -4,6 +4,16 @@ export function createVillageEconomy(){
   let copper=0,job='available',jobBonus=0,treatmentPrice=6;const terms={},conversationRewards=new Set();const bag={},stock=structuredClone(STOCK),harvested=new Set(),drank=new Set();
   const price=(shop,item)=>Math.max(1,(GOODS[item]?.price||0)+(terms[shop]||0));
   return {
+    serialize:()=>({version:1,copper,job,jobBonus,treatmentPrice,terms:{...terms},bag:{...bag},stock:structuredClone(stock),conversationRewards:[...conversationRewards],harvested:[...harvested],drank:[...drank]}),
+    load(saved){
+      const counts=obj=>obj&&typeof obj==='object'&&!Array.isArray(obj)&&Object.entries(obj).every(([id,n])=>GOODS[id]&&Number.isInteger(n)&&n>=0);
+      if(saved?.version!==1||!['available','accepted','stacked','paid'].includes(saved.job)||!['copper','jobBonus','treatmentPrice'].every(k=>Number.isInteger(saved[k])&&saved[k]>=0)||!counts(saved.bag))throw new Error('Invalid saved inventory');
+      if(!saved.stock||Object.keys(saved.stock).length!==Object.keys(STOCK).length||!Object.keys(STOCK).every(shop=>counts(saved.stock[shop]))||!saved.terms||Object.entries(saved.terms).some(([shop,n])=>!STOCK[shop]||!Number.isInteger(n)))throw new Error('Invalid saved shops');
+      for(const key of ['conversationRewards','harvested','drank'])if(!Array.isArray(saved[key])||saved[key].some(v=>key==='drank'?!Number.isInteger(v)||v<1:typeof v!=='string'))throw new Error('Invalid saved world resources');
+      copper=saved.copper;job=saved.job;jobBonus=saved.jobBonus;treatmentPrice=saved.treatmentPrice;
+      for(const [target,source]of [[bag,saved.bag],[stock,saved.stock],[terms,saved.terms]]){for(const k of Object.keys(target))delete target[k];Object.assign(target,structuredClone(source));}
+      for(const [target,source]of [[conversationRewards,saved.conversationRewards],[harvested,saved.harvested],[drank,saved.drank]]){target.clear();for(const v of source)target.add(v);}
+    },
     price,
     applyConversation(id,effects,shop){if(conversationRewards.has(id))return false;conversationRewards.add(id);for(const [item,count] of Object.entries(effects.items||{}))if(GOODS[item]&&Number.isInteger(count)&&count>0)bag[item]=(bag[item]||0)+count;if(effects.discount&&stock[shop])terms[shop]=-effects.discount;if(effects.surcharge&&stock[shop])terms[shop]=effects.surcharge;if(effects.jobBonus&&['available','accepted'].includes(job))jobBonus=effects.jobBonus;if(effects.treatmentPrice)treatmentPrice=effects.treatmentPrice;return true;},
     snapshot:()=>({copper,bag:{...bag},stock:structuredClone(stock),job,jobBonus,treatmentPrice,terms:{...terms}}),

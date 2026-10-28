@@ -11,7 +11,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
    source=source.replace('window.__fenris2d=Object.freeze',"window.__villageQA={place(dx,dy){state.interior=null;state.seated=false;relocate({x:village.x+dx,y:village.y+dy});},injure(){stats.damage(6);},hurtNpc(){characters.get('blacksmith').damage(3);},night(){state.clock=gameClock.advance(14*60,true);refreshTown();},zoom(){renderer.setZoom(-.2);}};window.__fenris2d=Object.freeze");
    await route.fulfill({response,body:source});
   });
-  await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
+  await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
  }
  const snapshot=page=>page.evaluate(()=>__fenris2d.snapshot());
  async function place(page,x,y){await page.evaluate(([x,y])=>__villageQA.place(x,y),[x,y]);await page.waitForTimeout(250);}
@@ -52,8 +52,8 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   }
   check('NPC health survives leaving the shop',(await snapshot(page)).characters.blacksmith.hp===7);
   await place(page,-38,-135);await interact(page,'door:market');await page.getByRole('button',{name:'See the goods',exact:true}).click();check('Market sells food',await page.locator('.trade-row').filter({hasText:'Apple'}).count()===1);await close(page);
-  await place(page,-132,-240);await interact(page,'door:home-a');await page.waitForFunction(()=>document.getElementById('panel').open);check('Residents bar their homes to Fenris',(await page.locator('#panel-content').textContent()).includes('barred'));await close(page);
-  await page.evaluate(()=>__villageQA.night());await place(page,142,-60);await interact(page,'door:store');await page.waitForFunction(()=>document.getElementById('panel').open);check('Shops close at night with readable hours',(await page.locator('#panel-content').textContent()).includes('Closed.')&&(await snapshot(page)).people.length===0);await close(page);
+  await place(page,-132,-240);await interact(page,'door:home-a');await page.waitForFunction(()=>document.querySelector('.event-text[data-event-id="door:home-a"]'));check('Residents bar their homes with inline text',(await page.locator('#world-events').textContent()).includes('barred'));await close(page);
+  await page.evaluate(()=>__villageQA.night());await place(page,142,-60);await interact(page,'door:store');await page.waitForFunction(()=>document.querySelector('.event-text[data-event-id="door:store"]'));check('Shops close at night with inline hours',(await page.locator('#world-events').textContent()).includes('Closed.')&&(await snapshot(page)).people.length===0);await close(page);
   check('Village does not resolve the voices objective',await page.locator('#objective-text').textContent()==='Seek the source of the voices.');
   await page.keyboard.press('Escape');await page.getByRole('button',{name:'Restart the awakening',exact:true}).click();check('Restart restores all NPC health',(await snapshot(page)).characters.blacksmith.hp===10);check('Restart clears job, purchases and wallet',(await snapshot(page)).economy.copper===0&&(await snapshot(page)).economy.job==='available'&&Object.keys((await snapshot(page)).economy.bag).length===0);await page.close();
   const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});await prepare(mobile);await place(mobile,0,-25);await mobile.waitForTimeout(400);await mobile.screenshot({path:path.join(out,'village-mobile.png')});

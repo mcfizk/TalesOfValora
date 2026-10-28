@@ -1,3 +1,9 @@
+import {eventAudio} from '../audio-catalog.js';
+import {createEventOverlay} from './event-overlay.js';
+import {createSaveSlots} from './saves.js';
+import {makeInterior} from './village-layout.js';
+import {createPerception} from './perception.js';
+import {PERCEPTION_EVENTS,PERCEPTION_MODE} from './perception-events.js';
 import {villagePeople,ALL_PEOPLE} from './village-people.js';
 import {inVillage} from './village-layout.js';
 import {createVillageUI} from './village-ui.js';
@@ -16,33 +22,57 @@ const $=id=>document.getElementById(id),canvas=$('forest'),world=makeWorld(crypt
 const state={phase:'title',age:0,time:0,paused:false,reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,player:{...SPAWN,direction:'left',moving:false,running:false,animation:0,action:'sleep',actionTime:0},found:new Set(),notes:new Map(),destination:null,distance:0};
 const characters=createCharacterRoster(['fenris',...ALL_PEOPLE.map(p=>p.id)]);
 let stats=characters.get('fenris');
-const gameClock=createGameClock(),partyHud=createPartyHud($('party-panel')),village=villageLocation(world.seed);
+const perception=createPerception({events:PERCEPTION_EVENTS,mode:PERCEPTION_MODE});
+state.perception=perception.snapshot();
+const gameClock=createGameClock(),partyHud=createPartyHud($('party-panel'));
+let village=villageLocation(world.seed),activeSlot=null,autosaveAge=0,saveFailed=false;
+const saves=createSaveSlots({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value)});
 let characterStatus='Sleeping',villageTracking=true,lastParty='',lastClock='';
 state.clock=gameClock.snapshot();state.village=null;
 partyHud.update([{id:'fenris',name:'Fenris',portrait:'assets/fenris/portrait.png',portraitCrop:{scale:2.6,left:-.48,top:-.2},stats:stats.snapshot(),status:characterStatus}]);
-let renderer,animationConfig,path=[],near=null,pendingInterest=null,last=performance.now(),stepDistance=0,noticeTimer,subtitleUntil=0,voiceIds=new Set(),audioOn=true,joystick={x:0,y:0},stalled=0;
-const keys=new Set(),audio=createAudio(notify);
-const town=createVillageUI({state,world,getStats:()=>stats,dialog,paragraph,button,closePanel,notify,relocate});
+let renderer,eventOverlay,animationConfig,path=[],near=null,pendingInterest=null,last=performance.now(),stepDistance=0,noticeTimer,subtitleUntil=0,voiceIds=new Set(),audioOn=true,joystick={x:0,y:0},stalled=0;
+const keys=new Set(),audio=createAudio(notify,{onVoice:line=>{
+  floatText({id:'fenris-voice',...state.player},{title:line.speaker,text:line.text});const card=state.callouts.find(c=>c.id==='fenris-voice');if(card)card.until=state.time+Math.max(2.5,line.duration+.5);
+}});
+const town=createVillageUI({state,world,getStats:()=>stats,dialog,paragraph,button,closePanel,notify,relocate,onObservation:observe,onConversation(npc,outcome,attitude){
+  const memory={id:`conversation:${outcome.key}`,type:'conversation',participants:['fenris',npc],text:`${outcome.choice} ${outcome.text}`,at:state.clock.totalMinutes};
+  characters.unit('fenris').remember(memory);characters.unit(npc).remember(memory);characters.unit(npc).setAffinity('fenris',attitude);
+}});
+state.callouts=[];
 state.interior=null;state.people=[];state.interactionPoints=world.points;state.visitedVillage=false;state.economy=town.snapshot(false);
 const colliders=()=>state.interior?.colliders||world.colliders;
-function refreshTown(){state.people=villagePeople(world.village,state.clock,state.time,state.player,state.interior);for(const person of state.people)characters.get(person.actorId);state.interactionPoints=[...(state.interior?state.interior.points.filter(p=>p.id==='exit'):world.points),...state.people];state.economy=town.snapshot(false);}
-function relocate(target){state.seated=false;path=[];pendingInterest=null;near=null;state.destination=null;clearInput();Object.assign(state.player,target,{moving:false,action:null,animation:0});renderer.resetCamera(state.interior?120:target.x,state.interior?110:target.y-28);if(!state.interior)world.update(target.x,target.y,renderer.loadingRadius);refreshTown();}
+function refreshTown(){state.people=villagePeople(world.village,state.clock,state.time,state.player,state.interior);for(const person of state.people)characters.get(person.actorId);state.interactionPoints=[...(state.interior?state.interior.points.filter(p=>p.id==='exit'):world.points),...(state.interior?[]:perception.visible()),...state.people];state.economy=town.snapshot(false);}
+function relocate(target){audio.cancel();state.callouts=[];perception.update(state.player,stats,{active:false});state.seated=false;path=[];pendingInterest=null;near=null;state.destination=null;clearInput();Object.assign(state.player,target,{moving:false,action:null,animation:0});renderer.resetCamera(state.interior?120:target.x,state.interior?110:target.y-28);if(!state.interior)world.update(target.x,target.y,renderer.loadingRadius);refreshTown();}
 function notify(text){$('notice').textContent=text;$('notice').classList.add('visible');clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>$('notice').classList.remove('visible'),3000);}
 function updateSound(){ $('sound').textContent=audioOn?'♫':'♪';$('sound').setAttribute('aria-label',audioOn?'Mute sound':'Enable sound');$('sound').title=audioOn?'Sound on — click to mute':'Sound off — click to enable';audio.set(audioOn); }
 function clearInput(){keys.clear();joystick={x:0,y:0};$('stick').style.transform='';}
-function pause(){state.paused=true;clearInput();audio.pause();}
+function pause(){saveGame(false);state.paused=true;clearInput();audio.pause();}
 function resume(){state.paused=false;audio.resume();last=performance.now();}
 function closePanel(){if($('panel').open)$('panel').close();resume();}
 function dialog(title,content){pause();$('panel-content').replaceChildren();const tag=document.createElement('span');tag.className='eyebrow';tag.textContent='THE BOOK OF FENRIS';const heading=document.createElement('h2');heading.id='panel-title';heading.textContent=title;$('panel-content').append(tag,heading,content);if(!$('panel').open)$('panel').showModal();$('panel').scrollTop=0;heading.tabIndex=-1;heading.focus({preventScroll:true});}
 function button(text,action,cls='dialog-action'){const el=document.createElement('button');el.type='button';el.className=cls;el.textContent=text;el.addEventListener('click',action);return el;}
 function paragraph(text){const el=document.createElement('p');el.textContent=text;return el;}
+function floatText(point,entry,{gather=false}={}){
+  const until=state.time+Math.max(10,Math.min(20,entry.text.split(/\s+/).length*.35+5));
+  state.callouts=state.callouts.filter(item=>item.id!==point.id&&item.until>state.time).slice(-2);
+  state.callouts.push({id:point.id,x:point.x,y:point.y,title:entry.title,text:entry.text,until,gather,location:state.interior?.id||'forest'});
+}
+function observe(point,entry){
+  const fresh=!state.found.has(point.id);if(fresh)audio.voice(point.type==='stone'?'let-me-look':point.type==='embers'?'hmm':point.type==='perception-event'?'curious':'huh-thats-new');
+  state.found.add(point.id);state.notes.set(point.id,entry);$('journal-dot').hidden=false;
+  characters.unit('fenris').remember({id:'observation:'+point.id,type:'observation',text:entry.text,at:state.clock.totalMinutes});
+  floatText(point,entry,{gather:point.type==='stump'});
+}
+function gatherAt(id){
+  const item=state.callouts.find(c=>c.id===id);if(!item||state.paused||Math.hypot(item.x-state.player.x,item.y-state.player.y)>=48)return;
+  const gathered=town.gatherWood(id);if(gathered)audio.voice('got-it');item.text=gathered?'You gather one bundle of fallen wood.':'You have already gathered the loose wood here.';item.gather=false;item.until=state.time+10;
+}
 function examine(){
   if(state.phase!=='explore'||state.paused||!near)return;
   const point=near;path=[];pendingInterest=null;state.destination=null;
   if(town.interact(point))return;
-  const id=point.id,entry=OPENING.observations[point.type];if(!entry)return;state.found.add(id);state.notes.set(id,entry);pendingInterest=null;$('journal-dot').hidden=false;path=[];state.destination=null;
-  const content=document.createElement('div');content.append(paragraph(entry.text));const note=document.createElement('div');note.className='dialog-footer';note.textContent='Recorded in your journal.';if(point.type==='stump')content.append(button('Gather fallen wood',()=>{notify(town.gatherWood(id)?'Collected one firewood bundle.':'You have already gathered the loose wood here.');closePanel();}));
-  content.append(note,button('Continue searching',closePanel));dialog(entry.title,content);updateObjective();
+  const id=point.id,entry=point.type==='perception-event'?{title:point.title,text:point.text}:OPENING.observations[point.type];if(!entry)return;pendingInterest=null;$('journal-dot').hidden=false;path=[];state.destination=null;
+  observe(point,entry);updateObjective();
 }
 function journal(){
   if(state.phase==='title')return;
@@ -56,13 +86,68 @@ function menu(){
   const content=document.createElement('div');content.className='menu-actions';
   content.append(button('Continue',closePanel,''),button(audioOn?'Sound: on':'Sound: off',()=>{audioOn=!audioOn;updateSound();audio.pause();menu();},''));
   const label=document.createElement('label'),checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.checked=state.reduced;checkbox.addEventListener('change',()=>state.reduced=checkbox.checked);label.append(checkbox,document.createTextNode('Reduce drifting leaves and camera motion'));content.append(label);
-  content.append(button('Restart the awakening',()=>{closePanel();start();},''));const note=document.createElement('p');note.className='dialog-footer';note.textContent='WASD / arrows to move · Shift to run · E to examine · J for journal · I for pack. Click the ground to walk. Your discoveries last for this visit.';content.append(note);dialog('A moment of quiet',content);
+  content.append(button('Save Game',()=>{if(saveGame(true))closePanel();},''),button('Load Game',()=>slotMenu('load'),''),button('New Game',()=>slotMenu('new'),''),button('Save and return to title',()=>{if(saveGame(true))showTitle();},''),button('Restart the awakening',()=>{closePanel();start();saveGame(false);},''));const note=document.createElement('p');note.className='dialog-footer';note.textContent='WASD / arrows to move · Shift to run · E to examine · J for journal · I for pack. Click the ground to walk. Progress autosaves to the selected slot on this browser.';content.append(note);dialog('A moment of quiet',content);
 }
-function start(){
-  town.reset();state.interior=null;state.visitedVillage=false;state.seated=false;characters.reset();stats=characters.get('fenris');gameClock.reset();state.clock=gameClock.snapshot();state.village=null;villageTracking=true;lastParty='';lastClock='';characterStatus='Waking';
-  state.phase='waking';state.age=0;state.paused=false;state.player={...SPAWN,direction:'left',moving:false,running:false,animation:0,action:'sleep',actionTime:0};state.found.clear();state.notes.clear();pendingInterest=null;state.distance=0;state.destination=null;path=[];voiceIds.clear();subtitleUntil=0;near=null;clearInput();audio.cancel();
+function start({newWorld=false}={}){
+  if(newWorld){world.reset(crypto.getRandomValues(new Uint32Array(1))[0]);village=villageLocation(world.seed);renderer.resetWorld();}
+  autosaveAge=0;stepDistance=0;state.time=0;state.callouts=[];
+  town.reset();perception.reset();state.perception=perception.snapshot();state.interior=null;state.visitedVillage=false;state.seated=false;characters.reset();stats=characters.get('fenris');gameClock.reset();state.clock=gameClock.snapshot();state.village=null;villageTracking=true;lastParty='';lastClock='';characterStatus='Waking';
+  state.phase='waking';state.age=0;state.paused=false;state.player={...SPAWN,direction:'left',moving:false,running:false,animation:0,action:'sleep',actionTime:0};state.found.clear();state.notes.clear();pendingInterest=null;state.distance=0;state.destination=null;path=[];voiceIds.clear();subtitleUntil=0;near=null;clearInput();audio.reset();
   renderer?.resetCamera(SPAWN.x,SPAWN.y-28);
-  $('journal-dot').hidden=true;$('subtitles').hidden=true;$('game-ui').hidden=false;$('start').classList.add('leaving');$('veil').style.opacity='1';updateSound();updateObjective();syncHud();last=performance.now();
+  $('journal-dot').hidden=true;$('subtitles').hidden=true;$('game-ui').hidden=false;$('start').classList.add('leaving');$('start').inert=true;$('veil').style.opacity='1';updateSound();updateObjective();syncHud();last=performance.now();
+}
+function captureGame(){
+  return {seed:world.seed,phase:state.phase,age:state.age,time:state.time,distance:state.distance,player:{...state.player,moving:false,running:false},minutes:state.clock.totalMinutes,found:[...state.found],notes:[...state.notes],voices:[...voiceIds],subtitleUntil,visitedVillage:state.visitedVillage,seated:!!state.seated,villageDiscovered:!!state.village,villageTracking,interior:state.interior?.id||null,audioOn,reduced:state.reduced,characters:characters.serialize(),town:town.serialize(),perception:perception.snapshot()};
+}
+function refreshSaves(){
+  const slots=saves.list();$('continue-game').disabled=!renderer||!slots.some(s=>s.status==='saved');return slots;
+}
+function saveGame(manual=false){
+  if(!activeSlot||state.phase==='title')return false;if(saveFailed&&!manual)return false;
+  try{saves.write(activeSlot,captureGame());saveFailed=false;if(manual)notify('Saved to slot '+activeSlot+'.');return true;}
+  catch(error){saveFailed=true;notify(error.message);return false;}
+}
+function showTitle(){
+  if($('panel').open)$('panel').close();state.phase='title';state.paused=false;activeSlot=null;clearInput();path=[];state.destination=null;audio.pause();
+  $('start').classList.remove('leaving');$('start').inert=false;$('game-ui').hidden=true;$('subtitles').hidden=true;$('chapter-intro').classList.remove('visible');$('veil').style.opacity='0';refreshSaves();
+}
+function loadGame(slot){
+  try{
+    const saved=saves.read(slot);if(!saved)throw new Error('This slot is empty.');const d=saved.data;
+    // read() validates every subsystem on fresh instances before this commit.
+    characters.load(d.characters);stats=characters.get('fenris');town.load(d.town);perception.load(d.perception);
+    world.reset(d.seed);village=villageLocation(world.seed);renderer.resetWorld();
+    Object.assign(state,{phase:d.phase,age:d.age,time:d.time,distance:d.distance,player:{...d.player,moving:false,running:false},found:new Set(d.found),notes:new Map(d.notes),visitedVillage:d.visitedVillage,seated:d.seated,reduced:d.reduced});
+    state.clock=gameClock.load(d.minutes);state.village=d.villageDiscovered?{...village}:null;state.interior=d.interior?makeInterior(world.village.buildings.find(b=>b.id===d.interior)):null;
+    voiceIds=new Set(d.voices);subtitleUntil=d.subtitleUntil;villageTracking=d.villageTracking;audioOn=d.audioOn;activeSlot=slot;saveFailed=false;autosaveAge=0;
+    state.callouts=[];path=[];pendingInterest=null;near=null;state.destination=null;stepDistance=0;state.perception=perception.snapshot();clearInput();
+    if($('panel').open)$('panel').close();state.paused=false;audio.reset(d.time);updateSound();lastParty='';lastClock='';
+    renderer.resetCamera(state.interior?120:state.player.x,state.interior?110:state.player.y-28);world.update(state.player.x,state.player.y,renderer.loadingRadius);refreshTown();
+    $('start').classList.add('leaving');$('start').inert=true;$('game-ui').hidden=false;$('journal-dot').hidden=true;$('chapter-intro').classList.remove('visible');$('veil').style.opacity=d.phase==='waking'?'1':'0';
+    const voice=OPENING.voices.filter(v=>voiceIds.has(v.id)&&d.age<v.at+v.duration).at(-1);$('subtitles').hidden=!voice;if(voice)$('subtitle-text').textContent=voice.text;
+    updateObjective();syncHud();last=performance.now();notify('Continued from slot '+slot+'.');
+  }catch(error){notify('Could not continue: '+error.message);}
+}
+function beginSlot(slot){
+  // Choosing New Game is the explicit replacement of this slot only.
+  if(state.phase!=='title')saveGame(false);
+  activeSlot=slot;saveFailed=false;audioOn=$('enable-audio').checked;if($('panel').open)$('panel').close();start({newWorld:true});saveGame(false);
+}
+function slotMenu(mode){
+  const content=document.createElement('div');content.className='save-slots';
+  content.append(paragraph(mode==='new'?'Choose a slot for your new journey.':'Choose a journey to continue.'));
+  for(const item of refreshSaves()){
+    const card=document.createElement('section');card.className='save-slot';const h=document.createElement('h3');h.textContent='Slot '+item.slot;card.append(h);
+    if(item.save){const d=item.save.data,minutes=d.minutes%1440;card.append(paragraph('Day '+(Math.floor(d.minutes/1440)+1)+' · '+String(Math.floor(minutes/60)).padStart(2,'0')+':'+String(Math.floor(minutes%60)).padStart(2,'0')+' · '+(d.interior||'Forest')),paragraph('Saved '+new Date(item.save.savedAt).toLocaleString()));}
+    else card.append(paragraph(item.status==='empty'?'Empty slot':item.error));
+    const action=button((mode==='new'?'Start in slot ':'Continue slot ')+item.slot,()=>{
+      if(mode==='load'){loadGame(item.slot);return;}
+      if(item.status==='empty'){beginSlot(item.slot);return;}
+      const confirm=document.createElement('div');confirm.append(paragraph('Starting a new game will replace the saved journey in slot '+item.slot+'.'),button('Replace slot '+item.slot,()=>beginSlot(item.slot)),button('Cancel',()=>slotMenu('new')));dialog('Replace saved game?',confirm);
+    });action.disabled=mode==='load'&&item.status!=='saved';card.append(action);content.append(card);
+  }
+  content.append(paragraph('Three local slots. Progress saves automatically and from the pause menu. Saves stay in this browser on this site.'),button('Back',()=>state.phase==='title'?closePanel():menu()));
+  dialog(mode==='new'?'New Game':'Continue',content);
 }
 function updateObjective(){
   $('objective-text').textContent='Seek the source of the voices.';
@@ -119,6 +204,13 @@ function update(dt){
   if(state.phase==='explore'&&p.action){p.actionTime+=dt;if(p.action==='sitToStand'&&p.actionTime>=1.5)p.action=null;}
   state.clock=gameClock.advance(dt,p.moving);
   if(!state.interior&&inVillage(p.x,p.y,world.seed)&&!state.visitedVillage){state.visitedVillage=true;notify('The villagers fall quiet as you approach.');}
+  const outcomes=perception.update(p,stats,{active:state.phase==='explore'&&!state.interior,eligible:event=>!event.availableAfterDay||state.clock.day>=event.availableAfterDay});
+  for(const outcome of outcomes){
+    const event=PERCEPTION_EVENTS.find(e=>e.id===outcome.id);if(event){floatText(event,{title:outcome.title,text:outcome.text});const cue=eventAudio(event,outcome);if(cue.effect)audio.play(cue.effect,{position:event});if(cue.voice)audio.voice(cue.voice);}
+    state.notes.set(outcome.id,{title:outcome.title,text:outcome.text});state.found.add(outcome.id);$('journal-dot').hidden=false;
+    characters.unit('fenris').remember({id:`perception:${outcome.id}:${outcome.type}`,type:'perception',text:outcome.text,at:state.clock.totalMinutes});
+  }
+  state.perception=perception.snapshot();
   refreshTown();
   if(state.clock.villageAvailable&&!state.village){state.village={...village};notify('Morning breaks. A village is now marked on your compass.');}
   if(wasMoving!==p.moving)p.animation=0;
@@ -128,7 +220,8 @@ function update(dt){
     const interest=state.interactionPoints.find(point=>point.id===pendingInterest);
     if(interest&&Math.hypot(interest.x-p.x,interest.y-p.y)<48){near=interest;examine();}
   }
-  audio.update(state.time,waterDistance(p.x,p.y)/12);
+  audio.update(state.time,waterDistance(p.x,p.y)/12,{forest:!state.interior&&!inVillage(p.x,p.y,world.seed),active:state.phase==='explore',night:!state.clock.daylight,moving:p.moving,running:p.running,inWater:inWater(p.x,p.y),player:{x:p.x,y:p.y}});
+  const speech=state.callouts.find(c=>c.id==='fenris-voice');if(speech){speech.x=p.x;speech.y=p.y;}
 }
 function syncHud(){
   const sheet=stats.snapshot(),partyKey=JSON.stringify([sheet.hp,sheet.maxHp,sheet.power,characterStatus]);
@@ -151,16 +244,19 @@ function syncHud(){
   }
 }
 function frame(now){
-  const dt=Math.min(.05,Math.max(0,(now-last)/1000));last=now;update(dt);renderer.render(state,dt);syncHud();
+  const dt=Math.min(.05,Math.max(0,(now-last)/1000));last=now;update(dt);renderer.render(state,dt);eventOverlay.update(state,innerWidth,innerHeight);syncHud();
+  if(activeSlot&&state.phase!=='title'&&!state.paused){autosaveAge+=dt;if(autosaveAge>=10){autosaveAge=0;saveGame(false);}}
   $('touch-examine').disabled=!(near&&!state.paused&&state.phase==='explore');
   requestAnimationFrame(frame);
 }
-$('begin').addEventListener('click',()=>{audioOn=$('enable-audio').checked;start();});
+$('begin').addEventListener('click',()=>slotMenu('new'));
+$('continue-game').addEventListener('click',()=>slotMenu('load'));
+window.addEventListener('pagehide',()=>saveGame(false));
 $('sound').addEventListener('click',()=>{audioOn=!audioOn;updateSound();});
 $('pack').addEventListener('click',()=>{if(state.phase==='explore')town.inventory();});
 $('journal').addEventListener('click',journal);$('menu').addEventListener('click',menu);$('close-panel').addEventListener('click',closePanel);
 $('touch-examine').addEventListener('click',examine);
-$('village-nav').addEventListener('click',()=>{if(state.paused)return;villageTracking=!villageTracking;syncHud();});
+$('village-nav').addEventListener('click',()=>{if(state.paused)return;villageTracking=!villageTracking;if(villageTracking)audio.voice('this-way');syncHud();});
 $('panel').addEventListener('cancel',e=>{e.preventDefault();closePanel();});
 window.addEventListener('keydown',e=>{
   if(state.phase==='title')return;
@@ -171,7 +267,7 @@ window.addEventListener('keydown',e=>{
 });
 window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));
 window.addEventListener('blur',()=>{clearInput();if(state.phase!=='title'&&!state.paused)menu();});
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&state.phase!=='title'&&!state.paused)menu();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)saveGame(false);if(document.hidden&&state.phase!=='title'&&!state.paused)menu();});
 window.addEventListener('resize',()=>renderer?.resize());
 let pointerStart;
 canvas.addEventListener('pointerdown',e=>{if(e.button!==0)return;pointerStart={x:e.clientX,y:e.clientY};});
@@ -184,7 +280,7 @@ pad.addEventListener('pointerdown',e=>{if(state.paused)return;touchId=e.pointerI
 function release(e){if(e.pointerId===touchId){touchId=null;joystick={x:0,y:0};$('stick').style.transform='';}}
 pad.addEventListener('pointerup',release);pad.addEventListener('pointercancel',release);pad.addEventListener('lostpointercapture',release);
 try {
-  const art=await loadArt();animationConfig=art.manifest.fenrisAnimations;renderer=createRenderer(canvas,art,world);$('begin').disabled=false;$('begin').querySelector('span').textContent='Open your eyes';$('load-status').textContent='WASD or arrows to move · Click ground to walk';
-  window.__fenris2d=Object.freeze({snapshot:()=>({phase:state.phase,age:state.age,paused:state.paused,position:{x:state.player.x,y:state.player.y},animation:{...fenrisFrame(state.player,art.manifest.fenrisAnimations),moving:state.player.moving,running:state.player.running},distance:state.distance,found:[...state.found],near:near?.id||null,pathLength:path.length,voices:[...voiceIds],audio:audio.status(),stats:stats.snapshot(),clock:{...state.clock},village:state.village?{...state.village,...waypointReading(state.player,state.village),tracking:villageTracking}:null,view:renderer.snapshot(),location:state.interior?.id||'forest',economy:town.snapshot(),characters:characters.snapshot(),people:state.people.map(p=>({id:p.id,characterId:p.actorId,x:p.x,y:p.y,role:p.role,stats:characters.get(p.actorId).snapshot()})),settlement:{x:world.village.x,y:world.village.y,buildings:world.village.buildings.length},points:state.interactionPoints.map(p=>({...p})),treeCount:world.trees.length,world:{seed:world.seed,chunks:world.chunks.size,terrain:terrainAt(state.player.x,state.player.y,world.seed),inWater:inWater(state.player.x,state.player.y),movementScale:movementScale(state.player.x,state.player.y)}}),worldToScreen:(x,y)=>renderer.toScreen(x,y)});
+  const art=await loadArt();animationConfig=art.manifest.fenrisAnimations;renderer=createRenderer(canvas,art,world);eventOverlay=createEventOverlay($('world-events'),{toScreen:(x,y)=>renderer.toScreen(x,y),onNavigate:moveTo,onGather:gatherAt});$('begin').disabled=false;$('begin').querySelector('span').textContent='New Game';refreshSaves();$('load-status').textContent='WASD or arrows to move · Click ground to walk';
+  window.__fenris2d=Object.freeze({snapshot:()=>({phase:state.phase,age:state.age,saveSlot:activeSlot,callouts:structuredClone(state.callouts),paused:state.paused,position:{x:state.player.x,y:state.player.y},animation:{...fenrisFrame(state.player,art.manifest.fenrisAnimations),moving:state.player.moving,running:state.player.running},distance:state.distance,found:[...state.found],near:near?.id||null,pathLength:path.length,voices:[...voiceIds],audio:audio.status(),perception:perception.snapshot(),stats:stats.snapshot(),clock:{...state.clock},village:state.village?{...state.village,...waypointReading(state.player,state.village),tracking:villageTracking}:null,view:renderer.snapshot(),location:state.interior?.id||'forest',economy:town.snapshot(),characters:characters.snapshot(),units:characters.unitSnapshot(),people:state.people.map(p=>({id:p.id,characterId:p.actorId,x:p.x,y:p.y,role:p.role,stats:characters.get(p.actorId).snapshot()})),settlement:{x:world.village.x,y:world.village.y,buildings:world.village.buildings.length},points:state.interactionPoints.map(p=>({...p})),treeCount:world.trees.length,world:{seed:world.seed,chunks:world.chunks.size,terrain:terrainAt(state.player.x,state.player.y,world.seed),inWater:inWater(state.player.x,state.player.y),movementScale:movementScale(state.player.x,state.player.y)}}),worldToScreen:(x,y)=>renderer.toScreen(x,y)});
   requestAnimationFrame(frame);
 } catch(error){console.error(error);$('load-status').textContent='The local artwork could not be loaded. Start this scene with npm start, then reload.';$('begin').querySelector('span').textContent='Unable to load the forest';}

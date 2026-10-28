@@ -44,7 +44,7 @@ test('the shared character standard accepts other identities and rejects incompl
   assert.equal(validateCharacterAnimations(config),config);
   const other=structuredClone(config);other.id='next-character';
   assert.equal(characterFrame({direction:'left',action:'sleep',actionTime:0},other).asset,'next-character-sleep');
-  assert.equal(Object.keys(characterAssets(other)).length,13);
+  assert.equal(Object.keys(characterAssets(other)).length,13+(other.directionalRest?8:0));
   const missing=structuredClone(config);delete missing.sit;
   assert.throws(()=>validateCharacterAnimations(missing),/Missing character animation: sit/);
   const looping=structuredClone(config);looping.sitToStand.loop=true;
@@ -62,6 +62,24 @@ test('sleep and sit loop; transitions clamp at their last frame and mirror consi
     assert.equal(characterFrame({action,actionTime:-2},config).index,0);
     assert.equal(characterFrame({action,actionTime:duration*10},config).index,spec.loop?0:spec.frames-1);
   }
+});
+
+test('directional standing keeps its preserved sheet while movement uses refreshed walks',()=>{
+  assert.ok(config.directionalRest);
+  const assets=characterAssets(config);
+  for(const direction of ['up','down','up-left','up-right','down-left','down-right']){
+    const rest=characterFrame({direction,moving:false},config);
+    assert.equal(rest.asset,`fenris-rest-${direction}`);
+    assert.equal(rest.index,config.restFrame);
+    assert.equal(assets[rest.asset],config.directionalRest.files[direction]);
+    assert.deepEqual(rest.anchor,config.directionalRest.anchor);
+    assert.equal(rest.scale,config.displayHeight/config.directionalRest.bodyHeight);
+    assert.equal(characterFrame({direction,moving:true},config).asset,`fenris-walk-${direction}`);
+  }
+  const legacy=structuredClone(config);delete legacy.directionalRest;
+  assert.equal(characterFrame({direction:'up',moving:false},legacy).asset,'fenris-walk-up');
+  const incomplete=structuredClone(config);delete incomplete.directionalRest.files.up;
+  assert.throws(()=>validateCharacterAnimations(incomplete),/all eight directions/);
 });
 
 test('awakening visits each state in order and hands over to standing at six seconds',()=>{

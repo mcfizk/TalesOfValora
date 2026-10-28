@@ -42,7 +42,8 @@
         256,
         610
       ],
-      "bodyHeight": 550
+      "bodyHeight": 550,
+      "revision": "eight-phase-refresh-2026-10-27"
     },
     "sleep": {
       "file": "fenris/sleep.png",
@@ -137,6 +138,29 @@
         "clip": "sitToStand",
         "seconds": 1.5
       }
-    ]
+    ],
+    "directionalRest": {
+      "files": {
+        "left": "fenris/standing/stand-left.png",
+        "right": "fenris/standing/stand-right.png",
+        "up-left": "fenris/standing/stand-up-left.png",
+        "up-right": "fenris/standing/stand-up-right.png",
+        "up": "fenris/standing/stand-up.png",
+        "down-left": "fenris/standing/stand-down-left.png",
+        "down-right": "fenris/standing/stand-down-right.png",
+        "down": "fenris/standing/stand-down.png"
+      },
+      "frameWidth": 512,
+      "frameHeight": 640,
+      "columns": 4,
+      "frames": 8,
+      "fps": 8,
+      "loop": true,
+      "anchor": [
+        256,
+        610
+      ],
+      "bodyHeight": 550
+    }
   }
 }

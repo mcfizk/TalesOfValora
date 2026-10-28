@@ -19,7 +19,8 @@ export function createCharacter(idOrDef,data=STATS){
  const bonus=target=>{let n=0;for(const m of mods.values())if(m.target===target)n+=m.add;return n;};
  const score=id=>Math.min(30,Math.max(1,def.abilities[id]+bonus(id))),mod=id=>abilityMod(score(id)),prof=()=>proficiencyFor(level,data);
  const maxHp=()=>Math.max(1,(def.maxHp??averageHp(def.hitDie,level,mod('con')))+bonus('maxHp'));
- const s={hp:0,tempHp:0,hitDice:level,successes:0,failures:0,stable:false,dead:false};s.hp=maxHp();
+ const hitDiceMax=()=>def.hitDiceMax??level;
+ const s={hp:0,tempHp:0,hitDice:hitDiceMax(),successes:0,failures:0,stable:false,dead:false};s.hp=maxHp();
  const status=()=>s.dead?'dead':s.hp>0?'conscious':s.stable?'stable':'dying';
  const emit=(event,detail={})=>{for(const f of listeners)f(event,detail,sheet);};
  const resetSaves=()=>{s.successes=0;s.failures=0;s.stable=false;};
@@ -33,8 +34,10 @@ export function createCharacter(idOrDef,data=STATS){
   id:def.id,name:def.name,species:def.species||null,
   get level(){return level;},get xp(){return xp;},get proficiency(){return prof();},
   get hp(){return s.hp;},get tempHp(){return s.tempHp;},get maxHp(){return maxHp();},get hitDice(){return s.hitDice;},get hitDie(){return def.hitDie;},
-  get ac(){return 10+mod('dex')+bonus('ac');}, // Unarmored. Armor and shields replace this once equipment exists.
+  get ac(){return (def.baseAc??10)+mod('dex')+bonus('ac');}, // Creature references may supply a natural-armour base.
   get initiative(){return mod('dex')+bonus('initiative');},get speed(){return Math.max(0,def.speed+bonus('speed'));},
+  get movement(){return {...structuredClone(def.statBlock?.speed||{}),walk:sheet.speed};},
+  get creature(){return def.statBlock?structuredClone(def.statBlock):null;},
   get status(){return status();},get deathSaves(){return {successes:s.successes,failures:s.failures};},
   get power(){return power.snapshot();},
   spendPower(amount){const spent=power.spend(amount);if(spent)emit('power',{spent});return spent;},
@@ -59,12 +62,27 @@ export function createCharacter(idOrDef,data=STATS){
    emit('deathSave',{roll});return roll;},
   stabilize(){if(status()==='dying')stabilize();},
   spendHitDie(rng=Math.random){if(s.dead||s.hp===0||s.hitDice<=0)return 0;s.hitDice--;return sheet.heal(Math.max(0,die(def.hitDie,rng)+mod('con')));}, // Short rest.
-  longRest(){if(s.dead||s.hp===0)return false;s.hp=maxHp();s.tempHp=0;s.hitDice=Math.min(level,s.hitDice+Math.max(1,Math.floor(level/2)));resetSaves();emit('longRest');return true;},
+  longRest(){if(s.dead||s.hp===0)return false;s.hp=maxHp();s.tempHp=0;s.hitDice=Math.min(hitDiceMax(),s.hitDice+Math.max(1,Math.floor(hitDiceMax()/2)));resetSaves();emit('longRest');return true;},
   addXp(amount){xp+=Math.max(0,Math.floor(amount));const next=levelForXp(xp,data);if(next>level){const before=maxHp(),gained=next-level;level=next;s.hitDice+=gained;if(s.hp>0)s.hp+=maxHp()-before;emit('levelUp',{level});}return level;},
   addModifier({id,target,add,source=''}){mods.set(id,{target,add,source});s.hp=Math.min(s.hp,maxHp());emit('modifiers');},
   removeModifier(id){mods.delete(id);s.hp=Math.min(s.hp,maxHp());emit('modifiers');},
   onChange(f){listeners.add(f);return()=>listeners.delete(f);},
-  snapshot:()=>({id:def.id,name:def.name,species:def.species||null,hitDie:def.hitDie,power:power.snapshot(),level,xp,proficiency:prof(),hp:s.hp,tempHp:s.tempHp,maxHp:maxHp(),hitDice:s.hitDice,ac:sheet.ac,initiative:sheet.initiative,speed:sheet.speed,status:status(),deathSaves:sheet.deathSaves,
+  serialize:()=>({version:1,xp,state:{...s},modifiers:structuredClone([...mods].map(([id,m])=>({id,...m}))),power:power.snapshot()}),
+  load(saved){
+   if(saved?.version!==1||!Number.isFinite(saved.xp)||saved.xp<0||!Array.isArray(saved.modifiers)||!saved.state)throw new Error('Invalid saved stats');
+   const next=saved.state,newMods=new Map();
+   for(const m of saved.modifiers){if(typeof m.id!=='string'||typeof m.target!=='string'||!Number.isFinite(m.add))throw new Error('Invalid saved modifier');newMods.set(m.id,structuredClone(m));}
+   for(const key of ['hp','tempHp','hitDice','successes','failures'])if(!Number.isInteger(next[key])||next[key]<0)throw new Error('Invalid saved health');
+   if(typeof next.dead!=='boolean'||typeof next.stable!=='boolean'||next.hitDice>(def.hitDiceMax??levelForXp(saved.xp,data))||next.successes>3||next.failures>3)throw new Error('Invalid saved character state');
+   // Validate the resource before changing any character fields.
+   const probe=createPowerPool(def.power);probe.load(saved.power);
+   const additions=target=>[...newMods.values()].filter(m=>m.target===target).reduce((n,m)=>n+m.add,0),nextLevel=levelForXp(saved.xp,data);
+   const nextCon=abilityMod(Math.min(30,Math.max(1,def.abilities.con+additions('con')))),nextMax=Math.max(1,(def.maxHp??averageHp(def.hitDie,nextLevel,nextCon))+additions('maxHp'));
+   if(next.hp>nextMax)throw new Error('Saved health exceeds maximum');
+   xp=saved.xp;level=nextLevel;mods.clear();for(const [id,m]of newMods)mods.set(id,m);
+   Object.assign(s,Object.fromEntries(Object.keys(s).map(key=>[key,next[key]])));power.load(saved.power);
+  },
+  snapshot:()=>({id:def.id,name:def.name,species:def.species||null,hitDie:def.hitDie,power:power.snapshot(),level,xp,proficiency:prof(),hp:s.hp,tempHp:s.tempHp,maxHp:maxHp(),hitDice:s.hitDice,ac:sheet.ac,initiative:sheet.initiative,speed:sheet.speed,...(def.statBlock?{movement:sheet.movement,creature:sheet.creature}:{}),status:status(),deathSaves:sheet.deathSaves,
    abilities:Object.fromEntries(data.abilities.map(a=>[a.id,{score:score(a.id),mod:mod(a.id),save:saveBonus(a.id)}])),passivePerception:10+skillBonus('perception'),modifiers:[...mods.keys()]})
  };
  return sheet;

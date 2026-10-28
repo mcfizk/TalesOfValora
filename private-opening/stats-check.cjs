@@ -10,7 +10,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   const initial=await page.evaluate(()=>__fenris2d.snapshot().stats);
   check('Current 2D opening loads the CSV-defined Fenris sheet',initial.id==='fenris'&&initial.level===1&&initial.hp===initial.maxHp&&Object.keys(initial.abilities).length===6);
   check('Stats snapshots cannot modify the live sheet',await page.evaluate(()=>{const s=__fenris2d.snapshot().stats;s.hp=0;s.abilities.str.score=30;return __fenris2d.snapshot().stats.hp>0&&__fenris2d.snapshot().stats.abilities.str.score!==30;}));
-  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
+  await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
   const before=await page.evaluate(()=>__fenris2d.snapshot());await page.keyboard.down('s');await page.waitForTimeout(400);await page.keyboard.up('s');
   const after=await page.evaluate(()=>__fenris2d.snapshot());
   check('Exploration still moves and does not spend HP or award XP',after.position.y>before.position.y+10&&JSON.stringify(after.stats)===JSON.stringify(initial));

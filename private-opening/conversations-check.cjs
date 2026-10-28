@@ -8,7 +8,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   page.on('pageerror',e=>report.errors.push(e.message));
   await page.route('**/conversations.js',async route=>{const response=await route.fetch();await route.fulfill({response,body:(await response.text()).replace('rng=Math.random',`rng=()=>${roll}`)});});
   await page.route('**/opening.js',async route=>{const response=await route.fetch();let source=await response.text();source=source.replace('if(wake.complete){',"if(wake.complete){relocate({x:village.x-185,y:village.y+218});state.clock=gameClock.advance(600,true);");source=source.replace('window.__fenris2d=Object.freeze',"window.__conversationQA=(x,y)=>{state.interior=null;relocate({x:village.x+x,y:village.y+y});};window.__fenris2d=Object.freeze");await route.fulfill({response,body:source});});
-  await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
+  await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
  }
  async function interact(page,id){const at=await page.evaluate(id=>{const p=__fenris2d.snapshot().points.find(p=>p.id===id);if(!p)throw Error(id);return __fenris2d.worldToScreen(p.x,p.y-26);},id);await page.mouse.click(at.x,at.y);}
  async function close(page){await page.locator('#close-panel').click();}
@@ -20,6 +20,9 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   const before=(await snap(page)).clock.totalMinutes;await option(page,'heavier logs').click();
   check('Success displays the real d20, modifier, total and DC',(await page.locator('.check-result').textContent()).includes('d20 20 + 4 = 24 · DC 12'));
   check('Successful Athletics changes the agreed job pay',(await snap(page)).economy.jobBonus===4);
+  const units=(await snap(page)).units;
+  check('Conversation belongs to both participants and affinity is directed',units.fenris.memories.some(m=>m.id==='conversation:woodcutter:workTerms')&&units.woodcutter.memories.some(m=>m.id==='conversation:woodcutter:workTerms')&&units.woodcutter.affinity.fenris===1&&!units.fenris.affinity.woodcutter);
+  check('Uninvolved villagers do not acquire the conversation',units.edra.memories.length===0);
   check('The attempted check is disabled',await option(page,'heavier logs').isDisabled());
   check('Conversations and checks do not advance the movement clock',(await snap(page)).clock.totalMinutes===before);
   await page.getByRole('button',{name:'Accept the work',exact:true}).click();await close(page);await interact(page,'woodpile');await page.getByRole('button',{name:'Stack the wood',exact:true}).click();await close(page);await interact(page,'npc:woodcutter');await page.getByRole('button',{name:'Collect 16 copper',exact:true}).click();check('Negotiated pay is actually awarded',(await snap(page)).economy.copper===16);await close(page);

@@ -3,7 +3,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:'msedge'}),out=path.join(__dirname,'qa'),report={checks:[],errors:[]};
  const check=(name,value)=>{assert.ok(value,name);report.checks.push(name);};
- async function start(page){page.on('pageerror',e=>report.errors.push(e.message));await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();}
+ async function start(page){page.on('pageerror',e=>report.errors.push(e.message));await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();}
  try{
   const page=await browser.newPage({viewport:{width:1440,height:900}});await start(page);
   await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');

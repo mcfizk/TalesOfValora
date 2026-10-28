@@ -1,21 +1,10 @@
+import {VILLAGE_UNITS} from '../units/catalog.js';
 import {DIRECTIONS,CHARACTER_ACTIONS,validateCharacterAnimations,characterFrame,movementDirection} from './character-animation.js';
 import {isOpen} from './village-layout.js';
-export const PEOPLE=[
-  {id:'harl',name:'Harl',role:'Carpenter',dx:-25,dy:277,coat:'#777d7d',hair:'#4b3d32',line:'A Lupera? Mind the timber. I have work to finish, and I would rather you kept your distance.'},
-  {id:'edra',name:'Edra',role:'Weaver',dx:30,dy:-235,coat:'#727981',hair:'#43352c',line:'You stand a head above most folk here. Give us room. My neighbours are frightened enough already.'},
-  {id:'woodcutter',name:'Torren',role:'Woodcutter',dx:-191,dy:181,coat:'#8c6642',hair:'#6b4831',line:'You look strong enough. Stack that firewood beside the smithy and I will pay twelve copper. Work outside. Leave the axe alone.'},
-  {id:'farmer',name:'Mara',role:'Farmer',dx:73,dy:12,coat:'#85804c',hair:'#6f4a32',wander:18,line:'Mind where you tread. Those beds feed people. There is a stall if you need food.'},
-  {id:'resident',name:'Oren',role:'Villager',dx:-70,dy:78,coat:'#686b81',hair:'#998777',wander:15,line:'I have nothing for you. Please move along.'},
-  {id:'washer',name:'Sella',role:'Washerwoman',dx:38,dy:164,coat:'#6a8084',hair:'#3f312c',wander:12,line:'Not so close. The water is for everyone, but do not put those claws in the bucket.'},
-  {id:'vendor',name:'Bessa',role:'Produce seller',dx:-36,dy:-163,coat:'#9e7153',hair:'#514135',shop:'market',line:'Coin first. Take what you pay for and keep your paws off the rest.'}
-];
-export const KEEPERS={
-  inn:{id:'innkeeper',name:'Vera',role:'Innkeeper',coat:'#81594c',hair:'#777064',shop:'inn',line:'No room for one your size. You can sit by the door, and I can dress a scrape for six copper. Keep clear of my guests.'},
-  store:{id:'trader',name:'Dain',role:'Shopkeeper',coat:'#6d7954',hair:'#624630',shop:'store',line:'Coin on the counter. No credit. And give me some room.'},
-  smith:{id:'blacksmith',name:'Rusk',role:'Smith',coat:'#675648',hair:'#49403a',shop:'smith',line:'Do not touch the tools. Cups and firewood are for sale. I will buy spare supplies if the price is right.'},
-  apothecary:{id:'herbalist',name:'Ilen',role:'Herbalist',coat:'#70816b',hair:'#b2a08b',shop:'apothecary',line:'Clean hands, and stand back from the shelves. I sell remedies, not favours.'}
-};
-export const ALL_PEOPLE=[...PEOPLE,...Object.values(KEEPERS)];
+// Unit identity, appearance and authored scene data have one source of truth.
+export const ALL_PEOPLE=VILLAGE_UNITS.map(unit=>({id:unit.id,name:unit.name,role:unit.information.role,...unit.presentation,...unit.behaviour.village}));
+export const PEOPLE=ALL_PEOPLE.filter(person=>Number.isFinite(person.dx));
+export const KEEPERS=Object.fromEntries(ALL_PEOPLE.filter(person=>!Number.isFinite(person.dx)).map(person=>[person.shop,person]));
 export function humanConfig(id){
   const config={id,formatVersion:1,displayHeight:28,restFrame:0,wakeSequence:[{clip:'sleep',seconds:2},{clip:'sleepToSit',seconds:1},{clip:'sit',seconds:1.5},{clip:'sitToStand',seconds:1}]};
   for(const action of CHARACTER_ACTIONS){config[action]={frameWidth:32,frameHeight:40,columns:8,frames:8,fps:8,loop:!['sleepToSit','sitToStand'].includes(action),anchor:[16,37],bodyHeight:30,file:`generated/${id}-${action}.png`,mirrorRight:true};}
