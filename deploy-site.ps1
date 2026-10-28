@@ -22,7 +22,9 @@ try {
  Invoke-Command -Session $siteSession -ArgumentList $staging -ScriptBlock {
   param($staging)
   $ErrorActionPreference='Stop'
-  $source=Join-Path $staging 'site';Expand-Archive -LiteralPath (Join-Path $staging 'release.zip') -DestinationPath $source
+  $source=Join-Path $staging 'site'
+  Add-Type -AssemblyName System.IO.Compression.FileSystem
+  [IO.Compression.ZipFile]::ExtractToDirectory((Join-Path $staging 'release.zip'),$source)
   $manifest=Get-Content -LiteralPath (Join-Path $source 'release.json') -Raw | ConvertFrom-Json
   $target='D:\UlfheimData\games\FenrisAwakening'
   foreach($file in $manifest.files){
