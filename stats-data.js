@@ -379,7 +379,7 @@ export const STATS={
   "farmer": {
    "id": "farmer",
    "name": "Mara",
-   "species": "human",
+   "species": "halfling",
    "level": 1,
    "hitDie": 8,
    "abilities": {
@@ -406,12 +406,12 @@ export const STATS={
     "current": 0
    },
    "maxHp": null,
-   "notes": "Level-1 human farmer. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+   "notes": "Level-1 halfling farmer. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat. Ancestry selected by world demographics; retains the existing commoner numeric baseline pending authored species mechanics."
   },
   "resident": {
    "id": "resident",
    "name": "Oren",
-   "species": "human",
+   "species": "dwarf",
    "level": 1,
    "hitDie": 8,
    "abilities": {
@@ -435,7 +435,7 @@ export const STATS={
     "current": 0
    },
    "maxHp": null,
-   "notes": "Level-1 human villager. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat."
+   "notes": "Level-1 dwarf villager. Commoner baseline; no active class, armor, weapon or power resource. Eligible for future turn-based combat. Ancestry selected by world demographics; retains the existing commoner numeric baseline pending authored species mechanics."
   },
   "washer": {
    "id": "washer",

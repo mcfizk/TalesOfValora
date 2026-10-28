@@ -21,7 +21,7 @@ Do not edit `stats-data.js` by hand.
 | Column | Meaning |
 |---|---|
 | `id`, `name` | Code id (`fenris`) and display name |
-| `species` | Species identity (`human`, `lupera`); required for a registered world character |
+| `species` | Species identity (`human`, `halfling`, `dwarf`, `lupera`); required for a registered world character |
 | `level` | 1–20. XP starts at that level's threshold |
 | `hit_die` | 6, 8, 10 or 12 |
 | `str` `dex` `con` `int` `wis` `cha` | Ability scores, 1–30 |
@@ -50,7 +50,7 @@ Author direction, 26 October 2026: **every character in the world needs stats**,
 
 The village has no guards. Harl is a carpenter, Edra a weaver, and the former watch building is a communal tool shed. Threats spread alarm among neighbours rather than summoning a guard force.
 
-All eleven villagers are level-1 humans with one d8 hit die, speed 30 and no active class, armor, weapon or power pool. The editable implementation baseline is six ability scores of 10: HP 8, unarmored AC 10, proficiency +2, and occupation-based skill proficiencies. This is a game baseline, not a claim that an official commoner stat block is a player-class character. Prominent or physically robust villagers can have stronger abilities without gaining levels:
+The eleven villagers use level-1 commoner baselines with one d8 hit die, speed 30 and no active class, armor, weapon or power pool. The author-approved demographic implementation has nine humans, Mara as a halfling, and Oren as a dwarf. Species identity and sprites match; no extra ancestry bonuses, movement rules or traits are inferred from that choice. The editable implementation baseline is six ability scores of 10: HP 8, unarmored AC 10, proficiency +2, and occupation-based skill proficiencies. This is a game baseline, not a claim that an official commoner stat block is a player-class character. Prominent or physically robust villagers can have stronger abilities without gaining levels:
 
 | Villager | STR | CON | HP | AC | Level |
 |---|---:|---:|---:|---:|---:|

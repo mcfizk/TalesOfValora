@@ -56,6 +56,7 @@ export function characterFrame(player,config) {
     const raw=Math.floor(Math.max(0,player.actionTime||0)*spec.fps);
     index=spec.loop?raw%spec.frames:Math.min(raw,spec.frames-1);
   }else{
+    if(player.moving&&config.walk.directionMode==='horizontal')direction=direction.includes('right')?'right':direction.includes('left')?'left':player.walkFacing||'left';
     const sideIdle=!player.moving&&(direction==='left'||direction==='right');
     spec=sideIdle?config.idle:!player.moving&&config.directionalRest?config.directionalRest:config.walk;
     clip=player.moving?'walk':sideIdle?'idle':'rest';

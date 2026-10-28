@@ -1,3 +1,4 @@
+import {populationTemplate} from '../units/population.js';
 // Pure seeded layout: shared by terrain generation, navigation and village life.
 export function villageLocation(seed=1468){
   let n=Math.imul(81,374761393)^Math.imul(39,668265263)^seed;n=Math.imul(n^(n>>>13),1274126177);
@@ -11,13 +12,13 @@ const SPECS=[
   ['market','Produce stall',-38,-181,6,78,73],['well','Village well',0,70,7,45,49],
   ['shed','Tool shed',95,288,8,90,87]
 ];
-export function createVillageLayout(seed){
+export function createVillageLayout(seed,{demographics={}}={}){
   const center=villageLocation(seed);
   const buildings=SPECS.map(([id,label,dx,dy,tile,width,height])=>({id,label,tile,width,height,x:center.x+dx,y:center.y+dy,building:true}));
   const points=buildings.map(b=>({id:`door:${b.id}`,type:'village',buildingId:b.id,label:b.label,x:b.x,y:b.y+12}));
   points.push({id:'woodpile',type:'village',label:'Unstacked firewood',x:center.x-220,y:center.y+170});
   const colliders=buildings.map(b=>({x:b.x-b.width*.4,y:b.y-31,w:b.width*.8,h:30}));
-  return {...center,buildings,points,colliders};
+  return {...center,populationTemplate:populationTemplate(demographics),buildings,points,colliders};
 }
 export function inVillage(x,y,seed){const v=villageLocation(seed);return Math.hypot((x-v.x)/285,(y-v.y+30)/435)<1;}
 export function villageRoad(x,y,seed){const v=villageLocation(seed),dx=x-v.x,dy=y-v.y;

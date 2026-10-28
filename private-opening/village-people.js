@@ -1,14 +1,26 @@
+import {populationSprite} from '../units/population.js';
 import {VILLAGE_UNITS} from '../units/catalog.js';
 import {DIRECTIONS,CHARACTER_ACTIONS,validateCharacterAnimations,characterFrame,movementDirection} from './character-animation.js';
 import {isOpen} from './village-layout.js';
+import {NPC_WALKS} from './npc-walks.js';
 // Unit identity, appearance and authored scene data have one source of truth.
-export const ALL_PEOPLE=VILLAGE_UNITS.map(unit=>({id:unit.id,name:unit.name,role:unit.information.role,...unit.presentation,...unit.behaviour.village}));
+export const ALL_PEOPLE=VILLAGE_UNITS.map(unit=>({id:unit.id,name:unit.name,role:unit.information.role,species:unit.information.species,...unit.presentation,...unit.behaviour.village}));
 export const PEOPLE=ALL_PEOPLE.filter(person=>Number.isFinite(person.dx));
 export const KEEPERS=Object.fromEntries(ALL_PEOPLE.filter(person=>!Number.isFinite(person.dx)).map(person=>[person.shop,person]));
 export function humanConfig(id){
   const config={id,formatVersion:1,displayHeight:28,restFrame:0,wakeSequence:[{clip:'sleep',seconds:2},{clip:'sleepToSit',seconds:1},{clip:'sit',seconds:1.5},{clip:'sitToStand',seconds:1}]};
   for(const action of CHARACTER_ACTIONS){config[action]={frameWidth:32,frameHeight:40,columns:8,frames:8,fps:8,loop:!['sleepToSit','sitToStand'].includes(action),anchor:[16,37],bodyHeight:30,file:`generated/${id}-${action}.png`,mirrorRight:true};}
   config.walk.files=Object.fromEntries(DIRECTIONS.map(d=>[d,`generated/${id}-walk-${d}.png`]));
+  return validateCharacterAnimations(config);
+}
+export function npcConfig(person){
+  const config=humanConfig(person.id),gender=person.walkBase?.endsWith('-female')?'female':'male',walkBase=person.species?populationSprite(person.species,gender):person.walkBase,base=NPC_WALKS[walkBase];
+  if(!base){if(person.species)throw Error('No installed NPC sprite for '+person.species);return config;}
+  config.directionalRest={...base.walk,frames:1,files:Object.fromEntries(DIRECTIONS.map(d=>[d,base.walk.files[d.includes('right')?'right':'left']]))};
+  config.idle={...base.walk,frames:1,file:base.walk.files.left,mirrorRight:true};
+  config.walk={...base.walk,files:Object.fromEntries(DIRECTIONS.map(d=>[d,base.walk.files[d.includes('right')?'right':'left']]))};
+  config.walkBase=walkBase;
+  config.displayHeight=base.displayHeight;
   return validateCharacterAnimations(config);
 }
 // Small code-drawn pixel sprites share Fenris's six-action, eight-direction contract.
@@ -38,6 +50,14 @@ export function makeHumanArt(art){
       }
       art[`${person.id}-${action}${action==='walk'?'-'+direction:''}`]=sheet;
     }
+    if(NPC_WALKS[person.walkBase]){
+      art.people[person.id]=npcConfig(person);
+      art[`${person.id}-idle`]=art[`npc-${person.walkBase}-left`];
+      for(const d of DIRECTIONS){
+        art[`${person.id}-rest-${d}`]=art[`npc-${person.walkBase}-${d.includes('right')?'right':'left'}`];
+        art[`${person.id}-walk-${d}`]=art[`npc-${person.walkBase}-${d.includes('right')?'right':'left'}`];
+      }
+    }
   }
 }
 export function villagePeople(layout,clock,time,player,interior){
@@ -46,8 +66,9 @@ export function villagePeople(layout,clock,time,player,interior){
     let x=layout.x+p.dx,y=layout.y+p.dy;const dx=Math.sin(time*.18+index)* (p.wander||0),dy=Math.cos(time*.15+index)*(p.wander||0)*.4;
     x+=dx;y+=dy;const distance=Math.hypot(player.x-x,player.y-y),wary=distance<70;
     if(wary&&distance>0){const retreat=(1-distance/70)*15;x+=(x-player.x)/distance*retreat;y+=(y-player.y)/distance*retreat;}
-    const direction=distance<90?movementDirection(player.x-x,player.y-y):movementDirection(Math.cos(time*.18+index),-Math.sin(time*.15+index));
-    return {...p,id:`npc:${p.id}`,actorId:p.id,type:'village',x,y,direction,animation:time,moving:!!p.wander&&!wary};
+    const vx=Math.cos(time*.18+index),vy=-Math.sin(time*.15+index),moving=!!p.wander&&!wary;
+    const direction=!moving&&distance<90?movementDirection(player.x-x,player.y-y):movementDirection(vx,vy);
+    return {...p,id:`npc:${p.id}`,actorId:p.id,type:'village',x,y,direction,walkFacing:vx>=0?'right':'left',animation:time,moving};
   });
 }
 export function drawPerson(ctx,person,art){

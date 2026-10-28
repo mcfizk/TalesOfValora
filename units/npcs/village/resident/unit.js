@@ -6,9 +6,9 @@ export default {
     "template": "resident"
   },
   "information": {
-    "species": "human",
+    "species": "dwarf",
     "role": "Villager",
-    "description": "Oren, the village villager.",
+    "description": "Oren, a dwarf village resident.",
     "traits": []
   },
   "story": {
@@ -20,7 +20,8 @@ export default {
   "presentation": {
     "coat": "#686b81",
     "hair": "#998777",
-    "animation": "generated-human"
+    "animation": "npc-walks",
+    "walkBase": "dwarf-male"
   },
   "behaviour": {
     "tags": [

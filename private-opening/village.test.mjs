@@ -48,8 +48,8 @@ test('treatment cannot charge at full health or without funds; a new visit reset
  c.damage(8);assert.ok(e.treatment(c));assert.ok(e.treatment(c));assert.equal(c.hp,13);assert.equal(e.snapshot().copper,0);assert.equal(createVillageEconomy().snapshot().job,'available');
 });
 
-test('every authored NPC is backed by an independent human sheet regardless of visibility',()=>{
+test('every authored NPC is backed by an independent species-matched sheet regardless of visibility',()=>{
  const roster=createCharacterRoster(['fenris',...ALL_PEOPLE.map(p=>p.id)]);
- for(const person of ALL_PEOPLE){const sheet=roster.get(person.id);assert.equal(sheet.name,person.name);assert.equal(sheet.species,'human');assert.equal(sheet.level,1);assert.ok(!person.guard);assert.ok(!/guard|watch/i.test(person.role));}
+ for(const person of ALL_PEOPLE){const sheet=roster.get(person.id);assert.equal(sheet.name,person.name);assert.equal(sheet.species,person.species);assert.equal(sheet.level,1);assert.ok(!person.guard);assert.ok(!/guard|watch/i.test(person.role));}
  assert.equal(Object.keys(roster.snapshot()).length,12);assert.ok(createVillageLayout(1).buildings.some(b=>b.id==='shed'));assert.ok(!createVillageLayout(1).buildings.some(b=>b.id==='watch'));
 });

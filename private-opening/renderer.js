@@ -4,6 +4,7 @@ import {drawBuilding,drawVillageGround,drawRoom} from './village-renderer.js';
 import {CHUNK_SIZE,riverCenter,inWater,trailDistance,terrainAt,hash,random} from './world.js';
 import {fenrisFrame} from './fenris-animation.js';
 import {characterAssets,validateCharacterAnimations} from './character-animation.js';
+import {NPC_WALKS} from './npc-walks.js';
 
 export async function loadArt() {
   const response=await fetch('assets/manifest.json');if(!response.ok)throw new Error('The local art manifest could not be loaded.');
@@ -12,6 +13,7 @@ export async function loadArt() {
   const files=Object.fromEntries(names.map(name=>[name,`${name}.png`]));
   Object.assign(files,characterAssets(validateCharacterAnimations(manifest.fenrisAnimations)));
   files['village-buildings']='village/buildings.png';
+  for(const [id,profile] of Object.entries(NPC_WALKS))for(const [direction,file] of Object.entries(profile.walk.files))files[`npc-${id}-${direction}`]=file;
   const art={manifest};
   await Promise.all(Object.entries(files).map(async ([name,file])=>{const img=new Image();img.src=`assets/${file}`;await img.decode();art[name]=img;}));
   makeHumanArt(art);return art;

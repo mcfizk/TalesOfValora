@@ -58,7 +58,7 @@ That geography describes a developed kingdom, particularly the 1489-era map. It 
 
 ### Proposed village demographics — author guidance, 28 October 2026
 
-The author proposes a small, established village with some trade connections, in Faerûn between Cormyr and Sembia, around **1468 DR**. This provides a proposed regional setting; the village's name, precise location and history remain open.
+The author selected this composition as the **general world population template** and authorized applying it to the game on 28 October 2026. The opening village is a small, established settlement with some trade connections, in Faerûn between Cormyr and Sembia, around **1468 DR**. Its name, precise location and history remain open. The baseline allows regional and settlement-specific variation.
 
 | Permanent residents | Proposed share |
 | --- | ---: |
@@ -74,7 +74,9 @@ Humans form the large majority and work across farming, trade, crafts and villag
 
 These are **suggested Book of Fenris world-building proportions, not official Forgotten Realms demographic figures or an exact census**. Composition depends on the village's eventual location, history, road access and proximity to Cormyr, Sembia and the Dalelands. Historical published regional demographics predate 1468 DR and must not be treated as an exact census for the story's date.
 
-Use this as guidance for future population design, not a quota for the **eleven existing named villagers**. Do not force exact character counts, change their authored identities, assign ancestry-specific occupations or automatically spawn residents to match the table. Small villages can vary significantly, and nearby settlements may have different compositions. Permanent residents and passing travelers are separate populations.
+Use this as guidance for future population design, not a quota for the **eleven existing named villagers**. Do not force exact character counts, assign ancestry-specific occupations or automatically spawn residents to match the table. Individual identity changes require author authorization. Small villages can vary significantly, and nearby settlements may have different compositions. Permanent residents and passing travelers are separate populations.
+
+**Applied roster, 28 October 2026:** nine humans, Mara (farmer) as a halfling, and Oren (villager) as a dwarf. Names, roles, dialogue, routines, health and numeric ability baselines remain intact. Humans, dwarves and halflings have installed male/female walking sprites; standing reuses the same artwork and physical scale. The other demographic categories remain in the world template but need their own art before appearing. Generated sleep/sit clips remain temporary fallbacks. `units/population.js` owns the reusable percentage template and supported sprite mapping; village layouts carry a validated profile and may override percentages for another region.
 
 ## Future continuity: orientation only, not opening content [E, G, I]
 

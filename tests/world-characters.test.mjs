@@ -20,9 +20,9 @@ test('creature units preserve all supplied JSON stats, natural armour, hit dice,
  const copy=roster.get('wolf').creature;copy.actions.length=0;assert.ok(roster.get('wolf').creature.actions.length>0);
 });
 
-test('all villagers have level-one human sheets and the blacksmith is tougher without extra levels',()=>{
+test('all villagers have level-one commoner sheets and the blacksmith is tougher without extra levels',()=>{
  const ids=Object.keys(UNIT_DEFINITIONS).filter(id=>UNIT_DEFINITIONS[id].kind==='npc'),roster=createCharacterRoster(ids);assert.equal(ids.length,11);
- for(const id of ids){const s=roster.get(id);assert.equal(s.species,'human');assert.equal(s.level,1);assert.equal(s.hitDie,8);assert.equal(s.hitDice,1);assert.equal(s.proficiency,2);assert.equal(s.power.active,false);assert.equal(s.speed,30);assert.equal(s.ac,10);assert.ok(Number.isFinite(s.initiative));for(const ability of STATS.abilities)assert.ok(Number.isFinite(s.saveBonus(ability.id)));}
+ for(const id of ids){const s=roster.get(id);assert.equal(s.species,UNIT_DEFINITIONS[id].information.species);assert.equal(s.level,1);assert.equal(s.hitDie,8);assert.equal(s.hitDice,1);assert.equal(s.proficiency,2);assert.equal(s.power.active,false);assert.equal(s.speed,30);assert.equal(s.ac,10);assert.ok(Number.isFinite(s.initiative));for(const ability of STATS.abilities)assert.ok(Number.isFinite(s.saveBonus(ability.id)));}
  const ordinary=roster.get('resident'),smith=roster.get('blacksmith'),woodcutter=roster.get('woodcutter');assert.equal(ordinary.maxHp,8);assert.equal(smith.maxHp,10);assert.equal(woodcutter.maxHp,9);assert.equal(smith.score('str'),14);assert.equal(smith.score('con'),14);assert.equal(smith.skillBonus('athletics'),4);
  assert.equal(roster.get('herbalist').skillBonus('medicine'),2);assert.equal(roster.get('trader').skillBonus('persuasion'),2);
 });

@@ -6,9 +6,9 @@ export default {
     "template": "farmer"
   },
   "information": {
-    "species": "human",
+    "species": "halfling",
     "role": "Farmer",
-    "description": "Mara, the village farmer.",
+    "description": "Mara, a halfling village farmer.",
     "traits": []
   },
   "story": {
@@ -20,7 +20,8 @@ export default {
   "presentation": {
     "coat": "#85804c",
     "hair": "#6f4a32",
-    "animation": "generated-human"
+    "animation": "npc-walks",
+    "walkBase": "halfling-female"
   },
   "behaviour": {
     "tags": [

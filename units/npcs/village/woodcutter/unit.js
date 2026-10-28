@@ -20,7 +20,8 @@ export default {
   "presentation": {
     "coat": "#8c6642",
     "hair": "#6b4831",
-    "animation": "generated-human"
+    "animation": "npc-walks",
+    "walkBase": "human-male"
   },
   "behaviour": {
     "tags": [

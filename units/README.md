@@ -61,7 +61,7 @@ Definitions are immutable. Instances never write back into unit files. `unitSnap
 
 Health, memories and relationships persist across loaded/unloaded scenery and interiors. The game's three local save slots serialize each individual's stats, modifiers, resources, knowledge, memories, affinity and flags. Continue restores them after a reload. New Game and Restart create fresh instances; the active slot then records that fresh journey. Saves live in browser storage for this site, not in the authoring files or a cloud account.
 
-Village population design follows the [proposed demographics in the world reference](../docs/FENRIS-AND-WORLD.md#proposed-village-demographics--author-guidance-28-october-2026). These are settlement-level guidance, not quotas for the eleven named villagers; occupations and individual identities remain authored choices.
+Village population design follows the [proposed demographics in the world reference](../docs/FENRIS-AND-WORLD.md#proposed-village-demographics--author-guidance-28-october-2026). These are settlement-level guidance, not quotas for the eleven named villagers; occupations and individual identities remain authored choices. `population.js` defines the shared world percentages, validated regional overrides and the three installed sprite ancestries. The current village has nine humans, Mara as a halfling farmer and Oren as a dwarf villager. IDs stay stable so existing saves, memories and relationships continue to refer to the same individuals.
 
 ## Adding a unit
 
