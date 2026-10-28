@@ -56,6 +56,26 @@ The later kingdom of Valora lies on the northern coast of the Sea of Stars, east
 
 That geography describes a developed kingdom, particularly the 1489-era map. It must not be used as a 1468 political map. The awakening clearing has not been located within those borders, and no named grove, road, settlement, or regional faction has been assigned to it by the author.
 
+### Proposed village demographics — author guidance, 28 October 2026
+
+The author proposes a small, established village with some trade connections, in Faerûn between Cormyr and Sembia, around **1468 DR**. This provides a proposed regional setting; the village's name, precise location and history remain open.
+
+| Permanent residents | Proposed share |
+| --- | ---: |
+| Humans | 86% |
+| Halflings | 5% |
+| Half-elves | 4% |
+| Dwarves | 3% |
+| Elves | 1% |
+| Other | 1% |
+| **Total** | **100%** |
+
+Humans form the large majority and work across farming, trade, crafts and village affairs. Halflings are an established small minority, potentially including families in farming, hospitality and commerce. Half-elves are uncommon but familiar through connections to the Dalelands and wider trade routes. Dwarves may have ties to regional crafts, commerce and nearby mountains, without occupations being assigned by ancestry. Elves are rare permanent residents, though travelers may pass through. Other residents may include occasional gnomes, half-orcs, tieflings or other ancestries.
+
+These are **suggested Book of Fenris world-building proportions, not official Forgotten Realms demographic figures or an exact census**. Composition depends on the village's eventual location, history, road access and proximity to Cormyr, Sembia and the Dalelands. Historical published regional demographics predate 1468 DR and must not be treated as an exact census for the story's date.
+
+Use this as guidance for future population design, not a quota for the **eleven existing named villagers**. Do not force exact character counts, change their authored identities, assign ancestry-specific occupations or automatically spawn residents to match the table. Small villages can vary significantly, and nearby settlements may have different compositions. Permanent residents and passing travelers are separate populations.
+
 ## Future continuity: orientation only, not opening content [E, G, I]
 
 | Era | Background anchor | Boundary for the game opening |
