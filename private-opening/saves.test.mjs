@@ -1,3 +1,4 @@
+import {createRestTracker} from './resting.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createSaveSlots,validateGameSave} from './saves.js';
@@ -39,4 +40,11 @@ test('perception memory survives loading without a second encounter; world reset
  const event={id:'test',x:0,y:0,dc:1,triggerRadius:5,zones:[{id:'near',radius:30,dcModifier:0}],title:'Test',discovered:'Seen',aware:'Ready',surprised:'Startled'},p=createPerception({events:[event]}),sheet=createCharacterRoster(['fenris']).get('fenris');p.update({x:0,y:0},sheet);
  const loaded=createPerception({events:[event]});loaded.load(p.snapshot());assert.deepEqual(loaded.update({x:0,y:0},sheet),[]);
  const w=makeWorld(123),before=structuredClone(w.trees);w.reset(999);assert.notDeepEqual(w.trees,before);w.reset(123);assert.deepEqual(w.trees,before);
+});
+
+test('rest penalties, cooldowns and completion history survive save slots',()=>{
+ const data=fixture(),r=createRestTracker(1320);r.begin('sleep',1320,480);r.tick(1400,{kind:'wait',elapsed:80});data.minutes=1400;data.rest=r.serialize();
+ const records=new Map(),slots=createSaveSlots({getItem:k=>records.get(k),setItem:(k,v)=>records.set(k,v)});slots.write(1,data);
+ const restored=createRestTracker(1400);restored.load(slots.read(1).data.rest,1400);assert.equal(restored.snapshot().waitPenalty,true);assert.equal(restored.available('long',1400),false);
+ assert.throws(()=>validateGameSave({...data,rest:{}}),/saved rest/);
 });

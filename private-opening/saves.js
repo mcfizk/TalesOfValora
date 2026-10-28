@@ -1,3 +1,4 @@
+import {createRestTracker} from './resting.js';
 import {createCharacterRoster} from '../world-characters.js';
 import {VILLAGE_UNITS} from '../units/catalog.js';
 import {createVillageEconomy} from './village-economy.js';
@@ -22,6 +23,7 @@ export function validateGameSave(data){
   const conversations=createConversations();conversations.load(data.town?.conversations);
   const perception=createPerception({events:PERCEPTION_EVENTS,mode:PERCEPTION_MODE});perception.load(data.perception);
   createGameClock().load(data.minutes);
+  createRestTracker(data.minutes).load(data.rest,data.minutes);
   if(data.interior!==null){const b=createVillageLayout(data.seed).buildings.find(b=>b.id===data.interior);if(!b||!['inn','store','smith','apothecary'].includes(b.id))throw new Error('Invalid saved interior');makeInterior(b);}
   return data;
 }

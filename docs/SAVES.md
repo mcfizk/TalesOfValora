@@ -16,6 +16,16 @@ Run `node --test private-opening/saves.test.mjs` for serialization, slot isolati
 
 ## Rest / Wait
 
-Use Rest / Wait beneath the clock, the pause menu, or T after awakening. Choose 15 minutes, 1/4/8 hours, or the next 06:00. Fenris sits while the world clock passes one hour per real second; daylight, village discovery, residents and shop opening hours use that clock. Movement, interaction or Stop waiting cancels the remaining duration. Waiting requires dry ground outdoors. This time-passage feature does not apply healing or spend hit dice.
+Use Rest / Wait beneath the clock, the pause menu, or T after awakening. Choose a 1-hour short rest, an 8-hour long rest, 8 hours of sleep, or simply wait 15 minutes, 1/4/8 hours, or until the next 06:00. The world clock passes one hour per real second; daylight, village discovery, residents and shop opening hours follow that clock. Movement, interaction or Stop waiting interrupts without rest completion credit. Outdoors, all activities require dry ground and a conscious character.
 
-Pausing or losing focus freezes accelerated time. Saves keep the time already passed and the seated pose. Loading a save ends the remaining wait, so acceleration never starts unexpectedly after Continue. Existing version-one saves remain compatible.
+Provisional rules live in `private-opening/resting.js`:
+
+- Over 60 minutes of continuous waiting causes Restless: −1 Perception and −1 Initiative. Moving resets the continuous-wait counter, but an existing penalty lasts until a completed rest. Consecutive waits accumulate, including across saves.
+- Completing a short rest clears Restless and resets the 24-hour no-rest timer. It does not clear existing exhaustion.
+- Sleep and long rest share a rolling 24-hour limit measured from starting either. Starting reserves the window even if interrupted or reloaded. The menu displays the next allowed start time; midnight does not reset it.
+- After 24 world hours without a completed rest, exhaustion applies −2 ability checks (including skills) and 20% slower movement. It is a single, non-stacking debuff. Completed sleep or long rest clears both penalties and resets the no-rest timer.
+- Perception penalties apply to live passive discovery; exhaustion affects actual walking/running speed, as well as the stats sheet. The two deficits stack when both are active. Ability scores, saving throws, HP, hit dice and gear remain unchanged. Completion counts and unit memories provide hooks for later restoration/maintenance.
+
+Pausing or losing focus freezes accelerated time. Saves keep elapsed time, fatigue, the continuous-wait counter, cooldown reservations and completion history. Loading ends the remaining activity without awarding completion, and plays sleep-to-sit for a saved sleeping pose. Existing version-one saves without rest state receive a fresh 24-hour grace period at their saved clock time. New journeys begin with that same grace period.
+
+Run `node --test private-opening/resting.test.mjs private-opening/saves.test.mjs`, `node private-opening/resting-check.cjs`, and `node private-opening/waiting-check.cjs`. The browser checks cover live deficits, rest completion, cooldowns, animations, reload, pause, interruption and phone layouts. Reports/screenshots are under the ignored `private-opening/qa/` directory.
