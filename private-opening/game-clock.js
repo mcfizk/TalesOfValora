@@ -15,6 +15,7 @@ export function createGameClock({startMinutes=CLOCK_START,rate=GAME_MINUTES_PER_
   return{
     load(minutes){if(!Number.isFinite(minutes)||minutes<startMinutes)throw new Error('Invalid saved clock');total=minutes;return snapshot();},
     advance(seconds,moved){if(moved&&Number.isFinite(seconds)&&seconds>0)total+=seconds*rate;return snapshot();},
+    elapse(minutes){if(Number.isFinite(minutes)&&minutes>0)total+=minutes;return snapshot();},
     reset(){total=startMinutes;},snapshot
   };
 }

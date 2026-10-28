@@ -14,8 +14,9 @@
   <aside id="party-panel" aria-label="Party"></aside>
   <aside id="world-clock" aria-label="World time">
     <svg class="sky-dial" viewBox="0 0 100 40" aria-hidden="true"><path d="M8 34 Q50 -14 92 34"/><path class="horizon" d="M6 34 H94"/><text id="sky-symbol" x="50" y="18" text-anchor="middle">☾</text></svg>
-    <div><span id="clock-phase">Night</span><time id="clock-time">22:00</time></div><small id="clock-day">Day 1</small>
+    <div><span id="clock-phase">Night</span><time id="clock-time">22:00</time></div><small id="clock-day">Day 1</small><button id="rest-wait" title="Rest / Wait (T)" disabled>Rest / Wait</button>
   </aside>
+  <aside id="wait-status" hidden aria-label="Waiting"><span id="wait-until"></span><progress id="wait-progress" aria-label="Time passed"></progress><button id="stop-wait">Stop waiting</button></aside>
   <button id="village-nav" hidden aria-label="Track village" aria-pressed="true"><span class="village-bearing" aria-hidden="true">↑</span><span><strong id="village-label">Village</strong><small id="village-distance"></small></span><span class="nav-track" aria-hidden="true">◇</span></button>
   <div id="village-beacon" hidden aria-hidden="true"><span>⌂</span><small>Village</small></div>
   <footer class="controls"><span><kbd>W A S D</kbd> Move <i>·</i> <kbd>Shift</kbd> Run <i>·</i> Click to walk</span><span>Click a bauble to interact <i>·</i> Scroll to zoom</span></footer>

@@ -1,0 +1,40 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:'msedge'}),report={checks:[],errors:[]};
+ try{
+ const page=await browser.newPage({viewport:{width:1440,height:900}});
+ page.on('pageerror',e=>report.errors.push(e.message));page.on('response',r=>{if(r.status()>=400)report.errors.push(r.status()+' '+r.url());});
+ const snap=()=>page.evaluate(()=>__fenris2d.snapshot());
+ const check=(name,ok)=>{assert.ok(ok,name);report.checks.push(name);};
+ await page.goto(process.env.GAME_URL||'http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);
+ await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();
+ check('Waiting unavailable during awakening',await page.locator('#rest-wait').isDisabled());
+ await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
+ await page.keyboard.press('t');check('T opens duration choices and pauses time',await page.getByRole('heading',{name:'Rest / Wait',exact:true}).isVisible()&&(await snap()).paused);
+ await page.screenshot({path:path.join(__dirname,'qa','wait-options.png')});
+ const original=await snap();await page.getByRole('button',{name:/^Wait 1 hour /}).click();
+ await page.waitForFunction(()=>!__fenris2d.snapshot().waiting);
+ let s=await snap();check('One hour passes exactly with Fenris sitting in place',s.clock.totalMinutes===original.clock.totalMinutes+60&&s.seated&&s.distance===original.distance&&s.position.x===original.position.x&&s.position.y===original.position.y);
+ await page.locator('#rest-wait').click();await page.getByRole('button',{name:/^Wait 8 hours /}).click();
+ await page.waitForFunction(()=>__fenris2d.snapshot().clock.totalMinutes>1385);await page.keyboard.press('Escape');const paused=await snap();await page.waitForTimeout(350);
+ check('Pause freezes accelerated time',(await snap()).clock.totalMinutes===paused.clock.totalMinutes);
+ await page.getByRole('button',{name:'Continue',exact:true}).click();await page.locator('#stop-wait').click();const stopped=await snap();await page.waitForTimeout(200);
+ check('Stop preserves elapsed time and cancels the remainder',!stopped.waiting&&(await snap()).clock.totalMinutes===stopped.clock.totalMinutes);
+ await page.keyboard.press('t');await page.getByRole('button',{name:/^Wait 4 hours /}).click();await page.keyboard.down('s');await page.waitForTimeout(100);await page.keyboard.up('s');
+ check('Movement interrupts waiting and starts standing up',!(await snap()).waiting&&!(await snap()).seated);
+ await page.waitForTimeout(1600);await page.keyboard.press('t');await page.getByRole('button',{name:/^Until morning /}).click();
+ await page.screenshot({path:path.join(__dirname,'qa','waiting.png')});
+ await page.waitForFunction(()=>!__fenris2d.snapshot().waiting,null,{timeout:12000});s=await snap();
+ check('Until morning stops at dawn and reveals the village',s.clock.time==='06:00'&&s.clock.daylight&&s.clock.day===2&&!!s.village);
+ await page.keyboard.press('t');await page.getByRole('button',{name:/^Wait 8 hours /}).click();await page.waitForTimeout(400);
+ await page.keyboard.press('Escape');const savedTime=(await snap()).clock.totalMinutes;
+ await page.reload();await page.waitForFunction(()=>window.__fenris2d);await page.locator('#continue-game').click();await page.getByRole('button',{name:'Continue slot 1',exact:true}).click();
+ s=await snap();check('Reload preserves elapsed time and sitting without resuming acceleration',s.clock.totalMinutes===savedTime&&s.seated&&!s.waiting);
+ await page.waitForTimeout(250);check('Reloaded clock stays still',(await snap()).clock.totalMinutes===savedTime);
+ await page.setViewportSize({width:390,height:844});await page.locator('#rest-wait').click();
+ check('Duration choices fit a phone viewport',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth&&document.getElementById('panel').scrollWidth<=document.getElementById('panel').clientWidth));
+ await page.screenshot({path:path.join(__dirname,'qa','wait-mobile.png')});
+ check('No browser errors',report.errors.length===0);fs.writeFileSync(path.join(__dirname,'qa','waiting-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

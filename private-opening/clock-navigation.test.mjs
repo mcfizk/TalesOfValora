@@ -29,3 +29,16 @@ test('seeded village destinations are stable and stand on reachable dry ground',
  }
  assert.equal(waypointReading({x:0,y:0},{x:0,y:-220}).direction,'N');assert.equal(waypointReading({x:0,y:0},{x:220,y:0}).paces,10);
 });
+
+test('waiting advances world time without movement and clamps at the chosen end',async()=>{
+ const {advanceWait,minutesUntilMorning}=await import('./waiting.js');
+ const c=createGameClock(),target=c.snapshot().totalMinutes+480;
+ assert.equal(minutesUntilMorning(c.snapshot().totalMinutes),480);
+ c.elapse(advanceWait(c.snapshot().totalMinutes,target,7));assert.equal(c.snapshot().time,'05:00');
+ c.elapse(advanceWait(c.snapshot().totalMinutes,target,5));assert.equal(c.snapshot().time,'06:00');
+ assert.ok(c.snapshot().villageAvailable);assert.ok(c.snapshot().daylight);
+ assert.equal(advanceWait(target,target,1),0);assert.equal(advanceWait(target,target+60,NaN),0);
+ assert.equal(minutesUntilMorning(target),1440);
+ c.elapse(-1);c.elapse(NaN);assert.equal(c.snapshot().totalMinutes,target);
+ c.advance(10,false);assert.equal(c.snapshot().totalMinutes,target);
+});
