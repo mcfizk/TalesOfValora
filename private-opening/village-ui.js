@@ -1,7 +1,7 @@
 import {createConversations} from './conversations.js';
 import {createVillageEconomy,GOODS} from './village-economy.js';
 import {isOpen,SHOP_HOURS,makeInterior} from './village-layout.js';
-export function createVillageUI({state,world,getStats,dialog,paragraph,button,closePanel,notify,relocate,onObservation,onConversation=()=>{}}){
+export function createVillageUI({state,world,getStats,dialog,presentConversation,paragraph,button,closePanel,notify,relocate,onObservation,onConversation=()=>{}}){
   let economy=createVillageEconomy(),conversations=createConversations(),activePoint=null;
   const show=(title,text,actions=[])=>{if(onObservation&&activePoint&&!actions.length){closePanel();onObservation(activePoint,{title,text});return;}const content=document.createElement('div');content.append(paragraph(text),...actions,button('Leave',closePanel));dialog(title,content);};
   function trade(shop){
@@ -44,18 +44,21 @@ export function createVillageUI({state,world,getStats,dialog,paragraph,button,cl
   function person(point,node='root',result=null){
     const view=conversations.view(point.actorId,node,getStats(),economy.snapshot());if(!view)return show(point.name,point.line);
     const content=document.createElement('div');content.className='conversation';
-    const mood=document.createElement('p');mood.className='conversation-mood';mood.textContent=`${view.attitude>=2?'Cautiously receptive':view.attitude>0?'Less guarded':view.attitude<=-2?'Hostile':view.attitude<0?'Suspicious':'Wary'}${view.alert?' · Word of your threats has spread (Persuasion DC +2)':''}`;content.append(mood);
-    content.append(paragraph(result?.text||view.text));
-    if(result?.roll){const r=result.roll,summary=document.createElement('p');summary.className=`check-result ${result.success?'success':'failure'}`;summary.setAttribute('role','status');summary.textContent=`${result.success?'Success':'Failure'} · ${skillName(r.skill)}: d20 ${r.roll} ${r.bonus>=0?'+':'−'} ${Math.abs(r.bonus)} = ${r.total} · DC ${r.dc}`;content.append(summary);}
+    const npcTurn=document.createElement('div'),playerTurn=document.createElement('div'),npcLines=document.createElement('div'),playerLines=document.createElement('div');
+    npcTurn.className='dialogue-turn npc-turn';playerTurn.className='dialogue-turn player-turn';npcLines.className=playerLines.className='speaker-lines';npcTurn.append(npcLines);playerTurn.append(playerLines);content.append(npcTurn,playerTurn);
+    const mood=document.createElement('p');mood.className='conversation-mood';mood.textContent=`${view.attitude>=2?'Cautiously receptive':view.attitude>0?'Less guarded':view.attitude<=-2?'Hostile':view.attitude<0?'Suspicious':'Wary'}${view.alert?' · Word of your threats has spread (Persuasion DC +2)':''}`;npcLines.append(mood);
+    npcLines.append(paragraph(result?.text||view.text));
+    if(result?.roll){const r=result.roll,summary=document.createElement('p');summary.className=`check-result ${result.success?'success':'failure'}`;summary.setAttribute('role','status');summary.textContent=`${result.success?'Success':'Failure'} · ${skillName(r.skill)}: d20 ${r.roll} ${r.bonus>=0?'+':'−'} ${Math.abs(r.bonus)} = ${r.total} · DC ${r.dc}`;npcLines.append(summary);}
     if(result?.effects){const e=result.effects,changes=[];
       for(const [id,n] of Object.entries(e.items||{}))changes.push(`Received ${n} × ${GOODS[id].name}.`);
       if(e.discount)changes.push(`This shop’s prices are ${e.discount} copper lower (minimum 1).`);
       if(e.surcharge)changes.push(`This shop’s prices are ${e.surcharge} copper higher.`);
       if(e.jobBonus)changes.push(`Agreed job pay: ${12+e.jobBonus} copper.`);
       if(e.treatmentPrice)changes.push(`Wound dressing now costs ${e.treatmentPrice} copper.`);
-      if(changes.length){const outcome=paragraph(changes.join(' '));outcome.className='conversation-outcome';content.append(outcome);}
+      if(changes.length){const outcome=paragraph(changes.join(' '));outcome.className='conversation-outcome';npcLines.append(outcome);}
     }
-    if(node!=='root'&&result)content.append(paragraph(view.text));
+    if(node!=='root'&&result)npcLines.append(paragraph(view.text));
+    if(result?.choice){const selected=paragraph('Your choice: '+result.choice);selected.className='player-choice';playerLines.append(selected);}
     const choices=document.createElement('div');choices.className='conversation-choices';
     for(const option of view.choices){
       const choose=button(option.label,()=>{
@@ -69,9 +72,11 @@ export function createVillageUI({state,world,getStats,dialog,paragraph,button,cl
       if(option.risk){const risk=document.createElement('small');risk.className='choice-risk';risk.textContent=option.risk;choose.append(risk);}
       choices.append(choose);
     }
-    content.append(choices);
-    if(node==='root')content.append(...services(point));else content.append(button('Something else',()=>person(point)));
-    content.append(button('Leave',closePanel));dialog(`${point.name} · ${point.role}`,content);
+    playerLines.append(choices);
+    const actions=document.createElement('div');actions.className='conversation-services';
+    if(node==='root')actions.append(...services(point));else actions.append(button('Something else',()=>person(point)));
+    actions.append(button('Leave',closePanel));playerLines.append(actions);
+    presentConversation(point,content);
   }
   function interact(point){
     if(point.type!=='village')return false;

@@ -20,7 +20,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
  try{
   const page=await browser.newPage({viewport:{width:1440,height:900}});await prepare(page);
   check('All eleven NPCs and Fenris own persistent sheets',(await snapshot(page)).characters&&Object.keys((await snapshot(page)).characters).length===12);
-  check('Visible villagers expose their level-one human stats',(await snapshot(page)).people.every(p=>p.stats.species==='human'&&p.stats.level===1&&p.characterId===p.stats.id));
+  check('Visible villagers expose their level-one commoner stats',(await snapshot(page)).people.every(p=>['human','dwarf','halfling'].includes(p.stats.species)&&p.stats.level===1&&p.characterId===p.stats.id));
   check('No guard roles remain',(await snapshot(page)).people.every(p=>!/guard|watch/i.test(p.role)));
   check('Nine buildings and seven outdoor townspeople appear in the morning',(await snapshot(page)).settlement.buildings===9&&(await snapshot(page)).people.length===7);
   await interact(page,'npc:woodcutter');await page.getByRole('button',{name:'Accept the work',exact:true}).click();await close(page);
@@ -44,7 +44,7 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   const returned=await snapshot(page);check('Exit restores the exterior door position',Math.abs(returned.position.x-returned.settlement.x-142)<1&&Math.abs(returned.position.y-returned.settlement.y+70)<1);
   for(const [id,dx,dy,keeper] of [['inn',-146,-60,'innkeeper'],['smith',-150,150,'blacksmith'],['apothecary',146,150,'herbalist']]){
    await place(page,dx,dy);await interact(page,'door:'+id);await page.waitForFunction(id=>__fenris2d.snapshot().location===id,id);
-   await interact(page,'npc:'+keeper);await page.waitForFunction(()=>document.getElementById('panel').open);
+   await interact(page,'npc:'+keeper);await page.waitForFunction(()=>!document.getElementById('panel').hidden);
    check(`${id} can be entered and its keeper speaks`,(await page.locator('#panel-content').textContent()).length>80);
    if(id==='smith'){await page.evaluate(()=>__villageQA.hurtNpc());check('Blacksmith uses the shared damage model with his own HP',(await snapshot(page)).characters.blacksmith.hp===7&&(await snapshot(page)).stats.hp===12);}
    if(id==='inn'){await page.getByRole('button',{name:'Sit by the door',exact:true}).click();check('Inn offers the sitting animation',(await snapshot(page)).animation.clip==='sit');await page.keyboard.down('s');await page.waitForTimeout(200);check('Standing transition precedes movement',(await snapshot(page)).animation.clip==='sitToStand'&&!(await snapshot(page)).animation.moving);await page.waitForTimeout(1500);await page.keyboard.up('s');}
@@ -59,9 +59,9 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});await prepare(mobile);await place(mobile,0,-25);await mobile.waitForTimeout(400);await mobile.screenshot({path:path.join(out,'village-mobile.png')});
   check('Mobile HUD fits without horizontal overflow',await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   const bounds=await mobile.locator('#pack').boundingBox();check('Pack button remains on screen',bounds.x>=0&&bounds.x+bounds.width<=390);
-  await mobile.locator('#pack').tap();await mobile.waitForFunction(()=>document.getElementById('panel').open);check('Mobile pack opens with empty inventory',(await mobile.locator('#panel-content').textContent()).includes('Your pack is empty.'));await close(mobile);
+  await mobile.locator('#pack').tap();await mobile.waitForFunction(()=>!document.getElementById('panel').hidden);check('Mobile pack opens with empty inventory',(await mobile.locator('#panel-content').textContent()).includes('Your pack is empty.'));await close(mobile);
   await place(mobile,142,-60);await interact(mobile,'door:store');await mobile.waitForFunction(()=>__fenris2d.snapshot().location==='store');await interact(mobile,'npc:trader');await mobile.getByRole('button',{name:'See the goods',exact:true}).click();
-  check('Mobile trade labels and buttons fit inside the dialog',await mobile.evaluate(()=>{const panel=document.getElementById('panel');return panel.scrollWidth<=panel.clientWidth&&[...document.querySelectorAll('.trade-row span')].every(el=>el.getBoundingClientRect().width>120);}));
+  check('Mobile trade labels and buttons fit inside the dock',await mobile.evaluate(()=>{const panel=document.getElementById('panel');return panel.scrollWidth<=panel.clientWidth&&[...document.querySelectorAll('.trade-row span')].every(el=>el.getBoundingClientRect().width>120);}));
   await mobile.screenshot({path:path.join(out,'village-shop-mobile.png')});await mobile.close();
   check('No browser errors',report.errors.length===0);fs.writeFileSync(path.join(out,'village-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
  }catch(error){fs.writeFileSync(path.join(out,'village-report.json'),JSON.stringify({...report,error:error.message},null,2));throw error;}finally{await browser.close();}

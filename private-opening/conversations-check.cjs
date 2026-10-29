@@ -11,8 +11,8 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   await page.goto('http://127.0.0.1:8766/');await page.waitForFunction(()=>window.__fenris2d);await page.locator('#enable-audio').uncheck();await page.locator('#begin').click();await page.getByRole('button',{name:'Start in slot 1',exact:true}).click();await page.waitForFunction(()=>__fenris2d.snapshot().phase==='explore');
  }
  async function interact(page,id){const at=await page.evaluate(id=>{const p=__fenris2d.snapshot().points.find(p=>p.id===id);if(!p)throw Error(id);return __fenris2d.worldToScreen(p.x,p.y-26);},id);await page.mouse.click(at.x,at.y);}
- async function close(page){await page.locator('#close-panel').click();}
- async function enterStore(page){await page.evaluate(()=>__conversationQA(142,-60));await page.waitForTimeout(150);await interact(page,'door:store');await page.waitForFunction(()=>__fenris2d.snapshot().location==='store');await interact(page,'npc:trader');await page.waitForFunction(()=>document.getElementById('panel').open);}
+ async function close(page){if(await page.locator('#panel').isVisible())await page.locator('#close-panel').click();}
+ async function enterStore(page){await page.evaluate(()=>__conversationQA(142,-60));await page.waitForTimeout(150);await interact(page,'door:store');await page.waitForFunction(()=>__fenris2d.snapshot().location==='store');await interact(page,'npc:trader');await page.waitForFunction(()=>!document.getElementById('panel').hidden);}
  const option=(page,text)=>page.locator('.conversation-choice').filter({hasText:text});
  try{
   const page=await browser.newPage({viewport:{width:1440,height:900}});await setup(page,.999);await interact(page,'npc:woodcutter');
@@ -38,8 +38,8 @@ const {chromium}=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-run
   check('Failed Intimidation changes prices and alarms the villagers',(await snap(mobile)).economy.terms.store===1&&(await snap(mobile)).economy.conversations.flags.includes('villagersAlarmed'));
   check('Failure displays the rolled result',(await mobile.locator('.check-result').textContent()).includes('Failure · Intimidation: d20 1 + 4 = 5 · DC 14'));
   check('Failure still leaves trading available',await mobile.getByRole('button',{name:'See the goods',exact:true}).count()===1);
-  check('Mobile conversation fits its dialog without horizontal scrolling',await mobile.evaluate(()=>{const p=document.getElementById('panel');return p.scrollWidth<=p.clientWidth&&document.documentElement.scrollWidth<=innerWidth;}));
-  check('Outcome opens at the top and receives keyboard focus',await mobile.evaluate(()=>document.getElementById('panel').scrollTop===0&&document.activeElement.id==='panel-title'));
+  check('Mobile conversation fits its bottom dock without horizontal scrolling',await mobile.evaluate(()=>{const p=document.getElementById('panel');return p.scrollWidth<=p.clientWidth&&document.documentElement.scrollWidth<=innerWidth;}));
+  check('Outcome opens at the top and receives keyboard focus',await mobile.evaluate(()=>document.getElementById('panel-content').scrollTop===0&&document.activeElement.id==='panel-title'));
   await mobile.screenshot({path:path.join(out,'conversation-failure-mobile.png')});await close(mobile);
   await mobile.evaluate(()=>__conversationQA(-25,310));await mobile.waitForTimeout(200);await interact(mobile,'npc:harl');
   check('Spreading alarm increases subsequent Persuasion DC',(await option(mobile,'woke alone').textContent()).includes('DC 14'));

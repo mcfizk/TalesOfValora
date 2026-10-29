@@ -1,3 +1,4 @@
+import {createSpeakerPortrait} from './speaker-portraits.js';
 import {REST_RULES,createRestTracker,applyRestEffects} from './resting.js';
 import {WAIT_DURATIONS,minutesUntilMorning,advanceWait,clockLabel} from './waiting.js';
 import {eventAudio} from '../audio-catalog.js';
@@ -34,11 +35,11 @@ state.clock=gameClock.snapshot();state.village=null;state.waiting=null;
 const rests=createRestTracker(state.clock.totalMinutes);let restEffectsKey='';
 function syncRestEffects(){const r=rests.snapshot(),key=JSON.stringify([r.waitPenalty,r.exhausted]);if(key!==restEffectsKey){applyRestEffects(stats,r);restEffectsKey=key;}}
 partyHud.update([{id:'fenris',name:'Fenris',portrait:'assets/fenris/portrait.png',portraitCrop:{scale:2.6,left:-.48,top:-.2},stats:stats.snapshot(),status:characterStatus}]);
-let renderer,eventOverlay,animationConfig,path=[],near=null,pendingInterest=null,last=performance.now(),stepDistance=0,noticeTimer,subtitleUntil=0,voiceIds=new Set(),audioOn=true,joystick={x:0,y:0},stalled=0;
+let renderer,eventOverlay,animationConfig,portraitArt,panelReturnFocus,path=[],near=null,pendingInterest=null,last=performance.now(),stepDistance=0,noticeTimer,subtitleUntil=0,voiceIds=new Set(),audioOn=true,joystick={x:0,y:0},stalled=0;
 const keys=new Set(),audio=createAudio(notify,{onVoice:line=>{
   floatText({id:'fenris-voice',...state.player},{title:line.speaker,text:line.text});const card=state.callouts.find(c=>c.id==='fenris-voice');if(card)card.until=state.time+Math.max(2.5,line.duration+.5);
 }});
-const town=createVillageUI({state,world,getStats:()=>stats,dialog,paragraph,button,closePanel,notify,relocate,onObservation:observe,onConversation(npc,outcome,attitude){
+const town=createVillageUI({state,world,getStats:()=>stats,dialog,presentConversation,paragraph,button,closePanel,notify,relocate,onObservation:observe,onConversation(npc,outcome,attitude){
   const memory={id:`conversation:${outcome.key}`,type:'conversation',participants:['fenris',npc],text:`${outcome.choice} ${outcome.text}`,at:state.clock.totalMinutes};
   characters.unit('fenris').remember(memory);characters.unit(npc).remember(memory);characters.unit(npc).setAffinity('fenris',attitude);
 }});
@@ -52,8 +53,21 @@ function updateSound(){ $('sound').textContent=audioOn?'♫':'♪';$('sound').se
 function clearInput(){keys.clear();joystick={x:0,y:0};$('stick').style.transform='';}
 function pause(){saveGame(false);state.paused=true;clearInput();audio.pause();}
 function resume(){state.paused=false;audio.resume();last=performance.now();}
-function closePanel(){if($('panel').open)$('panel').close();resume();}
-function dialog(title,content){pause();$('panel-content').replaceChildren();const tag=document.createElement('span');tag.className='eyebrow';tag.textContent='THE BOOK OF FENRIS';const heading=document.createElement('h2');heading.id='panel-title';heading.textContent=title;$('panel-content').append(tag,heading,content);if(!$('panel').open)$('panel').showModal();$('panel').scrollTop=0;heading.tabIndex=-1;heading.focus({preventScroll:true});}
+function hidePanel(){ $('panel').hidden=true;document.body.classList.remove('ui-open'); }
+function closePanel(){hidePanel();resume();if(panelReturnFocus?.isConnected&&!panelReturnFocus.disabled)panelReturnFocus.focus({preventScroll:true});panelReturnFocus=null;}
+function dialog(title,content,{conversation=false}={}){
+  if($('panel').hidden)panelReturnFocus=document.activeElement;
+  pause();path=[];pendingInterest=null;state.destination=null;state.player.moving=false;state.player.running=false;
+  $('panel').classList.toggle('conversation-dock',conversation);$('panel-content').replaceChildren();
+  const tag=document.createElement('span');tag.className='eyebrow';tag.textContent=conversation?'CONVERSATION':'THE BOOK OF FENRIS';
+  const heading=document.createElement('h2');heading.id='panel-title';heading.textContent=title;
+  $('panel-content').append(tag,heading,content);$('panel').hidden=false;document.body.classList.add('ui-open');$('panel-content').scrollTop=0;heading.tabIndex=-1;heading.focus({preventScroll:true});
+}
+function presentConversation(point,content){
+  content.querySelector('.npc-turn').prepend(createSpeakerPortrait(portraitArt,point.actorId,point.name));
+  content.querySelector('.player-turn').prepend(createSpeakerPortrait(portraitArt,'fenris','Fenris'));
+  dialog(point.name+' · '+point.role,content,{conversation:true});
+}
 function button(text,action,cls='dialog-action'){const el=document.createElement('button');el.type='button';el.className=cls;el.textContent=text;el.addEventListener('click',action);return el;}
 function paragraph(text){const el=document.createElement('p');el.textContent=text;return el;}
 function floatText(point,entry,{gather=false}={}){
@@ -158,7 +172,7 @@ function saveGame(manual=false){
   catch(error){saveFailed=true;notify(error.message);return false;}
 }
 function showTitle(){
-  if($('panel').open)$('panel').close();state.waiting=null;state.phase='title';state.paused=false;activeSlot=null;clearInput();path=[];state.destination=null;audio.pause();
+  hidePanel();state.waiting=null;state.phase='title';state.paused=false;activeSlot=null;clearInput();path=[];state.destination=null;audio.pause();
   $('start').classList.remove('leaving');$('start').inert=false;$('game-ui').hidden=true;$('subtitles').hidden=true;$('chapter-intro').classList.remove('visible');$('veil').style.opacity='0';refreshSaves();
 }
 function loadGame(slot){
@@ -171,7 +185,7 @@ function loadGame(slot){
     state.clock=gameClock.load(d.minutes);rests.load(d.rest,d.minutes);restEffectsKey='';syncRestEffects();if(state.player.action==='sleep'&&d.phase==='explore')wakeFromRest({kind:'sleep'});state.village=d.villageDiscovered?{...village}:null;state.interior=d.interior?makeInterior(world.village.buildings.find(b=>b.id===d.interior)):null;
     voiceIds=new Set(d.voices);subtitleUntil=d.subtitleUntil;villageTracking=d.villageTracking;audioOn=d.audioOn;activeSlot=slot;saveFailed=false;autosaveAge=0;
     state.waiting=null;state.callouts=[];path=[];pendingInterest=null;near=null;state.destination=null;stepDistance=0;state.perception=perception.snapshot();clearInput();
-    if($('panel').open)$('panel').close();state.paused=false;audio.reset(d.time);updateSound();lastParty='';lastClock='';
+    hidePanel();state.paused=false;audio.reset(d.time);updateSound();lastParty='';lastClock='';
     renderer.resetCamera(state.interior?120:state.player.x,state.interior?110:state.player.y-28);world.update(state.player.x,state.player.y,renderer.loadingRadius);refreshTown();
     $('start').classList.add('leaving');$('start').inert=true;$('game-ui').hidden=false;$('journal-dot').hidden=true;$('chapter-intro').classList.remove('visible');$('veil').style.opacity=d.phase==='waking'?'1':'0';
     const voice=OPENING.voices.filter(v=>voiceIds.has(v.id)&&d.age<v.at+v.duration).at(-1);$('subtitles').hidden=!voice;if(voice)$('subtitle-text').textContent=voice.text;
@@ -181,7 +195,7 @@ function loadGame(slot){
 function beginSlot(slot){
   // Choosing New Game is the explicit replacement of this slot only.
   if(state.phase!=='title')saveGame(false);
-  activeSlot=slot;saveFailed=false;audioOn=$('enable-audio').checked;if($('panel').open)$('panel').close();start({newWorld:true});saveGame(false);
+  activeSlot=slot;saveFailed=false;audioOn=$('enable-audio').checked;hidePanel();start({newWorld:true});saveGame(false);
 }
 function slotMenu(mode){
   const content=document.createElement('div');content.className='save-slots';
@@ -333,11 +347,10 @@ $('journal').addEventListener('click',journal);$('menu').addEventListener('click
 $('touch-examine').addEventListener('click',examine);
 $('rest-wait').addEventListener('click',waitMenu);$('stop-wait').addEventListener('click',()=>stopWaiting());
 $('village-nav').addEventListener('click',()=>{if(state.paused)return;villageTracking=!villageTracking;if(villageTracking)audio.voice('this-way');syncHud();});
-$('panel').addEventListener('cancel',e=>{e.preventDefault();closePanel();});
 window.addEventListener('keydown',e=>{
   if(state.phase==='title')return;
-  const key=e.key.toLowerCase();if(['arrowup','arrowdown','arrowleft','arrowright',' '].includes(key))e.preventDefault();
-  if(key==='escape'){e.preventDefault();if($('panel').open)closePanel();else menu();return;}
+  const key=e.key.toLowerCase();if(!state.paused&&['arrowup','arrowdown','arrowleft','arrowright',' '].includes(key))e.preventDefault();
+  if(key==='escape'){e.preventDefault();if(!$('panel').hidden)closePanel();else menu();return;}
   if(state.paused)return;
   if(!e.repeat&&key==='t'&&state.phase==='explore'){waitMenu();return;}
   if(!e.repeat&&key==='i'&&state.phase==='explore'){town.inventory();return;}if(!e.repeat&&key==='j'){journal();return;}if(!e.repeat&&key==='e'){examine();return;}keys.add(key);
@@ -357,7 +370,7 @@ pad.addEventListener('pointerdown',e=>{if(state.paused)return;touchId=e.pointerI
 function release(e){if(e.pointerId===touchId){touchId=null;joystick={x:0,y:0};$('stick').style.transform='';}}
 pad.addEventListener('pointerup',release);pad.addEventListener('pointercancel',release);pad.addEventListener('lostpointercapture',release);
 try {
-  const art=await loadArt();animationConfig=art.manifest.fenrisAnimations;renderer=createRenderer(canvas,art,world);eventOverlay=createEventOverlay($('world-events'),{toScreen:(x,y)=>renderer.toScreen(x,y),onNavigate:moveTo,onGather:gatherAt});$('begin').disabled=false;$('begin').querySelector('span').textContent='New Game';refreshSaves();$('load-status').textContent='WASD or arrows to move · Click ground to walk';
+  const art=await loadArt();portraitArt=art;animationConfig=art.manifest.fenrisAnimations;renderer=createRenderer(canvas,art,world);eventOverlay=createEventOverlay($('world-events'),{toScreen:(x,y)=>renderer.toScreen(x,y),onNavigate:moveTo,onGather:gatherAt});$('begin').disabled=false;$('begin').querySelector('span').textContent='New Game';refreshSaves();$('load-status').textContent='WASD or arrows to move · Click ground to walk';
   window.__fenris2d=Object.freeze({snapshot:()=>({phase:state.phase,age:state.age,saveSlot:activeSlot,rest:rests.snapshot(),waiting:state.waiting?{...state.waiting}:null,seated:!!state.seated,callouts:structuredClone(state.callouts),paused:state.paused,position:{x:state.player.x,y:state.player.y},animation:{...fenrisFrame(state.player,art.manifest.fenrisAnimations),moving:state.player.moving,running:state.player.running},distance:state.distance,found:[...state.found],near:near?.id||null,pathLength:path.length,voices:[...voiceIds],audio:audio.status(),perception:perception.snapshot(),stats:stats.snapshot(),clock:{...state.clock},village:state.village?{...state.village,...waypointReading(state.player,state.village),tracking:villageTracking}:null,view:renderer.snapshot(),location:state.interior?.id||'forest',economy:town.snapshot(),characters:characters.snapshot(),units:characters.unitSnapshot(),people:state.people.map(p=>({id:p.id,characterId:p.actorId,x:p.x,y:p.y,role:p.role,stats:characters.get(p.actorId).snapshot()})),settlement:{x:world.village.x,y:world.village.y,buildings:world.village.buildings.length,populationTemplate:{...world.village.populationTemplate}},points:state.interactionPoints.map(p=>({...p})),treeCount:world.trees.length,world:{seed:world.seed,chunks:world.chunks.size,terrain:terrainAt(state.player.x,state.player.y,world.seed),inWater:inWater(state.player.x,state.player.y),movementScale:movementScale(state.player.x,state.player.y)}}),worldToScreen:(x,y)=>renderer.toScreen(x,y)});
   requestAnimationFrame(frame);
 } catch(error){console.error(error);$('load-status').textContent='The local artwork could not be loaded. Start this scene with npm start, then reload.';$('begin').querySelector('span').textContent='Unable to load the forest';}
