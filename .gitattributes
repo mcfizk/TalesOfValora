@@ -1,5 +1,5 @@
-# Preserve archived/source artwork bytes and release manifest hashes.
+# Preserve source/artwork bytes and reproducible website/archive hashes.
+RELEASE/** -text
 UNPUBLISHED/** -text
-RELEASE/private-opening/assets/** -text
 # Generated stats are compared byte-for-byte by tests.
 RELEASE/stats-data.js text eol=lf
