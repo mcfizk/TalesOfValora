@@ -1,0 +1,967 @@
+{
+  "canvas": [
+    1120,
+    1448
+  ],
+  "logicalPixelSize": 4,
+  "humanVisibleHeight": 1280,
+  "footBaseline": 1376,
+  "samples": [
+    {
+      "id": "dwarf-male-a",
+      "name": "Traditional stocky",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 248,
+        "y": 416,
+        "width": 620,
+        "height": 960,
+        "bottom": 1376
+      },
+      "heightPercent": 75,
+      "widthToHeight": 0.646,
+      "opaquePixels": 353040,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 163,
+        "y": 174,
+        "width": 766,
+        "height": 1186,
+        "bottom": 1360
+      },
+      "uniformSourceScale": 0.8094435075885329,
+      "sha256": "5E3BC9DB6B9A5FFBCEF9255B4953DC2EA0047D38320155EE53D62CBF13D52C99"
+    },
+    {
+      "id": "dwarf-male-b",
+      "name": "Broad and muscular",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 200,
+        "y": 376,
+        "width": 716,
+        "height": 1000,
+        "bottom": 1376
+      },
+      "heightPercent": 78.13,
+      "widthToHeight": 0.716,
+      "opaquePixels": 418224,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 76,
+        "y": 86,
+        "width": 943,
+        "height": 1314,
+        "bottom": 1400
+      },
+      "uniformSourceScale": 0.76103500761035,
+      "sha256": "247FE7458DF14727A4D3458FB0A8E6D5CCE5DBB42657904A72AD48E22DB82AFC"
+    },
+    {
+      "id": "dwarf-male-c",
+      "name": "Compact and rugged",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 260,
+        "y": 480,
+        "width": 600,
+        "height": 896,
+        "bottom": 1376
+      },
+      "heightPercent": 70,
+      "widthToHeight": 0.67,
+      "opaquePixels": 309984,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 146,
+        "y": 160,
+        "width": 801,
+        "height": 1194,
+        "bottom": 1354
+      },
+      "uniformSourceScale": 0.7504187604690117,
+      "sha256": "0E41B9518093AE789BBFD8CFDD16E6552A0E8DD6323C4CB2B3F594546CF2ACB2"
+    },
+    {
+      "id": "dwarf-female-a",
+      "name": "Traditional stocky",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 244,
+        "y": 416,
+        "width": 632,
+        "height": 960,
+        "bottom": 1376
+      },
+      "heightPercent": 75,
+      "widthToHeight": 0.658,
+      "opaquePixels": 360176,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 115,
+        "y": 95,
+        "width": 857,
+        "height": 1301,
+        "bottom": 1396
+      },
+      "uniformSourceScale": 0.7378939277478862,
+      "sha256": "C175148E034A59C68790D9A91F9B24B82E034D5E130AFF516C5A013A26C3732E"
+    },
+    {
+      "id": "dwarf-female-b",
+      "name": "Broad and athletic",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 236,
+        "y": 376,
+        "width": 644,
+        "height": 1000,
+        "bottom": 1376
+      },
+      "heightPercent": 78.13,
+      "widthToHeight": 0.644,
+      "opaquePixels": 374624,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 119,
+        "y": 69,
+        "width": 851,
+        "height": 1325,
+        "bottom": 1394
+      },
+      "uniformSourceScale": 0.7547169811320755,
+      "sha256": "3370B216CFC69F6C8FDFA13758AC590650F513544C06FCA719ABEE2CA86DEB5C"
+    },
+    {
+      "id": "dwarf-female-c",
+      "name": "Compact and rugged",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 260,
+        "y": 480,
+        "width": 596,
+        "height": 896,
+        "bottom": 1376
+      },
+      "heightPercent": 70,
+      "widthToHeight": 0.665,
+      "opaquePixels": 300576,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1090,
+        1443
+      ],
+      "sourceBounds": {
+        "x": 150,
+        "y": 170,
+        "width": 790,
+        "height": 1188,
+        "bottom": 1358
+      },
+      "uniformSourceScale": 0.7542087542087542,
+      "sha256": "18CF09CCA50701DA76692C2E84576A48AE5464F350BB2D3C349430D6BB1C2A7F"
+    },
+    {
+      "id": "halfling-male-a",
+      "name": "Balanced proportions",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 364,
+        "y": 608,
+        "width": 388,
+        "height": 768,
+        "bottom": 1376
+      },
+      "heightPercent": 60,
+      "widthToHeight": 0.505,
+      "opaquePixels": 161632,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 263,
+        "y": 181,
+        "width": 593,
+        "height": 1177,
+        "bottom": 1358
+      },
+      "uniformSourceScale": 0.6525063721325404,
+      "sha256": "F7287A393E947851E485139DCE3D5E9AE803667ED12B34BBF38AFA30C473FA8D"
+    },
+    {
+      "id": "halfling-male-b",
+      "name": "Slender and agile",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 364,
+        "y": 556,
+        "width": 392,
+        "height": 820,
+        "bottom": 1376
+      },
+      "heightPercent": 64.06,
+      "widthToHeight": 0.478,
+      "opaquePixels": 157376,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 267,
+        "y": 137,
+        "width": 585,
+        "height": 1220,
+        "bottom": 1357
+      },
+      "uniformSourceScale": 0.6721311475409836,
+      "sha256": "529467ED96D68601154CFA36126F0B00DA871A4E49C89991FBD5B70A906DB935"
+    },
+    {
+      "id": "halfling-male-c",
+      "name": "Compact and sturdy",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 372,
+        "y": 684,
+        "width": 372,
+        "height": 692,
+        "bottom": 1376
+      },
+      "heightPercent": 54.06,
+      "widthToHeight": 0.538,
+      "opaquePixels": 145024,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 243,
+        "y": 161,
+        "width": 622,
+        "height": 1163,
+        "bottom": 1324
+      },
+      "uniformSourceScale": 0.5950128976784179,
+      "sha256": "CCFCBF9CA52CB59CBFCD61F95CD540BEF8BD87964F54B98B2821F95D74D89186"
+    },
+    {
+      "id": "halfling-female-a",
+      "name": "Balanced proportions",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 360,
+        "y": 608,
+        "width": 396,
+        "height": 768,
+        "bottom": 1376
+      },
+      "heightPercent": 60,
+      "widthToHeight": 0.516,
+      "opaquePixels": 157632,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 243,
+        "y": 102,
+        "width": 628,
+        "height": 1218,
+        "bottom": 1320
+      },
+      "uniformSourceScale": 0.6305418719211823,
+      "sha256": "DB31312193205830C282B2D82ACEEC20DED27247A79B6F43A63BE501930B525D"
+    },
+    {
+      "id": "halfling-female-b",
+      "name": "Slender and agile",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 360,
+        "y": 556,
+        "width": 396,
+        "height": 820,
+        "bottom": 1376
+      },
+      "heightPercent": 64.06,
+      "widthToHeight": 0.483,
+      "opaquePixels": 156192,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 260,
+        "y": 100,
+        "width": 610,
+        "height": 1268,
+        "bottom": 1368
+      },
+      "uniformSourceScale": 0.6466876971608833,
+      "sha256": "B1B4EB724142287DDB0314EAEBF220DEA55B75669E013AF5DCFB8E949E0B0578"
+    },
+    {
+      "id": "halfling-female-c",
+      "name": "Compact and sturdy",
+      "dimensions": [
+        1120,
+        1448
+      ],
+      "visibleBounds": {
+        "x": 376,
+        "y": 684,
+        "width": 368,
+        "height": 692,
+        "bottom": 1376
+      },
+      "heightPercent": 54.06,
+      "widthToHeight": 0.532,
+      "opaquePixels": 140400,
+      "partialAlphaPixels": 0,
+      "gridErrors": 0,
+      "footBaseline": 1376,
+      "sourceDimensions": [
+        1089,
+        1444
+      ],
+      "sourceBounds": {
+        "x": 247,
+        "y": 164,
+        "width": 613,
+        "height": 1156,
+        "bottom": 1320
+      },
+      "uniformSourceScale": 0.5986159169550173,
+      "sha256": "55D7365AE66D2609449A4754AE385E75BB8C1D8968822762F630EE74B1BC4D15"
+    }
+  ],
+  "sheets": [
+    {
+      "file": "comparison-preview.png",
+      "dimensions": [
+        1868,
+        1000
+      ],
+      "uniformImageScale": 0.25,
+      "placements": [
+        {
+          "id": "human-male",
+          "worldRatio": 1,
+          "scale": 0.25,
+          "canvasLeft": 10,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 320
+        },
+        {
+          "id": "dwarf-male-a",
+          "worldRatio": 0.75,
+          "scale": 0.25,
+          "canvasLeft": 270,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 240
+        },
+        {
+          "id": "dwarf-male-b",
+          "worldRatio": 0.78125,
+          "scale": 0.25,
+          "canvasLeft": 530,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 250
+        },
+        {
+          "id": "dwarf-male-c",
+          "worldRatio": 0.7,
+          "scale": 0.25,
+          "canvasLeft": 790,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 224
+        },
+        {
+          "id": "halfling-male-a",
+          "worldRatio": 0.6,
+          "scale": 0.25,
+          "canvasLeft": 1050,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 192
+        },
+        {
+          "id": "halfling-male-b",
+          "worldRatio": 0.640625,
+          "scale": 0.25,
+          "canvasLeft": 1310,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 205
+        },
+        {
+          "id": "halfling-male-c",
+          "worldRatio": 0.540625,
+          "scale": 0.25,
+          "canvasLeft": 1570,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 173
+        },
+        {
+          "id": "human-female",
+          "worldRatio": 1,
+          "scale": 0.25,
+          "canvasLeft": 10,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 320
+        },
+        {
+          "id": "dwarf-female-a",
+          "worldRatio": 0.75,
+          "scale": 0.25,
+          "canvasLeft": 270,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 240
+        },
+        {
+          "id": "dwarf-female-b",
+          "worldRatio": 0.78125,
+          "scale": 0.25,
+          "canvasLeft": 530,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 250
+        },
+        {
+          "id": "dwarf-female-c",
+          "worldRatio": 0.7,
+          "scale": 0.25,
+          "canvasLeft": 790,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 224
+        },
+        {
+          "id": "halfling-female-a",
+          "worldRatio": 0.6,
+          "scale": 0.25,
+          "canvasLeft": 1050,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 192
+        },
+        {
+          "id": "halfling-female-b",
+          "worldRatio": 0.640625,
+          "scale": 0.25,
+          "canvasLeft": 1310,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 205
+        },
+        {
+          "id": "halfling-female-c",
+          "worldRatio": 0.540625,
+          "scale": 0.25,
+          "canvasLeft": 1570,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 173
+        }
+      ]
+    },
+    {
+      "file": "comparison-native.png",
+      "dimensions": [
+        7472,
+        4000
+      ],
+      "uniformImageScale": 1,
+      "placements": [
+        {
+          "id": "human-male",
+          "worldRatio": 1,
+          "scale": 1,
+          "canvasLeft": 40,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 1280
+        },
+        {
+          "id": "dwarf-male-a",
+          "worldRatio": 0.75,
+          "scale": 1,
+          "canvasLeft": 1080,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 960
+        },
+        {
+          "id": "dwarf-male-b",
+          "worldRatio": 0.78125,
+          "scale": 1,
+          "canvasLeft": 2120,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 1000
+        },
+        {
+          "id": "dwarf-male-c",
+          "worldRatio": 0.7,
+          "scale": 1,
+          "canvasLeft": 3160,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 896
+        },
+        {
+          "id": "halfling-male-a",
+          "worldRatio": 0.6,
+          "scale": 1,
+          "canvasLeft": 4200,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 768
+        },
+        {
+          "id": "halfling-male-b",
+          "worldRatio": 0.640625,
+          "scale": 1,
+          "canvasLeft": 5240,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 820
+        },
+        {
+          "id": "halfling-male-c",
+          "worldRatio": 0.540625,
+          "scale": 1,
+          "canvasLeft": 6280,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 692
+        },
+        {
+          "id": "human-female",
+          "worldRatio": 1,
+          "scale": 1,
+          "canvasLeft": 40,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 1280
+        },
+        {
+          "id": "dwarf-female-a",
+          "worldRatio": 0.75,
+          "scale": 1,
+          "canvasLeft": 1080,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 960
+        },
+        {
+          "id": "dwarf-female-b",
+          "worldRatio": 0.78125,
+          "scale": 1,
+          "canvasLeft": 2120,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 1000
+        },
+        {
+          "id": "dwarf-female-c",
+          "worldRatio": 0.7,
+          "scale": 1,
+          "canvasLeft": 3160,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 896
+        },
+        {
+          "id": "halfling-female-a",
+          "worldRatio": 0.6,
+          "scale": 1,
+          "canvasLeft": 4200,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 768
+        },
+        {
+          "id": "halfling-female-b",
+          "worldRatio": 0.640625,
+          "scale": 1,
+          "canvasLeft": 5240,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 820
+        },
+        {
+          "id": "halfling-female-c",
+          "worldRatio": 0.540625,
+          "scale": 1,
+          "canvasLeft": 6280,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 692
+        }
+      ]
+    },
+    {
+      "file": "silhouettes-preview.png",
+      "dimensions": [
+        1868,
+        1000
+      ],
+      "uniformImageScale": 0.25,
+      "placements": [
+        {
+          "id": "human-male",
+          "worldRatio": 1,
+          "scale": 0.25,
+          "canvasLeft": 10,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 320
+        },
+        {
+          "id": "dwarf-male-a",
+          "worldRatio": 0.75,
+          "scale": 0.25,
+          "canvasLeft": 270,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 240
+        },
+        {
+          "id": "dwarf-male-b",
+          "worldRatio": 0.78125,
+          "scale": 0.25,
+          "canvasLeft": 530,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 250
+        },
+        {
+          "id": "dwarf-male-c",
+          "worldRatio": 0.7,
+          "scale": 0.25,
+          "canvasLeft": 790,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 224
+        },
+        {
+          "id": "halfling-male-a",
+          "worldRatio": 0.6,
+          "scale": 0.25,
+          "canvasLeft": 1050,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 192
+        },
+        {
+          "id": "halfling-male-b",
+          "worldRatio": 0.640625,
+          "scale": 0.25,
+          "canvasLeft": 1310,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 205
+        },
+        {
+          "id": "halfling-male-c",
+          "worldRatio": 0.540625,
+          "scale": 0.25,
+          "canvasLeft": 1570,
+          "canvasTop": 106,
+          "baseline": 450,
+          "displayHeight": 173
+        },
+        {
+          "id": "human-female",
+          "worldRatio": 1,
+          "scale": 0.25,
+          "canvasLeft": 10,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 320
+        },
+        {
+          "id": "dwarf-female-a",
+          "worldRatio": 0.75,
+          "scale": 0.25,
+          "canvasLeft": 270,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 240
+        },
+        {
+          "id": "dwarf-female-b",
+          "worldRatio": 0.78125,
+          "scale": 0.25,
+          "canvasLeft": 530,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 250
+        },
+        {
+          "id": "dwarf-female-c",
+          "worldRatio": 0.7,
+          "scale": 0.25,
+          "canvasLeft": 790,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 224
+        },
+        {
+          "id": "halfling-female-a",
+          "worldRatio": 0.6,
+          "scale": 0.25,
+          "canvasLeft": 1050,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 192
+        },
+        {
+          "id": "halfling-female-b",
+          "worldRatio": 0.640625,
+          "scale": 0.25,
+          "canvasLeft": 1310,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 205
+        },
+        {
+          "id": "halfling-female-c",
+          "worldRatio": 0.540625,
+          "scale": 0.25,
+          "canvasLeft": 1570,
+          "canvasTop": 538,
+          "baseline": 882,
+          "displayHeight": 173
+        }
+      ]
+    },
+    {
+      "file": "silhouettes-native.png",
+      "dimensions": [
+        7472,
+        4000
+      ],
+      "uniformImageScale": 1,
+      "placements": [
+        {
+          "id": "human-male",
+          "worldRatio": 1,
+          "scale": 1,
+          "canvasLeft": 40,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 1280
+        },
+        {
+          "id": "dwarf-male-a",
+          "worldRatio": 0.75,
+          "scale": 1,
+          "canvasLeft": 1080,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 960
+        },
+        {
+          "id": "dwarf-male-b",
+          "worldRatio": 0.78125,
+          "scale": 1,
+          "canvasLeft": 2120,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 1000
+        },
+        {
+          "id": "dwarf-male-c",
+          "worldRatio": 0.7,
+          "scale": 1,
+          "canvasLeft": 3160,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 896
+        },
+        {
+          "id": "halfling-male-a",
+          "worldRatio": 0.6,
+          "scale": 1,
+          "canvasLeft": 4200,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 768
+        },
+        {
+          "id": "halfling-male-b",
+          "worldRatio": 0.640625,
+          "scale": 1,
+          "canvasLeft": 5240,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 820
+        },
+        {
+          "id": "halfling-male-c",
+          "worldRatio": 0.540625,
+          "scale": 1,
+          "canvasLeft": 6280,
+          "canvasTop": 424,
+          "baseline": 1800,
+          "displayHeight": 692
+        },
+        {
+          "id": "human-female",
+          "worldRatio": 1,
+          "scale": 1,
+          "canvasLeft": 40,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 1280
+        },
+        {
+          "id": "dwarf-female-a",
+          "worldRatio": 0.75,
+          "scale": 1,
+          "canvasLeft": 1080,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 960
+        },
+        {
+          "id": "dwarf-female-b",
+          "worldRatio": 0.78125,
+          "scale": 1,
+          "canvasLeft": 2120,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 1000
+        },
+        {
+          "id": "dwarf-female-c",
+          "worldRatio": 0.7,
+          "scale": 1,
+          "canvasLeft": 3160,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 896
+        },
+        {
+          "id": "halfling-female-a",
+          "worldRatio": 0.6,
+          "scale": 1,
+          "canvasLeft": 4200,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 768
+        },
+        {
+          "id": "halfling-female-b",
+          "worldRatio": 0.640625,
+          "scale": 1,
+          "canvasLeft": 5240,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 820
+        },
+        {
+          "id": "halfling-female-c",
+          "worldRatio": 0.540625,
+          "scale": 1,
+          "canvasLeft": 6280,
+          "canvasTop": 2152,
+          "baseline": 3528,
+          "displayHeight": 692
+        }
+      ]
+    }
+  ],
+  "existingAssetsChecked": 27,
+  "existingAssetsUnchanged": true
+}

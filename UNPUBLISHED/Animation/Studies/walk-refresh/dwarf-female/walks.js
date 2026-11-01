@@ -1,0 +1,1 @@
+const configs={"left":{"file":"walk-left.png","frames":8,"columns":4,"frameWidth":512,"frameHeight":640,"anchor":[256,610],"fps":8,"bodyHeight":482},"right":{"file":"walk-right.png","frames":8,"columns":4,"frameWidth":512,"frameHeight":640,"anchor":[256,610],"fps":8,"bodyHeight":482}};

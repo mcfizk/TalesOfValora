@@ -1,0 +1,318 @@
+{
+  "displayHeight": 28,
+  "clips": {
+    "walk/left": {
+      "offsetX": -6
+    },
+    "rest/left/idle": {
+      "frames": {
+        "01": {
+          "targetHeight": 540
+        },
+        "02": {
+          "targetHeight": 540
+        },
+        "03": {
+          "targetHeight": 540
+        },
+        "04": {
+          "targetHeight": 540
+        },
+        "05": {
+          "targetHeight": 540
+        },
+        "06": {
+          "targetHeight": 540
+        },
+        "07": {
+          "targetHeight": 540
+        },
+        "08": {
+          "targetHeight": 540
+        }
+      }
+    },
+    "rest/left/sit": {
+      "frames": {
+        "01": {
+          "targetHeight": 330
+        },
+        "02": {
+          "targetHeight": 332
+        },
+        "03": {
+          "targetHeight": 330
+        },
+        "04": {
+          "targetHeight": 330
+        }
+      }
+    },
+    "rest/left/sleep": {
+      "frames": {
+        "01": {
+          "targetHeight": 180
+        },
+        "02": {
+          "targetHeight": 182
+        },
+        "03": {
+          "targetHeight": 180
+        },
+        "04": {
+          "targetHeight": 180
+        }
+      }
+    },
+    "rest/left/sleepToSit": {
+      "frames": {
+        "01": {
+          "targetHeight": 180
+        },
+        "02": {
+          "targetHeight": 205
+        },
+        "03": {
+          "targetHeight": 255
+        },
+        "04": {
+          "targetHeight": 310
+        },
+        "05": {
+          "targetHeight": 330
+        }
+      }
+    },
+    "rest/left/sitToStand": {
+      "frames": {
+        "01": {
+          "targetHeight": 330
+        },
+        "02": {
+          "targetHeight": 330
+        },
+        "03": {
+          "targetHeight": 350,
+          "offsetX": -18
+        },
+        "04": {
+          "targetHeight": 385
+        },
+        "05": {
+          "targetHeight": 450
+        },
+        "06": {
+          "targetHeight": 470
+        },
+        "07": {
+          "targetHeight": 520
+        },
+        "08": {
+          "targetHeight": 540
+        }
+      }
+    },
+    "rest/left/sitToSleep": {
+      "frames": {
+        "01": {
+          "targetHeight": 330
+        },
+        "02": {
+          "targetHeight": 310
+        },
+        "03": {
+          "targetHeight": 255
+        },
+        "04": {
+          "targetHeight": 205
+        },
+        "05": {
+          "targetHeight": 180
+        }
+      }
+    },
+    "rest/left/standToSit": {
+      "frames": {
+        "01": {
+          "targetHeight": 540
+        },
+        "02": {
+          "targetHeight": 520
+        },
+        "03": {
+          "targetHeight": 470
+        },
+        "04": {
+          "targetHeight": 450
+        },
+        "05": {
+          "targetHeight": 385
+        },
+        "06": {
+          "targetHeight": 350,
+          "offsetX": -18
+        },
+        "07": {
+          "targetHeight": 330
+        },
+        "08": {
+          "targetHeight": 330
+        }
+      }
+    },
+    "rest/right/idle": {
+      "frames": {
+        "01": {
+          "targetHeight": 540
+        },
+        "02": {
+          "targetHeight": 540
+        },
+        "03": {
+          "targetHeight": 540
+        },
+        "04": {
+          "targetHeight": 540
+        },
+        "05": {
+          "targetHeight": 540
+        },
+        "06": {
+          "targetHeight": 540
+        },
+        "07": {
+          "targetHeight": 540
+        },
+        "08": {
+          "targetHeight": 540
+        }
+      }
+    },
+    "rest/right/sit": {
+      "frames": {
+        "01": {
+          "targetHeight": 330
+        },
+        "02": {
+          "targetHeight": 332
+        },
+        "03": {
+          "targetHeight": 330
+        },
+        "04": {
+          "targetHeight": 330
+        }
+      }
+    },
+    "rest/right/sleep": {
+      "frames": {
+        "01": {
+          "targetHeight": 180
+        },
+        "02": {
+          "targetHeight": 182
+        },
+        "03": {
+          "targetHeight": 180
+        },
+        "04": {
+          "targetHeight": 180
+        }
+      }
+    },
+    "rest/right/sleepToSit": {
+      "frames": {
+        "01": {
+          "targetHeight": 180
+        },
+        "02": {
+          "targetHeight": 205
+        },
+        "03": {
+          "targetHeight": 255
+        },
+        "04": {
+          "targetHeight": 310
+        },
+        "05": {
+          "targetHeight": 330
+        }
+      }
+    },
+    "rest/right/sitToStand": {
+      "frames": {
+        "01": {
+          "targetHeight": 330
+        },
+        "02": {
+          "targetHeight": 330
+        },
+        "03": {
+          "targetHeight": 350
+        },
+        "04": {
+          "targetHeight": 385
+        },
+        "05": {
+          "targetHeight": 420
+        },
+        "06": {
+          "targetHeight": 470
+        },
+        "07": {
+          "targetHeight": 520
+        },
+        "08": {
+          "targetHeight": 540
+        }
+      }
+    },
+    "rest/right/sitToSleep": {
+      "frames": {
+        "01": {
+          "targetHeight": 330
+        },
+        "02": {
+          "targetHeight": 310
+        },
+        "03": {
+          "targetHeight": 255
+        },
+        "04": {
+          "targetHeight": 205
+        },
+        "05": {
+          "targetHeight": 180
+        }
+      }
+    },
+    "rest/right/standToSit": {
+      "frames": {
+        "01": {
+          "targetHeight": 540
+        },
+        "02": {
+          "targetHeight": 520
+        },
+        "03": {
+          "targetHeight": 470
+        },
+        "04": {
+          "targetHeight": 420
+        },
+        "05": {
+          "targetHeight": 385
+        },
+        "06": {
+          "targetHeight": 350
+        },
+        "07": {
+          "targetHeight": 330
+        },
+        "08": {
+          "targetHeight": 330
+        }
+      }
+    }
+  }
+}

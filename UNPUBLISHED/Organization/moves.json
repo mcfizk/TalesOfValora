@@ -1,0 +1,230 @@
+[
+  {
+    "from": "assets\\sprites\\animations",
+    "to": "UNPUBLISHED\\Animation\\Studies"
+  },
+  {
+    "from": "assets\\sprites\\Animals",
+    "to": "UNPUBLISHED\\Animation\\Animals"
+  },
+  {
+    "from": "assets\\sprites\\concepts",
+    "to": "UNPUBLISHED\\Concepts"
+  },
+  {
+    "from": "assets\\sprites",
+    "to": "UNPUBLISHED\\Animation\\Bases"
+  },
+  {
+    "from": "Sprites",
+    "to": "UNPUBLISHED\\Animation\\Exports"
+  },
+  {
+    "from": "asset-review",
+    "to": "UNPUBLISHED\\References\\AssetReview"
+  },
+  {
+    "from": "Resourses",
+    "to": "UNPUBLISHED\\References\\OriginalResources"
+  },
+  {
+    "from": "private-opening\\qa",
+    "to": "UNPUBLISHED\\QA"
+  },
+  {
+    "from": "backups",
+    "to": "UNPUBLISHED\\Archives\\LocalBackups"
+  },
+  {
+    "from": "0001-Add-D-D-5e-stats-scaffolding.patch",
+    "to": "UNPUBLISHED\\Archives\\Patches\\0001-Add-D-D-5e-stats-scaffolding.patch"
+  },
+  {
+    "from": "tests\\world.test.mjs",
+    "to": "UNPUBLISHED\\Legacy3D\\tests\\world.test.mjs"
+  },
+  {
+    "from": "assets",
+    "to": "UNPUBLISHED\\Legacy3D\\assets"
+  },
+  {
+    "from": "vendor",
+    "to": "UNPUBLISHED\\Legacy3D\\vendor"
+  },
+  {
+    "from": "main.js",
+    "to": "UNPUBLISHED\\Legacy3D\\main.js"
+  },
+  {
+    "from": "world.js",
+    "to": "UNPUBLISHED\\Legacy3D\\world.js"
+  },
+  {
+    "from": "character.js",
+    "to": "UNPUBLISHED\\Legacy3D\\character.js"
+  },
+  {
+    "from": "forest.js",
+    "to": "UNPUBLISHED\\Legacy3D\\forest.js"
+  },
+  {
+    "from": "visuals.js",
+    "to": "UNPUBLISHED\\Legacy3D\\visuals.js"
+  },
+  {
+    "from": "index.html",
+    "to": "UNPUBLISHED\\Legacy3D\\index.html"
+  },
+  {
+    "from": "style.css",
+    "to": "UNPUBLISHED\\Legacy3D\\style.css"
+  },
+  {
+    "from": "art-manifest.json",
+    "to": "UNPUBLISHED\\Legacy3D\\art-manifest.json"
+  },
+  {
+    "from": "model-study.html",
+    "to": "UNPUBLISHED\\Legacy3D\\model-study.html"
+  },
+  {
+    "from": "shelf-card.html",
+    "to": "UNPUBLISHED\\Legacy3D\\shelf-card.html"
+  },
+  {
+    "from": "browser-test.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\browser-test.cjs"
+  },
+  {
+    "from": "deploy.ps1",
+    "to": "UNPUBLISHED\\Legacy3D\\deploy.ps1"
+  },
+  {
+    "from": "document-model.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\document-model.cjs"
+  },
+  {
+    "from": "inspect-camera.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\inspect-camera.cjs"
+  },
+  {
+    "from": "inspect-model.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\inspect-model.cjs"
+  },
+  {
+    "from": "inspect.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\inspect.cjs"
+  },
+  {
+    "from": "integrate-model.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\integrate-model.cjs"
+  },
+  {
+    "from": "prepare-release.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\prepare-release.cjs"
+  },
+  {
+    "from": "refine-graphics.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\refine-graphics.cjs"
+  },
+  {
+    "from": "refine-sculpt.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\refine-sculpt.cjs"
+  },
+  {
+    "from": "refine.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\refine.cjs"
+  },
+  {
+    "from": "sculpt-model.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\sculpt-model.cjs"
+  },
+  {
+    "from": "upgrade-graphics.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\upgrade-graphics.cjs"
+  },
+  {
+    "from": "validate-model.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\validate-model.cjs"
+  },
+  {
+    "from": "verify-live.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\verify-live.cjs"
+  },
+  {
+    "from": "verify-model-viewer.cjs",
+    "to": "UNPUBLISHED\\Legacy3D\\verify-model-viewer.cjs"
+  },
+  {
+    "from": "private-opening",
+    "to": "RELEASE\\private-opening"
+  },
+  {
+    "from": "units",
+    "to": "RELEASE\\units"
+  },
+  {
+    "from": "data",
+    "to": "RELEASE\\data"
+  },
+  {
+    "from": "docs",
+    "to": "RELEASE\\docs"
+  },
+  {
+    "from": "tests",
+    "to": "RELEASE\\tests"
+  },
+  {
+    "from": "audio.js",
+    "to": "RELEASE\\audio.js"
+  },
+  {
+    "from": "audio-catalog.js",
+    "to": "RELEASE\\audio-catalog.js"
+  },
+  {
+    "from": "story.js",
+    "to": "RELEASE\\story.js"
+  },
+  {
+    "from": "stats.js",
+    "to": "RELEASE\\stats.js"
+  },
+  {
+    "from": "stats-data.js",
+    "to": "RELEASE\\stats-data.js"
+  },
+  {
+    "from": "resources.js",
+    "to": "RELEASE\\resources.js"
+  },
+  {
+    "from": "world-characters.js",
+    "to": "RELEASE\\world-characters.js"
+  },
+  {
+    "from": "build-site.cjs",
+    "to": "RELEASE\\build-site.cjs"
+  },
+  {
+    "from": "build-stats.cjs",
+    "to": "RELEASE\\build-stats.cjs"
+  },
+  {
+    "from": "site-build-check.cjs",
+    "to": "RELEASE\\site-build-check.cjs"
+  },
+  {
+    "from": "deploy-site.ps1",
+    "to": "RELEASE\\deploy-site.ps1"
+  },
+  {
+    "from": "serve.cjs",
+    "to": "RELEASE\\serve.cjs"
+  },
+  {
+    "from": "README.md",
+    "to": "UNPUBLISHED\\Archives\\previous-project-README.md"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "id": "wolf",
+  "frames": 8,
+  "columns": 4,
+  "frameWidth": 640,
+  "frameHeight": 640,
+  "fps": 8,
+  "anchor": [
+    320,
+    600
+  ],
+  "bodyHeight": 340,
+  "displayHeight": 22,
+  "files": {
+    "left": "walk-left.png",
+    "right": "walk-right.png"
+  },
+  "method": "Individually generated poses, whole-image uniform scaling and nearest-neighbor assembly. Right is exact frame mirror.",
+  "records": [
+    {
+      "id": "01",
+      "prompt": "Generate ONE pixel-art wolf walking LEFT frame. Image1 is WOLF IDENTITY and must control exact head, grey fur markings, short neck, long horizontal torso, bushy low tail, canine leg lengths and paws. Image2 is only a four-legged movement phase guide: transfer which near/far feet are forward/back and planted/airborne; do NOT transfer deer anatomy, hooves, upright neck or antlers. Natural relaxed four-beat canine walk. Exactly four jointed canine legs, darker far legs behind near legs, natural elbows/hocks. Same three-quarter left camera, crisp outlined pixel art, same lighting and shading as wolf reference. Full body isolated on genuine transparent background; no floor, shadow, text, accessories. Keep stable head and back for animation.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-e51913dd-9921-4877-aab0-122d56675abc.png",
+      "scale": 0.3582718651211802,
+      "lift": 0,
+      "hash": "0b6fd55ec659607e51cf242e7c89a01d1d12cc4882746cdde6c1300a6ea37f20"
+    },
+    {
+      "id": "02",
+      "prompt": "Generate ONE pixel-art wolf walking LEFT frame. Image1 is WOLF IDENTITY and must control exact head, grey fur markings, short neck, long horizontal torso, bushy low tail, canine leg lengths and paws. Image2 is only a four-legged movement phase guide: transfer which near/far feet are forward/back and planted/airborne; do NOT transfer deer anatomy, hooves, upright neck or antlers. Natural relaxed four-beat canine walk. Exactly four jointed canine legs, darker far legs behind near legs, natural elbows/hocks. Same three-quarter left camera, crisp outlined pixel art, same lighting and shading as wolf reference. Full body isolated on genuine transparent background; no floor, shadow, text, accessories. Keep stable head and back for animation.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-1ebcc0c3-02fb-4071-ab8c-7d6c1fbc0156.png",
+      "scale": 0.3574468085106383,
+      "lift": 0,
+      "hash": "9386aaeacffc80110ffb0fc6913020711f7f6845ebb47d9df5f01002d7e4897e"
+    },
+    {
+      "id": "03",
+      "prompt": "Edit this exact wolf sprite, preserving head, torso, fur markings, tail, size, camera and crisp pixel-art style. Change ONLY the four leg positions into this walk phase: The LIGHT FOREGROUND FRONT LEG, attached to the large near shoulder, is STRAIGHT VERTICAL DOWN, paw planted directly beneath shoulder. Dark far front leg lifted and reaching forward LEFT. Near hind foot planted behind hip; far hind foot forward contact. Near legs are the large light foreground limbs and MUST retain that identity. Natural canine elbows and hocks. Exactly four legs with four paws, no extra limbs. Full body, transparent background, no shadow or text.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-4f43a614-8e9f-4959-867a-14e994aba512.png",
+      "scale": 0.35751840168243953,
+      "lift": 0,
+      "hash": "1e16aaab8245a47d262a8acc424c8b8cc4b0ebbf9cfc4c4b407e86d86c973737"
+    },
+    {
+      "id": "04",
+      "prompt": "Edit this exact wolf sprite, preserving head, torso, fur markings, tail, size, camera and crisp pixel-art style. Change ONLY the four leg positions into this walk phase: The LIGHT FOREGROUND FRONT LEG extends diagonally BACKWARD to screen RIGHT from its shoulder, paw planted behind shoulder under belly. The dark far front leg extends forward LEFT, planted. Near front paw must be to the RIGHT of far front paw. Near hind lifts behind, far hind supports. Near legs are the large light foreground limbs and MUST retain that identity. Natural canine elbows and hocks. Exactly four legs with four paws, no extra limbs. Full body, transparent background, no shadow or text.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a3da7f67-6d55-4b7b-a574-f79c728579b2.png",
+      "scale": 0.3671291355389541,
+      "lift": 0,
+      "hash": "b1d134d5375ae9154f8322cbc06135a68a371aaf280ec3a30e285505d7344755"
+    },
+    {
+      "id": "05",
+      "prompt": "Edit this exact wolf sprite, preserving head, torso, fur markings, tail, size, camera and crisp pixel-art style. Change ONLY the four leg positions into this walk phase: The LIGHT FOREGROUND FRONT LEG is far BACK under belly toward screen RIGHT, toe just leaving ground, wrist curling. Dark far front leg reaches LEFT and bears weight. Near hind foot forward planted; far hind foot lifting behind. Near legs are the large light foreground limbs and MUST retain that identity. Natural canine elbows and hocks. Exactly four legs with four paws, no extra limbs. Full body, transparent background, no shadow or text.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-4a891676-0514-4c21-8375-8d2128f0c37b.png",
+      "scale": 0.361317747077577,
+      "lift": 0,
+      "hash": "a644268713a3e88bcb00107eca0287416039a52981e943e99dede70561758deb"
+    },
+    {
+      "id": "06",
+      "prompt": "Generate ONE pixel-art wolf walking LEFT frame. Image1 is WOLF IDENTITY and must control exact head, grey fur markings, short neck, long horizontal torso, bushy low tail, canine leg lengths and paws. Image2 is only a four-legged movement phase guide: transfer which near/far feet are forward/back and planted/airborne; do NOT transfer deer anatomy, hooves, upright neck or antlers. Natural relaxed four-beat canine walk. Exactly four jointed canine legs, darker far legs behind near legs, natural elbows/hocks. Same three-quarter left camera, crisp outlined pixel art, same lighting and shading as wolf reference. Full body isolated on genuine transparent background; no floor, shadow, text, accessories. Keep stable head and back for animation.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-295e45b7-a300-416f-b04a-5b3d4f3d09b1.png",
+      "scale": 0.35331230283911674,
+      "lift": 0,
+      "hash": "dcddd4465874fa5cdebb621cdcc4e81acd9e732f5836f91bf5046d8b3a648695"
+    },
+    {
+      "id": "07",
+      "prompt": "Generate ONE pixel-art wolf walking LEFT frame. Image1 is WOLF IDENTITY and must control exact head, grey fur markings, short neck, long horizontal torso, bushy low tail, canine leg lengths and paws. Image2 is only a four-legged movement phase guide: transfer which near/far feet are forward/back and planted/airborne; do NOT transfer deer anatomy, hooves, upright neck or antlers. Natural relaxed four-beat canine walk. Exactly four jointed canine legs, darker far legs behind near legs, natural elbows/hocks. Same three-quarter left camera, crisp outlined pixel art, same lighting and shading as wolf reference. Full body isolated on genuine transparent background; no floor, shadow, text, accessories. Keep stable head and back for animation.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-1e4ff6fe-756e-4396-b0f9-6c0e620e31eb.png",
+      "scale": 0.35714285714285715,
+      "lift": 0,
+      "hash": "a7f0587cc7541f142ec0639f99da4078f615726abcf7e497acbb74f83e362190"
+    },
+    {
+      "id": "08",
+      "prompt": "Edit this exact wolf sprite, preserving head, torso, fur markings, tail, size, camera and crisp pixel-art style. Change ONLY the four leg positions into this walk phase: The LIGHT FOREGROUND FRONT LEG reaches far FORWARD screen LEFT, wrist slightly curled and paw clearly AIRBORNE just above ground preparing contact. Dark far front leg planted behind shoulder to RIGHT. Near hind supports, far hind lifts. Near legs are the large light foreground limbs and MUST retain that identity. Natural canine elbows and hocks. Exactly four legs with four paws, no extra limbs. Full body, transparent background, no shadow or text.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-ec08f084-7df7-4beb-9b1b-2e17dd42098e.png",
+      "scale": 0.36020942408376966,
+      "lift": 0,
+      "hash": "608aaded8fbd67e224b149533f3e096aac702f8e0aca632cd26621468edcc11d"
+    }
+  ]
+}

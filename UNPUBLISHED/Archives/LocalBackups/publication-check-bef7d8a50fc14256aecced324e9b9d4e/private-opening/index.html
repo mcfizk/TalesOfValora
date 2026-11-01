@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0c1717"><link rel="icon" href="data:,"><title>Fenris · Awakening</title><link rel="stylesheet" href="opening.css"></head>
+<body>
+<canvas id="forest" aria-label="Forest clearing. Move with WASD or the arrow keys. Click the ground to walk. E examines nearby objects."></canvas>
+<div class="grain" aria-hidden="true"></div><div class="vignette" aria-hidden="true"></div><div id="veil" aria-hidden="true"></div>
+<section id="start" class="start">
+  <div class="title-copy"><p class="eyebrow">THE BOOK OF FENRIS</p><h1>FENRIS</h1><div class="chapter-rule"><span></span><b>I</b><span></span></div><h2>AWAKENING</h2><p class="prologue">An unfamiliar forest.<br>A voice beyond the trees.<br>No memory of how you came to be here.</p><button id="begin" class="primary" disabled><span>Preparing the forest…</span><b aria-hidden="true">→</b></button><label class="sound-choice"><input id="enable-audio" type="checkbox" checked> Forest ambience</label><p id="load-status" class="load-status" role="status">Gathering the last light…</p></div>
+  <footer class="title-footer"><span>1468 DR <i>·</i> BEFORE VALORA</span><span>A story yet to be remembered</span></footer>
+</section>
+<div id="game-ui" hidden>
+  <header class="game-header"><div class="chapter"><span class="eyebrow">CHAPTER I</span><h1>Awakening</h1><p id="location-name">An unfamiliar forest</p></div><nav aria-label="Game options"><button id="sound" aria-label="Mute sound" title="Toggle sound">♫</button><button id="pack" title="Pack (I)">Pack &#183; 0c</button><button id="journal" title="Journal (J)">Journal <kbd>J</kbd><span id="journal-dot" hidden>●</span></button><button id="menu" title="Pause (Escape)" aria-label="Pause menu">Ⅱ</button></nav></header>
+  <aside id="objective"><span class="objective-mark" aria-hidden="true">◇</span><div><span class="eyebrow">FIRST STEPS</span><p id="objective-text">Seek the source of the voices.</p><span id="progress">Search deeper into the forest.</span></div></aside>
+  <div id="chapter-intro" aria-hidden="true"><span>I</span><h2>AWAKENING</h2><p>The forest stirs.</p></div>
+  <aside id="party-panel" aria-label="Party"></aside>
+  <aside id="world-clock" aria-label="World time">
+    <svg class="sky-dial" viewBox="0 0 100 40" aria-hidden="true"><path d="M8 34 Q50 -14 92 34"/><path class="horizon" d="M6 34 H94"/><text id="sky-symbol" x="50" y="18" text-anchor="middle">☾</text></svg>
+    <div><span id="clock-phase">Night</span><time id="clock-time">22:00</time></div><small id="clock-day">Day 1</small>
+  </aside>
+  <button id="village-nav" hidden aria-label="Track village" aria-pressed="true"><span class="village-bearing" aria-hidden="true">↑</span><span><strong id="village-label">Village</strong><small id="village-distance"></small></span><span class="nav-track" aria-hidden="true">◇</span></button>
+  <div id="village-beacon" hidden aria-hidden="true"><span>⌂</span><small>Village</small></div>
+  <footer class="controls"><span><kbd>W A S D</kbd> Move <i>·</i> <kbd>Shift</kbd> Run <i>·</i> Click to walk</span><span>Click a bauble to interact <i>·</i> Scroll to zoom</span></footer>
+  <div id="touch-controls"><div id="joystick" aria-label="Drag to move Fenris"><div id="stick"></div></div><button id="touch-examine" aria-label="Examine nearby object">◇</button></div>
+</div>
+<section id="subtitles" hidden aria-live="polite" aria-atomic="true"><span>A DISTANT VOICE</span><p id="subtitle-text"></p></section>
+<div id="notice" role="status"></div>
+<dialog id="panel" aria-labelledby="panel-title"><button id="close-panel" aria-label="Close dialog">×</button><div id="panel-content"></div></dialog>
+<noscript>This opening needs JavaScript enabled.</noscript><script type="module" src="opening.js"></script>
+</body></html>

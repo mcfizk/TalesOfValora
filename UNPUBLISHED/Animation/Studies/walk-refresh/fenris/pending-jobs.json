@@ -1,0 +1,32 @@
+[
+  {
+    "id": "03",
+    "direction": "down",
+    "role": "Opposite leg passing",
+    "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-51154df0-5570-4043-aa1b-780313bb55f6.png",
+    "prompt": "Edit this EXACT Fenris sprite; keep DIRECT FRONT/DOWN facing camera, face, white-grey fur, muscular anatomy, brown shorts, wolf paws and hocks, full body scale and crisp pixel art. Genuine transparent background. Exactly two arms/legs. Next walking pose is PASSING: the SCREEN-RIGHT leg is the supporting leg and should be upright under the pelvis with paw flat planted. Bend and lift the SCREEN-LEFT knee forward toward viewer; its paw is CLEARLY AIRBORNE just beside the supporting shin. Show natural knee bending, not a tiny shortened leg. Arms pass close to neutral. Body rises slightly from settling. Keep mouth closed simple black line."
+  },
+  {
+    "id": "04",
+    "direction": "down",
+    "role": "Opposite leg reaching",
+    "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-51154df0-5570-4043-aa1b-780313bb55f6.png",
+    "prompt": "Edit this EXACT Fenris sprite; keep DIRECT FRONT/DOWN facing camera, face, white-grey fur, muscular anatomy, brown shorts, wolf paws and hocks, full body scale and crisp pixel art. Genuine transparent background. Exactly two arms/legs. Next walking pose is REACH: the SCREEN-RIGHT leg is now trailing away from viewer, supported on its paw toes with heel lifted. SCREEN-LEFT leg unfolds and reaches toward viewer, paw clearly AIRBORNE just above floor before landing, larger and LOWER than the trailing paw due to perspective. SCREEN-RIGHT arm swings forward toward viewer, SCREEN-LEFT arm back. Preserve limbs' actual lengths. Keep mouth closed simple black line."
+  },
+  {
+    "id": "01",
+    "direction": "down-left",
+    "role": "Near-leg contact",
+    "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\..\\Sprites\\Fenris white\\Walking pose review v2\\Fenris_walk_left_01_contact-near.png",
+    "second": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\..\\Sprites\\Fenris white\\Walking direction review\\Fenris_walk_down-left.png",
+    "prompt": "Create ONE full-body Fenris pixel-art pose on transparent background. Image1 gives the exact LEG and ARM gait assignment and identity; image2 gives the required FRONT THREE-QUARTER DOWN-LEFT camera. Rotate image1 into image2's camera, without changing which leg leads. Show chest and left-facing muzzle, moving diagonally toward bottom-left, not pure side view. Phase 01: near leg reaches forward into heel/paw contact; far leg trails on toes; near arm swings backward, far arm forward. Foreground near thigh must remain the same near thigh through the viewpoint change. Preserve broad upright white-grey muscular wolf anatomy, blue eyes, neutral closed black mouth line, brown ragged shorts, short bushy tail, hocks and paws, crisp pixel-art rendering. Modest relaxed stride, complete body, exactly two legs and arms, no clothes from other characters, no text/shadow/floor."
+  },
+  {
+    "id": "05",
+    "direction": "down-left",
+    "role": "Far-leg contact",
+    "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\..\\Sprites\\Fenris white\\Walking pose review v2\\Fenris_walk_left_05_contact-far.png",
+    "second": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\..\\Sprites\\Fenris white\\Walking direction review\\Fenris_walk_down-left.png",
+    "prompt": "Create ONE full-body Fenris pixel-art pose on transparent background. Image1 gives the exact LEG and ARM gait assignment and identity; image2 gives the required FRONT THREE-QUARTER DOWN-LEFT camera. Rotate image1 into image2's camera, without changing which leg leads. Show chest and left-facing muzzle, moving diagonally toward bottom-left, not pure side view. Phase 05: far leg reaches forward into paw contact; near leg trails on toes; near arm forward, far arm backward. Foreground near thigh must remain the same near thigh through the viewpoint change. Preserve broad upright white-grey muscular wolf anatomy, blue eyes, neutral closed black mouth line, brown ragged shorts, short bushy tail, hocks and paws, crisp pixel-art rendering. Modest relaxed stride, complete body, exactly two legs and arms, no clothes from other characters, no text/shadow/floor."
+  }
+]

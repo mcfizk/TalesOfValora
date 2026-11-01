@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "Noticed off-screen deer has a directional arrow",
+    "Failed distant branch check leaks no marker or text",
+    "Campfire description appears at the object without a dialog or pause",
+    "Campfire requires no dismissal button",
+    "Movement continues while observation text is visible",
+    "A closer ring reveals its text automatically",
+    "The aware outcome appears on the event",
+    "A missed perception check shows the surprise outcome inline",
+    "Optional gathering remains available inline",
+    "Text fades without dismissal and remains in the journal",
+    "Mobile text and arrows fit the screen",
+    "No browser errors"
+  ],
+  "errors": []
+}

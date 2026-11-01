@@ -1,0 +1,12 @@
+[
+  {
+    "direction": "left",
+    "exactEndpoints": true,
+    "exactReverseTransitions": true
+  },
+  {
+    "direction": "right",
+    "exactEndpoints": true,
+    "exactReverseTransitions": true
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "name": "fenris-awakening", "private": true, "version": "0.1.0", "type": "module",
+  "scripts": { "start": "node serve.cjs", "test": "node --test tests/world.test.mjs" },
+  "description": "Fenris Awakening: a private local pixel-art opening, with the earlier 3D prototype retained."
+}

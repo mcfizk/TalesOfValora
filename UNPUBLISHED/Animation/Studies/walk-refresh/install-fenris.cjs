@@ -1,0 +1,9 @@
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto'),root=__dirname,repo=path.resolve(root,'../../../..'),assets=path.join(repo,'RELEASE/private-opening/assets'),read=f=>JSON.parse(fs.readFileSync(f,'utf8').replace(/^\uFEFF/,'')),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const manifestPath=path.join(assets,'manifest.json'),manifest=read(manifestPath),config=manifest.fenrisAnimations,snapshot=read(path.join(root,'fenris/preserved-standing/snapshot.json')),walks=read(path.join(root,'fenris/walks.json'));assert.equal(Object.keys(walks).length,8);
+const protectedAssets=read(path.join(root,'protected-assets.json'));for(const f of protectedAssets)assert.equal(hash(f.path).toUpperCase(),f.sha256);
+const standing=path.join(assets,'fenris/standing');fs.mkdirSync(standing,{recursive:true});const files={};for(const f of snapshot.files){const src=path.join(root,'fenris/preserved-standing',f.file);assert.equal(hash(src),f.sha256);fs.copyFileSync(src,path.join(standing,f.file));files[f.direction]='fenris/standing/'+f.file;}
+config.directionalRest={...snapshot.spec,files};config.restFrame=snapshot.restFrame;
+for(const[d,spec]of Object.entries(walks))fs.copyFileSync(path.join(root,'fenris',spec.file),path.join(assets,config.walk.files[d]));
+config.walk.revision='eight-phase-refresh-2026-10-27';fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\n');
+for(const f of protectedAssets)assert.equal(hash(f.path).toUpperCase(),f.sha256);for(const f of snapshot.files)assert.equal(hash(path.join(standing,f.file)),f.sha256);
+const report={directions:8,walkFrames:8,protectedAssetsUnchanged:protectedAssets.length,standingSheetsByteIdentical:true,restFrame:config.restFrame};fs.writeFileSync(path.join(root,'fenris/integration-validation.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));

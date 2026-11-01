@@ -1,0 +1,26 @@
+[
+  {
+    "id": "01",
+    "phase": 0,
+    "prompt": "Draw ONE animation frame of this exact stag, walking slowly LEFT in same three-quarter side camera. Preserve deer face, antler topology, fur colors, head/torso size, leg lengths and pixel-art shading. Exactly FOUR naturally connected legs: two forelegs below chest LEFT, two hindlegs below rump RIGHT. Foreground/near legs overlap and are lighter; far legs slightly darker and visibly behind. True four-beat grounded walk, NOT trot, hop, run or biped. Phase 1 of8: NEAR FORELEG extended forward LEFT, hoof planted in initial contact; FAR FORELEG extended backward RIGHT, heel raised on toe-off; NEAR HINDLEG planted nearly vertical under its shoulder/hip; FAR HINDLEG bent passing under body, hoof CLEARLY AIRBORNE. These are four separate named limbs; do not repeat idle stance. Knees/hocks bend naturally; shoulders/hips remain fixed. Gentle body weight shift, almost stable head and antlers, relaxed ears/tail. Full body and all antlers/hooves visible, same apparent body scale and canvas framing as reference, transparent background, no shadow or text. Crisp stepped pixel art, no smoothing or motion blur.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-6f29b651-d6c6-484e-af26-c54d26f30167.png"
+  },
+  {
+    "id": "02",
+    "phase": 1,
+    "prompt": "Draw ONE animation frame of this exact stag, walking slowly LEFT in same three-quarter side camera. Preserve deer face, antler topology, fur colors, head/torso size, leg lengths and pixel-art shading. Exactly FOUR naturally connected legs: two forelegs below chest LEFT, two hindlegs below rump RIGHT. Foreground/near legs overlap and are lighter; far legs slightly darker and visibly behind. True four-beat grounded walk, NOT trot, hop, run or biped. Phase 2 of8: NEAR FORELEG planted ahead, bearing weight; FAR FORELEG lifted behind RIGHT, lower leg folded; NEAR HINDLEG planted behind its shoulder/hip toward RIGHT; FAR HINDLEG reaching forward LEFT, hoof airborne just before contact. These are four separate named limbs; do not repeat idle stance. Knees/hocks bend naturally; shoulders/hips remain fixed. Gentle body weight shift, almost stable head and antlers, relaxed ears/tail. Full body and all antlers/hooves visible, same apparent body scale and canvas framing as reference, transparent background, no shadow or text. Crisp stepped pixel art, no smoothing or motion blur.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-25650867-ecc5-47cc-9ad3-7563b9931241.png"
+  },
+  {
+    "id": "03",
+    "phase": 2,
+    "prompt": "Draw ONE animation frame of this exact stag, walking slowly LEFT in same three-quarter side camera. Preserve deer face, antler topology, fur colors, head/torso size, leg lengths and pixel-art shading. Exactly FOUR naturally connected legs: two forelegs below chest LEFT, two hindlegs below rump RIGHT. Foreground/near legs overlap and are lighter; far legs slightly darker and visibly behind. True four-beat grounded walk, NOT trot, hop, run or biped. Phase 3 of8: NEAR FORELEG planted nearly vertical under its shoulder/hip; FAR FORELEG bent passing under body, hoof CLEARLY AIRBORNE; NEAR HINDLEG extended backward RIGHT, heel raised on toe-off; FAR HINDLEG extended forward LEFT, hoof planted in initial contact. These are four separate named limbs; do not repeat idle stance. Knees/hocks bend naturally; shoulders/hips remain fixed. Gentle body weight shift, almost stable head and antlers, relaxed ears/tail. Full body and all antlers/hooves visible, same apparent body scale and canvas framing as reference, transparent background, no shadow or text. Crisp stepped pixel art, no smoothing or motion blur.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-53c2bbaa-79e2-452e-930b-dd5d09391279.png"
+  },
+  {
+    "id": "04",
+    "phase": 3,
+    "prompt": "Draw ONE animation frame of this exact stag, walking slowly LEFT in same three-quarter side camera. Preserve deer face, antler topology, fur colors, head/torso size, leg lengths and pixel-art shading. Exactly FOUR naturally connected legs: two forelegs below chest LEFT, two hindlegs below rump RIGHT. Foreground/near legs overlap and are lighter; far legs slightly darker and visibly behind. True four-beat grounded walk, NOT trot, hop, run or biped. Phase 4 of8: NEAR FORELEG planted behind its shoulder/hip toward RIGHT; FAR FORELEG reaching forward LEFT, hoof airborne just before contact; NEAR HINDLEG lifted behind RIGHT, lower leg folded; FAR HINDLEG planted ahead, bearing weight. These are four separate named limbs; do not repeat idle stance. Knees/hocks bend naturally; shoulders/hips remain fixed. Gentle body weight shift, almost stable head and antlers, relaxed ears/tail. Full body and all antlers/hooves visible, same apparent body scale and canvas framing as reference, transparent background, no shadow or text. Crisp stepped pixel art, no smoothing or motion blur.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-6eed01b8-1308-48c5-85d6-35cb9930e8d8.png"
+  }
+]

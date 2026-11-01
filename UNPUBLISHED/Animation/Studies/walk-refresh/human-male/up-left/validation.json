@@ -1,0 +1,162 @@
+{
+  "direction": "up-left",
+  "frames": [
+    {
+      "id": "01",
+      "role": "Near leg contact: foreground leg planted forward, far leg trails on toes; foreground arm back.",
+      "source": "source/01.png",
+      "sourceHash": "a0293e226dd884fcf87877a04446e5c13fb1f95de13b30393ab13b946d963e56",
+      "waist": 498.18333333333334,
+      "scale": 0.44,
+      "translation": [
+        36.79933333333332,
+        33.15999999999997
+      ],
+      "bounds": [
+        152,
+        74,
+        433,
+        609
+      ],
+      "pixelHash": "0f611c5095ca8d1f6b527b32571a0d11744bc7298934be6f2ceea8ae68ea1985"
+    },
+    {
+      "id": "02",
+      "role": "Near leg settle: foreground knee flexes taking weight, trailing far heel lifts.",
+      "source": "source/02.png",
+      "sourceHash": "f9b6bf972a7a714f15d3683a6177f2e8bb8455a12b740d4f3489bc6f3559fc85",
+      "waist": 580.8666666666667,
+      "scale": 0.44,
+      "translation": [
+        0.41866666666666674,
+        37.120000000000005
+      ],
+      "bounds": [
+        128,
+        90,
+        389,
+        609
+      ],
+      "pixelHash": "0280915dbd7dc0ae575dc4e2ada093837c8e4d7f7b45de53c5c69986b06bc138"
+    },
+    {
+      "id": "03",
+      "role": "Far leg passing: foreground leg supports, far knee bent with boot airborne beside support calf; arms neutral.",
+      "source": "source/03.png",
+      "sourceHash": "f07ce69bf03884846ad03e3560f1d9041a083b93b6b0a438e2629bf1e3532cd7",
+      "waist": 570.9833333333333,
+      "scale": 0.44,
+      "translation": [
+        4.767333333333312,
+        34.48000000000002
+      ],
+      "bounds": [
+        116,
+        84,
+        393,
+        609
+      ],
+      "pixelHash": "adececabe4064bc84cefe9e402800f8036281361b51f1f99592632422a27ece0"
+    },
+    {
+      "id": "04",
+      "role": "Far leg reach: foreground leg trails on toes, far boot reaches ahead airborne; foreground arm forward.",
+      "source": "source/04.png",
+      "sourceHash": "16e52899e673afdd6c3727890f4c17dd48ef1384fd06a1371c78951183f19db5",
+      "waist": 560,
+      "scale": 0.44,
+      "translation": [
+        9.599999999999994,
+        32.27999999999997
+      ],
+      "bounds": [
+        104,
+        82,
+        407,
+        609
+      ],
+      "pixelHash": "360dd6350162b356b9572ef58aa8f5de00af004b49e81470c40494aba5a7d036"
+    },
+    {
+      "id": "05",
+      "role": "Far leg contact: far leg planted ahead, foreground leg trails on toes; foreground arm forward.",
+      "source": "source/05.png",
+      "sourceHash": "1fc563f16b88ac01ffda94953f6dbd243769967751b26bb9b7e760f1fcc118b2",
+      "waist": 567.2333333333333,
+      "scale": 0.44,
+      "translation": [
+        6.417333333333318,
+        29.200000000000045
+      ],
+      "bounds": [
+        104,
+        72,
+        407,
+        609
+      ],
+      "pixelHash": "6ba5defd6db2ad25ce25a1430f187f9811266bf598a83cd5989b8dac94434618"
+    },
+    {
+      "id": "06",
+      "role": "Far leg settle: far knee flexes supporting weight, foreground heel lifts.",
+      "source": "source/06.png",
+      "sourceHash": "0e35333a2181bea897e75f75687842653d465771a4e6dbe018c2e727e3cae739",
+      "waist": 562.8166666666667,
+      "scale": 0.44,
+      "translation": [
+        8.360666666666646,
+        32.72000000000003
+      ],
+      "bounds": [
+        102,
+        82,
+        411,
+        609
+      ],
+      "pixelHash": "68ad115761c42260f956753ed0398debe777c71ef985df79f3b25ffbe66fbc86"
+    },
+    {
+      "id": "07",
+      "role": "Near leg passing: far leg supports, foreground knee bends with boot airborne; arms neutral.",
+      "source": "source/07.png",
+      "sourceHash": "669f24bb4ee9e365a4318b7e7e340a0082a0491736ad5a67991eebde143f257b",
+      "waist": 570.0166666666667,
+      "scale": 0.44,
+      "translation": [
+        5.192666666666668,
+        17.32000000000005
+      ],
+      "bounds": [
+        116,
+        62,
+        397,
+        609
+      ],
+      "pixelHash": "38200eeec1d1e827a20eb9ed65d83ffcf5b2a367a86d75a492104855b474ad2c"
+    },
+    {
+      "id": "08",
+      "role": "Near leg reach: far leg trails on toes, foreground boot reaches forward airborne; foreground arm back.",
+      "source": "source/08.png",
+      "sourceHash": "93bc7d5fe973f69e64a32f5458aacbe0b4924e2b9d827347d24264f574b25030",
+      "waist": 627.05,
+      "scale": 0.44,
+      "translation": [
+        -19.901999999999987,
+        24.799999999999955
+      ],
+      "bounds": [
+        66,
+        78,
+        379,
+        609
+      ],
+      "pixelHash": "e226a47b5cc0d2becd06857d6f86ba5ae03ca31ac8dc64c4b3751f5a0bbbe0fe"
+    }
+  ],
+  "ground": 610,
+  "uniformScale": 0.44,
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "gifFrames": 8
+}

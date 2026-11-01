@@ -1,0 +1,180 @@
+{
+  "direction": "left",
+  "frames": [
+    {
+      "id": "01",
+      "role": "NEAR CONTACT: near thigh overlaps far thigh and reaches left planted; far leg trails right on toes. Near arm (screen-right shoulder) back on right; far arm forward left.",
+      "source": "source/01.png",
+      "sourceFlipped": false,
+      "sourceHash": "f835b231d6458ea637a3de90117fed72cff4da9dfaa0d44f79627da04941749a",
+      "waist": 551.5,
+      "scale": 0.44878957169459965,
+      "translation": [
+        8.492551210428303,
+        23.880819366852847
+      ],
+      "bounds": [
+        74,
+        128,
+        435,
+        609
+      ],
+      "pixelHash": "5fd56679f6bfcd863e6b7eb116d1c55161cf83e54b2a9cb505d4fbbdfa0bec15"
+    },
+    {
+      "id": "02",
+      "role": "NEAR SETTLE: near leading knee flexes supporting weight, far heel lifts behind. Near arm still back, easing neutral.",
+      "source": "source/02.png",
+      "sourceFlipped": false,
+      "sourceHash": "ff117cd7e759fefa1f8343ff9cd4bda0e7845ba9ad5faa5bf6d575a09d460b91",
+      "waist": 551.5,
+      "scale": 0.44216417910447764,
+      "translation": [
+        12.146455223880594,
+        32.53358208955217
+      ],
+      "bounds": [
+        70,
+        136,
+        433,
+        609
+      ],
+      "pixelHash": "e4ceae63cf9f735181c1195fab33b82525e099efccab7bac71e1ae70e1bf10b0"
+    },
+    {
+      "id": "03",
+      "role": "FAR PASSING: near leg supports straight beneath hip on screen right; FAR knee bends forward to LEFT, far foot airborne LEFT of support shin, NOT trailing behind. Arms neutral.",
+      "source": "source/03.png",
+      "sourceFlipped": false,
+      "sourceHash": "5e177bd78d750679abf0720925430d5323b94d89bb8a3ddc2b1aaa346971270a",
+      "waist": 551.5,
+      "scale": 0.42087254063301965,
+      "translation": [
+        23.88879384088966,
+        53.60650128314796
+      ],
+      "bounds": [
+        94,
+        118,
+        433,
+        609
+      ],
+      "pixelHash": "e6b6fda787c27bd63bddbdf7aa3259892a87cf761bca859012dd11df4e6f17d2"
+    },
+    {
+      "id": "04",
+      "role": "FAR REACH: FAR leg extends LEFT airborne before heel contact, near leg trails RIGHT toe support. NEAR arm from screen-right shoulder swings LEFT ACROSS belt, far arm trails right.",
+      "source": "source/04.png",
+      "sourceFlipped": false,
+      "sourceHash": "403bb72afe2f5556b769f98ffc05facdfe1237aed3231269a4a86f294e9dcddf",
+      "waist": 551.5,
+      "scale": 0.43455031166518254,
+      "translation": [
+        16.345503116651827,
+        45.519145146927826
+      ],
+      "bounds": [
+        78,
+        122,
+        451,
+        609
+      ],
+      "pixelHash": "edda6f2f95fc70b08a582856d372ca2fbdd8751d87ad71db922f11daa82153a8"
+    },
+    {
+      "id": "05",
+      "role": "FAR CONTACT: far leg leading LEFT planted, near thigh overlaps it but angles RIGHT trailing. Near arm from screen-right shoulder swings LEFT across waist; far arm back.",
+      "source": "source/05.png",
+      "sourceFlipped": false,
+      "sourceHash": "2f49a2787268c0b360616e8e8c966da322d7aa0dbee64450d3016a42e5f12a2e",
+      "waist": 551.5,
+      "scale": 0.42579505300353354,
+      "translation": [
+        21.17402826855124,
+        54.33745583038876
+      ],
+      "bounds": [
+        100,
+        128,
+        439,
+        609
+      ],
+      "pixelHash": "80936e7dbe167a8c06a58b1bb85494db2bb788179f4b48711051e5aa99438c08"
+    },
+    {
+      "id": "06",
+      "role": "FAR SETTLE: far leading knee bends supporting weight, near trailing heel lifts. Near arm forward across waist easing neutral.",
+      "source": "source/06.png",
+      "sourceFlipped": false,
+      "sourceHash": "988e5db76a50e7ca523757dc8f6aa95ef2e3a4a3d8dd3cf42ae28324b7bd00d4",
+      "waist": 551.5,
+      "scale": 0.4792719919110212,
+      "translation": [
+        -8.318503538928212,
+        -6.823053589484289
+      ],
+      "bounds": [
+        132,
+        136,
+        433,
+        609
+      ],
+      "pixelHash": "1f1cb82305ddb0f0ea5dd84a78ed64eb9367aa5f48e6e6e029162a1a709a4448"
+    },
+    {
+      "id": "07",
+      "role": "NEAR PASSING: far leg supports beneath pelvis on screen RIGHT; NEAR thigh overlaps it and bends LEFT, near foot airborne LEFT of support shin. Arms neutral.",
+      "source": "source/07.png",
+      "sourceFlipped": false,
+      "sourceHash": "0b6524ba6fbf7e2d6d40faf593a154f77036e8724d19a55d02a7b650f574402a",
+      "waist": 551.5,
+      "scale": 0.42523768366465,
+      "translation": [
+        21.481417458945543,
+        59.317199654278284
+      ],
+      "bounds": [
+        116,
+        118,
+        421,
+        609
+      ],
+      "pixelHash": "fc24b332fb8a9d1821d5bcee5d9177feee8e7550b62cfc4e85518cadd62db846"
+    },
+    {
+      "id": "08",
+      "role": "NEAR REACH: near leg extends LEFT airborne before heel contact, far leg behind RIGHT on toes. Near arm swings BACK to right, far arm forward left.",
+      "source": "source/08.png",
+      "sourceFlipped": false,
+      "sourceHash": "695f0ced5d881c2d67c8b88df9a683c890f688df9c0c265eedcf8edf4b0765bf",
+      "waist": 551.5,
+      "scale": 0.47517039922103216,
+      "translation": [
+        -6.05647517039921,
+        7.959104186952231
+      ],
+      "bounds": [
+        78,
+        122,
+        445,
+        609
+      ],
+      "pixelHash": "6c10731123358997806c7a98d620466168d8a788ce86ffb1dbc642296fe1ccdd"
+    }
+  ],
+  "ground": 610,
+  "uniformScale": null,
+  "perFrameUniformScales": [
+    0.44878957169459965,
+    0.44216417910447764,
+    0.42087254063301965,
+    0.43455031166518254,
+    0.42579505300353354,
+    0.4792719919110212,
+    0.42523768366465,
+    0.47517039922103216
+  ],
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "gifFrames": 8
+}

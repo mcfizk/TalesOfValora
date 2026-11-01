@@ -1,0 +1,76 @@
+{
+  "restFrame": 6,
+  "spec": {
+    "files": {
+      "left": "fenris/walk-left.png",
+      "right": "fenris/walk-right.png",
+      "up-left": "fenris/walk-up-left.png",
+      "up-right": "fenris/walk-up-right.png",
+      "up": "fenris/walk-up.png",
+      "down-left": "fenris/walk-down-left.png",
+      "down-right": "fenris/walk-down-right.png",
+      "down": "fenris/walk-down.png"
+    },
+    "frameWidth": 512,
+    "frameHeight": 640,
+    "columns": 4,
+    "frames": 8,
+    "fps": 8,
+    "loop": true,
+    "anchor": [
+      256,
+      610
+    ],
+    "bodyHeight": 550
+  },
+  "files": [
+    {
+      "direction": "left",
+      "file": "stand-left.png",
+      "original": "fenris/walk-left.png",
+      "sha256": "5643fa21d2b8e6f0c4c83da1717dc361767264c666f183bcffb647b393930c61"
+    },
+    {
+      "direction": "right",
+      "file": "stand-right.png",
+      "original": "fenris/walk-right.png",
+      "sha256": "56775f80edb9dc9533a935db9dfe0aba1f864ad641089aa88a1a4c905d2d9564"
+    },
+    {
+      "direction": "up-left",
+      "file": "stand-up-left.png",
+      "original": "fenris/walk-up-left.png",
+      "sha256": "efb28c574843136800104bc204d6dc90a438eceeb6505ed03d65058e47dd1990"
+    },
+    {
+      "direction": "up-right",
+      "file": "stand-up-right.png",
+      "original": "fenris/walk-up-right.png",
+      "sha256": "885de5255eeb9992e1456fa56a7f868f67b92571ccdb1063b8b29add58d6f8c8"
+    },
+    {
+      "direction": "up",
+      "file": "stand-up.png",
+      "original": "fenris/walk-up.png",
+      "sha256": "94f5baa9b12d6b9638b41af12f435a018985fd055befc94deda1cf32e650a6da"
+    },
+    {
+      "direction": "down-left",
+      "file": "stand-down-left.png",
+      "original": "fenris/walk-down-left.png",
+      "sha256": "4d1c9f1b24ad187e94568b47fa70547d6f975b982e78a770be0ca9b296ed4c4a"
+    },
+    {
+      "direction": "down-right",
+      "file": "stand-down-right.png",
+      "original": "fenris/walk-down-right.png",
+      "sha256": "cafe151fd1bfc4bcb9f658bc4bd913658291735d0ce16355d526bfafb033ba50"
+    },
+    {
+      "direction": "down",
+      "file": "stand-down.png",
+      "original": "fenris/walk-down.png",
+      "sha256": "5560208b343cc5d9f740152336c93a94ae0ee54394bead419446459407e7bee4"
+    }
+  ]
+}

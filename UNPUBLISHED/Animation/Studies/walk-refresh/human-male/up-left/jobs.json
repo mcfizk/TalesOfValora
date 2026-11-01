@@ -1,0 +1,58 @@
+[
+  {
+    "id": "01",
+    "direction": "up-left",
+    "role": "Near leg contact: foreground leg planted forward, far leg trails on toes; foreground arm back.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/01.png",
+    "prompt": "Image 1 is ONLY the exact walking POSE, camera and limb overlap guide. Image 2 is the character IDENTITY/style guide. Replace the wolf in image1 with the normal adult HUMAN MAN in image2. Preserve image1 rear three-quarter UP-LEFT view, back visible, tiny side of face, walking away diagonally left. Match its exact hip/knee/arm positions, adapting to normal human knees, ankles and brown boots. Phase: Near leg contact: foreground leg planted forward, far leg trails on toes; foreground arm back. Keep human man's brown tousled hair, short full beard, olive tunic with cream rolled cuffs, brown leather belt, brown trousers and boots; belt buckle is on FRONT therefore not visible from back. Maintain adult human proportions and identity; no wolf ears, fur, tail, paws, claws or digitigrade legs. Exactly two arms and two legs. No chest visible. Full body, same anatomical scale as image2 with padding, transparent background, no shadow/text. Crisp pixel art edges and stepped shading matching image2, no smoothing. Do not copy image2 idle pose."
+  },
+  {
+    "id": "02",
+    "direction": "up-left",
+    "role": "Near leg settle: foreground knee flexes taking weight, trailing far heel lifts.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/02.png",
+    "prompt": "Image 1 is ONLY the exact walking POSE, camera and limb overlap guide. Image 2 is the character IDENTITY/style guide. Replace the wolf in image1 with the normal adult HUMAN MAN in image2. Preserve image1 rear three-quarter UP-LEFT view, back visible, tiny side of face, walking away diagonally left. Match its exact hip/knee/arm positions, adapting to normal human knees, ankles and brown boots. Phase: Near leg settle: foreground knee flexes taking weight, trailing far heel lifts. Keep human man's brown tousled hair, short full beard, olive tunic with cream rolled cuffs, brown leather belt, brown trousers and boots; belt buckle is on FRONT therefore not visible from back. Maintain adult human proportions and identity; no wolf ears, fur, tail, paws, claws or digitigrade legs. Exactly two arms and two legs. No chest visible. Full body, same anatomical scale as image2 with padding, transparent background, no shadow/text. Crisp pixel art edges and stepped shading matching image2, no smoothing. Do not copy image2 idle pose."
+  },
+  {
+    "id": "03",
+    "direction": "up-left",
+    "role": "Far leg passing: foreground leg supports, far knee bent with boot airborne beside support calf; arms neutral.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/03.png",
+    "prompt": "Image 1 is ONLY the exact walking POSE, camera and limb overlap guide. Image 2 is the character IDENTITY/style guide. Replace the wolf in image1 with the normal adult HUMAN MAN in image2. Preserve image1 rear three-quarter UP-LEFT view, back visible, tiny side of face, walking away diagonally left. Match its exact hip/knee/arm positions, adapting to normal human knees, ankles and brown boots. Phase: Far leg passing: foreground leg supports, far knee bent with boot airborne beside support calf; arms neutral. Keep human man's brown tousled hair, short full beard, olive tunic with cream rolled cuffs, brown leather belt, brown trousers and boots; belt buckle is on FRONT therefore not visible from back. Maintain adult human proportions and identity; no wolf ears, fur, tail, paws, claws or digitigrade legs. Exactly two arms and two legs. No chest visible. Full body, same anatomical scale as image2 with padding, transparent background, no shadow/text. Crisp pixel art edges and stepped shading matching image2, no smoothing. Do not copy image2 idle pose."
+  },
+  {
+    "id": "04",
+    "direction": "up-left",
+    "role": "Far leg reach: foreground leg trails on toes, far boot reaches ahead airborne; foreground arm forward.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/04.png",
+    "prompt": "Image 1 is ONLY the exact walking POSE, camera and limb overlap guide. Image 2 is the character IDENTITY/style guide. Replace the wolf in image1 with the normal adult HUMAN MAN in image2. Preserve image1 rear three-quarter UP-LEFT view, back visible, tiny side of face, walking away diagonally left. Match its exact hip/knee/arm positions, adapting to normal human knees, ankles and brown boots. Phase: Far leg reach: foreground leg trails on toes, far boot reaches ahead airborne; foreground arm forward. Keep human man's brown tousled hair, short full beard, olive tunic with cream rolled cuffs, brown leather belt, brown trousers and boots; belt buckle is on FRONT therefore not visible from back. Maintain adult human proportions and identity; no wolf ears, fur, tail, paws, claws or digitigrade legs. Exactly two arms and two legs. No chest visible. Full body, same anatomical scale as image2 with padding, transparent background, no shadow/text. Crisp pixel art edges and stepped shading matching image2, no smoothing. Do not copy image2 idle pose."
+  },
+  {
+    "id": "05",
+    "direction": "up-left",
+    "role": "Far leg contact: far leg planted ahead, foreground leg trails on toes; foreground arm forward.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/05.png",
+    "prompt": "Image 1 is ONLY the exact walking POSE, camera and limb overlap guide. Image 2 is the character IDENTITY/style guide. Replace the wolf in image1 with the normal adult HUMAN MAN in image2. Preserve image1 rear three-quarter UP-LEFT view, back visible, tiny side of face, walking away diagonally left. Match its exact hip/knee/arm positions, adapting to normal human knees, ankles and brown boots. Phase: Far leg contact: far leg planted ahead, foreground leg trails on toes; foreground arm forward. Keep human man's brown tousled hair, short full beard, olive tunic with cream rolled cuffs, brown leather belt, brown trousers and boots; belt buckle is on FRONT therefore not visible from back. Maintain adult human proportions and identity; no wolf ears, fur, tail, paws, claws or digitigrade legs. Exactly two arms and two legs. No chest visible. Full body, same anatomical scale as image2 with padding, transparent background, no shadow/text. Crisp pixel art edges and stepped shading matching image2, no smoothing. Do not copy image2 idle pose."
+  },
+  {
+    "id": "06",
+    "direction": "up-left",
+    "role": "Far leg settle: far knee flexes supporting weight, foreground heel lifts.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/06.png",
+    "prompt": "Image 1 is ONLY the exact walking POSE, camera and limb overlap guide. Image 2 is the character IDENTITY/style guide. Replace the wolf in image1 with the normal adult HUMAN MAN in image2. Preserve image1 rear three-quarter UP-LEFT view, back visible, tiny side of face, walking away diagonally left. Match its exact hip/knee/arm positions, adapting to normal human knees, ankles and brown boots. Phase: Far leg settle: far knee flexes supporting weight, foreground heel lifts. Keep human man's brown tousled hair, short full beard, olive tunic with cream rolled cuffs, brown leather belt, brown trousers and boots; belt buckle is on FRONT therefore not visible from back. Maintain adult human proportions and identity; no wolf ears, fur, tail, paws, claws or digitigrade legs. Exactly two arms and two legs. No chest visible. Full body, same anatomical scale as image2 with padding, transparent background, no shadow/text. Crisp pixel art edges and stepped shading matching image2, no smoothing. Do not copy image2 idle pose."
+  },
+  {
+    "id": "07",
+    "direction": "up-left",
+    "role": "Near leg passing: far leg supports, foreground knee bends with boot airborne; arms neutral.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/07.png",
+    "prompt": "Image 1 is ONLY the exact walking POSE, camera and limb overlap guide. Image 2 is the character IDENTITY/style guide. Replace the wolf in image1 with the normal adult HUMAN MAN in image2. Preserve image1 rear three-quarter UP-LEFT view, back visible, tiny side of face, walking away diagonally left. Match its exact hip/knee/arm positions, adapting to normal human knees, ankles and brown boots. Phase: Near leg passing: far leg supports, foreground knee bends with boot airborne; arms neutral. Keep human man's brown tousled hair, short full beard, olive tunic with cream rolled cuffs, brown leather belt, brown trousers and boots; belt buckle is on FRONT therefore not visible from back. Maintain adult human proportions and identity; no wolf ears, fur, tail, paws, claws or digitigrade legs. Exactly two arms and two legs. No chest visible. Full body, same anatomical scale as image2 with padding, transparent background, no shadow/text. Crisp pixel art edges and stepped shading matching image2, no smoothing. Do not copy image2 idle pose."
+  },
+  {
+    "id": "08",
+    "direction": "up-left",
+    "role": "Near leg reach: far leg trails on toes, foreground boot reaches forward airborne; foreground arm back.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/08.png",
+    "prompt": "Image 1 is ONLY the exact walking POSE, camera and limb overlap guide. Image 2 is the character IDENTITY/style guide. Replace the wolf in image1 with the normal adult HUMAN MAN in image2. Preserve image1 rear three-quarter UP-LEFT view, back visible, tiny side of face, walking away diagonally left. Match its exact hip/knee/arm positions, adapting to normal human knees, ankles and brown boots. Phase: Near leg reach: far leg trails on toes, foreground boot reaches forward airborne; foreground arm back. Keep human man's brown tousled hair, short full beard, olive tunic with cream rolled cuffs, brown leather belt, brown trousers and boots; belt buckle is on FRONT therefore not visible from back. Maintain adult human proportions and identity; no wolf ears, fur, tail, paws, claws or digitigrade legs. Exactly two arms and two legs. No chest visible. Full body, same anatomical scale as image2 with padding, transparent background, no shadow/text. Crisp pixel art edges and stepped shading matching image2, no smoothing. Do not copy image2 idle pose."
+  }
+]

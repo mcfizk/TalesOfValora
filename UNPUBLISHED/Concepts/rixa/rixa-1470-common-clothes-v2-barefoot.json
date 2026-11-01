@@ -1,0 +1,17 @@
+{
+  "mode": "built-in image_gen",
+  "identity": "Rixa",
+  "era": "1470 DR",
+  "purpose": "Approved 1470 Rixa design updated at author request: barefoot, with natural dark-furred feline feet; animation pending",
+  "output": "rixa-1470-common-clothes-v2-barefoot.png",
+  "references": [
+    "C:\\Users\\Mcfiz\\AppData\\Local\\Temp\\codex-clipboard-935ed043-89e1-4c0e-9921-a2f74f0a9bbe.png",
+    "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\Sprites\\Fenris white\\Fenris_idle_frames.png",
+    "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\private-opening\\assets\\npcs\\human-female\\walk-left.png"
+  ],
+  "continuity": "Separate from the preserved Queen Rixa concept. No exact age assigned.",
+  "approval": "Approved by the author on 2026-10-28: Good. Keep that. Another session will pick up the animation.",
+  "animationStatus": "Not started; use this approved concept as the identity and outfit reference.",
+  "editMode": "built-in image_gen localized boot removal",
+  "supersedes": "rixa-1470-common-clothes-v1.png"
+}

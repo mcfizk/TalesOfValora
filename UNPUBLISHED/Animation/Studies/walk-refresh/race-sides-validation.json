@@ -1,0 +1,37 @@
+{
+  "characters": [
+    {
+      "id": "dwarf-male",
+      "frames": 8,
+      "unique": true,
+      "exactMirror": true,
+      "transparent": true,
+      "ground": 610
+    },
+    {
+      "id": "dwarf-female",
+      "frames": 8,
+      "unique": true,
+      "exactMirror": true,
+      "transparent": true,
+      "ground": 610
+    },
+    {
+      "id": "halfling-male",
+      "frames": 8,
+      "unique": true,
+      "exactMirror": true,
+      "transparent": true,
+      "ground": 610
+    },
+    {
+      "id": "halfling-female",
+      "frames": 8,
+      "unique": true,
+      "exactMirror": true,
+      "transparent": true,
+      "ground": 610
+    }
+  ],
+  "protectedFilesUnchanged": 57
+}

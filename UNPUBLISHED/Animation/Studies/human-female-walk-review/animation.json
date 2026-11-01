@@ -1,0 +1,57 @@
+{
+  "direction": "left",
+  "file": "human-female_walk_left_sheet.png",
+  "frameWidth": 512,
+  "frameHeight": 640,
+  "columns": 4,
+  "frames": 8,
+  "fps": 8,
+  "loop": true,
+  "anchor": [
+    256,
+    610
+  ],
+  "duration_ms": 1000,
+  "sequence": [
+    {
+      "file": "human-female_walk_left_01.png",
+      "role": "near-leg contact",
+      "duration_ms": 125
+    },
+    {
+      "file": "human-female_walk_left_02.png",
+      "role": "settle onto near leg",
+      "duration_ms": 125
+    },
+    {
+      "file": "human-female_walk_left_03.png",
+      "role": "near-leg support, far-leg passing",
+      "duration_ms": 125
+    },
+    {
+      "file": "human-female_walk_left_04.png",
+      "role": "far leg reaches, near toe support",
+      "duration_ms": 125
+    },
+    {
+      "file": "human-female_walk_left_05.png",
+      "role": "far-leg contact",
+      "duration_ms": 125
+    },
+    {
+      "file": "human-female_walk_left_06.png",
+      "role": "settle onto far leg",
+      "duration_ms": 125
+    },
+    {
+      "file": "human-female_walk_left_07.png",
+      "role": "far leg support, near leg passes",
+      "duration_ms": 125
+    },
+    {
+      "file": "human-female_walk_left_08.png",
+      "role": "near leg reaches, far toe support",
+      "duration_ms": 125
+    }
+  ]
+}

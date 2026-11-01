@@ -1,0 +1,16 @@
+{
+  "method": "Direct pixel edit authorized by user",
+  "source": "Fenris_upright_high_mouth_fixed.png",
+  "output": "Fenris_upright_high_face_fixed.png",
+  "width": 2171,
+  "height": 724,
+  "changed_pixels_per_pose": [
+    60,
+    66,
+    94,
+    59
+  ],
+  "total_changed_pixels": 279,
+  "changed_pixels_outside_brows": 0,
+  "mouth_and_iris_pixels": "Unchanged; full-image pixel comparison verified"
+}

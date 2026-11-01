@@ -1,0 +1,57 @@
+{
+  "frames": [
+    {
+      "direction": "left",
+      "source": "generated",
+      "width": 512,
+      "height": 640
+    },
+    {
+      "direction": "up-left",
+      "source": "generated",
+      "width": 512,
+      "height": 640
+    },
+    {
+      "direction": "up",
+      "source": "generated",
+      "width": 512,
+      "height": 640
+    },
+    {
+      "direction": "down-left",
+      "source": "generated",
+      "width": 512,
+      "height": 640
+    },
+    {
+      "direction": "down",
+      "source": "generated",
+      "width": 512,
+      "height": 640
+    },
+    {
+      "direction": "right",
+      "source": "horizontal mirror",
+      "mirrored_from": "left",
+      "width": 512,
+      "height": 640
+    },
+    {
+      "direction": "up-right",
+      "source": "horizontal mirror",
+      "mirrored_from": "up-left",
+      "width": 512,
+      "height": 640
+    },
+    {
+      "direction": "down-right",
+      "source": "horizontal mirror",
+      "mirrored_from": "down-left",
+      "width": 512,
+      "height": 640
+    }
+  ],
+  "purpose": "Single walking key pose per direction for review; not an animation",
+  "reference": "../Fenris_idle_frames.png"
+}

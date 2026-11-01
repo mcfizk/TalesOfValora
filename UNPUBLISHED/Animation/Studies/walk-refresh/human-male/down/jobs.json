@@ -1,0 +1,51 @@
+[
+  {
+    "id": "01",
+    "direction": "down",
+    "role": "Screen-left boot lands forward toward the viewer; screen-right boot trails into depth on its toe. Left arm swings back, right arm forward.",
+    "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\walk-refresh\\fenris\\down\\source\\01.png",
+    "identity": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\walk-refresh\\human-male\\left\\source\\01.png",
+    "prompt": "Use case: identity-preserve. Asset: ONE full-body pixel-art walking animation frame on genuine transparent background. Image 1 is ONLY the gait phase and direct FRONT camera guide. Image 2 is the HUMAN character identity, costume, shading and anatomical scale reference. Replace the wolf from image 1 with this exact adult HUMAN MAN from image 2: tousled brown hair, short brown full beard, olive green cloth tunic with cream collar and rolled cream cuffs, brown leather belt, brown trousers, ordinary brown leather boots. Keep the same tunic panels, adult human proportions, silhouette volume, hair and palette across frames. Phase 01: Screen-left boot lands forward toward the viewer; screen-right boot trails into depth on its toe. Left arm swings back, right arm forward. Camera: Direct front view, walking straight DOWN toward the viewer, face and front belt buckle visible; torso faces camera squarely. No sideways travel, no three-quarter turn. Both feet stay on opposite sides of body centre, separated and readable. Human knees and ankles, two arms and two legs only. Absolutely no wolf ears, fur, tail, claws, paws or digitigrade hocks. Full body centred with generous transparent padding, matching the human reference body height. Crisp stepped pixel-art outlines and clustered shading; no blur, gradients, scenery, shadow, text or ground. Use image1 only for pose; do not retain any wolf anatomy or copy the human's original side pose.",
+    "file": "source/01.png",
+    "status": "generated-reviewed",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\exec-58030837-accd-4a9e-b492-03778aefa814.png"
+  },
+  {
+    "id": "02",
+    "direction": "down",
+    "role": "Weight settles over the screen-left planted boot with a bent knee; screen-right heel lifts behind in preparation for its swing.",
+    "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\exec-58030837-accd-4a9e-b492-03778aefa814.png",
+    "identity": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\walk-refresh\\human-male\\left\\source\\01.png",
+    "prompt": "Use case: identity-preserve. Edit Image 1 into ONE new frame of the SAME direct-front human walking cycle. Image 2 is only the established costume/identity reference. Preserve Image1 exact front-facing head, adult anatomy, body width, scale, olive tunic, cream collar and rolled cuffs, brown front belt/buckle, brown trousers and ordinary brown boots. Change only the limb positions and slight weight shift needed for walking phase 02: Weight settles over the screen-left planted boot with a bent knee; screen-right heel lifts behind in preparation for its swing. The SCREEN-LEFT leg is the SUPPORTING leg in this phase, never swap it with the right leg. Both knees and boots must remain separately readable on their own side of the body centre. Walk straight toward the viewer, no rotation, no sideways travel, no crossed legs. Opposed arm motion. Exactly two arms and two legs. Full body, same canvas/scale and generous transparent padding. Crisp stepped pixel art, transparent background, no text, scenery, shadows or ground. Match hair, face, tunic panel arrangement and garment colours exactly to image1. No interpolated blur or limb deformation.",
+    "file": "source/02.png",
+    "status": "generated-reviewed",
+    "poseGuide": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\walk-refresh\\fenris\\down\\source\\02.png",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\exec-5bb57fdf-bc73-488d-bd64-7cfd7cae19c3.png"
+  },
+  {
+    "id": "03",
+    "direction": "down",
+    "role": "Screen-left leg supports under the hip; screen-right knee lifts forward passing airborne, boot clear of ground; arms near neutral.",
+    "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\exec-58030837-accd-4a9e-b492-03778aefa814.png",
+    "identity": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\walk-refresh\\human-male\\left\\source\\01.png",
+    "prompt": "Use case: identity-preserve. Edit Image 1 into ONE new frame of the SAME direct-front human walking cycle. Image 2 is only the established costume/identity reference. Preserve Image1 exact front-facing head, adult anatomy, body width, scale, olive tunic, cream collar and rolled cuffs, brown front belt/buckle, brown trousers and ordinary brown boots. Change only the limb positions and slight weight shift needed for walking phase 03: Screen-left leg supports under the hip; screen-right knee lifts forward passing airborne, boot clear of ground; arms near neutral. The SCREEN-LEFT leg is the SUPPORTING leg in this phase, never swap it with the right leg. Both knees and boots must remain separately readable on their own side of the body centre. Walk straight toward the viewer, no rotation, no sideways travel, no crossed legs. Opposed arm motion. Exactly two arms and two legs. Full body, same canvas/scale and generous transparent padding. Crisp stepped pixel art, transparent background, no text, scenery, shadows or ground. Match hair, face, tunic panel arrangement and garment colours exactly to image1. No interpolated blur or limb deformation.",
+    "file": "source/03.png",
+    "status": "generated-reviewed",
+    "poseGuide": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\walk-refresh\\fenris\\down\\source\\03.png",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\exec-38bdd508-dc00-4257-b116-8553b090d136.png"
+  },
+  {
+    "id": "04",
+    "direction": "down",
+    "role": "Screen-left leg trails into depth on toe support; screen-right boot reaches forward toward the viewer airborne just before contact. Left arm swings forward; right arm back.",
+    "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\exec-38bdd508-dc00-4257-b116-8553b090d136.png",
+    "identity": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\exec-58030837-accd-4a9e-b492-03778aefa814.png",
+    "prompt": "Use case: identity-preserve. Make ONE new direct-front pixel-art human walking frame, phase 04 REACH. Image1 is the edit target: the right knee has lifted in passing. Image2 locks the man's exact identity and costume. Extend the SCREEN-RIGHT lower leg forward toward the viewer from the lifted right knee, boot airborne with heel reaching and toe slightly raised just BEFORE contact. The SCREEN-LEFT leg is now trailing into depth, supporting on the toe with heel lifted. Keep both boots on their own side of centre with a clear gap. Left arm swings forward, right arm swings back, opposing the leg swing. Maintain exact direct-front camera, same face/hair/head, adult proportions, body width, olive tunic, cream collar and rolled cuffs, brown front belt and buckle, trousers and brown leather boots. Only walking phase changes. No turn, sideways movement, crossed legs or extra limbs. Full body, same body scale and transparent padding. Genuine transparent background, crisp stepped pixel art, no blur, scenery, text, ground or shadow.",
+    "file": "source/04.png",
+    "status": "generated-reviewed",
+    "poseGuide": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\walk-refresh\\fenris\\down\\source\\04.png",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\exec-578d60b9-bd5c-495b-99ee-30dffd23f1fa.png",
+    "flipSource": true,
+    "anatomyReview": "Generated reaching pose leads with screen-left leg; reflect input to put screen-right leg in the reaching phase."
+  }
+]

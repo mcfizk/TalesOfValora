@@ -1,0 +1,162 @@
+{
+  "direction": "down",
+  "frames": [
+    {
+      "id": "01",
+      "role": "Screen-left boot lands forward toward the viewer; screen-right boot trails into depth on its toe. Left arm swings back, right arm forward.",
+      "source": "source/01.png",
+      "sourceFlipped": false,
+      "sourceHash": "29cd07753e84324751e4bf5cce1c17b5b210419d9ade198ac9f7faf3e6e3101d",
+      "waist": 569.15,
+      "scale": 0.44,
+      "translation": [
+        5.574000000000012,
+        19.519999999999982
+      ],
+      "bounds": [
+        126,
+        50,
+        393,
+        609
+      ],
+      "pixelHash": "bcec90fb3a94ba925490262a72981028d8802c526925508fb62ca4be764e8939"
+    },
+    {
+      "id": "02",
+      "role": "Weight settles over the screen-left planted boot with a bent knee; screen-right heel lifts behind in preparation for its swing.",
+      "source": "source/02.png",
+      "sourceFlipped": false,
+      "sourceHash": "feab9a90ae7528434895a0bb146232bc3a4f7a48ae09c0f9abea865bae21cdcd",
+      "waist": 571.1333333333333,
+      "scale": 0.44,
+      "translation": [
+        4.701333333333338,
+        18.200000000000045
+      ],
+      "bounds": [
+        124,
+        48,
+        383,
+        609
+      ],
+      "pixelHash": "36a8e7c5714c8c1a4d08ab09a5eeabd30f1a89894d41e7a122f8c73cb67bae29"
+    },
+    {
+      "id": "03",
+      "role": "Screen-left leg supports under the hip; screen-right knee lifts forward passing airborne, boot clear of ground; arms near neutral.",
+      "source": "source/03.png",
+      "sourceFlipped": false,
+      "sourceHash": "371f07383ed3abe2f4c688fe83f3d18bcf2d037bed46d5edfc271fe342208292",
+      "waist": 550.1833333333333,
+      "scale": 0.44,
+      "translation": [
+        13.919333333333356,
+        19.519999999999982
+      ],
+      "bounds": [
+        126,
+        50,
+        387,
+        609
+      ],
+      "pixelHash": "439f094690420b5f6e65cecd0d411a5bf32f38f57343ffd6deb3d16620fcd2be"
+    },
+    {
+      "id": "04",
+      "role": "Screen-left leg trails into depth on toe support; screen-right boot reaches forward toward the viewer airborne just before contact. Left arm swings forward; right arm back.",
+      "source": "source/04.png",
+      "sourceFlipped": true,
+      "sourceHash": "572fbf9ac03efd58011bce161bbb8967a534dd5db55248c94ffd047052f655c2",
+      "waist": 564.9166666666666,
+      "scale": 0.44,
+      "translation": [
+        7.436666666666696,
+        23.039999999999964
+      ],
+      "bounds": [
+        128,
+        52,
+        381,
+        609
+      ],
+      "pixelHash": "230f17f64641e5d16a9f4317f8cb07fe02b03b9815f93b09d35a96ce2e8ed0fe"
+    },
+    {
+      "id": "05",
+      "role": "Opposite-limb Screen-left boot lands forward toward the viewer; screen-right boot trails into depth on its toe. Left arm swings back, right arm forward.",
+      "mirrorOf": "01",
+      "sourceFlipped": false,
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        118,
+        50,
+        385,
+        609
+      ],
+      "pixelHash": "4cc7318b0c906f04b0ba766005173ee735af7e3ad4ba5162e9b1db02cb376f96"
+    },
+    {
+      "id": "06",
+      "role": "Opposite-limb Weight settles over the screen-left planted boot with a bent knee; screen-right heel lifts behind in preparation for its swing.",
+      "mirrorOf": "02",
+      "sourceFlipped": false,
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        128,
+        48,
+        387,
+        609
+      ],
+      "pixelHash": "cc799bb9f2c15a704a93f3e60c82d616e1c4e4a299d704cf4e424c88b792cbb2"
+    },
+    {
+      "id": "07",
+      "role": "Opposite-limb Screen-left leg supports under the hip; screen-right knee lifts forward passing airborne, boot clear of ground; arms near neutral.",
+      "mirrorOf": "03",
+      "sourceFlipped": false,
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        124,
+        50,
+        385,
+        609
+      ],
+      "pixelHash": "18d35eb438c37174d8693b12d260b082ce046d4207d63279f708ad387c5034d2"
+    },
+    {
+      "id": "08",
+      "role": "Opposite-limb Screen-left leg trails into depth on toe support; screen-right boot reaches forward toward the viewer airborne just before contact. Left arm swings forward; right arm back.",
+      "mirrorOf": "04",
+      "sourceFlipped": false,
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        130,
+        52,
+        383,
+        609
+      ],
+      "pixelHash": "38ce63b6d46a32d831f9b1e13387c305d715ee65aa42a5636b500611eabcb48f"
+    }
+  ],
+  "ground": 610,
+  "uniformScale": 0.44,
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "gifFrames": 8
+}

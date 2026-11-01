@@ -1,0 +1,12 @@
+{
+  "mode": "built-in image_gen",
+  "purpose": "Queen Rixa visual concept for review; not installed in the game",
+  "references": [
+    "C:\\Users\\Mcfiz\\.codex\\codex-remote-attachments\\01a1727b-8c30-7230-a7ed-06dfdf457eb4\\50902148-A364-4511-99DC-1D3C0A704712\\1-Photo-1.jpg",
+    "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\Sprites\\Fenris white\\Fenris_idle_frames.png",
+    "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\private-opening\\assets\\npcs\\human-female\\walk-left.png"
+  ],
+  "output": "queen-rixa-pixel-concept-v1.png",
+  "identity": "Queen Rixa",
+  "continuity": "Author clarification: this design represents Queen Rixa. Her appearance in 1470 is younger and requires a separate design. No exact age or date is assigned to this Queen Rixa concept. The prompt file preserves the original generation prompt."
+}

@@ -1,0 +1,15 @@
+{
+  "characters": [
+    "fenris",
+    "human-male",
+    "human-female",
+    "dwarf-male",
+    "dwarf-female",
+    "halfling-male",
+    "halfling-female"
+  ],
+  "allFramesReachable": true,
+  "directionsChecked": 8,
+  "playbackAdvances": true,
+  "pageErrors": []
+}

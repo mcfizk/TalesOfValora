@@ -1,0 +1,76 @@
+{
+  "direction": "up-left",
+  "frames": [
+    {
+      "id": "01",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-7c3117af-8194-4b05-9b55-69273ebbb83c.png",
+      "prompt": "Edit this EXACT Fenris sprite. Preserve rear three-quarter UP-LEFT camera, white-grey fur, brown shorts, bushy tail, blue eye, crisp pixel art, full body scale and limb lengths. Transparent background, no ground/shadow/text. Change ONLY the large foreground arm on screen LEFT. It must swing BACK with its upper arm sloping slightly down-left, elbow nearly straight, hand LOWER near upper-thigh level. Do not bend the forearm up toward the chest. The near foreground leg remains planted forward LEFT exactly as it is. Far arm on right should swing forward into depth, slightly bent, partially concealed. Keep legs entirely unchanged.",
+      "direction": "up-left",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-60cf7b28-266c-452c-ac1b-d5335a796d29.png",
+      "file": "source/01.png",
+      "role": "Near-leg contact"
+    },
+    {
+      "id": "02",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-7c3117af-8194-4b05-9b55-69273ebbb83c.png",
+      "prompt": "Edit this EXACT Fenris sprite. Preserve rear three-quarter UP-LEFT camera, white-grey fur, brown shorts, bushy tail, blue eye, crisp pixel art, full body scale and limb lengths. Transparent background, no ground/shadow/text. Next pose: bend the near LEFT planted knee slightly to absorb weight, lower pelvis/head subtly, pull that planted paw slightly inward under the body. Far RIGHT leg remains trailing but its heel lifts and paw begins leaving the floor. Same leg assignment, no swapping. The big near arm on LEFT should hang lower and slightly back, elbow relaxed nearly straight; hand near thigh, not a raised fist. Far arm forward in depth. This is settling, not straight contact.",
+      "direction": "up-left",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-5e539242-dd1e-4629-81ab-87d7dfb30400.png",
+      "file": "source/02.png",
+      "role": "Near-leg settle"
+    },
+    {
+      "id": "03",
+      "role": "Far-leg passing",
+      "direction": "up-left",
+      "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 03: near leg supports upright under pelvis; far knee bends and passes forward with paw clearly airborne near supporting calf; arms close to neutral. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-f52608da-5bec-4bff-b76e-51622688ab98.png",
+      "file": "source/03.png"
+    },
+    {
+      "id": "04",
+      "role": "Far-leg reach",
+      "direction": "up-left",
+      "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 04: near leg extends behind on toe support; far leg extends forward airborne just before contact; near arm swings forward, far arm backward. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-adcf5823-de0e-41cb-86e1-98e8e1ee009f.png",
+      "file": "source/04.png"
+    },
+    {
+      "id": "05",
+      "role": "Far-leg contact",
+      "direction": "up-left",
+      "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 01: near leg reaches forward into heel/paw contact; far leg trails on toes; near arm swings backward, far arm forward. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-9d45f480-07c1-40c7-ad58-b0d9ac691eb5.png",
+      "review": "Reassigned by actual leading leg.",
+      "file": "source/05.png"
+    },
+    {
+      "id": "06",
+      "role": "Far-leg settle",
+      "direction": "up-left",
+      "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 02: near knee bends taking weight on planted paw; far trailing paw begins lifting; near arm back approaches neutral; pelvis slightly lower. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c1c3bbed-17c5-445f-aeb5-53ef2afa2273.png",
+      "review": "Reassigned by actual leading leg.",
+      "file": "source/06.png"
+    },
+    {
+      "id": "07",
+      "role": "Near-leg passing",
+      "direction": "up-left",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-f52608da-5bec-4bff-b76e-51622688ab98.png",
+      "prompt": "Edit this exact Fenris rear three-quarter UP-LEFT sprite into OPPOSITE passing phase. Keep identity, back view, fur, brown shorts and tail. SWAP WHICH LEG SUPPORTS: the FAR background leg on the RIGHT must now be STRAIGHT and planted beneath pelvis, carrying weight. The NEAR foreground thigh on the LEFT bends at knee and lifts forward toward upper-left, with its paw clearly AIRBORNE beside supporting calf. The raised foreground near thigh overlaps IN FRONT of the straight supporting far thigh. This is opposite to the reference: LEFT paw up, RIGHT paw down. Arms pass neutral beside torso. Only two legs/arms, no camera change, preserve limb lengths, crisp pixel art transparent full body.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-f70dd68e-13a7-40fd-a720-25f61918433c.png",
+      "file": "source/07.png"
+    },
+    {
+      "id": "08",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a2b4f63a-5475-4c58-87c3-3b8637b6f532.png",
+      "prompt": "Edit this exact pixel-art Fenris sprite: REMOVE the stray third arm/hand that protrudes on the FAR LEFT below the chest and above the shorts, behind the long foreground arm. There must be EXACTLY TWO arms: KEEP the long foreground arm descending from the near left shoulder to the large hand at hip level, and KEEP the right-side arm/hand behind the tail. Remove only the small extra far-left bent forearm and fist, replacing that area with transparency outside the torso outline. Preserve the entire character and current walking pose, both legs, tail, camera, pixel art and transparency otherwise.",
+      "direction": "up-left",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c3002e64-8385-40e9-8f29-88f35f6d7c80.png",
+      "fix": true,
+      "file": "source/08.png",
+      "role": "Near-leg reach"
+    }
+  ]
+}

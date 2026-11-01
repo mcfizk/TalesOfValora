@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "hidden before exploration",
+    "failed checks reveal nothing",
+    "pause blocks discovery",
+    "closer ring reveals only noticed event",
+    "journal discovery",
+    "aware and surprised branches",
+    "restart clears events"
+  ],
+  "errors": []
+}

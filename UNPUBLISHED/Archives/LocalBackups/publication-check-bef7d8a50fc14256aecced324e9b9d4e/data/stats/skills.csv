@@ -1,0 +1,19 @@
+id,name,ability
+acrobatics,Acrobatics,dex
+animal_handling,Animal Handling,wis
+arcana,Arcana,int
+athletics,Athletics,str
+deception,Deception,cha
+history,History,int
+insight,Insight,wis
+intimidation,Intimidation,cha
+investigation,Investigation,int
+medicine,Medicine,wis
+nature,Nature,int
+perception,Perception,wis
+performance,Performance,cha
+persuasion,Persuasion,cha
+religion,Religion,int
+sleight_of_hand,Sleight of Hand,dex
+stealth,Stealth,dex
+survival,Survival,wis

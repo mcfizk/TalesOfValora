@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101b20"><meta name="description" content="Fenris awakens in an unfamiliar forest. A playable 3D opening scene.">
+<link rel="icon" href="data:,">
+<title>Fenris — Awakening | Ulfheim</title>
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+<main id="scene" aria-label="3D forest. Use WASD or arrow keys to move Fenris. Drag to turn the camera."></main>
+<div class="vignette" aria-hidden="true"></div><div id="eyelids" aria-hidden="true"></div>
+<header id="hud" class="hidden">
+ <div class="chapter"><span class="smallcaps">The beginning</span><h1>Awakening</h1><div class="chapter-line"></div></div>
+ <nav aria-label="Game options"><button id="sound" title="Toggle ambient sound">Sound on</button><button id="journal">Journal <kbd>J</kbd></button><button id="settings">Menu <kbd>Esc</kbd></button></nav>
+</header>
+<section id="objective" class="hidden"><span class="diamond" aria-hidden="true">◇</span><div><span class="smallcaps">First steps</span><p id="objective-text">Find your footing.</p></div></section>
+<div id="interact" class="hidden"><button id="interact-button"><kbd>E</kbd> <span>Look closer</span></button></div>
+<section id="subtitles" class="hidden" aria-live="polite" aria-atomic="true"><span id="speaker">A distant voice</span><p id="subtitle-text"></p></section>
+<footer id="controls" class="hidden"><div><kbd>W A S D</kbd> Move <span>·</span> <kbd>Shift</kbd> Run <span>·</span> Click ground to walk</div><div>Drag to look <span>·</span> Scroll to zoom <span>·</span> <kbd>E</kbd> Examine</div></footer>
+<div id="touch-controls" class="hidden"><div id="joystick" aria-label="Drag to move" role="group"><div id="stick"></div></div><button id="touch-interact" aria-label="Examine nearby object">E</button></div>
+<div id="notice" role="status"></div>
+<section id="start" class="screen">
+ <div class="start-content"><span class="eyebrow">A story yet to be remembered</span><h2>FENRIS</h2><div class="ornament" aria-hidden="true">──── ◇ ────</div><p class="subtitle">Awakening</p><p class="intro">An unfamiliar forest.<br>A voice beyond the trees.<br>No memory of how you came to be here.</p>
+ <button id="begin" class="primary" disabled>Preparing the forest…</button><label class="audio-choice"><input type="checkbox" id="enable-audio" checked> Ambient sound</label><p class="prototype-note">Playable opening · Early 3D prototype<br>Voice lines and observations are placeholders for the author.</p></div>
+ <div class="start-bottom"><a href="/games/">← Ulfheim games</a><span>1468 DR · Before Valora</span></div>
+</section>
+<dialog id="panel"><button id="close-panel" class="close" aria-label="Close dialog">×</button><div id="panel-content"></div></dialog>
+<noscript>This 3D scene needs JavaScript enabled.</noscript>
+<script type="module" src="main.js?v=3"></script>
+</body></html>

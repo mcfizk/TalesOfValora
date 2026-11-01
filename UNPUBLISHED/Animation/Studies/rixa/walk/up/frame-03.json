@@ -1,0 +1,9 @@
+[
+  {
+    "id": "03",
+    "direction": "up",
+    "phase": "Passing: screen-LEFT leg supports weight almost vertical; screen-RIGHT knee bends and passes, bare paw clearly AIRBORNE beside supporting calf with sole partly visible. Arms near neutral.",
+    "prompt": "Generate ONE full-body pixel-art walking frame of RIXA. Image1 is exact Rixa identity, costume and DIRECT REAR camera; image2 supplies only the gait phase, NEVER its wolf body. Rixa is a slender adult female dark-grey feline with short tousled dark hair, upright ears, a small hoop on anatomical LEFT ear (screen LEFT from rear), worn brown vest over charcoal rolled-sleeve tunic, loose patched brown trousers, furry bare ankles and BARE feline paws, long dark tail with pale tip, small SHEATHED knife on anatomical LEFT hip (screen LEFT from rear). Preserve these fixed side details; do not mirror identity. DIRECT BACK walking straight UP away: show back of head and vest, NO face, NO eyes, NO chest, NO turn. Phase 03: Passing: screen-LEFT leg supports weight almost vertical; screen-RIGHT knee bends and passes, bare paw clearly AIRBORNE beside supporting calf with sole partly visible. Arms near neutral. Exactly two connected arms and two legs, natural knees/ankles, feet separated either side of center, never crossed. Tail trails with small sway and does not obscure both feet. Keep head/body proportions, same camera and crisp stepped pixel rendering. Genuine transparent background without glow, haze, shadow, floor or text. Full body with padding.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a18631-2c5c-74d2-a36c-55d21e87d587\\exec-455b7f7c-cf3f-43b7-9c16-718fb7b80144.png"
+  }
+]

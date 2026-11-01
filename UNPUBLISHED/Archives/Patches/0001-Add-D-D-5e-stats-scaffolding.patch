@@ -1,0 +1,759 @@
+From ddf0d53e09107d4c1321a41626defec1d74f6f73 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sun, 25 Oct 2026 14:34:58 +0000
+Subject: [PATCH] Add D&D 5e stats scaffolding
+
+Rules in stats.js (ability mods, proficiency, saves/skills, average HP,
+damage with resistances and temp HP, death saves, rests, XP levelling,
+modifiers, change events). Numbers authored in data/stats/*.csv and
+compiled to stats-data.js by build-stats.cjs with row validation.
+Fenris gets a placeholder sheet exposed via __fenris diagnostics only.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VMbpixdxuZMjyXQCwstfdy
+---
+ README.md                   |   6 +-
+ build-stats.cjs             |  46 ++++++
+ data/stats/abilities.csv    |   7 +
+ data/stats/actors.csv       |   2 +
+ data/stats/damage-types.csv |  14 ++
+ data/stats/levels.csv       |  21 +++
+ data/stats/skills.csv       |  19 +++
+ deploy.ps1                  |   2 +-
+ docs/STATS.md               |  88 ++++++++++++
+ main.js                     |   6 +-
+ package.json                |   2 +-
+ stats-data.js               | 276 ++++++++++++++++++++++++++++++++++++
+ stats.js                    |  65 +++++++++
+ tests/stats.test.mjs        |  32 +++++
+ 14 files changed, 581 insertions(+), 5 deletions(-)
+ create mode 100644 build-stats.cjs
+ create mode 100644 data/stats/abilities.csv
+ create mode 100644 data/stats/actors.csv
+ create mode 100644 data/stats/damage-types.csv
+ create mode 100644 data/stats/levels.csv
+ create mode 100644 data/stats/skills.csv
+ create mode 100644 docs/STATS.md
+ create mode 100644 stats-data.js
+ create mode 100644 stats.js
+ create mode 100644 tests/stats.test.mjs
+
+diff --git a/README.md b/README.md
+index 200cb22..6051753 100644
+--- a/README.md
++++ b/README.md
+@@ -30,6 +30,10 @@ The attached `01-The Story Begins.txt` inspires a forest awakening and voices. I
+ 
+ `forest.js` creates the environment. Fur, bark, and leaf-litter image assets were generated with built-in image generation; exact prompts and local asset paths are recorded in `art-manifest.json`. The supplied character image guides the model and is not published. The full Valora manuscripts and royal portraits are not included. The repository contains only the curated lore handoff linked above; it is not part of the public game deployment.
+ 
++## Stats
++
++Characters use D&D 5e (2014 SRD) rules. `stats.js` holds the rules; `data/stats/*.csv` holds the numbers. After editing a CSV, run `node build-stats.cjs` to regenerate `stats-data.js`. Fenris's current row is a placeholder, not canon. See [docs/STATS.md](docs/STATS.md) for the columns, implemented rules, open decisions and Codex handoff.
++
+ ## Running locally
+ 
+ Run `node serve.cjs` from this directory, then open http://127.0.0.1:8766. HTTP is required for JavaScript modules. The server binds only to loopback. No installation or API keys are required. Three.js 0.180.0 is included under `vendor/` with its MIT license. Renderer setup: https://threejs.org/manual/pages/installation.html.
+@@ -48,7 +52,7 @@ Subtitles are always available. The start screen offers audio and it can be togg
+ 
+ ## Verification
+ 
+-`node --test tests/world.test.mjs` checks boundaries, obstacles, sliding, water restrictions, and paths including the bridge. `browser-test.cjs` uses the bundled Playwright and installed Edge to test wake-up, keyboard/click movement, voices/subtitles, observations, journal, pause, audio activation, camera, performance mode, restart, and mobile touch. `test-results.json` records the latest run. `window.__fenris` offers read-only diagnostics.
++`npm test` runs `tests/world.test.mjs` (boundaries, obstacles, sliding, water restrictions, paths including the bridge) and `tests/stats.test.mjs` (5e derived values, damage, death saves, rests, levelling, and that `stats-data.js` matches the CSVs). `browser-test.cjs` uses the bundled Playwright and installed Edge to test wake-up, keyboard/click movement, voices/subtitles, observations, journal, pause, audio activation, camera, performance mode, restart, and mobile touch. `test-results.json` records the latest run. `window.__fenris` offers read-only diagnostics.
+ 
+ ## Deployment
+ 
+diff --git a/build-stats.cjs b/build-stats.cjs
+new file mode 100644
+index 0000000..b9be1a0
+--- /dev/null
++++ b/build-stats.cjs
+@@ -0,0 +1,46 @@
++// Converts the author-edited tables in data/stats/*.csv into stats-data.js, which the game and tests import.
++// Run `node build-stats.cjs` after editing a CSV. Rows are validated so a typo fails here instead of in the browser.
++const fs=require('node:fs'),path=require('node:path');
++const DIR=path.join(__dirname,'data','stats'),OUT=path.join(__dirname,'stats-data.js');
++const HIT_DICE=[6,8,10,12];
++
++// RFC 4180-style: commas, quoted fields with "" escapes, CRLF or LF. Spreadsheet exports need nothing else.
++function parseCsv(text){
++ const rows=[];let row=[],field='',quoted=false;text=text.replace(/^﻿/,'');
++ for(let i=0;i<text.length;i++){const c=text[i];
++  if(quoted){if(c==='"'&&text[i+1]==='"'){field+='"';i++;}else if(c==='"')quoted=false;else field+=c;}
++  else if(c==='"')quoted=true;else if(c===','){row.push(field);field='';}
++  else if(c==='\n'||c==='\r'){if(c==='\r'&&text[i+1]==='\n')i++;row.push(field);rows.push(row);row=[];field='';}
++  else field+=c;}
++ if(field||row.length){row.push(field);rows.push(row);}
++ const [header,...body]=rows.filter(r=>r.some(v=>v.trim()));
++ return body.map(r=>Object.fromEntries(header.map((h,i)=>[h.trim(),(r[i]??'').trim()])));
++}
++
++function build(read=file=>fs.readFileSync(path.join(DIR,file),'utf8')){
++ const table=file=>parseCsv(read(file)).map((r,i)=>({...r,_where:`${file} row ${i+2}`}));
++ const fail=(r,msg)=>{throw new Error(`${r._where}: ${msg}`);};
++ const int=(r,key,min,max)=>{const v=Number(r[key]);if(!Number.isInteger(v)||v<min||v>max)fail(r,`${key} must be a whole number from ${min} to ${max}, got "${r[key]}"`);return v;};
++ const unique=(rows,key='id')=>{const seen=new Set();for(const r of rows){if(!r[key])fail(r,`missing ${key}`);if(seen.has(r[key]))fail(r,`duplicate ${key} "${r[key]}"`);seen.add(r[key]);}return rows;};
++ const strip=({_where,...r})=>r;
++ const abilities=unique(table('abilities.csv')).map(strip),abilityIds=abilities.map(a=>a.id);
++ const skills=unique(table('skills.csv')).map(r=>{if(!abilityIds.includes(r.ability))fail(r,`unknown ability "${r.ability}"`);return strip(r);}),skillIds=skills.map(s=>s.id);
++ const damageTypes=unique(table('damage-types.csv')).map(r=>r.id);
++ const levels=table('levels.csv').map((r,i)=>{const level=int(r,'level',1,20);if(level!==i+1)fail(r,'levels must be listed 1, 2, 3… in order');return {level,xp:int(r,'xp',0,1e9),proficiency:int(r,'proficiency',2,6)};});
++ if(levels.length!==20)throw new Error('levels.csv must list levels 1 to 20');
++ const list=(r,key,allowed)=>{const ids=r[key]?r[key].split(/\s+/):[];for(const id of ids)if(!allowed.includes(id))fail(r,`${key}: unknown id "${id}"`);return ids;};
++ const actors=Object.fromEntries(unique(table('actors.csv')).map(r=>{
++  const skillsList=list(r,'skills',skillIds),expertise=list(r,'expertise',skillIds);
++  for(const id of expertise)if(!skillsList.includes(id))fail(r,`expertise "${id}" also needs to be in skills`);
++  const hitDie=int(r,'hit_die',4,20);if(!HIT_DICE.includes(hitDie))fail(r,`hit_die must be one of ${HIT_DICE.join(', ')}`);
++  return [r.id,{id:r.id,name:r.name||r.id,level:int(r,'level',1,20),hitDie,
++   abilities:Object.fromEntries(abilityIds.map(id=>[id,int(r,id,1,30)])),speed:int(r,'speed',0,200),
++   saves:list(r,'saves',abilityIds),skills:skillsList,expertise,
++   resistances:list(r,'resistances',damageTypes),immunities:list(r,'immunities',damageTypes),vulnerabilities:list(r,'vulnerabilities',damageTypes),
++   maxHp:r.max_hp?int(r,'max_hp',1,9999):null,notes:r.notes||''}];}));
++ return {abilities,skills,levels,damageTypes,actors};
++}
++
++const source=data=>`// Generated by build-stats.cjs from data/stats/*.csv. Edit the CSV files, then run \`node build-stats.cjs\`.\nexport const STATS=${JSON.stringify(data,null,1)};\n`;
++module.exports={parseCsv,build,source,OUT};
++if(require.main===module){const data=build();fs.writeFileSync(OUT,source(data));console.log(`stats-data.js: ${Object.keys(data.actors).length} actor(s), ${data.skills.length} skills`);}
+diff --git a/data/stats/abilities.csv b/data/stats/abilities.csv
+new file mode 100644
+index 0000000..666c382
+--- /dev/null
++++ b/data/stats/abilities.csv
+@@ -0,0 +1,7 @@
++id,name,description
++str,Strength,Physical power: Athletics and Strength saves
++dex,Dexterity,Agility and reflexes: AC and initiative when unarmored
++con,Constitution,Health and stamina: hit points
++int,Intelligence,Reasoning and memory
++wis,Wisdom,Perception and insight
++cha,Charisma,Force of personality
+diff --git a/data/stats/actors.csv b/data/stats/actors.csv
+new file mode 100644
+index 0000000..e8fd3bc
+--- /dev/null
++++ b/data/stats/actors.csv
+@@ -0,0 +1,2 @@
++id,name,level,hit_die,str,dex,con,int,wis,cha,speed,saves,skills,expertise,resistances,immunities,vulnerabilities,max_hp,notes
++fenris,Fenris,1,10,17,13,15,10,13,10,30,str con,athletics perception survival,,,,,,"PLACEHOLDER numbers, not canon. No class, Lupera traits, weapons or magic established."
+diff --git a/data/stats/damage-types.csv b/data/stats/damage-types.csv
+new file mode 100644
+index 0000000..029ec4f
+--- /dev/null
++++ b/data/stats/damage-types.csv
+@@ -0,0 +1,14 @@
++id,name
++acid,Acid
++bludgeoning,Bludgeoning
++cold,Cold
++fire,Fire
++force,Force
++lightning,Lightning
++necrotic,Necrotic
++piercing,Piercing
++poison,Poison
++psychic,Psychic
++radiant,Radiant
++slashing,Slashing
++thunder,Thunder
+diff --git a/data/stats/levels.csv b/data/stats/levels.csv
+new file mode 100644
+index 0000000..df0ec70
+--- /dev/null
++++ b/data/stats/levels.csv
+@@ -0,0 +1,21 @@
++level,xp,proficiency
++1,0,2
++2,300,2
++3,900,2
++4,2700,2
++5,6500,3
++6,14000,3
++7,23000,3
++8,34000,3
++9,48000,4
++10,64000,4
++11,85000,4
++12,100000,4
++13,120000,5
++14,140000,5
++15,165000,5
++16,195000,5
++17,225000,6
++18,265000,6
++19,305000,6
++20,355000,6
+diff --git a/data/stats/skills.csv b/data/stats/skills.csv
+new file mode 100644
+index 0000000..f8ab4bd
+--- /dev/null
++++ b/data/stats/skills.csv
+@@ -0,0 +1,19 @@
++id,name,ability
++acrobatics,Acrobatics,dex
++animal_handling,Animal Handling,wis
++arcana,Arcana,int
++athletics,Athletics,str
++deception,Deception,cha
++history,History,int
++insight,Insight,wis
++intimidation,Intimidation,cha
++investigation,Investigation,int
++medicine,Medicine,wis
++nature,Nature,int
++perception,Perception,wis
++performance,Performance,cha
++persuasion,Persuasion,cha
++religion,Religion,int
++sleight_of_hand,Sleight of Hand,dex
++stealth,Stealth,dex
++survival,Survival,wis
+diff --git a/deploy.ps1 b/deploy.ps1
+index 624b4c2..2f33377 100644
+--- a/deploy.ps1
++++ b/deploy.ps1
+@@ -12,7 +12,7 @@ $preview=Join-Path $gamesRoot 'assets\Fenris-Awakening-Preview.png'
+ if(Test-Path -LiteralPath $preview){Copy-Item -LiteralPath $preview -Destination (Join-Path $backupPath 'previous-preview.png')}
+ New-Item -ItemType Directory -Path $gameTarget -Force | Out-Null
+ foreach($folder in @('vendor','assets')){New-Item -ItemType Directory -Path (Join-Path $gameTarget $folder) -Force | Out-Null}
+-$files=@('index.html','style.css','main.js','world.js','story.js','forest.js','character.js','visuals.js','audio.js','model-study.html','vendor\three.module.js','vendor\three.core.js','vendor\THREE-LICENSE.txt','assets\fur.png','assets\forest-floor.png','assets\bark.png','assets\fenris-sculpt.json')
++$files=@('index.html','style.css','main.js','world.js','story.js','forest.js','character.js','visuals.js','audio.js','stats.js','stats-data.js','model-study.html','vendor\three.module.js','vendor\three.core.js','vendor\THREE-LICENSE.txt','assets\fur.png','assets\forest-floor.png','assets\bark.png','assets\fenris-sculpt.json')
+ # Copy assets and modules before switching the entry page to this release.
+ foreach($file in ($files | Where-Object {$_ -ne 'index.html'})){Copy-Item -LiteralPath (Join-Path $sceneSource $file) -Destination (Join-Path $gameTarget $file) -Force}
+ Copy-Item -LiteralPath (Join-Path $sceneSource 'index.html') -Destination (Join-Path $gameTarget 'index.html') -Force
+diff --git a/docs/STATS.md b/docs/STATS.md
+new file mode 100644
+index 0000000..62f24f9
+--- /dev/null
++++ b/docs/STATS.md
+@@ -0,0 +1,88 @@
++# Stats system (D&D 5e)
++
++Characters use D&D 5e rules, based on the **2014 System Reference Document (SRD 5.1)**. The rules live in code (`stats.js`). The numbers live in spreadsheets (`data/stats/*.csv`). Nothing in the opening uses the sheet yet. It is only exposed for diagnostics as `window.__fenris.snapshot().stats`.
++
++## Editing numbers
++
++1. Edit a CSV in `data/stats/` with any spreadsheet program. Save it as CSV (UTF-8).
++2. Run `node build-stats.cjs` (or `npm run stats`). This validates every row and regenerates `stats-data.js`. A bad value fails with its file and row, e.g. `actors.csv row 2: str must be a whole number from 1 to 30`.
++3. Run `npm test`. A test fails if `stats-data.js` is out of date with the CSVs.
++
++Do not edit `stats-data.js` by hand.
++
++| File | Contents | Edit? |
++|---|---|---|
++| `actors.csv` | One row per character or creature | Yes: this is where your numbers go |
++| `levels.csv` | XP thresholds and proficiency bonus, levels 1–20 (5e table) | Only to house-rule |
++| `abilities.csv`, `skills.csv`, `damage-types.csv` | 5e reference lists; other files refer to these ids | Rarely |
++
++### `actors.csv` columns
++
++| Column | Meaning |
++|---|---|
++| `id`, `name` | Code id (`fenris`) and display name |
++| `level` | 1–20. XP starts at that level's threshold |
++| `hit_die` | 6, 8, 10 or 12 |
++| `str` `dex` `con` `int` `wis` `cha` | Ability scores, 1–30 |
++| `speed` | Walking speed in feet. It does not yet drive in-game movement speed |
++| `saves` | Proficient saving throws, separated by spaces: `str con` |
++| `skills` | Proficient skills, separated by spaces, using ids from `skills.csv`: `athletics perception` |
++| `expertise` | Skills with double proficiency (must also be in `skills`) |
++| `resistances` `immunities` `vulnerabilities` | Damage type ids, separated by spaces |
++| `max_hp` | Leave blank to use average HP. Set a number to override it (fixed; it ignores level-ups) |
++| `notes` | Free text, not used by code |
++
++## Rules implemented (`stats.js`)
++
++- **Ability modifier**: `floor((score − 10) / 2)`.
++- **Proficiency bonus**: from `levels.csv`. Applied to proficient saves and skills, and doubled for expertise.
++- **Checks, saves, skills**: d20 + bonus, with advantage/disadvantage; reports natural 1 and 20. **Passive** = 10 + skill bonus.
++- **Hit points**: fixed average. Full hit die at level 1, then die/2 + 1 per level, plus the CON modifier each level, at least 1 per level. Level-ups raise current HP by the gain.
++- **AC**: unarmored, 10 + DEX modifier. **Initiative**: DEX modifier.
++- **Damage**: immunity, then resistance (halve, round down), then vulnerability (double). Temporary HP absorbs damage first; temporary HP doesn't stack (the higher value wins).
++- **0 HP**: the character is *dying*.
++  - Death save: 10+ succeeds; natural 1 counts as two failures; natural 20 revives with 1 HP.
++  - Three successes stabilise; three failures kill.
++  - Damage while down counts as one failure, or two on a critical hit.
++  - Massive damage: if the damage left over after dropping to 0 HP is at least max HP, the character dies outright.
++  - Any healing above 0 HP clears the death saves.
++- **Rests**: a short rest spends hit dice (roll + CON modifier). A long rest needs at least 1 HP; it restores all HP, clears temporary HP, and regains half the total hit dice (minimum 1).
++- **Modifiers**: `addModifier({id, target, add})` for temporary or item effects. Targets: an ability id, `ac`, `speed`, `maxHp`, `initiative`, `check:<ability>`, `save:<ability>`, `skill:<skill>`. Max HP changes clamp current HP.
++- **Events**: `onChange((event, detail, sheet) => …)` fires `damage`, `heal`, `down`, `stable`, `revived`, `deathSave`, `died`, `tempHp`, `longRest`, `levelUp` and `modifiers`. Use it for HUD updates.
++
++All randomness takes an optional `rng` function (returns 0–1), so tests can force exact rolls.
++
++### 2014 vs 2024 rules
++
++The code follows 2014 rules where the editions differ. The differences that affect this module: a 2024 long rest regains **all** hit dice, not half; 2024 Exhaustion is a −2 per level penalty to d20 tests. Tell Codex if you want 2024.
++
++## Not built yet
++
++These need author decisions first, and canon currently excludes several of them for the opening:
++
++- Classes and class features (Fenris has no class: `hit_die 10` is a placeholder)
++- Lupera species traits (size, darkvision, senses, natural weapons). Fenris is listed as *Medium-sized by default*; 5e "Large" has rules consequences
++- Equipment, armor and attacks (the opening has none)
++- Spellcasting (Fenris has no magic)
++- Conditions (prone, grappled, exhaustion and so on), concentration, and monster CR/XP awards
++- A HUD or character sheet panel, and saving between sessions
++
++## Open author decisions
++
++- [ ] Fenris's real ability scores, level, hit die, proficiencies (current row is **PLACEHOLDER**)
++- [ ] Lupera traits and size category
++- [ ] 2014 or 2024 rules
++- [ ] Average or rolled HP on level-up (currently average)
++- [ ] What 0 HP means in story terms during the opening
++
++## Handing work to Codex
++
++Give Codex the CSV row(s) plus a short note of anything this document doesn't already say. For example:
++
++> Fill in `data/stats/actors.csv` with the attached rows, run `node build-stats.cjs` and `npm test`. Rules follow `docs/STATS.md`; do not add classes, species traits, equipment or magic unless listed here. New rules go in `stats.js` with tests in `tests/stats.test.mjs`, using a fixed `rng` for any roll.
++
++For a new rule (e.g. conditions), describe it in this file first. Then Codex adds the code, the tests and, where needed, a new CSV.
++
++## License
++
++Rules text and tables such as the skill list, XP thresholds and death-save rules come from the System Reference Document 5.1 by Wizards of the Coast LLC, available at https://dnd.wizards.com/resources/systems-reference-document, licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/legalcode).
+diff --git a/main.js b/main.js
+index d050773..ca8b26a 100644
+--- a/main.js
++++ b/main.js
+@@ -5,6 +5,7 @@ import {buildForest} from './forest.js?v=3';
+ import {createFenris} from './character.js?v=3';
+ import {loadVisualAssets} from './visuals.js?v=3';
+ import {createAudio} from './audio.js?v=3';
++import {createCharacter} from './stats.js?v=3';
+ const $=id=>document.getElementById(id),scene=new T.Scene();
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,touch=matchMedia('(pointer: coarse)').matches;
+ let renderer;
+@@ -21,6 +22,7 @@ const marker=new T.Mesh(new T.RingGeometry(.25,.31,32),new T.MeshBasicMaterial({
+ const clock=new T.Clock(),keys=new Set();let started=false,wake=0,elapsed=0,paused=false,heading=.38,zoom=9.5,pitch=.53,movePath=[],distanceWalked=0,nearby=null,subtitleUntil=0,seen=new Set(),observed=new Set(),introDone=false;
+ let audioOn=true,footTimer=0,joy={x:0,y:0},run=false,drag=null,noticeUntil=0,quality='high';
+ const audio=createAudio(notify);
++let stats=createCharacter('fenris'); // 5e sheet; no HUD or combat uses it yet.
+ const interactables=[{id:'embers',x:-2.8,z:0,r:2.8,label:'Examine the embers'},{id:'water',x:13.8,z:-9,r:3.3,label:'Listen to the water'},{id:'trail',x:0,z:-22,r:3.5,label:'Look beyond the clearing'}];
+ function notify(text){$('notice').textContent=text;$('notice').style.opacity='1';noticeUntil=elapsed+5;}
+ function speak(text,duration=5){$('subtitles').classList.remove('hidden');$('speaker').textContent='A distant voice';$('subtitle-text').textContent=text;subtitleUntil=elapsed+duration;audio.speak(text);}
+@@ -31,7 +33,7 @@ function journal(){panel(`<span class="smallcaps">Journal</span><h2>Awakening</h
+ function applyQuality(){renderer.setPixelRatio(quality==='low'?1:Math.min(devicePixelRatio,1.6));renderer.shadowMap.enabled=quality==='high';forest.shafts.visible=quality==='high';scene.traverse(o=>{if(o.material)o.material.needsUpdate=true;});}
+ function menu(){panel(`<span class="smallcaps">Paused</span><h2>Take a breath</h2><p>WASD or arrows to walk. Hold Shift to run. Click the ground to walk there. Drag to orbit the camera, scroll to zoom. Press E to examine nearby details.</p><label>Graphics <select id="quality"><option value="high" ${quality==='high'?'selected':''}>High</option><option value="low" ${quality==='low'?'selected':''}>Performance</option></select></label><div class="row"><button class="primary" id="resume">Continue</button><button id="restart">Restart scene</button></div><p class="fine">Opening prototype · No combat or progression yet.<br>Fenris’s model and voice audio are temporary. Your position resets when the page reloads.</p>`);$('resume').onclick=closePanel;$('restart').onclick=()=>{closePanel();reset();};$('quality').onchange=e=>{quality=e.target.value;applyQuality();};}
+ function examine(){if(!started||paused||wake<3||!nearby)return;const o=OPENING.observations[nearby.id];observed.add(nearby.id);panel(`<span class="smallcaps">Observation</span><h2>${o.title}</h2><p>${o.text}</p>${nearby.id==='trail'?'<p>You have reached the edge of this playable scene. The story continues with the author.</p>':''}<p class="fine">Temporary scene text · Awaiting author revision</p><div class="row"><button id="return">Return to the clearing</button></div>`);$('return').onclick=closePanel;}
+-function reset(){wake=0;elapsed=0;distanceWalked=0;seen.clear();observed.clear();introDone=false;movePath=[];marker.visible=false;keys.clear();joy={x:0,y:0};fenris.position.set(SPAWN.x,heightAt(SPAWN.x,SPAWN.z),SPAWN.z);fenris.rotation.y=-.45;heading=.38;pitch=.53;zoom=9.5;subtitleUntil=0;nearby=null;$('subtitles').classList.add('hidden');$('interact').classList.add('hidden');$('objective-text').textContent='Find your footing.';$('eyelids').classList.add('closed');setTimeout(()=>$('eyelids').classList.remove('closed'),300);audio.cancel();}
++function reset(){stats=createCharacter('fenris');wake=0;elapsed=0;distanceWalked=0;seen.clear();observed.clear();introDone=false;movePath=[];marker.visible=false;keys.clear();joy={x:0,y:0};fenris.position.set(SPAWN.x,heightAt(SPAWN.x,SPAWN.z),SPAWN.z);fenris.rotation.y=-.45;heading=.38;pitch=.53;zoom=9.5;subtitleUntil=0;nearby=null;$('subtitles').classList.add('hidden');$('interact').classList.add('hidden');$('objective-text').textContent='Find your footing.';$('eyelids').classList.add('closed');setTimeout(()=>$('eyelids').classList.remove('closed'),300);audio.cancel();}
+ $('begin').onclick=()=>{started=true;audioOn=$('enable-audio').checked;$('start').classList.add('hidden');for(const id of ['hud','objective','controls'])$(id).classList.remove('hidden');if(touch){document.body.classList.add('touch');$('touch-controls').classList.remove('hidden');}setAudio(audioOn);reset();renderer.domElement.focus();};
+ $('sound').onclick=()=>setAudio(!audioOn);$('journal').onclick=journal;$('settings').onclick=menu;$('close-panel').onclick=closePanel;$('panel').addEventListener('cancel',e=>{e.preventDefault();closePanel();});$('interact-button').onclick=examine;$('touch-interact').onclick=examine;
+ window.addEventListener('keydown',e=>{if(!started||$('panel').open)return;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key))e.preventDefault();if(e.repeat&&['e','j','Escape'].includes(e.key))return;if(e.key==='Escape'){e.preventDefault();menu();return;}if(e.key.toLowerCase()==='j'){journal();return;}if(e.key.toLowerCase()==='e'){examine();return;}keys.add(e.key.toLowerCase());if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(e.key.toLowerCase())){movePath=[];marker.visible=false;}});
+@@ -63,7 +65,7 @@ function update(dt,t){
+ }
+ function frame(){requestAnimationFrame(frame);const dt=Math.min(clock.getDelta(),.05),t=clock.elapsedTime;update(dt,t);if(!paused)forest.animate(t);renderer.render(scene,camera);frameCount++;if(t-lastFps>=1){fps=Math.round(frameCount/(t-lastFps));frameCount=0;lastFps=t;}}
+ // Read-only diagnostics used by the browser smoke test.
+-window.__fenris={project:(x,z)=>{const p=new T.Vector3(x,heightAt(x,z),z).project(camera);return {x:(p.x+1)*innerWidth/2,y:(1-p.y)*innerHeight/2};},snapshot:()=>({started,paused,wake,elapsed,position:{x:fenris.position.x,y:fenris.position.y,z:fenris.position.z},distanceWalked,voices:[...seen],observations:[...observed],nearby:nearby?.id||null,pathLength:movePath.length,zoom,heading,fps,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,colliders:colliders.length,audio:audio.status(),weaponCount:0,magicAbilities:0})};
++window.__fenris={project:(x,z)=>{const p=new T.Vector3(x,heightAt(x,z),z).project(camera);return {x:(p.x+1)*innerWidth/2,y:(1-p.y)*innerHeight/2};},snapshot:()=>({started,paused,wake,elapsed,position:{x:fenris.position.x,y:fenris.position.y,z:fenris.position.z},distanceWalked,voices:[...seen],observations:[...observed],nearby:nearby?.id||null,pathLength:movePath.length,zoom,heading,fps,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,colliders:colliders.length,audio:audio.status(),weaponCount:0,magicAbilities:0,stats:stats.snapshot()})};
+ renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();if(started&&!paused)menu();notify('Graphics interrupted. Reload the page to restart the scene.');});
+ $('begin').disabled=false;$('begin').textContent='Open your eyes';frame();
+ 
+diff --git a/package.json b/package.json
+index c6e2d51..669c67a 100644
+--- a/package.json
++++ b/package.json
+@@ -1,5 +1,5 @@
+ {
+   "name": "fenris-awakening", "private": true, "version": "0.1.0", "type": "module",
+-  "scripts": { "start": "node serve.cjs", "test": "node --test tests/world.test.mjs" },
++  "scripts": { "start": "node serve.cjs", "test": "node --test tests/world.test.mjs tests/stats.test.mjs", "stats": "node build-stats.cjs" },
+   "description": "A standalone 3D opening scene for Fenris. Three.js 0.180.0 is vendored locally."
+ }
+diff --git a/stats-data.js b/stats-data.js
+new file mode 100644
+index 0000000..e0d68ad
+--- /dev/null
++++ b/stats-data.js
+@@ -0,0 +1,276 @@
++// Generated by build-stats.cjs from data/stats/*.csv. Edit the CSV files, then run `node build-stats.cjs`.
++export const STATS={
++ "abilities": [
++  {
++   "id": "str",
++   "name": "Strength",
++   "description": "Physical power: Athletics and Strength saves"
++  },
++  {
++   "id": "dex",
++   "name": "Dexterity",
++   "description": "Agility and reflexes: AC and initiative when unarmored"
++  },
++  {
++   "id": "con",
++   "name": "Constitution",
++   "description": "Health and stamina: hit points"
++  },
++  {
++   "id": "int",
++   "name": "Intelligence",
++   "description": "Reasoning and memory"
++  },
++  {
++   "id": "wis",
++   "name": "Wisdom",
++   "description": "Perception and insight"
++  },
++  {
++   "id": "cha",
++   "name": "Charisma",
++   "description": "Force of personality"
++  }
++ ],
++ "skills": [
++  {
++   "id": "acrobatics",
++   "name": "Acrobatics",
++   "ability": "dex"
++  },
++  {
++   "id": "animal_handling",
++   "name": "Animal Handling",
++   "ability": "wis"
++  },
++  {
++   "id": "arcana",
++   "name": "Arcana",
++   "ability": "int"
++  },
++  {
++   "id": "athletics",
++   "name": "Athletics",
++   "ability": "str"
++  },
++  {
++   "id": "deception",
++   "name": "Deception",
++   "ability": "cha"
++  },
++  {
++   "id": "history",
++   "name": "History",
++   "ability": "int"
++  },
++  {
++   "id": "insight",
++   "name": "Insight",
++   "ability": "wis"
++  },
++  {
++   "id": "intimidation",
++   "name": "Intimidation",
++   "ability": "cha"
++  },
++  {
++   "id": "investigation",
++   "name": "Investigation",
++   "ability": "int"
++  },
++  {
++   "id": "medicine",
++   "name": "Medicine",
++   "ability": "wis"
++  },
++  {
++   "id": "nature",
++   "name": "Nature",
++   "ability": "int"
++  },
++  {
++   "id": "perception",
++   "name": "Perception",
++   "ability": "wis"
++  },
++  {
++   "id": "performance",
++   "name": "Performance",
++   "ability": "cha"
++  },
++  {
++   "id": "persuasion",
++   "name": "Persuasion",
++   "ability": "cha"
++  },
++  {
++   "id": "religion",
++   "name": "Religion",
++   "ability": "int"
++  },
++  {
++   "id": "sleight_of_hand",
++   "name": "Sleight of Hand",
++   "ability": "dex"
++  },
++  {
++   "id": "stealth",
++   "name": "Stealth",
++   "ability": "dex"
++  },
++  {
++   "id": "survival",
++   "name": "Survival",
++   "ability": "wis"
++  }
++ ],
++ "levels": [
++  {
++   "level": 1,
++   "xp": 0,
++   "proficiency": 2
++  },
++  {
++   "level": 2,
++   "xp": 300,
++   "proficiency": 2
++  },
++  {
++   "level": 3,
++   "xp": 900,
++   "proficiency": 2
++  },
++  {
++   "level": 4,
++   "xp": 2700,
++   "proficiency": 2
++  },
++  {
++   "level": 5,
++   "xp": 6500,
++   "proficiency": 3
++  },
++  {
++   "level": 6,
++   "xp": 14000,
++   "proficiency": 3
++  },
++  {
++   "level": 7,
++   "xp": 23000,
++   "proficiency": 3
++  },
++  {
++   "level": 8,
++   "xp": 34000,
++   "proficiency": 3
++  },
++  {
++   "level": 9,
++   "xp": 48000,
++   "proficiency": 4
++  },
++  {
++   "level": 10,
++   "xp": 64000,
++   "proficiency": 4
++  },
++  {
++   "level": 11,
++   "xp": 85000,
++   "proficiency": 4
++  },
++  {
++   "level": 12,
++   "xp": 100000,
++   "proficiency": 4
++  },
++  {
++   "level": 13,
++   "xp": 120000,
++   "proficiency": 5
++  },
++  {
++   "level": 14,
++   "xp": 140000,
++   "proficiency": 5
++  },
++  {
++   "level": 15,
++   "xp": 165000,
++   "proficiency": 5
++  },
++  {
++   "level": 16,
++   "xp": 195000,
++   "proficiency": 5
++  },
++  {
++   "level": 17,
++   "xp": 225000,
++   "proficiency": 6
++  },
++  {
++   "level": 18,
++   "xp": 265000,
++   "proficiency": 6
++  },
++  {
++   "level": 19,
++   "xp": 305000,
++   "proficiency": 6
++  },
++  {
++   "level": 20,
++   "xp": 355000,
++   "proficiency": 6
++  }
++ ],
++ "damageTypes": [
++  "acid",
++  "bludgeoning",
++  "cold",
++  "fire",
++  "force",
++  "lightning",
++  "necrotic",
++  "piercing",
++  "poison",
++  "psychic",
++  "radiant",
++  "slashing",
++  "thunder"
++ ],
++ "actors": {
++  "fenris": {
++   "id": "fenris",
++   "name": "Fenris",
++   "level": 1,
++   "hitDie": 10,
++   "abilities": {
++    "str": 17,
++    "dex": 13,
++    "con": 15,
++    "int": 10,
++    "wis": 13,
++    "cha": 10
++   },
++   "speed": 30,
++   "saves": [
++    "str",
++    "con"
++   ],
++   "skills": [
++    "athletics",
++    "perception",
++    "survival"
++   ],
++   "expertise": [],
++   "resistances": [],
++   "immunities": [],
++   "vulnerabilities": [],
++   "maxHp": null,
++   "notes": "PLACEHOLDER numbers, not canon. No class, Lupera traits, weapons or magic established."
++  }
++ }
++};
+diff --git a/stats.js b/stats.js
+new file mode 100644
+index 0000000..ab20665
+--- /dev/null
++++ b/stats.js
+@@ -0,0 +1,65 @@
++// D&D 5e character rules (2014 SRD 5.1 baseline; see docs/STATS.md). Pure logic: no DOM or Three.js, so it runs in node --test.
++// Numbers come from stats-data.js, generated from data/stats/*.csv. Pass `rng` (returns 0..1) to make rolls repeatable in tests.
++import {STATS} from './stats-data.js';
++export const abilityMod=score=>Math.floor((score-10)/2);
++export const die=(sides,rng=Math.random)=>1+Math.floor(rng()*sides);
++export function rollD20({advantage=false,disadvantage=false,rng=Math.random}={}){const a=die(20,rng);if(advantage===disadvantage)return {roll:a,rolls:[a]};const b=die(20,rng);return {roll:advantage?Math.max(a,b):Math.min(a,b),rolls:[a,b]};}
++export const proficiencyFor=(level,data=STATS)=>data.levels[level-1].proficiency;
++export function levelForXp(xp,data=STATS){let level=1;for(const l of data.levels)if(xp>=l.xp)level=l.level;return level;}
++// Fixed-average hit points: full hit die at level 1, then (die/2 + 1) per level, plus CON modifier each level, at least 1 per level.
++export const averageHp=(hitDie,level,conMod)=>Math.max(1,hitDie+conMod)+Math.max(1,hitDie/2+1+conMod)*(level-1);
++
++export function createCharacter(idOrDef,data=STATS){
++ const def=typeof idOrDef==='string'?data.actors[idOrDef]:idOrDef;if(!def)throw new Error(`Unknown actor "${idOrDef}"`);
++ const skillAbility=Object.fromEntries(data.skills.map(s=>[s.id,s.ability])),mods=new Map(),listeners=new Set();
++ let level=def.level,xp=data.levels[level-1].xp;
++ // Modifier targets: an ability id ('str'), 'ac', 'speed', 'maxHp', 'initiative', 'check:<ability>', 'save:<ability>', 'skill:<skill>'.
++ const bonus=target=>{let n=0;for(const m of mods.values())if(m.target===target)n+=m.add;return n;};
++ const score=id=>Math.min(30,Math.max(1,def.abilities[id]+bonus(id))),mod=id=>abilityMod(score(id)),prof=()=>proficiencyFor(level,data);
++ const maxHp=()=>Math.max(1,(def.maxHp??averageHp(def.hitDie,level,mod('con')))+bonus('maxHp'));
++ const s={hp:0,tempHp:0,hitDice:level,successes:0,failures:0,stable:false,dead:false};s.hp=maxHp();
++ const status=()=>s.dead?'dead':s.hp>0?'conscious':s.stable?'stable':'dying';
++ const emit=(event,detail={})=>{for(const f of listeners)f(event,detail,sheet);};
++ const resetSaves=()=>{s.successes=0;s.failures=0;s.stable=false;};
++ const kill=reason=>{s.dead=true;s.hp=0;s.tempHp=0;emit('died',{reason});};
++ const fail=n=>{s.failures+=n;s.stable=false;if(s.failures>=3)kill('death saves');};
++ const checkBonus=id=>mod(id)+bonus('check:'+id);
++ const skillBonus=id=>{const ability=skillAbility[id];if(!ability)throw new Error(`Unknown skill "${id}"`);return checkBonus(ability)+prof()*(def.expertise.includes(id)?2:def.skills.includes(id)?1:0)+bonus('skill:'+id);};
++ const saveBonus=id=>mod(id)+(def.saves.includes(id)?prof():0)+bonus('save:'+id);
++ const sheet={
++  id:def.id,name:def.name,
++  get level(){return level;},get xp(){return xp;},get proficiency(){return prof();},
++  get hp(){return s.hp;},get tempHp(){return s.tempHp;},get maxHp(){return maxHp();},get hitDice(){return s.hitDice;},get hitDie(){return def.hitDie;},
++  get ac(){return 10+mod('dex')+bonus('ac');}, // Unarmored. Armor and shields replace this once equipment exists.
++  get initiative(){return mod('dex')+bonus('initiative');},get speed(){return Math.max(0,def.speed+bonus('speed'));},
++  get status(){return status();},get deathSaves(){return {successes:s.successes,failures:s.failures};},
++  score,mod,checkBonus,skillBonus,saveBonus,passive:id=>10+skillBonus(id),
++  // kind: 'check' (ability), 'skill' or 'save'. Returns the natural roll so callers can apply crit rules.
++  roll(kind,id,opts={}){const b=kind==='skill'?skillBonus(id):kind==='save'?saveBonus(id):checkBonus(id),r=rollD20(opts);return {...r,bonus:b,total:r.roll+b,natural20:r.roll===20,natural1:r.roll===1};},
++  damage(amount,type,{critical=false}={}){
++   if(s.dead)return 0;amount=Math.max(0,Math.floor(amount));
++   if(type&&def.immunities.includes(type))amount=0;if(type&&def.resistances.includes(type))amount=Math.floor(amount/2);if(type&&def.vulnerabilities.includes(type))amount*=2;
++   if(!amount)return 0;const dealt=amount,absorbed=Math.min(s.tempHp,amount);s.tempHp-=absorbed;amount-=absorbed;
++   if(amount>0){
++    if(s.hp===0){if(amount>=maxHp())kill('massive damage');else fail(critical?2:1);} // Hit while down: a failed death save, two on a critical.
++    else{const overflow=amount-s.hp;s.hp=Math.max(0,s.hp-amount);if(s.hp===0){resetSaves();if(overflow>=maxHp())kill('massive damage');else emit('down');}}
++   }
++   emit('damage',{amount:dealt,type});return dealt;},
++  heal(amount){if(s.dead||amount<=0)return 0;const before=s.hp;s.hp=Math.min(maxHp(),s.hp+Math.floor(amount));if(before===0&&s.hp>0)resetSaves();emit('heal',{amount:s.hp-before});return s.hp-before;},
++  grantTempHp(amount){if(s.dead)return;s.tempHp=Math.max(s.tempHp,Math.floor(amount));emit('tempHp');}, // Temporary HP never stacks; keep the higher.
++  deathSave(rng=Math.random){
++   if(status()!=='dying')return null;const roll=die(20,rng);
++   if(roll===20){resetSaves();s.hp=1;emit('revived');}else if(roll===1)fail(2);else if(roll>=10){if(++s.successes>=3){s.stable=true;emit('stable');}}else fail(1);
++   emit('deathSave',{roll});return roll;},
++  stabilize(){if(status()==='dying'){s.stable=true;emit('stable');}},
++  spendHitDie(rng=Math.random){if(s.dead||s.hp===0||s.hitDice<=0)return 0;s.hitDice--;return sheet.heal(Math.max(0,die(def.hitDie,rng)+mod('con')));}, // Short rest.
++  longRest(){if(s.dead||s.hp===0)return false;s.hp=maxHp();s.tempHp=0;s.hitDice=Math.min(level,s.hitDice+Math.max(1,Math.floor(level/2)));resetSaves();emit('longRest');return true;},
++  addXp(amount){xp+=Math.max(0,Math.floor(amount));const next=levelForXp(xp,data);if(next>level){const before=maxHp(),gained=next-level;level=next;s.hitDice+=gained;if(s.hp>0)s.hp+=maxHp()-before;emit('levelUp',{level});}return level;},
++  addModifier({id,target,add,source=''}){mods.set(id,{target,add,source});s.hp=Math.min(s.hp,maxHp());emit('modifiers');},
++  removeModifier(id){mods.delete(id);s.hp=Math.min(s.hp,maxHp());emit('modifiers');},
++  onChange(f){listeners.add(f);return()=>listeners.delete(f);},
++  snapshot:()=>({id:def.id,level,xp,proficiency:prof(),hp:s.hp,tempHp:s.tempHp,maxHp:maxHp(),hitDice:s.hitDice,ac:sheet.ac,initiative:sheet.initiative,speed:sheet.speed,status:status(),deathSaves:sheet.deathSaves,
++   abilities:Object.fromEntries(data.abilities.map(a=>[a.id,{score:score(a.id),mod:mod(a.id),save:saveBonus(a.id)}])),passivePerception:10+skillBonus('perception'),modifiers:[...mods.keys()]})
++ };
++ return sheet;
++}
+diff --git a/tests/stats.test.mjs b/tests/stats.test.mjs
+new file mode 100644
+index 0000000..e8cd1e4
+--- /dev/null
++++ b/tests/stats.test.mjs
+@@ -0,0 +1,32 @@
++import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
++import build from '../build-stats.cjs';
++import {STATS} from '../stats-data.js';
++import {abilityMod,proficiencyFor,levelForXp,averageHp,createCharacter,rollD20} from '../stats.js';
++const {parseCsv,source,OUT}=build;
++const rolls=(...values)=>{let i=0;return ()=>(values[i++]-1)/20;}; // rng that makes a d20 land on the given faces
++const actor=(over={})=>({id:'test',name:'Test',level:1,hitDie:10,abilities:{str:10,dex:14,con:14,int:10,wis:12,cha:8},speed:30,saves:['str','con'],skills:['perception'],expertise:[],resistances:[],immunities:[],vulnerabilities:[],maxHp:null,...over});
++
++test('stats-data.js is regenerated from the CSV files',()=>{assert.equal(fs.readFileSync(OUT,'utf8'),source(build.build()),'Run `node build-stats.cjs` after editing data/stats/*.csv');});
++test('CSV parser handles quotes, commas, CRLF and blank lines',()=>{assert.deepEqual(parseCsv('id,notes\r\na,"x, ""y"""\r\n\r\nb,\n'),[{id:'a',notes:'x, "y"'},{id:'b',notes:''}]);});
++test('invalid rows fail the build with their location',()=>{const files={'abilities.csv':'id,name\nstr,S','skills.csv':'id,name,ability\nathletics,A,str','damage-types.csv':'id,name\nfire,F','levels.csv':'level,xp,proficiency\n'+STATS.levels.map(l=>`${l.level},${l.xp},${l.proficiency}`).join('\n')};
++ const bad=row=>()=>build.build(f=>f==='actors.csv'?'id,name,level,hit_die,str,speed,saves,skills,expertise,resistances,immunities,vulnerabilities,max_hp\n'+row:files[f]);
++ assert.doesNotThrow(bad('a,A,1,10,10,30,str,athletics,,fire,,,'));
++ assert.throws(bad('a,A,1,10,31,30,,,,,,,'),/actors.csv row 2: str/);assert.throws(bad('a,A,1,7,10,30,,,,,,,'),/hit_die/);
++ assert.throws(bad('a,A,1,10,10,30,,stealth,,,,,'),/unknown id "stealth"/);assert.throws(bad('a,A,1,10,10,30,,,athletics,,,,'),/expertise/);});
++
++test('5e ability modifiers and proficiency table',()=>{assert.deepEqual([1,8,9,10,11,15,20,30].map(abilityMod),[-5,-1,-1,0,0,2,5,10]);assert.deepEqual([1,4,5,9,13,17,20].map(l=>proficiencyFor(l)),[2,2,3,4,5,6,6]);assert.equal(levelForXp(0),1);assert.equal(levelForXp(899),2);assert.equal(levelForXp(900),3);assert.equal(levelForXp(1e7),20);});
++test('average hit points follow the fixed-value rule',()=>{assert.equal(averageHp(10,1,2),12);assert.equal(averageHp(10,3,2),28);assert.equal(averageHp(6,2,-5),2);});
++test('Fenris loads from the CSV and derives a full sheet',()=>{const f=createCharacter('fenris'),s=f.snapshot();assert.equal(f.maxHp,averageHp(STATS.actors.fenris.hitDie,f.level,f.mod('con')));assert.equal(s.hp,s.maxHp);assert.equal(s.ac,10+f.mod('dex'));assert.equal(s.passivePerception,10+f.skillBonus('perception'));assert.equal(s.status,'conscious');assert.equal(Object.keys(s.abilities).length,6);});
++test('saves, skills and expertise add proficiency',()=>{const c=createCharacter(actor({skills:['perception','stealth'],expertise:['stealth']}));assert.equal(c.saveBonus('con'),2+2);assert.equal(c.saveBonus('dex'),2);assert.equal(c.skillBonus('perception'),1+2);assert.equal(c.skillBonus('stealth'),2+4);assert.equal(c.skillBonus('athletics'),0);assert.equal(c.passive('perception'),13);});
++test('d20 rolls apply advantage and disadvantage',()=>{assert.equal(rollD20({advantage:true,rng:rolls(4,17)}).roll,17);assert.equal(rollD20({disadvantage:true,rng:rolls(4,17)}).roll,4);assert.deepEqual(rollD20({advantage:true,disadvantage:true,rng:rolls(9)}).rolls,[9]);const c=createCharacter(actor()).roll('skill','perception',{rng:rolls(20)});assert.equal(c.total,23);assert.ok(c.natural20);});
++
++test('temporary HP absorbs damage first and does not stack',()=>{const c=createCharacter(actor());c.grantTempHp(5);c.grantTempHp(3);assert.equal(c.tempHp,5);c.damage(7);assert.equal(c.tempHp,0);assert.equal(c.hp,10);});
++test('resistance, vulnerability and immunity',()=>{const c=createCharacter(actor({resistances:['fire'],vulnerabilities:['cold'],immunities:['poison']}));assert.equal(c.damage(5,'fire'),2);assert.equal(c.damage(3,'cold'),6);assert.equal(c.damage(9,'poison'),0);assert.equal(c.hp,4);});
++test('dropping to 0 HP starts death saves; three successes stabilise',()=>{const c=createCharacter(actor());c.damage(15);assert.equal(c.status,'dying');for(const r of [10,15,12])c.deathSave(rolls(r));assert.equal(c.status,'stable');c.damage(1);assert.equal(c.status,'dying');assert.equal(c.deathSaves.failures,1);});
++test('natural 1 counts twice, critical hits while down count twice, three failures kill',()=>{const c=createCharacter(actor());c.damage(12);c.deathSave(rolls(1));assert.equal(c.deathSaves.failures,2);c.damage(1,null,{critical:false});assert.equal(c.status,'dead');assert.equal(c.heal(5),0);const d=createCharacter(actor());d.damage(12);d.damage(1,null,{critical:true});d.deathSave(rolls(9));assert.equal(d.status,'dead');});
++test('natural 20 revives with 1 HP; healing at 0 HP clears death saves',()=>{const c=createCharacter(actor());c.damage(12);c.deathSave(rolls(5));c.deathSave(rolls(20));assert.equal(c.hp,1);assert.equal(c.deathSaves.failures,0);c.damage(1);c.deathSave(rolls(3));c.heal(4);assert.equal(c.status,'conscious');assert.equal(c.deathSaves.failures,0);});
++test('massive damage kills outright',()=>{const c=createCharacter(actor());c.damage(c.maxHp*2);assert.equal(c.status,'dead');const d=createCharacter(actor());d.damage(d.maxHp*2-1);assert.equal(d.status,'dying');});
++test('hit dice heal on a short rest; a long rest restores HP and half the dice',()=>{const c=createCharacter(actor({level:4}));c.damage(20);assert.equal(c.spendHitDie(()=>.5),6+2);assert.equal(c.hitDice,3);c.spendHitDie();c.spendHitDie();c.spendHitDie();assert.equal(c.spendHitDie(),0);c.longRest();assert.equal(c.hp,c.maxHp);assert.equal(c.hitDice,2);const down=createCharacter(actor());down.damage(12);assert.equal(down.longRest(),false);});
++test('experience levels up and raises HP and hit dice',()=>{const c=createCharacter(actor());c.damage(4);assert.equal(c.addXp(900),3);assert.equal(c.maxHp,28);assert.equal(c.hp,24);assert.equal(c.hitDice,3);assert.equal(c.proficiency,2);});
++test('modifiers adjust derived values and clamp HP when removed',()=>{const c=createCharacter(actor());c.addModifier({id:'belt',target:'con',add:4});assert.equal(c.maxHp,14);c.heal(99);assert.equal(c.hp,14);c.addModifier({id:'shield',target:'ac',add:2});assert.equal(c.ac,14);c.addModifier({id:'tired',target:'speed',add:-40});assert.equal(c.speed,0);c.removeModifier('belt');assert.equal(c.hp,12);assert.deepEqual(c.snapshot().modifiers,['shield','tired']);});
++test('change listeners report events',()=>{const c=createCharacter(actor()),events=[];const off=c.onChange(e=>events.push(e));c.damage(12);off();c.heal(1);assert.deepEqual(events,['down','damage']);});
+-- 
+2.43.0
+

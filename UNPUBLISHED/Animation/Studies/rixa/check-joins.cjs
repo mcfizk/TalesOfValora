@@ -1,0 +1,4 @@
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto');
+const root=__dirname,hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+function frame(d,c,n){return path.join(root,'export','rest',d,c,String(n).padStart(2,'0')+'.png');}
+const results=[];for(const d of ['left','right']){for(const [a,i,b,j]of [['sleepToSit',1,'sleep',1],['sleepToSit',5,'sit',1],['sitToStand',1,'sit',1],['sitToStand',8,'idle',1]])assert.equal(hash(frame(d,a,i)),hash(frame(d,b,j)),d+' endpoint '+a);for(const [a,b,n]of [['sleepToSit','sitToSleep',5],['sitToStand','standToSit',8]])for(let i=1;i<=n;i++)assert.equal(hash(frame(d,a,i)),hash(frame(d,b,n+1-i)),d+' reverse '+a);results.push({direction:d,exactEndpoints:true,exactReverseTransitions:true});}fs.writeFileSync(path.join(root,'transition-validation.json'),JSON.stringify(results,null,2));console.log(JSON.stringify(results));

@@ -1,0 +1,13 @@
+{
+  "bases": [
+    "human-male",
+    "human-female",
+    "dwarf-male",
+    "dwarf-female",
+    "halfling-male",
+    "halfling-female"
+  ],
+  "framesChecked": 96,
+  "villagers": 11,
+  "errors": []
+}

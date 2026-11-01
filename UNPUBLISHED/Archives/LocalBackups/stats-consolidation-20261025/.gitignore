@@ -1,0 +1,12 @@
+/backups/
+/node_modules/
+/*.png
+/test-results.json
+/live-verification.json
+*.log
+.env
+.env.*
+!.env.example
+
+# Generated browser captures and reports.
+/private-opening/qa/

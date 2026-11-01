@@ -1,0 +1,81 @@
+{
+  "bundles": [
+    {
+      "bundle": "bloodmoon_dynamic_assets_bloodmoonenemies.bundle",
+      "exported": 781,
+      "already_present": 0
+    },
+    {
+      "bundle": "chalcedony_dynamic_assets_chalcedonyenemies.bundle",
+      "exported": 786,
+      "already_present": 0
+    },
+    {
+      "bundle": "firstblood_dynamic_assets_firstbloodenemies.bundle",
+      "exported": 648,
+      "already_present": 0
+    },
+    {
+      "bundle": "foscari_dynamic_assets_foscarienemies.bundle",
+      "exported": 1752,
+      "already_present": 0
+    },
+    {
+      "bundle": "lemon_dynamic_assets_lem_enemies.bundle",
+      "exported": 675,
+      "already_present": 0
+    },
+    {
+      "bundle": "moonspell_dynamic_assets_moonspellenemies.bundle",
+      "exported": 1134,
+      "already_present": 0
+    },
+    {
+      "bundle": "thosepeople_dynamic_assets_tp_enemies.bundle",
+      "exported": 1067,
+      "already_present": 0
+    },
+    {
+      "bundle": "thosepeople_dynamic_assets_tp_enemiesreuse.bundle",
+      "exported": 512,
+      "already_present": 0
+    },
+    {
+      "bundle": "vs_local_assets_enemies.bundle",
+      "exported": 2388,
+      "already_present": 0
+    },
+    {
+      "bundle": "vs_local_assets_enemies2.bundle",
+      "exported": 1433,
+      "already_present": 0
+    },
+    {
+      "bundle": "vs_local_assets_enemies2023.bundle",
+      "exported": 1151,
+      "already_present": 0
+    },
+    {
+      "bundle": "vs_local_assets_enemies2025.bundle",
+      "exported": 1229,
+      "already_present": 0
+    },
+    {
+      "bundle": "vs_local_assets_enemies3.bundle",
+      "exported": 1570,
+      "already_present": 0
+    },
+    {
+      "bundle": "vs_local_assets_enemies_universal.bundle",
+      "exported": 2357,
+      "already_present": 0
+    },
+    {
+      "bundle": "vs_local_assets_enemiesm.bundle",
+      "exported": 1935,
+      "already_present": 0
+    }
+  ],
+  "errors": [],
+  "catalog_total": 22557
+}

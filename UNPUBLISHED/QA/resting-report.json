@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "Waiting over an hour applies Restless to live stats",
+    "Completed short rest clears Restless and records a new rest deadline",
+    "Sleep plays the sleeping animation",
+    "Sleep completes and uses the waking transition",
+    "Sleep and long rest share one cooldown",
+    "24 hours without a completed rest applies stacking exhaustion",
+    "The rest menu explains active deficits and unlocks at 24 hours",
+    "Short rest resets the timer but existing exhaustion needs sleep or long rest",
+    "Saving and loading retains exhaustion and rest history",
+    "Long rest clears both deficits without healing yet",
+    "Phone rest options fit horizontally and remain scrollable",
+    "No browser errors"
+  ],
+  "errors": []
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "01",
+    "role": "Near-leg contact",
+    "direction": "up-left",
+    "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 01: near leg reaches forward into heel/paw contact; far leg trails on toes; near arm swings backward, far arm forward. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding."
+  },
+  {
+    "id": "02",
+    "role": "Near-leg settle",
+    "direction": "up-left",
+    "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 02: near knee bends taking weight on planted paw; far trailing paw begins lifting; near arm back approaches neutral; pelvis slightly lower. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding."
+  },
+  {
+    "id": "03",
+    "role": "Far-leg passing",
+    "direction": "up-left",
+    "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 03: near leg supports upright under pelvis; far knee bends and passes forward with paw clearly airborne near supporting calf; arms close to neutral. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding."
+  },
+  {
+    "id": "04",
+    "role": "Far-leg reach",
+    "direction": "up-left",
+    "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 04: near leg extends behind on toe support; far leg extends forward airborne just before contact; near arm swings forward, far arm backward. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding."
+  },
+  {
+    "id": "05",
+    "role": "Far-leg contact",
+    "direction": "up-left",
+    "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 05: far leg reaches forward into paw contact; near leg trails on toes; near arm forward, far arm backward. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding."
+  },
+  {
+    "id": "06",
+    "role": "Far-leg settle",
+    "direction": "up-left",
+    "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 06: far knee bends taking weight on planted paw; near trailing paw begins lifting; near arm forward approaches neutral; pelvis slightly lower. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding."
+  },
+  {
+    "id": "07",
+    "role": "Near-leg passing",
+    "direction": "up-left",
+    "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 07: far leg supports upright under pelvis; near knee bends and passes forward with paw clearly airborne near supporting calf; arms close to neutral. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding."
+  },
+  {
+    "id": "08",
+    "role": "Near-leg reach",
+    "direction": "up-left",
+    "prompt": "Use case: stylized-concept. ONE full-body transparent pixel-art sprite of Fenris walking UP-LEFT. Image 1 is the approved human walking PHASE guide only; image 2 is Fenris identity AND the REQUIRED rear three-quarter camera. Reinterpret image 1's exact gait phase in image 2's rear three-quarter UP-LEFT view. Show broad BACK, back of head and shorts, only slight left side of muzzle; no front chest. Preserve Fenris white-grey fur, blue eye only if visible, upright muscular build, brown ragged shorts, short bushy tail, wolf paws and digitigrade hocks. Near limb is viewer-facing left side; it must stay attached to same hip across gait. Phase 08: far leg extends behind on toe support; near leg extends forward airborne before contact; near arm backward, far arm forward. Rotate the gait direction into depth toward upper LEFT, not pure side view. Natural weight transfer, moderate relaxed stride, two arms and two legs, fixed limb lengths, tail doesn't hide both feet. Preserve pixel rendering, crisp edges, same lighting, consistent proportions. One character, no text, props, floor, shadow or other frames. Fully visible with clear transparent padding."
+  }
+]

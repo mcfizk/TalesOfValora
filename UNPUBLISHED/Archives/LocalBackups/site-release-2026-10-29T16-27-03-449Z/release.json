@@ -1,0 +1,754 @@
+{
+  "version": "15b14ca2ba09",
+  "builtAt": "2026-10-29T16:27:03.585Z",
+  "files": [
+    {
+      "path": "character-animation.js",
+      "sha256": "65b6752d7b63706e9b22eb5a177e61cf3cd7421b3631cb402f168046f50da528"
+    },
+    {
+      "path": "conversations.js",
+      "sha256": "ad3bd0be9079025116453715597c09bf40f9cb804d23af4ca4e2cb174b032fc0"
+    },
+    {
+      "path": "event-overlay.js",
+      "sha256": "645a8633da3a14be62238a4dd9c949e3816f1565b3a9672be3f5649d3f5830b3"
+    },
+    {
+      "path": "fenris-animation.js",
+      "sha256": "23efaf006a7f0936c59cf3e010ce05997f5fcd50b8e54b563ddd6419131139e4"
+    },
+    {
+      "path": "game-clock.js",
+      "sha256": "f38807fed61d30f080fae44f3e91f62f2ec26a782e4120296de88e9d95c44443"
+    },
+    {
+      "path": "navigation.js",
+      "sha256": "ad871c7cac8d4e57c56926aed075f10072e7378ab5961b8fbec29fb89c136a29"
+    },
+    {
+      "path": "npc-walks.js",
+      "sha256": "e4ac4502ce076e198d5bb37deba8d27cb510ad6aafa9c0f1d888eefba5ea1ff8"
+    },
+    {
+      "path": "opening.js",
+      "sha256": "145e3c4bb0c32c13163e4f7fbf1a766eb51f6d648104a463520a5edd79cb7735"
+    },
+    {
+      "path": "party-hud.js",
+      "sha256": "4e6dd06e55ac0e5f3af615075dd825dc1cb7e8f5f38ddbb2a8ca1ff7f326d019"
+    },
+    {
+      "path": "perception-events.js",
+      "sha256": "3d44bad073446e5a9bdd6cb882c3e7e55e5a6765c48556480271b96c32569cac"
+    },
+    {
+      "path": "perception.js",
+      "sha256": "d678184f6e51423c776ce1e786ff1405f0fa0042185e181c72c99b47564e54d4"
+    },
+    {
+      "path": "renderer.js",
+      "sha256": "9db7f6e8e92eef8f5bc0919b83a8a5ceb95223f135559059c8b3d4fd64dfbeed"
+    },
+    {
+      "path": "resting.js",
+      "sha256": "c38df13ab2e24831b09274ffa45b7713c76cc6fb7476edd1d2273a98b7895654"
+    },
+    {
+      "path": "saves.js",
+      "sha256": "e5929da4e8b3ca9c939c84f1eb04d8efbb6ff0ca6d05d2b8b6f5fdc0ef463e06"
+    },
+    {
+      "path": "speaker-portraits.js",
+      "sha256": "d71a17639772b4b68226dc0a65edc72a1e8e10e007a6a2ad06c66c8f77d0850a"
+    },
+    {
+      "path": "village-economy.js",
+      "sha256": "c14dd6f9609454114273da276b33ad5d1bd26de74960c4e9329ad69ead43e369"
+    },
+    {
+      "path": "village-layout.js",
+      "sha256": "fb1d493c10cd812ce80bb88274360a8f439e861375827f0c0f5b3b8e828d8478"
+    },
+    {
+      "path": "village-people.js",
+      "sha256": "f596eb21a1b0bdd007ac78d7d7726398223aeab06f6b59dc03a0055bb37f3cca"
+    },
+    {
+      "path": "village-renderer.js",
+      "sha256": "fcdc7cc6d534f36370a46d0afb21a36ea5c0e39244868c5b497ff99a85b43e96"
+    },
+    {
+      "path": "village-ui.js",
+      "sha256": "af3bc2dd92c5505318868a0796136b257abb49e0c337ae926c1bbd623f83c961"
+    },
+    {
+      "path": "waiting.js",
+      "sha256": "d1e31c57cc5f099229fbfe41847ea28f1b480441b0187afd341e30b186b2cab0"
+    },
+    {
+      "path": "world.js",
+      "sha256": "a97900f17610a382e67b17e49185004c587b1ca7b055b5533ad0db860ac8bf46"
+    },
+    {
+      "path": "audio.js",
+      "sha256": "068224948be27e71fd7ac6e1bb86379c45426223e8f57428722d7d13c286890a"
+    },
+    {
+      "path": "audio-catalog.js",
+      "sha256": "feb293ccf25319bee2fa22e243193aaff56a9a1e807509da6f24783828eb1fa1"
+    },
+    {
+      "path": "story.js",
+      "sha256": "c6f956a7377aecd77d39deb6f6daf9299c5b0ef7840b87f1c5392cfd6549ba5b"
+    },
+    {
+      "path": "stats.js",
+      "sha256": "1f232eb78e9cea629cc8175051065da4062fe509a58d12315d9dc016dd49ca3d"
+    },
+    {
+      "path": "stats-data.js",
+      "sha256": "50684777aa28fb19c5b9324b4b328755875550598326a7c251d4ab4f0bf0b9f1"
+    },
+    {
+      "path": "resources.js",
+      "sha256": "d9c99caf2b62577a03567794b8dfa88f3650556a7f16453eecff343dbec488fa"
+    },
+    {
+      "path": "world-characters.js",
+      "sha256": "b97a2c682aae01c5cc12c7c2468712dd68db4e813a58909e92cdfe95a731f72a"
+    },
+    {
+      "path": "units/catalog.js",
+      "sha256": "c30de9e7169bb1f68d8970cec173da4620d2e650528209c6db76cd105de089d1"
+    },
+    {
+      "path": "units/population.js",
+      "sha256": "2f1013407ace54896cd823af64eb906eaeb96b54b2200cde37b7259d15509891"
+    },
+    {
+      "path": "units/schema.js",
+      "sha256": "b3b8a1c83f06f674b3dd9653df37c2117c0111d7adecd889e899ebdb1dd20fba"
+    },
+    {
+      "path": "units/unit-state.js",
+      "sha256": "308967fb78158447ec7cdacee4383ebdf47829d6016fe519ad597da1f75a6d3e"
+    },
+    {
+      "path": "units/characters/fenris/unit.js",
+      "sha256": "84067772bc57f6c3c9d493cfaed7ae181788a9aa10301ece171e626ae4c8a6f8"
+    },
+    {
+      "path": "units/critters/deer/unit.js",
+      "sha256": "0d0afff8335b764acac21b345869fb069d1a75948e485774671a3999de5f7650"
+    },
+    {
+      "path": "units/critters/hare/unit.js",
+      "sha256": "193fa089d18681daa22809dbc87f843b8c782cb70a69eb41dcc5bcad8c1fd7ca"
+    },
+    {
+      "path": "units/critters/owl/unit.js",
+      "sha256": "872e38bf7d5240c5b46b5db3e25cf48d6d21cf4c746f51e4454e4590ce0a0504"
+    },
+    {
+      "path": "units/critters/wolf/unit.js",
+      "sha256": "99dd1e8b4ad93e01ffcebc2ad0599442f18f40900237285f9d5788cdf1756af3"
+    },
+    {
+      "path": "units/npcs/village/blacksmith/unit.js",
+      "sha256": "43272c06e8a4e17c8dd019f788c900fb0f4b11c75ecbb883bb6baa5b69da5d1a"
+    },
+    {
+      "path": "units/npcs/village/edra/unit.js",
+      "sha256": "6b9f5307f280c01a8724aaded30d7e2e8677cfc22a372bce92489f4f6ceafe78"
+    },
+    {
+      "path": "units/npcs/village/farmer/unit.js",
+      "sha256": "25475c18faf861d788fb80dab019558c0ac6bc85edacc4d6e1665d9604d11262"
+    },
+    {
+      "path": "units/npcs/village/harl/unit.js",
+      "sha256": "d20c2a9f16b3b788d2aa8902538d67e5fa06afe0b6c3da5a56e2763148058dce"
+    },
+    {
+      "path": "units/npcs/village/herbalist/unit.js",
+      "sha256": "c8e145c9a7b8218eaa7b55aacfa6f96bc05e2c328e9ff677467389a7ba9116ad"
+    },
+    {
+      "path": "units/npcs/village/innkeeper/unit.js",
+      "sha256": "63f083cafb528d63bb4f7e22223089bb1f6fecc77db66c294ab3f7f639077fed"
+    },
+    {
+      "path": "units/npcs/village/resident/unit.js",
+      "sha256": "dd627903de34c5133f361cd7bfcf6a873bfd35c1220fad090e3644ae3b315fda"
+    },
+    {
+      "path": "units/npcs/village/trader/unit.js",
+      "sha256": "8750da014a8819547ec2ce0cf4f4f8a95b32500c8363c312c9dccc7396c28e0c"
+    },
+    {
+      "path": "units/npcs/village/vendor/unit.js",
+      "sha256": "3f87e09ccacb0b09723e912f65161a626fc29193c457ea3c890e2427e8abebcd"
+    },
+    {
+      "path": "units/npcs/village/washer/unit.js",
+      "sha256": "f4a7d516ff656a6b3a4f66976ce267a7402cef59ce3fa28c6e9ea6a3adc10e65"
+    },
+    {
+      "path": "units/npcs/village/woodcutter/unit.js",
+      "sha256": "abf901947f55ec96f18546319606874288f58b621862bdb684f8ba1989679a89"
+    },
+    {
+      "path": "assets/fenris-1.png",
+      "sha256": "5d3c8f20af0f36741771bbde0c98a4d26cd71275670c5a4fb809be55280b902e"
+    },
+    {
+      "path": "assets/fenris-2.png",
+      "sha256": "042093bd526060afddb281bee00fa1e97eec07ddb9f45d5c51d686474b5b23ca"
+    },
+    {
+      "path": "assets/fenris-3.png",
+      "sha256": "496cef1b0ca980e9bdbf8f439416599793c4d02104f4f2b5e3b79a7262d73587"
+    },
+    {
+      "path": "assets/fenris-4.png",
+      "sha256": "042093bd526060afddb281bee00fa1e97eec07ddb9f45d5c51d686474b5b23ca"
+    },
+    {
+      "path": "assets/fern.png",
+      "sha256": "bcc2e67e65a97ea96d32aa6768c040fe0361fc57992f3fe94b714a7cef1ed165"
+    },
+    {
+      "path": "assets/fire-0.png",
+      "sha256": "8ded8c1e41025314f333dbb24c4dc3d89d498925e958a292d60502c09083c5dd"
+    },
+    {
+      "path": "assets/fire-1.png",
+      "sha256": "666e25eba5581eb5a8188ce5d942d11979c7a2529b9414f98650095baf4aeb72"
+    },
+    {
+      "path": "assets/fire-10.png",
+      "sha256": "ed8b7cbe4302fc4d1a5289119b04aa484d1ab8ac1c0feb90a6ecedb4832ecf3a"
+    },
+    {
+      "path": "assets/fire-11.png",
+      "sha256": "63e6a0b0b0edc943d2541d4d51b221821c899e1cb2a7001170e7a5d758421c3d"
+    },
+    {
+      "path": "assets/fire-12.png",
+      "sha256": "003ac558f804f7a61045725db8e7bcc75424e2cdc54040e0c53929d8c3f4a183"
+    },
+    {
+      "path": "assets/fire-13.png",
+      "sha256": "666e25eba5581eb5a8188ce5d942d11979c7a2529b9414f98650095baf4aeb72"
+    },
+    {
+      "path": "assets/fire-14.png",
+      "sha256": "8ded8c1e41025314f333dbb24c4dc3d89d498925e958a292d60502c09083c5dd"
+    },
+    {
+      "path": "assets/fire-15.png",
+      "sha256": "83ff1f0495cdf71b637ff623dd0a88948f15422bd620e5abe72be80df1fc1634"
+    },
+    {
+      "path": "assets/fire-16.png",
+      "sha256": "a8666da57af3872133bb6b6573a743f07f3718b9da75742c91baf69d90e39bfe"
+    },
+    {
+      "path": "assets/fire-17.png",
+      "sha256": "d47bf24f1c2a32ab88ea7c386d17822a46940697c84ef8a96d6c593e4734385a"
+    },
+    {
+      "path": "assets/fire-18.png",
+      "sha256": "36391042346c1b3b0195c9d6f392fe4096d21759a4a65b04b14bf630567bcc31"
+    },
+    {
+      "path": "assets/fire-19.png",
+      "sha256": "5deabf29d2f17e450432c47e1c6adff8095346bbe23337114de37b23d517c6ce"
+    },
+    {
+      "path": "assets/fire-2.png",
+      "sha256": "003ac558f804f7a61045725db8e7bcc75424e2cdc54040e0c53929d8c3f4a183"
+    },
+    {
+      "path": "assets/fire-20.png",
+      "sha256": "06399874e5123e8e9dbb64ddd0108fdadb64db8b9306d41a20810467294a17d6"
+    },
+    {
+      "path": "assets/fire-21.png",
+      "sha256": "7b9422680d9d7f9764a6ca0fb9d41e91fd50aa705dc2678f0dcb0f38d8681d23"
+    },
+    {
+      "path": "assets/fire-22.png",
+      "sha256": "61d86de1259ce4c97babea55617f127e632243f52a39325558d8a3d1353dcefd"
+    },
+    {
+      "path": "assets/fire-23.png",
+      "sha256": "7b9422680d9d7f9764a6ca0fb9d41e91fd50aa705dc2678f0dcb0f38d8681d23"
+    },
+    {
+      "path": "assets/fire-24.png",
+      "sha256": "06399874e5123e8e9dbb64ddd0108fdadb64db8b9306d41a20810467294a17d6"
+    },
+    {
+      "path": "assets/fire-25.png",
+      "sha256": "5deabf29d2f17e450432c47e1c6adff8095346bbe23337114de37b23d517c6ce"
+    },
+    {
+      "path": "assets/fire-26.png",
+      "sha256": "36391042346c1b3b0195c9d6f392fe4096d21759a4a65b04b14bf630567bcc31"
+    },
+    {
+      "path": "assets/fire-27.png",
+      "sha256": "d47bf24f1c2a32ab88ea7c386d17822a46940697c84ef8a96d6c593e4734385a"
+    },
+    {
+      "path": "assets/fire-28.png",
+      "sha256": "a8666da57af3872133bb6b6573a743f07f3718b9da75742c91baf69d90e39bfe"
+    },
+    {
+      "path": "assets/fire-29.png",
+      "sha256": "eebf4212a4ec4f986f6ff65024d0def48287a156a603e04ea5aa2f0d3de986a9"
+    },
+    {
+      "path": "assets/fire-3.png",
+      "sha256": "63e6a0b0b0edc943d2541d4d51b221821c899e1cb2a7001170e7a5d758421c3d"
+    },
+    {
+      "path": "assets/fire-30.png",
+      "sha256": "1fc494efed046c5ffeb9c36310ed4a3ec6c97321fb3998474a39e1238463cb8e"
+    },
+    {
+      "path": "assets/fire-31.png",
+      "sha256": "549ec8137325a9d6e5aef2efe49b5f32965fcd24b3499d13bfb6914af686a3c1"
+    },
+    {
+      "path": "assets/fire-4.png",
+      "sha256": "ed8b7cbe4302fc4d1a5289119b04aa484d1ab8ac1c0feb90a6ecedb4832ecf3a"
+    },
+    {
+      "path": "assets/fire-5.png",
+      "sha256": "ffa5c6b6910620e06aceccff51d648f6652b4e83cba4f8a025e19c43fab3adba"
+    },
+    {
+      "path": "assets/fire-6.png",
+      "sha256": "f087d64859f297c25e7e1fdaf9e9af9a5ea0b15853b4f2acd4db1b64516fa804"
+    },
+    {
+      "path": "assets/fire-7.png",
+      "sha256": "00a4554d73d554128fdb9782d88f3701d7be5c4e48ae5e2146ff26caeb140191"
+    },
+    {
+      "path": "assets/fire-8.png",
+      "sha256": "f087d64859f297c25e7e1fdaf9e9af9a5ea0b15853b4f2acd4db1b64516fa804"
+    },
+    {
+      "path": "assets/fire-9.png",
+      "sha256": "ffa5c6b6910620e06aceccff51d648f6652b4e83cba4f8a025e19c43fab3adba"
+    },
+    {
+      "path": "assets/flowers.png",
+      "sha256": "1af7434e1d18409a65b2722b0e8268019b884eff4623fff1901653bc5a008592"
+    },
+    {
+      "path": "assets/ground.png",
+      "sha256": "a5dd3615ef62b7818fc913f47f23b49a7da6bcd822d5856542c20e84c87095ce"
+    },
+    {
+      "path": "assets/manifest.json",
+      "sha256": "64580c7a8ee2f67400d8da2ffff567bd6b86508e79f7cf014431fc52aed9e6eb"
+    },
+    {
+      "path": "assets/path.png",
+      "sha256": "bf14a955475cd66c5b5fa1e37accaddb75e8d06379df0e3e69bfc178f962a7fc"
+    },
+    {
+      "path": "assets/rock-0.png",
+      "sha256": "26823367e97eb89d44ffc72850de6f9677a3c8a6c8bf78111cdea51745898b74"
+    },
+    {
+      "path": "assets/rock-1.png",
+      "sha256": "eebe6844289d0c08c490dda22d60662a492879558f76cc1ce8e0101cd60dc774"
+    },
+    {
+      "path": "assets/rock-2.png",
+      "sha256": "5863c89a914461787c92e8eef6efbf364e2e8e71a307c2d556a328e4926823f4"
+    },
+    {
+      "path": "assets/rock-3.png",
+      "sha256": "980e27eafefd376faf48fbafb521419cfb7fd4bb19184490660e7dd48521eb93"
+    },
+    {
+      "path": "assets/shrub.png",
+      "sha256": "a2cafef34ee63b37478d169c6f2344fea1517e45aec64b42b4b9208af7e2390d"
+    },
+    {
+      "path": "assets/stump.png",
+      "sha256": "58600d7e9b706b02f39eca8897fb628a8d26dd1339a6e7838b7120fb999840c8"
+    },
+    {
+      "path": "assets/tree-elder.png",
+      "sha256": "369dc3671b3a50a7450c747b9bdbd76723817aea0567af02f55048522a59ffb0"
+    },
+    {
+      "path": "assets/tree-oak.png",
+      "sha256": "a73d70925c812ff78737a3bc3019659b9bb58e332774037a4d610a6722c49d51"
+    },
+    {
+      "path": "assets/tree-young.png",
+      "sha256": "652addadb8418cacd47de49edc8fea2192ccd7e3e42f12b8ef2c3213178cc765"
+    },
+    {
+      "path": "assets/water-1.png",
+      "sha256": "80c7850bbece13253c4487e6537d3ff1c8c8b13a66457d4a1e0947ec101e9761"
+    },
+    {
+      "path": "assets/water-2.png",
+      "sha256": "64a8c252b127dc704ffc6e41b6dd1d16f8a84be2bb0d5d92db51098ae27bec17"
+    },
+    {
+      "path": "assets/water-3.png",
+      "sha256": "02f7b024bd2aa95dfab23927318afc33de7d34bf1a1e66f0e9b15ccd8f84070a"
+    },
+    {
+      "path": "assets/water-4.png",
+      "sha256": "232ce741d6ec7927494e8db504444f8469edf4240906e333a87fa0a1d913f9fb"
+    },
+    {
+      "path": "assets/water-5.png",
+      "sha256": "892936a34568998ef8baa5d0d7d1e56b35d4da52d98b6d86d12981383ece8351"
+    },
+    {
+      "path": "assets/water-6.png",
+      "sha256": "13add63ff6000e6be6b7017e7e8e664c1e061c04ee4816411a29d497b20cf0cd"
+    },
+    {
+      "path": "assets/water-7.png",
+      "sha256": "dbaeec9706184c9c00b86f6204d0593dfa79b5c50d91655720fdc366457e224f"
+    },
+    {
+      "path": "assets/water-8.png",
+      "sha256": "1e12fe7ed6b4b3d9a28fe8f30039b28679b14bb253e3255bd6ef8e404136c2a5"
+    },
+    {
+      "path": "assets/fenris/idle.png",
+      "sha256": "e75f37301fdc063fa266b492c5afd9ea4674c633a9797405340ae6a3c8631cdf"
+    },
+    {
+      "path": "assets/fenris/portrait.png",
+      "sha256": "2a181b5f5ce6e1d6efe053a031e7f3bd40830048b7927712b526e1e735212385"
+    },
+    {
+      "path": "assets/fenris/sit.png",
+      "sha256": "a95d90e077e801885e610f1fcdf85d7b7529f70810e1494abd054dd4db1a8834"
+    },
+    {
+      "path": "assets/fenris/sitToStand.png",
+      "sha256": "d9ffcd6c6005ca59f6474648a22dd2add23b093fda8b7ebec6ebfa929d6b47b4"
+    },
+    {
+      "path": "assets/fenris/sleep.png",
+      "sha256": "e9484747fa6503885aeacbe29f323950183a057fe2209fdf5a2c324404d95e8b"
+    },
+    {
+      "path": "assets/fenris/sleepToSit.png",
+      "sha256": "64dc869f17b0ad04ca06e9de0fb57773a995ba59769c076c6f65824492defaa6"
+    },
+    {
+      "path": "assets/fenris/walk-down-left.png",
+      "sha256": "b3ed5c0a224c691449e0dcf3e2d896e17db7bfb890853a550af323d048660197"
+    },
+    {
+      "path": "assets/fenris/walk-down-right.png",
+      "sha256": "a403c27836930d7f639e66ac9475b1488519a1683acebe5095abc1cf950a94b8"
+    },
+    {
+      "path": "assets/fenris/walk-down.png",
+      "sha256": "3624e88846b511392be26772b5228b94e116f0fe95fe2c61fd8af177b8cb975a"
+    },
+    {
+      "path": "assets/fenris/walk-left.png",
+      "sha256": "8e157dd95a39389582b3d840ef452d9d170670dc87d9938eba750e87f60151ab"
+    },
+    {
+      "path": "assets/fenris/walk-right.png",
+      "sha256": "8b3de3a3f620fa6521cf875633524e0cec65590bf5b831a19475fbd81aa0eff9"
+    },
+    {
+      "path": "assets/fenris/walk-up-left.png",
+      "sha256": "5a308b87db68f8b0ca977490a0230805d820aa6d938060a048903c3b1a5e4d04"
+    },
+    {
+      "path": "assets/fenris/walk-up-right.png",
+      "sha256": "80f5af3f8f6cf98fa92d3c256b256780de8118a755bba0a3e8bd0d7182cafb9b"
+    },
+    {
+      "path": "assets/fenris/walk-up.png",
+      "sha256": "ff4498c366b663a657688d00442a1dec600ee7f520b940baf2386fb32af139c3"
+    },
+    {
+      "path": "assets/village/buildings.png",
+      "sha256": "4a0023e5d96b03075ac77e67c449a6ab21f54caa2d966d2fa4528726aecd038d"
+    },
+    {
+      "path": "assets/fenris/standing/stand-down-left.png",
+      "sha256": "4d1c9f1b24ad187e94568b47fa70547d6f975b982e78a770be0ca9b296ed4c4a"
+    },
+    {
+      "path": "assets/fenris/standing/stand-down-right.png",
+      "sha256": "cafe151fd1bfc4bcb9f658bc4bd913658291735d0ce16355d526bfafb033ba50"
+    },
+    {
+      "path": "assets/fenris/standing/stand-down.png",
+      "sha256": "5560208b343cc5d9f740152336c93a94ae0ee54394bead419446459407e7bee4"
+    },
+    {
+      "path": "assets/fenris/standing/stand-left.png",
+      "sha256": "5643fa21d2b8e6f0c4c83da1717dc361767264c666f183bcffb647b393930c61"
+    },
+    {
+      "path": "assets/fenris/standing/stand-right.png",
+      "sha256": "56775f80edb9dc9533a935db9dfe0aba1f864ad641089aa88a1a4c905d2d9564"
+    },
+    {
+      "path": "assets/fenris/standing/stand-up-left.png",
+      "sha256": "efb28c574843136800104bc204d6dc90a438eceeb6505ed03d65058e47dd1990"
+    },
+    {
+      "path": "assets/fenris/standing/stand-up-right.png",
+      "sha256": "885de5255eeb9992e1456fa56a7f868f67b92571ccdb1063b8b29add58d6f8c8"
+    },
+    {
+      "path": "assets/fenris/standing/stand-up.png",
+      "sha256": "94f5baa9b12d6b9638b41af12f435a018985fd055befc94deda1cf32e650a6da"
+    },
+    {
+      "path": "assets/npcs/dwarf-female/walk-left.png",
+      "sha256": "67625f8960245e6ddf5a0eac8d241613cd3a7cb2d64d10dac13fc9bb067b3757"
+    },
+    {
+      "path": "assets/npcs/dwarf-female/walk-right.png",
+      "sha256": "2b60a38dd9e165442848947a6a602b8d49d32cbe2f79b33e859fca1b3bdaa233"
+    },
+    {
+      "path": "assets/npcs/dwarf-male/walk-left.png",
+      "sha256": "e753bf5c95c68e1c2892226fe3fb6fcf24af8d783ab133a36909a45f618b34f6"
+    },
+    {
+      "path": "assets/npcs/dwarf-male/walk-right.png",
+      "sha256": "72f0d642bd093aa685a439db6f2ed56a347ec898b96312295b0ea1473be826ea"
+    },
+    {
+      "path": "assets/npcs/halfling-female/walk-left.png",
+      "sha256": "02a1ac0206bbfe472108e8c481372b05053da5a4a32750f72af53e1e86a6f8c6"
+    },
+    {
+      "path": "assets/npcs/halfling-female/walk-right.png",
+      "sha256": "cc03fa60a30c82e9725762da560dcb10b8ad4d2acc94925a9bbabc3be0cbf3ae"
+    },
+    {
+      "path": "assets/npcs/halfling-male/walk-left.png",
+      "sha256": "64504fe1bcc943de4ab7b08b1039f6676f0eee1519f2c294f8248f5c48704e47"
+    },
+    {
+      "path": "assets/npcs/halfling-male/walk-right.png",
+      "sha256": "35b9ca7e7b3fea6bdbaa3edd5826bbfc647bc2b64a7d21465386380adcc363d0"
+    },
+    {
+      "path": "assets/npcs/human-female/walk-left.png",
+      "sha256": "9319ea8d07f4df963209703d0791d276ff58c826c90ad676fdbfccbc75bb06f9"
+    },
+    {
+      "path": "assets/npcs/human-female/walk-right.png",
+      "sha256": "516a76729a69808284d5353e4a269470e0b4cca01d7575ffab0acb797a460e56"
+    },
+    {
+      "path": "assets/npcs/human-male/walk-left.png",
+      "sha256": "e52892fc4c24b17e439be7507700e5835c64fbd815f5a11827051c1fb4556a3d"
+    },
+    {
+      "path": "assets/npcs/human-male/walk-right.png",
+      "sha256": "53478a9c7129a4d2082e7981b2a06ba60044e8c94468b07b0383f905af007a0f"
+    },
+    {
+      "path": "assets/audio/sfx/forest/beast-low-growl.mp3",
+      "sha256": "459620f1ee4f6cc83ee9dd02c8ce38a280197b4f2a4ec08fc37cd41bd1fae5f6"
+    },
+    {
+      "path": "assets/audio/sfx/forest/bird-wings-takeoff.mp3",
+      "sha256": "1df8e514eb6b930a90b81b443a85b030f324612bf4a9bec12d9b9d8bf4e06ad3"
+    },
+    {
+      "path": "assets/audio/sfx/forest/creature-heavy-steps.mp3",
+      "sha256": "2d853d46dad2b645ff054e3e68383663578841f199719b4c4c542ed7dc49352c"
+    },
+    {
+      "path": "assets/audio/sfx/forest/crows-cawing.mp3",
+      "sha256": "5921145dbd3b714f41a2ce51c1d537bd8dfb68f1b8d77af3c9d5ce96efa70406"
+    },
+    {
+      "path": "assets/audio/sfx/forest/eerie-wind-whistle.mp3",
+      "sha256": "cbf41cfa09a1eaaf779513ef3d4da7074ba4d9c10c2a7acc1c47649c40b9022f"
+    },
+    {
+      "path": "assets/audio/sfx/forest/footsteps-dry-leaves.mp3",
+      "sha256": "f4b4913ebbc27305e1b6b9d63536fc25022f14b8da20a3cf929a63297c1b5e4d"
+    },
+    {
+      "path": "assets/audio/sfx/forest/night-wind-through-trees.mp3",
+      "sha256": "730f751be13e6497e24992193a99b5a8d634f95527cc456c84169f827594aee2"
+    },
+    {
+      "path": "assets/audio/sfx/forest/old-tree-creaking.mp3",
+      "sha256": "3a3cbdcc6a88dc3b1d2a376c1d7bf94ec56201e44888638da0ab5392a10273b8"
+    },
+    {
+      "path": "assets/audio/sfx/forest/twig-snap.mp3",
+      "sha256": "1f320b548ffd0779169346c778a06d61c292d5698ee8d03c7fd945c5a0b1d7d2"
+    },
+    {
+      "path": "assets/audio/sfx/forest/wolf-howl-distant.mp3",
+      "sha256": "c114dd1374adf6d6c27d55a2fba4352780b3a545549489ac735b873ddc75e849"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/deer/alarm-snort.mp3",
+      "sha256": "c79b5e3861d7153307d7aec7132440a69761f604291e65a0d420546b03ce87de"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/deer/bounding-away.mp3",
+      "sha256": "d8e8abdd168ff5479497789c873089ad34f3b6fa2c281a2dac07d9073eaca728"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/deer/browsing.mp3",
+      "sha256": "25ad00f22973d4c519c5e1f14e099775616e2c0e3277214688b9267ae1d72aef"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/deer/distress-bleat.mp3",
+      "sha256": "1d6ea4a47b5bce776d55fb57b3ce99e9c2cb82787a32b1ef611e8cd08ff851c4"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/hare/dash-away.mp3",
+      "sha256": "73848a184c4de44e294ef4c251aa6a27357c92372230bb5b8c4d232b4975d570"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/hare/distress-squeal.mp3",
+      "sha256": "ff2f50f849fc538f16dd65ebcaa5e522a0514d5f36e0ee7668791b9db61f28b5"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/hare/foot-thump.mp3",
+      "sha256": "3eb7677a7376db1729790e1f45876f018d67c8f505ed6b6ada33305745d36719"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/owl/alarm-hiss.mp3",
+      "sha256": "8e1c117b0cca4d1e64bb4dbae809c3e1ac65764287a9fbff136995e7ec86b3d5"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/owl/hoot-call-answer.mp3",
+      "sha256": "56583b93722356a87b95954811272277dd731382329b07cd03baaa392f99920d"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/owl/screech.mp3",
+      "sha256": "191d4ffe7e6940ba0b2686f7b85d91b6151a500e5be334b155cfe94a153c20f4"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/owl/wings-takeoff.mp3",
+      "sha256": "7f7c647613793353c9ca20587b66a0eaf0cf5247219926ce0a39cfa0c8fc6d1a"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/wolf/howl-close.mp3",
+      "sha256": "9e5fcc401be9847e2ca610668356220b1604f10972044d6a4820ec9e2051215b"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/wolf/snarl.mp3",
+      "sha256": "666cffc12169f5096f66b0b9fe1a6fd810784bf186bb24ba6f4d454a748f6eb4"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/wolf/warning-bark.mp3",
+      "sha256": "1acf4ec4f92ca41d592782353949b9e4f045c711e0963c577411351a3b4a8b83"
+    },
+    {
+      "path": "assets/audio/sfx/creatures/wolf/yelp.mp3",
+      "sha256": "a9d5834fca491673f3100f140c3d1be914153d0bfd0eab6f5f17a4f5cca8c69a"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/curious.mp3",
+      "sha256": "8d38d365fdc88407ede14606ce89d2384fdfa8292ec30607ad0ced7d1139ef12"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/easy-easy.mp3",
+      "sha256": "9e34ed37c9a183c258915c99d40438e00fbba453a885be5fe99f6cc2b1e7a4a6"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/got-it.mp3",
+      "sha256": "035b99ef101095889343c53e85384a45745c18f169c1858773e44d17fa2ae96e"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/hmm.mp3",
+      "sha256": "39e1ead679a3849cdd76e885cbcc7b2c7d5cc26f94f05c8a2ead3efd2949f681"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/huh-thats-new.mp3",
+      "sha256": "0b54bcb67bad21c867e4d0ee78e4d6bb95712575aa0ec154fb576d90a7a7c807"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/let-me-look.mp3",
+      "sha256": "2c71634d560e596b345d1784deeec417e2a614cde6e4bbdc38a34a9c76d39224"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/listen.mp3",
+      "sha256": "cd4c6d0a8d09b529673e3748922fa1d4dd32da843d8e9c79fbee34b211208625"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/stand-back.mp3",
+      "sha256": "a980a30f5babf962c65ffebed46101b44318ace2a5e4690c46c4034fa4aa91d6"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/this-way.mp3",
+      "sha256": "8509c030d240484342c55e602779b17927443380c94636d96ddb37ac429f6d10"
+    },
+    {
+      "path": "assets/audio/voice/fenris/barks/what-the.mp3",
+      "sha256": "ddbfcb48ab9f18d7e9921a5a60b6421c43ed77dbdb4b8f33766d9715e9073d02"
+    },
+    {
+      "path": "assets/audio/voice/fenris/dialogue/i-have-always-been-more-curious-than-cautious.mp3",
+      "sha256": "72173b683baff5e80a668bbe17915fbf669a17c4978c5d65d208f8d2ecc3031f"
+    },
+    {
+      "path": "assets/audio/voice/rixa/dialogue/come-here-you-great-daft-wolf-im-not-asking-twice.mp3",
+      "sha256": "e022ff36973d3ab09011f5714d6cf2aa23a41c7f06334b49fdb5c0e27580fe7a"
+    },
+    {
+      "path": "assets/audio/voice/rixa/dialogue/course-i-know-what-im-doing-mostly.mp3",
+      "sha256": "f342fc5689c8c0ac6f52c622c74815e5463ba6d1c958efc7bba3b994df7e71e7"
+    },
+    {
+      "path": "assets/audio/voice/rixa/dialogue/oi-you-always-this-bloody-stupid-or-am-i-getting-a-special-performance.mp3",
+      "sha256": "fab33e0af49c7ac472f9ec3ea256e26ce30a17b04f2a6a2c575ad6bba6df317e"
+    },
+    {
+      "path": "assets/audio/voice/rixa/dialogue/see-thats-your-problem-you-think-i-need-to-be-stronger-than-you.mp3",
+      "sha256": "ab077d42e51237a8a2c000c40d17cae31706e5a9aa631eab3489d4f419e3ca1e"
+    },
+    {
+      "path": "assets/audio/voice/rixa/dialogue/thats-a-terrible-idea-go-on.mp3",
+      "sha256": "5ad065fc92239d93e77c034da3ea2b7aec10969ce5129acc9d44aaf2a3a35420"
+    },
+    {
+      "path": "assets/audio/voice/rixa/dialogue/you-can-call-me-whatever-you-bloody-like-doesnt-mean-im-gonna-answer.mp3",
+      "sha256": "f459aa2b51666eea18fc30adbe1d8402c66de8ad1e2344aed208817de0d9d264"
+    },
+    {
+      "path": "opening.css",
+      "sha256": "eb809d85d2bcb00513b4242a4d1b8b91c50c75eccd35432884f2e577ee3bb064"
+    },
+    {
+      "path": "index.html",
+      "sha256": "ff688f37d56c8a66ed68fa141c647f6bacebd559839fbcc3ee135a204011a684"
+    },
+    {
+      "path": "web.config",
+      "sha256": "0b04ab744282c2f31a07a954cbd72fd45c71dc3a899a55f5592396a387545f37"
+    }
+  ]
+}

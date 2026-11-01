@@ -1,0 +1,74 @@
+[
+  {
+    "id": "01",
+    "width": 1024,
+    "height": 1536,
+    "visible": 410071,
+    "clear": 1106565,
+    "semi": 466299,
+    "sha256": "e67b55b4fccd65c4b84ebfc9298468d5c1708b62f860a5a9d5842c9961a5633a"
+  },
+  {
+    "id": "02",
+    "width": 1024,
+    "height": 1536,
+    "visible": 452023,
+    "clear": 1066150,
+    "semi": 506714,
+    "sha256": "789d64cceb32331482f05453aae1aa0addc8b7cad01fa34502b6e186e7d09efd"
+  },
+  {
+    "id": "03",
+    "width": 1024,
+    "height": 1536,
+    "visible": 333997,
+    "clear": 1200102,
+    "semi": 372762,
+    "sha256": "041b2770da27cf9fdc0f6ad54882bd6c18ef937957584c3dc7379bcffeb355d8"
+  },
+  {
+    "id": "04",
+    "width": 1024,
+    "height": 1536,
+    "visible": 423060,
+    "clear": 1094786,
+    "semi": 478078,
+    "sha256": "4bce50f205792f0d3476ff584afcb26df9c2ea324c30d4cd65993ca053a590eb"
+  },
+  {
+    "id": "05",
+    "width": 1024,
+    "height": 1536,
+    "visible": 416005,
+    "clear": 1107825,
+    "semi": 465039,
+    "sha256": "90ec7280bae1b39ef79b813a840856d2d45c5ca7ec67bd7c67ea3f27d398c73f"
+  },
+  {
+    "id": "06",
+    "width": 1024,
+    "height": 1536,
+    "visible": 438227,
+    "clear": 1084071,
+    "semi": 488793,
+    "sha256": "173e866a0614a362134c9fd0746a251c728835728664f9ac9e2cd58170045eae"
+  },
+  {
+    "id": "07",
+    "width": 1024,
+    "height": 1536,
+    "visible": 341230,
+    "clear": 1187551,
+    "semi": 385313,
+    "sha256": "7f16dccb40e7c523a9ba1aabc7daf9b6d2d59b8aad8f49d338f1f3e2df8de290"
+  },
+  {
+    "id": "08",
+    "width": 1024,
+    "height": 1536,
+    "visible": 399573,
+    "clear": 1115248,
+    "semi": 457616,
+    "sha256": "a6aef53e61003f9be5010f8f65d09867ea56e27def6f454d75c44fdfa8d78887"
+  }
+]

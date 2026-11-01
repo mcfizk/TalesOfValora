@@ -1,0 +1,23 @@
+[
+  {
+    "id": "deer",
+    "width": 1091,
+    "height": 1442,
+    "transparentPixels": 1073144,
+    "valid": true
+  },
+  {
+    "id": "wolf",
+    "width": 1433,
+    "height": 1098,
+    "transparentPixels": 1001640,
+    "valid": true
+  },
+  {
+    "id": "hare",
+    "width": 1122,
+    "height": 1402,
+    "transparentPixels": 1059483,
+    "valid": true
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "direction": "left",
+  "file": "Fenris_walk_left_sheet.png",
+  "frameWidth": 512,
+  "frameHeight": 640,
+  "columns": 4,
+  "frames": 8,
+  "fps": 8,
+  "loop": true,
+  "anchor": [
+    256,
+    610
+  ],
+  "duration_ms": 1000,
+  "sequence": [
+    {
+      "file": "Fenris_walk_left_01.png",
+      "role": "near-leg contact",
+      "duration_ms": 125
+    },
+    {
+      "file": "Fenris_walk_left_02.png",
+      "role": "near-leg weight settling",
+      "duration_ms": 125
+    },
+    {
+      "file": "Fenris_walk_left_03.png",
+      "role": "near-leg support, far-leg passing",
+      "duration_ms": 125
+    },
+    {
+      "file": "Fenris_walk_left_04.png",
+      "role": "near-leg push-off, far-leg reaching",
+      "duration_ms": 125
+    },
+    {
+      "file": "Fenris_walk_left_05.png",
+      "role": "far-leg contact",
+      "duration_ms": 125
+    },
+    {
+      "file": "Fenris_walk_left_06.png",
+      "role": "far-leg weight settling",
+      "duration_ms": 125
+    },
+    {
+      "file": "Fenris_walk_left_07.png",
+      "role": "far-leg support, near-leg passing",
+      "duration_ms": 125
+    },
+    {
+      "file": "Fenris_walk_left_08.png",
+      "role": "far-leg push-off, near-leg reaching",
+      "duration_ms": 125
+    }
+  ]
+}

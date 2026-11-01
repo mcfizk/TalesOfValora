@@ -1,0 +1,66 @@
+[
+  {
+    "file": "pose-01.png",
+    "x": 22,
+    "y": 232,
+    "width": 412,
+    "height": 157,
+    "opaque_pixels": 45127
+  },
+  {
+    "file": "pose-02.png",
+    "x": 490,
+    "y": 165,
+    "width": 431,
+    "height": 224,
+    "opaque_pixels": 55362
+  },
+  {
+    "file": "pose-03.png",
+    "x": 944,
+    "y": 89,
+    "width": 421,
+    "height": 304,
+    "opaque_pixels": 63312
+  },
+  {
+    "file": "pose-04.png",
+    "x": 1402,
+    "y": 69,
+    "width": 349,
+    "height": 327,
+    "opaque_pixels": 62883
+  },
+  {
+    "file": "pose-05.png",
+    "x": 84,
+    "y": 519,
+    "width": 379,
+    "height": 323,
+    "opaque_pixels": 70234
+  },
+  {
+    "file": "pose-06.png",
+    "x": 557,
+    "y": 511,
+    "width": 364,
+    "height": 332,
+    "opaque_pixels": 67890
+  },
+  {
+    "file": "pose-07.png",
+    "x": 964,
+    "y": 438,
+    "width": 340,
+    "height": 405,
+    "opaque_pixels": 70621
+  },
+  {
+    "file": "pose-08.png",
+    "x": 1403,
+    "y": 418,
+    "width": 296,
+    "height": 427,
+    "opaque_pixels": 71357
+  }
+]

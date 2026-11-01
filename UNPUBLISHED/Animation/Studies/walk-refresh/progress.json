@@ -1,0 +1,62 @@
+{
+  "status": "left_right_installed",
+  "method": "Eight individually checked phases; no rig interpolation. Built-in image generation.",
+  "order": [
+    "fenris",
+    "human-male",
+    "human-female",
+    "dwarf-male",
+    "dwarf-female",
+    "halfling-male",
+    "halfling-female"
+  ],
+  "directions": [
+    "left",
+    "up-left",
+    "up",
+    "down-left",
+    "down"
+  ],
+  "mirrors": {
+    "right": "left",
+    "up-right": "up-left",
+    "down-right": "down-left"
+  },
+  "protected": [
+    "idle",
+    "sit",
+    "sleep",
+    "standing",
+    "sleepToSit",
+    "sitToStand",
+    "standToSit",
+    "sitToSleep"
+  ],
+  "completed": [
+    "fenris:all-eight-directions installed",
+    "human-female:left,right approved/reference",
+    "human-male:left,right,up,down cardinal cycles complete-review-ready; up-left/up-right retained",
+    "dwarf-male:left,right review; eight unique frames and exact mirrored right",
+    "dwarf-female:left,right review; eight unique frames",
+    "halfling-male:left,right review; eight unique frames",
+    "halfling-female:left,right review; eight unique frames"
+  ],
+  "note": "Fenris is installed. All six NPC bases have refreshed left/right review cycles. Up/down and diagonal production is deferred by user request.",
+  "current": "All six left/right NPC bases installed in game renderer. Eleven existing human villagers assigned human bases.",
+  "integration": "Twelve walk atlases copied into private-opening/assets/npcs. Horizontal walking preserves existing idle, directional standing, sit, sleep and transitions. Six-base browser check and village regression pass; all 57 protected assets unchanged.",
+  "remaining": [
+    "Deferred: remaining NPC up/down and diagonals"
+  ],
+  "npcPriority": [
+    "left",
+    "right"
+  ],
+  "deferredNpcDirections": [
+    "up",
+    "down",
+    "up-left",
+    "up-right",
+    "down-left",
+    "down-right"
+  ]
+}

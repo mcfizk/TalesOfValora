@@ -1,0 +1,71 @@
+{
+  "method": "Built-in image generator; approved Fenris poses and human female reference.",
+  "frames": [
+    {
+      "id": "01",
+      "guide": "Fenris_walk_left_01_contact-near.png",
+      "role": "near-leg contact",
+      "prompt": "Image 1 supplies ONLY the exact walking POSE and limb overlap. Image 2 supplies the HUMAN WOMAN's identity, clothing, proportions and pixel-art rendering. Replace the wolf in image 1 with the woman in image 2, keeping the limb assignment and gesture of image 1. The result must be a normal adult HUMAN woman: chestnut low ponytail, olive tunic, cream collar/rolled cuffs, brown buckle belt and strap, brown trousers and boots. No animal ears, fur, tail, claws, hocks or wolf anatomy. Preserve image 2's face, build and design. Same left-facing three-quarter view, exactly two arms and legs, full body transparent background, crisp pixel art, no text, no ground shadow. COPY IMAGE 1's contact pose: foreground NEAR thigh leads LEFT with straightened knee and heel touching ground. Background FAR leg extends BACK RIGHT with heel lifted. Near arm swings backward RIGHT, far arm forward LEFT. Match the woman's scale and proportions to other transferred poses.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-83e32f03-9a1e-412f-86b1-8a4c624b3adb.png",
+      "file": "source/human-female-left-01.png"
+    },
+    {
+      "id": "02",
+      "guide": "Fenris_walk_left_02_settle-near.png",
+      "role": "settle onto near leg",
+      "prompt": "Image 1 supplies ONLY the exact walking POSE and limb overlap. Image 2 supplies the HUMAN WOMAN's identity, clothing, proportions and pixel-art rendering. Replace the wolf in image 1 with the woman in image 2, keeping the limb assignment and gesture of image 1. The result must be a normal adult HUMAN woman: chestnut low ponytail, olive tunic, cream collar/rolled cuffs, brown buckle belt and strap, brown trousers and boots. No animal ears, fur, tail, claws, hocks or wolf anatomy. Preserve image 2's face, build and design. Same left-facing three-quarter view, exactly two arms and legs, full body transparent background, crisp pixel art, no text, no ground shadow. COPY IMAGE 1's settle pose exactly: foreground NEAR leg forward LEFT supports weight with softly bent knee; background FAR leg trails RIGHT with heel raised and toes about to lift. Near arm back RIGHT, far arm forward LEFT. Body slightly lower than contact. Natural human knees and boots.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-d4129a20-0504-4c84-938f-1275a6695f11.png",
+      "file": "source/human-female-left-02.png"
+    },
+    {
+      "id": "03",
+      "guide": "Fenris_walk_left_03_passing-far.png",
+      "role": "near-leg support, far-leg passing",
+      "reverseRefs": true,
+      "prompt": "Image 1 supplies ONLY the exact walking POSE and limb overlap. Image 2 supplies the HUMAN WOMAN's identity, clothing, proportions and pixel-art rendering. Replace the wolf in image 1 with the woman in image 2, keeping the limb assignment and gesture of image 1. The result must be a normal adult HUMAN woman: chestnut low ponytail, olive tunic, cream collar/rolled cuffs, brown buckle belt and strap, brown trousers and boots. No animal ears, fur, tail, claws, hocks or wolf anatomy. Preserve image 2's face, build and design. Same left-facing three-quarter view, exactly two arms and legs, full body transparent background, crisp pixel art, no text, no ground shadow. COPY IMAGE 1's NARROW PASSING POSE: the large NEAR thigh/leg on the RIGHT is upright under the pelvis and supports her on one flat planted boot. The FAR leg on the LEFT passes forward with a modestly bent knee and its boot CLEARLY AIRBORNE beside the supporting shin. Both arms swing close to neutral beside the body. The supporting near thigh overlaps IN FRONT of the lifted far thigh. Human knee and ankle articulation, low relaxed walking step. Do not retain image 2's wide-legged stance.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-4c4e22b1-bc9a-43ef-a482-1270e90657a9.png",
+      "file": "source/human-female-left-03.png"
+    },
+    {
+      "id": "04",
+      "guide": "Fenris_walk_left_04_reach-far.png",
+      "role": "far leg reaches, near toe support",
+      "prompt": "Image 1 supplies ONLY the exact walking POSE and limb overlap. Image 2 supplies the HUMAN WOMAN's identity, clothing, proportions and pixel-art rendering. Replace the wolf in image 1 with the woman in image 2, keeping the limb assignment and gesture of image 1. The result must be a normal adult HUMAN woman: chestnut low ponytail, olive tunic, cream collar/rolled cuffs, brown buckle belt and strap, brown trousers and boots. No animal ears, fur, tail, claws, hocks or wolf anatomy. Preserve image 2's face, build and design. Same left-facing three-quarter view, exactly two arms and legs, full body transparent background, crisp pixel art, no text, no ground shadow. COPY IMAGE 1's reach pose exactly: foreground NEAR leg trails RIGHT with heel raised, weight on the toe. Background FAR leg extends forward LEFT, boot lifted above ground before heel contact. Near arm swings forward LEFT across torso, far arm back RIGHT. Exactly two normal human legs and arms, no fur or digitigrade anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-cd7d7218-228b-4fe6-a5db-34f52ae05eda.png",
+      "file": "source/human-female-left-04.png"
+    },
+    {
+      "id": "05",
+      "guide": "Fenris_walk_left_05_contact-far.png",
+      "role": "far-leg contact",
+      "reverseRefs": true,
+      "prompt": "Image 1 supplies ONLY the exact walking POSE and limb overlap. Image 2 supplies the HUMAN WOMAN's identity, clothing, proportions and pixel-art rendering. Replace the wolf in image 1 with the woman in image 2, keeping the limb assignment and gesture of image 1. The result must be a normal adult HUMAN woman: chestnut low ponytail, olive tunic, cream collar/rolled cuffs, brown buckle belt and strap, brown trousers and boots. No animal ears, fur, tail, claws, hocks or wolf anatomy. Preserve image 2's face, build and design. Same left-facing three-quarter view, exactly two arms and legs, full body transparent background, crisp pixel art, no text, no ground shadow. COPY IMAGE 1's OPPOSITE CONTACT: large viewer-facing/NEAR upper arm is in FRONT of the torso and reaches FORWARD LEFT; its opposite FAR arm is behind the torso toward RIGHT. The NEAR thigh is on the RIGHT side of the pelvis, sloping BACK RIGHT and covering the hip of the other leg; the FAR leg reaches FORWARD LEFT and plants. Make the background thigh and leading LEFT boot slightly darker than the foreground trailing RIGHT thigh and boot. Do not copy image 2's arm/leg pose; transfer only her appearance.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-753659db-18f9-4747-8c50-0bf144d7080b.png",
+      "file": "source/human-female-left-05.png"
+    },
+    {
+      "id": "06",
+      "guide": "Fenris_walk_left_06_settle-far-v2.png",
+      "role": "settle onto far leg",
+      "prompt": "Edit this human female pixel-art walking sprite into the next weight-settling frame. PRESERVE the head, face, clothing, scale, and particularly the TWO ARM connections and order exactly. The large NEAR arm starts at the RIGHT shoulder and crosses diagonally downward LEFT in front of the chest; keep its upper sleeve clearly visible connecting shoulder to forward elbow and hand. Far arm stays behind torso toward RIGHT. Change only the LOWER BODY pose: bend the forward LEFT supporting knee slightly, lower pelvis a little, bring trailing RIGHT leg a little inward, bend its knee and lift its heel so trailing boot is just leaving the ground. Same adult woman and full body transparent pixel-art sprite, left facing. Preserve anatomical size and proportions, do not shorten legs or torso. No text, shadow, weapons or extras.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-31e599e5-58b9-43db-b5e0-e4cac66e6615.png",
+      "file": "source/human-female-left-06.png"
+    },
+    {
+      "id": "07",
+      "guide": "Fenris_walk_left_07_passing-near.png",
+      "role": "far leg support, near leg passes",
+      "prompt": "Image 1 supplies ONLY the exact walking POSE and limb overlap. Image 2 supplies the HUMAN WOMAN's identity, clothing, proportions and pixel-art rendering. Replace the wolf in image 1 with the woman in image 2, keeping the limb assignment and gesture of image 1. The result must be a normal adult HUMAN woman: chestnut low ponytail, olive tunic, cream collar/rolled cuffs, brown buckle belt and strap, brown trousers and boots. No animal ears, fur, tail, claws, hocks or wolf anatomy. Preserve image 2's face, build and design. Same left-facing three-quarter view, exactly two arms and legs, full body transparent background, crisp pixel art, no text, no ground shadow. COPY IMAGE 1's near-leg passing pose. The foreground NEAR thigh overlaps the other leg, swings forward LEFT with knee bent and boot clearly AIRBORNE. Background FAR leg is upright under body, boot planted, carrying weight. Arms close to neutral by body, exactly TWO arms. Human knees and boots, relaxed low step. Preserve the near/far overlap from image 1.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-288ecddb-f6b3-43dc-b9fc-1f7dd7e0350b.png",
+      "file": "source/human-female-left-07.png"
+    },
+    {
+      "id": "08",
+      "guide": "Fenris_walk_left_08_reach-near.png",
+      "role": "near leg reaches, far toe support",
+      "prompt": "Image 1 supplies ONLY the exact walking POSE and limb overlap. Image 2 supplies the HUMAN WOMAN's identity, clothing, proportions and pixel-art rendering. Replace the wolf in image 1 with the woman in image 2, keeping the limb assignment and gesture of image 1. The result must be a normal adult HUMAN woman: chestnut low ponytail, olive tunic, cream collar/rolled cuffs, brown buckle belt and strap, brown trousers and boots. No animal ears, fur, tail, claws, hocks or wolf anatomy. Preserve image 2's face, build and design. Same left-facing three-quarter view, exactly two arms and legs, full body transparent background, crisp pixel art, no text, no ground shadow. COPY IMAGE 1's near-leg reaching pose. The foreground NEAR thigh overlaps and reaches forward LEFT, knee extending and boot visibly AIRBORNE before heel strike. Background FAR leg trails RIGHT on raised heel, toe supporting body. Near arm swings backward RIGHT and far arm forward LEFT. Human legs and boots, no wolf anatomy. Leading LEFT boot must not touch ground; this is BEFORE contact.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-45934352-7aac-4e12-86c8-837c1032aefa.png",
+      "file": "source/human-female-left-08.png"
+    }
+  ]
+}

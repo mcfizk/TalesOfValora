@@ -1,0 +1,94 @@
+{
+  "name": "Fenris white idle",
+  "frames": [
+    {
+      "file": "Fenris_idle_01.png",
+      "duration_ms": 250,
+      "sheet_x": 0,
+      "sheet_y": 0,
+      "width": 400,
+      "height": 528,
+      "source_offset_x": -2,
+      "source_offset_y": 2
+    },
+    {
+      "file": "Fenris_idle_02.png",
+      "duration_ms": 250,
+      "sheet_x": 400,
+      "sheet_y": 0,
+      "width": 400,
+      "height": 528,
+      "source_offset_x": -4,
+      "source_offset_y": 2
+    },
+    {
+      "file": "Fenris_idle_03.png",
+      "duration_ms": 250,
+      "sheet_x": 800,
+      "sheet_y": 0,
+      "width": 400,
+      "height": 528,
+      "source_offset_x": -2,
+      "source_offset_y": 2
+    },
+    {
+      "file": "Fenris_idle_04.png",
+      "duration_ms": 250,
+      "sheet_x": 1200,
+      "sheet_y": 0,
+      "width": 400,
+      "height": 528,
+      "source_offset_x": -2,
+      "source_offset_y": 2
+    },
+    {
+      "file": "Fenris_idle_05.png",
+      "duration_ms": 250,
+      "sheet_x": 0,
+      "sheet_y": 528,
+      "width": 400,
+      "height": 528,
+      "source_offset_x": -2,
+      "source_offset_y": 7
+    },
+    {
+      "file": "Fenris_idle_06.png",
+      "duration_ms": 250,
+      "sheet_x": 400,
+      "sheet_y": 528,
+      "width": 400,
+      "height": 528,
+      "source_offset_x": -4,
+      "source_offset_y": 7
+    },
+    {
+      "file": "Fenris_idle_07.png",
+      "duration_ms": 250,
+      "sheet_x": 800,
+      "sheet_y": 528,
+      "width": 400,
+      "height": 528,
+      "source_offset_x": -2,
+      "source_offset_y": 7
+    },
+    {
+      "file": "Fenris_idle_08.png",
+      "duration_ms": 250,
+      "sheet_x": 1200,
+      "sheet_y": 528,
+      "width": 400,
+      "height": 528,
+      "source_offset_x": -2,
+      "source_offset_y": 7
+    }
+  ],
+  "loop": true,
+  "duration_ms": 2000,
+  "anchor": [
+    200,
+    500
+  ],
+  "sheet_columns": 4,
+  "sheet_rows": 2,
+  "notes": "Generated eight-pose idle, sliced without resampling and aligned using the foot bounding box. PNG assets retain alpha; GIF is a preview."
+}

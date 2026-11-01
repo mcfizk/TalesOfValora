@@ -1,0 +1,9 @@
+{
+  "directions": 8,
+  "comparisonCharacters": 7,
+  "revisedCharacters": 4,
+  "walkFrames": 16,
+  "frameStepping": true,
+  "beforeAfter": true,
+  "pageErrors": []
+}

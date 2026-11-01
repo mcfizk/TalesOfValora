@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sit-sheet-v2",
+    "prompt": "Create exactly FOUR same-scale sprites in a TWO COLUMN TWO ROW grid, lots of TRANSPARENT padding around each whole figure. Exact Rixa from reference: adult slender female dark grey feline, green eyes, pale muzzle, tousled short dark hair, upright ears with small hoop on near ear, whiskers, plain brown vest over worn charcoal lace-neck tunic with rolled sleeves, patched loose brown trousers, exposed furry ankles and BARE feline feet. Long dark tail with pale tip, simple belt and sheathed knife on near left hip. No boots, armor, crown or extra limbs. She is seated on the ground in the LEFT facing three-quarter pose of reference, both knees bent drawn up, hand on knee, other hand supporting at hip, tail curved behindRIGHT. Frame1 eyesopen neutral,2 slightinhale,3 briefclosedeyesblinkexhale,4 eyesopenreturntoneutral. NO chair. Small breathing changes only, not walking. Each figure must be entirely within its cell, separated from neighbors by LARGE EMPTY GAPS; feet and tail never near cell edge. Exactsameartstyle as reference, crisp pixel details, NO glow, shadow, floor, text.",
+    "refs": [
+      "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/rixa/rest/left/sit/generated-sheet.png"
+    ],
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1863f-9da6-7ad2-bc72-efbaaacc9524\\exec-4fd4b604-206d-471a-af11-419212b7be29.png"
+  },
+  {
+    "id": "02",
+    "clip": "sleepToSit",
+    "prompt": "Edit Rixa sleeping reference image1 into an early waking pose, keeping her body lying curled in exact same LEFTward orientation and pixel-art identity. Image2 is her final seated identity for context, not current pose. She just wakes: eyes halfopen, head lifted a little off forearms, one forearm planted under shoulder, torso still LOW nearly horizontal, knees remain curled. Tail relaxed along legs. Exact Rixa from reference: adult slender female dark grey feline, green eyes, pale muzzle, tousled short dark hair, upright ears with small hoop on near ear, whiskers, plain brown vest over worn charcoal lace-neck tunic with rolled sleeves, patched loose brown trousers, exposed furry ankles and BARE feline feet. Long dark tail with pale tip, simple belt and sheathed knife on near left hip. No boots, armor, crown or extra limbs. Exactlytwoarms/twolegs; preserve clothing accessories, entirebody visible, genuine transparentbackground without glow/shadow/floor/text.",
+    "refs": [
+      "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/rixa/rest/left/sleep/source/01.png",
+      "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/rixa/rest/left/sit/source/01.png"
+    ],
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1863f-9da6-7ad2-bc72-efbaaacc9524\\exec-551c3ff8-1058-45fa-8d8d-e0ac31350e09.png"
+  },
+  {
+    "id": "03",
+    "clip": "sleepToSit",
+    "prompt": "Create the halfway sleep-to-sit animation pose of exact Rixa. Image1 is start curledsleep, image2 target sitting. Rixa props torso up on one straightening arm, chest inclined roughly45degrees above ground, head raised eyesopen facingLEFT. Other hand begins reaching toward bent knee. Hips remain grounded, knees still curled towardLEFT, body midway between lying and upright seated. Tail rests towardRIGHT. Exact Rixa from reference: adult slender female dark grey feline, green eyes, pale muzzle, tousled short dark hair, upright ears with small hoop on near ear, whiskers, plain brown vest over worn charcoal lace-neck tunic with rolled sleeves, patched loose brown trousers, exposed furry ankles and BARE feline feet. Long dark tail with pale tip, simple belt and sheathed knife on near left hip. No boots, armor, crown or extra limbs. Naturaladultanatomy exactlytwoarms/twolegs, notfloating, notstanding. Samepixelart camera, completefigure isolated genuinely transparentbackground, no glow/shadow/floor/text.",
+    "refs": [
+      "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/rixa/rest/left/sleep/source/01.png",
+      "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/rixa/rest/left/sit/source/01.png"
+    ],
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1863f-9da6-7ad2-bc72-efbaaacc9524\\exec-60257879-90e6-4231-8443-f69a18dd1e68.png"
+  }
+]

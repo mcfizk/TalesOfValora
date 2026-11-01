@@ -1,0 +1,104 @@
+{
+  "formatVersion": 1,
+  "frameSize": [
+    640,
+    640
+  ],
+  "clips": {
+    "sleep": {
+      "file": "sleep-left-sheet.png",
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "columns": 2,
+      "frames": 4,
+      "fps": 2,
+      "loop": true,
+      "directions": [
+        "left",
+        "right"
+      ],
+      "mirrorRight": true,
+      "anchor": [
+        320,
+        610
+      ],
+      "bodyHeight": 550
+    },
+    "sit": {
+      "file": "sit-left-sheet.png",
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "columns": 2,
+      "frames": 4,
+      "fps": 2,
+      "loop": true,
+      "directions": [
+        "left",
+        "right"
+      ],
+      "mirrorRight": true,
+      "anchor": [
+        320,
+        610
+      ],
+      "bodyHeight": 550
+    },
+    "sleepToSit": {
+      "file": "sleepToSit-left-sheet.png",
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "columns": 2,
+      "frames": 4,
+      "fps": 4,
+      "loop": false,
+      "directions": [
+        "left",
+        "right"
+      ],
+      "mirrorRight": true,
+      "anchor": [
+        320,
+        610
+      ],
+      "bodyHeight": 550
+    },
+    "sitToStand": {
+      "file": "sitToStand-left-sheet.png",
+      "frameWidth": 640,
+      "frameHeight": 640,
+      "columns": 3,
+      "frames": 6,
+      "fps": 4,
+      "loop": false,
+      "directions": [
+        "left",
+        "right"
+      ],
+      "mirrorRight": true,
+      "anchor": [
+        320,
+        610
+      ],
+      "bodyHeight": 550
+    }
+  },
+  "wakeSequence": [
+    {
+      "clip": "sleep",
+      "seconds": 2
+    },
+    {
+      "clip": "sleepToSit",
+      "seconds": 1
+    },
+    {
+      "clip": "sit",
+      "seconds": 1.5
+    },
+    {
+      "clip": "sitToStand",
+      "seconds": 1.5
+    }
+  ],
+  "notes": "Left/right rest actions. Right is an exact mirror. Transition endpoints reuse the loop pose; standing ends on the existing idle pose. No existing idle or walk assets changed."
+}

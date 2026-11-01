@@ -1,0 +1,232 @@
+diff --git a/.gitignore b/.gitignore
+index e5f88a1..3eb37e1 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -7,3 +7,6 @@
+ .env
+ .env.*
+ !.env.example
++
++# Generated browser captures and reports.
++/private-opening/qa/
+diff --git a/README.md b/README.md
+index 200cb22..b2938a4 100644
+--- a/README.md
++++ b/README.md
+@@ -1,12 +1,34 @@
+ # Fenris Awakening
+ 
+-Playable 3D opening prototype. The user authors the story.
++The active local prototype is a **2D pixel-art opening**. Fenris wakes in a forest clearing, receives the existing voice cues as subtitles, and can explore and examine his surroundings. The user authors the story. Spoken voice playback is disabled and wind is at 50% of its previous level; audio production will be a separate project.
++
++## Current opening
++
++The forest uses deeper dusk shading with a faint canopy light and warm embers. The stream has no bridge and can be waded through at 30% of normal movement speed, including when running.
++
++Run `npm start` here and open **http://127.0.0.1:8766/**. On this workstation the local server opens `private-opening/index.html` automatically. It binds only to loopback. If the private folder is absent, the server opens the earlier 3D prototype.
++
++The scene uses the approved white-and-grey Fenris with brown shorts, an eight-frame idle, and eight-frame walking loops in all eight directions. Walking runs at 8 fps; Shift accelerates the same gait to match running speed. Left/right idle uses the 4 fps breathing loop; other directions hold a gathered-foot pose when stopped so Fenris keeps facing the last movement direction. Reconstructed forest scenery, animated water and fire, collision-aware click movement, keyboard controls, touch controls, subtitles, ambience, a journal, pause, and restart remain available. Controls: WASD/arrows to move, Shift to run, E to examine, J for journal, Escape to pause, mouse wheel to zoom, or click ground to walk. Touch devices have a movement stick and examine button.
++
++`private-opening/` contains the 2D scene, runtime artwork, and browser checks. The folder name preserves existing paths and URLs. There is no cloud connection or save service; discoveries last for the current visit.
++
++The local art manifest is `private-opening/assets/manifest.json`. Browser validation is recorded in `private-opening/qa/functional-report.json`; desktop and mobile screenshots are in that same folder.
++
++Custom character sheets live in `private-opening/assets/fenris/`. Run `node private-opening/import-fenris.cjs` to recopy the approved exports from the sibling `Sprites/Fenris white` folder and refresh their frame dimensions, anchors, and timing. `node --test private-opening/fenris-animation.test.mjs` checks directions, animation selection, timing, and sprite-sheet bounds. `node private-opening/animation-check.cjs` checks the integration in a locally running browser preview.
++
++The forest generates 384-pixel sections around the player, with no fixed map boundary. A new page load selects a random seed; revisiting an area or restarting the awakening within that visit preserves its terrain. Distant sections and ground textures are discarded and regenerated from the seed, keeping loaded terrain memory bounded. Groves, fern hollows, rocky patches, clearings, winding trails and recurring streams provide variation.
++
++The voices appear before Fenris begins rising. His first objective is to seek their source, and the search remains open after examining objects. Faint glowing baubles mark camp details, weathered stones, old stumps, flowers and undergrowth. Click or tap a bauble to approach and examine; E and the mobile interaction button also work nearby. Descriptions appear only after interaction and are kept in the session journal. Floating E prompts and object labels have been removed.
++
++Run `node --test private-opening/world.test.mjs private-opening/fenris-animation.test.mjs` for generation, water speed, collision, reachability and animation checks. Run `node private-opening/forest-check.cjs` for streamed terrain and interaction browser checks.
+ 
+ ## Start here for another session
+ 
++All characters share the [character animation standard](docs/CHARACTER-ANIMATIONS.md): idle, eight-direction walking, sleeping, sitting, sleep-to-sit, and sit-to-stand. Fenris's opening now plays sleep → sit → stand using authored sprites rather than rotating the standing image. Sleep and sitting have their own breathing loops; these added actions support left/right views. Run `node private-opening/awakening-check.cjs` to check the sequence in the local game.
++
+ Read [Fenris and his world — lore handoff](docs/FENRIS-AND-WORLD.md) for the opening facts, Lupera identity, characterization, setting, era boundaries, and source provenance. It is a curated summary of the author's Valora archive, with later lore clearly separated from Fenris's knowledge around 1468 DR.
+ 
+-The author's current visual priority is the character's anatomy and model quality, rather than additional texture detail. The existing model is a prototype; do not treat it as the final visual reference.
++The author selected sprite-based pixel art in October 2026, superseding the earlier 3D modeling direction. The older renderer and model files remain as historical prototype work. The 3D-specific descriptions below refer to that earlier version.
+ 
+ ## Authoritative facts
+ 
+@@ -14,15 +36,15 @@ The author's current visual priority is the character's anatomy and model qualit
+ - He has no knowledge of who he is or where he came from.
+ - He begins without weapons or magical abilities.
+ - The opening is around 1468 DR, before Valora and before meeting Croft.
+-- Current playable scope: wake up, hear voices, move around the scene.
++- Current playable scope: voices wake Fenris; seek their source through an expanding forest. Environmental discoveries do not finish the search.
+ 
+-These facts override older manuscripts and previous prototypes. Do not introduce parents, a clan, remembered military service, known identity, spellcasting, equipment, or an explanation for the voices without the author's direction.
++These facts override older manuscripts and previous prototypes. Do not introduce parents, a clan, remembered military service, known identity, spellcasting, equipment, or reveal the voices' nature before the author directs that revelation.
+ 
+ The attached `01-The Story Begins.txt` inspires a forest awakening and voices. Its older shaman, weapon, ancestry, and species details are NOT current canon. No dream battle or elemental trial is implemented.
+ 
+ ## Authoring boundaries
+ 
+-`story.js` holds explicitly temporary voice lines and observations. "Do you hear them calling?" comes from the older manuscript; its context is not established. "Listen…" is temporary connective text. Campsite details, the brook, bridge, and forest path are replaceable scenery. The interface names Fenris for the player; dialogue does not reveal his identity to him.
++`story.js` holds explicitly temporary voice lines and observations. "Do you hear them calling?" comes from the older manuscript; its context is not established. "Listen…" is temporary connective text. Campsite details, the brook, and forest path are replaceable scenery. The interface names Fenris for the player; dialogue does not reveal his identity to him.
+ 
+ `character.js` renders a continuous, skin-weighted Lupera mesh built by `sculpt-model.cjs`. The 17-bone skeleton drives idle, wake, walk, and run motion. The model follows the supplied grey-white wolf reference with a connected muscular torso, tapered muzzle, recessed pale eyes, curved ears, clawed hands and paws, and rope-tied brown shorts. It remains a procedural prototype, not a production sculpt matching the reference's fidelity. No weapons, armour, or magical effects are present.
+ 
+@@ -30,9 +52,9 @@ The attached `01-The Story Begins.txt` inspires a forest awakening and voices. I
+ 
+ `forest.js` creates the environment. Fur, bark, and leaf-litter image assets were generated with built-in image generation; exact prompts and local asset paths are recorded in `art-manifest.json`. The supplied character image guides the model and is not published. The full Valora manuscripts and royal portraits are not included. The repository contains only the curated lore handoff linked above; it is not part of the public game deployment.
+ 
+-## Running locally
++## Running the earlier 3D prototype
+ 
+-Run `node serve.cjs` from this directory, then open http://127.0.0.1:8766. HTTP is required for JavaScript modules. The server binds only to loopback. No installation or API keys are required. Three.js 0.180.0 is included under `vendor/` with its MIT license. Renderer setup: https://threejs.org/manual/pages/installation.html.
++Run `node serve.cjs` from this directory, then open http://127.0.0.1:8766/index.html for the earlier 3D version. HTTP is required for JavaScript modules. The server binds only to loopback. No installation or API keys are required. Three.js 0.180.0 is included under `vendor/` with its MIT license. Renderer setup: https://threejs.org/manual/pages/installation.html.
+ 
+ This uses browser 3D to make the opening playable on the existing IIS website. It does not establish that Godot is insufficient or lock the eventual CRPG to this renderer. Story, movement, character, and environment modules are separate.
+ 
+@@ -44,14 +66,14 @@ This uses browser 3D to make the opening playable on the existing IIS website. I
+ - E: examine. J: journal. Escape: pause / close dialog.
+ - Touch: left joystick to move; drag elsewhere to look; E to examine.
+ 
+-Subtitles are always available. The start screen offers audio and it can be toggled. Browser speech synthesis supplies temporary voice audio; availability and voice quality depend on the device. Audio suspends while paused. Graphics can be reduced in the menu. Position and discoveries are session-only; restart or reload resets them.
++Subtitles are always available. The start screen offers ambient audio and it can be toggled. Spoken voice playback is disabled pending the separate audio project. Wind is at half its previous gain; water and footsteps retain their existing levels. Audio suspends while paused. Graphics can be reduced in the menu. Position and discoveries are session-only; restart or reload resets them.
+ 
+ ## Verification
+ 
+ `node --test tests/world.test.mjs` checks boundaries, obstacles, sliding, water restrictions, and paths including the bridge. `browser-test.cjs` uses the bundled Playwright and installed Edge to test wake-up, keyboard/click movement, voices/subtitles, observations, journal, pause, audio activation, camera, performance mode, restart, and mobile touch. `test-results.json` records the latest run. `window.__fenris` offers read-only diagnostics.
+ 
+-## Deployment
++## Historical 3D deployment
+ 
+-`deploy.ps1` backs up the existing game files and game shelf under `backups/`, copies only public game files and the renderer into `D:\UlfheimData\games\FenrisAwakening\`, and adds a prototype card to the shelf. The existing Godot game remains available. Source, tests, scripts, and lore documents are not published.
++`deploy.ps1` describes the older 3D website workflow and contains historical source paths. It is not the workflow for the private 2D opening. It backs up the existing game files and game shelf under `backups/`, copies its explicit list of public 3D game files and renderer into `D:\UlfheimData\games\FenrisAwakening\`, and adds a prototype card to the shelf. Source, tests, scripts, lore documents, and the private opening are outside its publication list.
+ 
+ URL: https://ulfheim.dk/games/FenrisAwakening/
+diff --git a/audio.js b/audio.js
+index ed60a5a..d9d7e5a 100644
+--- a/audio.js
++++ b/audio.js
+@@ -1,14 +1,15 @@
+-// Browser-generated ambience and temporary speech. No recordings or external services.
++// Temporary ambience only. Spoken audio is deferred to the separate audio project.
++const WIND_VOLUME=.5;
+ export function createAudio(notify){
+- let context,master,wind,water,on=true,current;
+- function init(){if(context)return;try{context=new(window.AudioContext||window.webkitAudioContext)();master=context.createGain();master.gain.value=on?.55:0;master.connect(context.destination);const buffer=context.createBuffer(1,context.sampleRate*4,context.sampleRate),data=buffer.getChannelData(0);let last=0;for(let i=0;i<data.length;i++){last=(last+Math.random()*.04-.02)/1.02;data[i]=last*3;}const source=context.createBufferSource();source.buffer=buffer;source.loop=true;const filter=context.createBiquadFilter();filter.type='lowpass';filter.frequency.value=650;wind=context.createGain();wind.gain.value=.25;source.connect(filter).connect(wind).connect(master);source.start();const stream=context.createBufferSource();stream.buffer=buffer;stream.loop=true;const high=context.createBiquadFilter();high.type='highpass';high.frequency.value=1000;water=context.createGain();water.gain.value=.02;stream.connect(high).connect(water).connect(master);stream.start();}catch{notify('Audio unavailable. Subtitles remain enabled.');}}
++ let context,master,wind,water,on=true;
++ function init(){if(context)return;try{context=new(window.AudioContext||window.webkitAudioContext)();master=context.createGain();master.gain.value=on?.55:0;master.connect(context.destination);const buffer=context.createBuffer(1,context.sampleRate*4,context.sampleRate),data=buffer.getChannelData(0);let last=0;for(let i=0;i<data.length;i++){last=(last+Math.random()*.04-.02)/1.02;data[i]=last*3;}const source=context.createBufferSource();source.buffer=buffer;source.loop=true;const filter=context.createBiquadFilter();filter.type='lowpass';filter.frequency.value=650;wind=context.createGain();wind.gain.value=.25*WIND_VOLUME;source.connect(filter).connect(wind).connect(master);source.start();const stream=context.createBufferSource();stream.buffer=buffer;stream.loop=true;const high=context.createBiquadFilter();high.type='highpass';high.frequency.value=1000;water=context.createGain();water.gain.value=.02;stream.connect(high).connect(water).connect(master);stream.start();}catch{notify('Audio unavailable. Subtitles remain enabled.');}}
+  function cancel(){if('speechSynthesis'in window)speechSynthesis.cancel();}
+  return {
+   set(enabled){on=enabled;if(on){init();context?.resume().catch(()=>{});}if(master)master.gain.setTargetAtTime(on?.55:0,context.currentTime,.1);if(!on)cancel();},
+-  speak(text){if(!on||!('speechSynthesis'in window))return;cancel();current=new SpeechSynthesisUtterance(text);current.rate=.72;current.pitch=.65;current.volume=.7;const voices=speechSynthesis.getVoices(),v=voices.find(v=>v.lang==='en-GB')||voices.find(v=>v.lang.startsWith('en'));if(v)current.voice=v;speechSynthesis.speak(current);},
++  speak(){/* Voice cues remain subtitle-only until the audio project. */},
+   step(){if(!on||!context||context.state!=='running')return;const osc=context.createOscillator(),g=context.createGain(),now=context.currentTime;osc.type='triangle';osc.frequency.setValueAtTime(75+Math.random()*25,now);osc.frequency.exponentialRampToValueAtTime(30,now+.1);g.gain.setValueAtTime(.11,now);g.gain.exponentialRampToValueAtTime(.001,now+.12);osc.connect(g).connect(master);osc.onended=()=>{osc.disconnect();g.disconnect();};osc.start();osc.stop(now+.13);},
+-  update(t,distance){if(wind)wind.gain.value=.23+Math.sin(t*.2)*.05;if(water)water.gain.setTargetAtTime(Math.max(.02,.22-distance*.014),context.currentTime,.5);},
++  update(t,distance){if(wind)wind.gain.value=(.23+Math.sin(t*.2)*.05)*WIND_VOLUME;if(water)water.gain.setTargetAtTime(Math.max(.02,.22-distance*.014),context.currentTime,.5);},
+   pause(){context?.suspend().catch(()=>{});cancel();},resume(){if(on)context?.resume().catch(()=>{});},cancel,
+-  status(){return {enabled:on,context:context?.state||'not-started',speechSupported:'speechSynthesis'in window};}
++  status(){return {enabled:on,context:context?.state||'not-started',speechEnabled:false,windVolume:WIND_VOLUME,windGain:wind?.gain.value??0};}
+  };
+ }
+diff --git a/docs/FENRIS-AND-WORLD.md b/docs/FENRIS-AND-WORLD.md
+index fa10b81..29ee504 100644
+--- a/docs/FENRIS-AND-WORLD.md
++++ b/docs/FENRIS-AND-WORLD.md
+@@ -14,10 +14,10 @@ Keep three things separate: what the developer knows from later lore, what Fenri
+ - Fenris is a **large Lupera**. He is alone.
+ - He has **no knowledge of who he is or where he came from**. The interface may name him for the player; that does not establish that he knows his name or history.
+ - He begins with **no weapons or magical abilities**. Do not reinterpret this as merely having forgotten how to use existing powers.
+-- The approved playable event is deliberately small: **Fenris wakes, hears voices, and can move around the scene**.
+-- The source of the voices, the cause of his amnesia, his origin, and the exact location have not been established for this opening.
++- **The voices wake Fenris. His first objective is to seek their source**, a prolonged search through the forest. Nearby observations do not complete this objective.
++- **Author-only knowledge, confirmed 25 October 2026:** the voices belong to spirits. This must not be revealed in opening dialogue, UI, journal entries, or interactions. Fenris does not yet know. The specific spirits, eventual encounter, cause of his amnesia, his origin, and exact location remain unspecified.
+ 
+-The current forest clearing, campfire, brook, bridge, trail, observation text, and voice lines are prototype choices. They are not automatically fixed geography or authored plot. Hearing a voice does not establish telepathy, spirit magic, or a supernatural bond. No companion, combat encounter, vision quest, or elemental trial is approved by this brief.
++The forest now generates as Fenris explores, with varied groves, undergrowth, clearings, stones and streams. Water is traversable at 30% movement speed; there is no bridge. Interactable objects use faint glowing baubles instead of floating labels. The starting clearing, campfire, observation text, and current voice lines remain prototype choices. They are not automatically fixed geography or authored plot. Hearing a voice does not establish telepathy, spirit magic, or a supernatural bond. No companion, combat encounter, vision quest, or elemental trial is approved by this brief.
+ 
+ ## What a Lupera is [B, C]
+ 
+@@ -25,7 +25,9 @@ Lupera are fully sapient, bipedal wolf-humanoids: people capable of speech, judg
+ 
+ Their physical vocabulary includes a fully furred body, pronounced muzzle, upright expressive ears, digitigrade legs, clawed hands with full dexterity, and a tail used for balance and expression. Their smell and hearing are strong; the species reference also describes good low-light vision. These are descriptive traits, not an approved package of gameplay abilities or numerical bonuses.
+ 
+-Fenris's supplied visual reference is the target for this game: tall and heavily built, muscular, grey-white fur, pale blue eyes, a natural wolf muzzle, expressive pointed ears, clawed hands and paws, a bare torso, and worn brown shorts tied with rope. His anatomy and silhouette matter more than surface texture. The current procedural model remains a placeholder for that standard. The reference image itself is not included in the repository.
++**Visual direction updated October 2026:** the author chose 2D pixel art and the approved wolf artwork for Fenris. The current private opening uses the approved white-and-grey Fenris with brown shorts, an upright build, and custom idle, walking, sleeping, sitting, and waking animations.
++
++The earlier 3D visual reference depicted him as tall and heavily built, muscular, with grey-white fur, pale blue eyes, a natural wolf muzzle, expressive pointed ears, clawed hands and paws, a bare torso, and worn brown shorts tied with rope. This description and the procedural model are historical visual references. The reference image itself is not included in the repository.
+ 
+ Later biographies include exact measurements, ages, scars, ceremonial clothing, and weapons. Those details are not all confirmed for the amnesiac opening. In particular, do not equip the later battleaxe Gorehowl, armour, totems, royal insignia, or glowing magical marks. [A, C, D]
+ 
+@@ -73,7 +75,7 @@ The supplied **01-The Story Begins.txt** provides a forest/campfire atmosphere a
+ 
+ Older timelines also use “Valora Year 1” rather than DR. The current civic timeline explicitly converts those years with **Valora year + 1470 = DR**, placing the founding in 1471 DR. Do not mistake a later file's “present” for this game's opening era. [E]
+ 
+-Still for the author to decide: the exact awakening location and circumstances; whether/how Fenris learns his name; who or what speaks; how his past is revealed; the first encounter after waking; when Croft appears; and how future abilities, equipment, relationships, and companions become part of the story. No answers are invented here.
++Still for the author to decide: the exact awakening location and circumstances; whether/how Fenris learns his name; the identities of the spirits and when their nature is revealed; how his past is revealed; the first encounter after waking; when Croft appears; and how future abilities, equipment, relationships, and companions become part of the story. No answers are invented here.
+ 
+ ## Source provenance
+ 
+diff --git a/index.html b/index.html
+index 52a27aa..6b9c138 100644
+--- a/index.html
++++ b/index.html
+@@ -12,7 +12,7 @@
+ <div class="vignette" aria-hidden="true"></div><div id="eyelids" aria-hidden="true"></div>
+ <header id="hud" class="hidden">
+  <div class="chapter"><span class="smallcaps">The beginning</span><h1>Awakening</h1><div class="chapter-line"></div></div>
+- <nav aria-label="Game options"><button id="sound" title="Toggle ambient sound and temporary voice audio">Sound on</button><button id="journal">Journal <kbd>J</kbd></button><button id="settings">Menu <kbd>Esc</kbd></button></nav>
++ <nav aria-label="Game options"><button id="sound" title="Toggle ambient sound">Sound on</button><button id="journal">Journal <kbd>J</kbd></button><button id="settings">Menu <kbd>Esc</kbd></button></nav>
+ </header>
+ <section id="objective" class="hidden"><span class="diamond" aria-hidden="true">◇</span><div><span class="smallcaps">First steps</span><p id="objective-text">Find your footing.</p></div></section>
+ <div id="interact" class="hidden"><button id="interact-button"><kbd>E</kbd> <span>Look closer</span></button></div>
+@@ -22,7 +22,7 @@
+ <div id="notice" role="status"></div>
+ <section id="start" class="screen">
+  <div class="start-content"><span class="eyebrow">A story yet to be remembered</span><h2>FENRIS</h2><div class="ornament" aria-hidden="true">──── ◇ ────</div><p class="subtitle">Awakening</p><p class="intro">An unfamiliar forest.<br>A voice beyond the trees.<br>No memory of how you came to be here.</p>
+- <button id="begin" class="primary" disabled>Preparing the forest…</button><label class="audio-choice"><input type="checkbox" id="enable-audio" checked> Ambient sound &amp; temporary voice audio</label><p class="prototype-note">Playable opening · Early 3D prototype<br>Voice lines and observations are placeholders for the author.</p></div>
++ <button id="begin" class="primary" disabled>Preparing the forest…</button><label class="audio-choice"><input type="checkbox" id="enable-audio" checked> Ambient sound</label><p class="prototype-note">Playable opening · Early 3D prototype<br>Voice lines and observations are placeholders for the author.</p></div>
+  <div class="start-bottom"><a href="/games/">← Ulfheim games</a><span>1468 DR · Before Valora</span></div>
+ </section>
+ <dialog id="panel"><button id="close-panel" class="close" aria-label="Close dialog">×</button><div id="panel-content"></div></dialog>
+diff --git a/package.json b/package.json
+index c6e2d51..6e39c8c 100644
+--- a/package.json
++++ b/package.json
+@@ -1,5 +1,5 @@
+ {
+   "name": "fenris-awakening", "private": true, "version": "0.1.0", "type": "module",
+   "scripts": { "start": "node serve.cjs", "test": "node --test tests/world.test.mjs" },
+-  "description": "A standalone 3D opening scene for Fenris. Three.js 0.180.0 is vendored locally."
++  "description": "Fenris Awakening: a private local pixel-art opening, with the earlier 3D prototype retained."
+ }
+diff --git a/serve.cjs b/serve.cjs
+index f1d4935..310020b 100644
+--- a/serve.cjs
++++ b/serve.cjs
+@@ -1,4 +1,5 @@
+ const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+ const root=__dirname,port=Number(process.env.PORT||8766);
++const privateEntry=path.join(root,'private-opening','index.html');
+ const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.txt':'text/plain; charset=utf-8'};
+-http.createServer((req,res)=>{let requested;try{requested=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400).end();return;}const target=path.resolve(root,'.'+(requested==='/'?'/index.html':requested));if(!target.startsWith(root+path.sep)||!Object.hasOwn(types,path.extname(target))){res.writeHead(403).end();return;}fs.readFile(target,(err,data)=>{if(err){res.writeHead(404).end('Not found');return;}res.writeHead(200,{'Content-Type':types[path.extname(target)],'Cache-Control':'no-store'});res.end(data);});}).listen(port,'127.0.0.1',()=>console.log(`Fenris preview: http://127.0.0.1:${port}`));
++http.createServer((req,res)=>{let requested;try{requested=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400).end();return;}if(requested==='/'&&fs.existsSync(privateEntry)){res.writeHead(302,{Location:'/private-opening/','Cache-Control':'no-store'}).end();return;}if(requested.endsWith('/'))requested+='index.html';const target=path.resolve(root,'.'+requested);if(!target.startsWith(root+path.sep)||!Object.hasOwn(types,path.extname(target))){res.writeHead(403).end();return;}fs.readFile(target,(err,data)=>{if(err){res.writeHead(404).end('Not found');return;}res.writeHead(200,{'Content-Type':types[path.extname(target)],'Cache-Control':'no-store'});res.end(data);});}).listen(port,'127.0.0.1',()=>console.log(`Fenris preview: http://127.0.0.1:${port}`));
+diff --git a/story.js b/story.js
+index f5494dc..4ec2d72 100644
+--- a/story.js
++++ b/story.js
+@@ -2,12 +2,16 @@
+ export const OPENING = {
+   facts: ['Fenris is a large Lupera.', 'He does not know who he is or where he came from.', 'He has no weapons and no magical abilities.'],
+   voices: [
+-    { id:'first', at:4, text:'Do you hear them calling?', duration:5 },
++    { id:'first', at:.25, text:'Do you hear them calling?', duration:5 },
+     { id:'second', at:14, text:'Listen…', duration:4 }
+   ],
+   observations: {
+     embers:{title:'Dying embers',text:'The last embers give off a little warmth. Nothing here tells you whose fire this was.'},
+     water:{title:'Running water',text:'Water moves over the stones. For a moment, its sound covers the voices.'},
+-    trail:{title:'An opening in the trees',text:'The trees thin ahead. You can see a way through, but you do not know where it leads.'}
++    trail:{title:'An opening in the trees',text:'The trees thin ahead. You can see a way through, but you do not know where it leads.'},
++    stone:{title:'Weathered stone',text:'Moisture fills the shallow cracks. Patches of moss soften the cold surface.'},
++    stump:{title:'An old stump',text:'The outer wood gives beneath your fingers. Small roots thread through the hollow centre.'},
++    flowers:{title:'Forest flowers',text:'Small pale flowers grow close to the ground. Their faint scent mixes with the damp earth.'},
++    fern:{title:'Thick undergrowth',text:'Damp fronds brush your hands. Beneath them, fallen leaves cover the soft earth.'}
+   }
+ };

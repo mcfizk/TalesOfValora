@@ -1,0 +1,80 @@
+{
+  "checks": [
+    "White portrait loaded",
+    "All nine animation sheets loaded",
+    "Legacy brown frames are not requested",
+    "Opening uses the breathing idle",
+    "left selects its walk sheet",
+    "left remains facing the same direction when stopped",
+    "left stops the walk cycle",
+    "right selects its walk sheet",
+    "right remains facing the same direction when stopped",
+    "right stops the walk cycle",
+    "up selects its walk sheet",
+    "up remains facing the same direction when stopped",
+    "up stops the walk cycle",
+    "down selects its walk sheet",
+    "down remains facing the same direction when stopped",
+    "down stops the walk cycle",
+    "up-left selects its walk sheet",
+    "up-left remains facing the same direction when stopped",
+    "up-left stops the walk cycle",
+    "down-right selects its walk sheet",
+    "down-right remains facing the same direction when stopped",
+    "down-right stops the walk cycle",
+    "up-right selects its walk sheet",
+    "up-right remains facing the same direction when stopped",
+    "up-right stops the walk cycle",
+    "down-left selects its walk sheet",
+    "down-left remains facing the same direction when stopped",
+    "down-left stops the walk cycle",
+    "All eight walking frames play",
+    "Shift uses the accelerated walking cycle",
+    "Pause freezes the rendered animation",
+    "Restart restores left-facing sleep",
+    "No browser or asset errors"
+  ],
+  "errors": [],
+  "directions": [
+    {
+      "direction": "left",
+      "movingFrame": 1,
+      "rest": "idle"
+    },
+    {
+      "direction": "right",
+      "movingFrame": 1,
+      "rest": "idle"
+    },
+    {
+      "direction": "up",
+      "movingFrame": 1,
+      "rest": "rest"
+    },
+    {
+      "direction": "down",
+      "movingFrame": 1,
+      "rest": "rest"
+    },
+    {
+      "direction": "up-left",
+      "movingFrame": 1,
+      "rest": "rest"
+    },
+    {
+      "direction": "down-right",
+      "movingFrame": 1,
+      "rest": "rest"
+    },
+    {
+      "direction": "up-right",
+      "movingFrame": 1,
+      "rest": "rest"
+    },
+    {
+      "direction": "down-left",
+      "movingFrame": 1,
+      "rest": "rest"
+    }
+  ]
+}

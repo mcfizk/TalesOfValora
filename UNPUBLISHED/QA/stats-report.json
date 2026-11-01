@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "Current 2D opening loads the CSV-defined Fenris sheet",
+    "Stats snapshots cannot modify the live sheet",
+    "Exploration still moves and does not spend HP or award XP",
+    "Opening audio preferences survive consolidation",
+    "The extended search remains the objective",
+    "Restart returns a fresh full-health sheet and sleeping Fenris",
+    "Both renderers use the same approved starting data",
+    "No browser or asset errors"
+  ],
+  "errors": []
+}

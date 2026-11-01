@@ -1,0 +1,26 @@
+[
+  {
+    "id": "02",
+    "prompt": "Edit this exact stag sprite. Preserve its head, antlers, torso, camera, colors, short tail and exact pixel-art style. Change leg pose ONLY. The NEAR FORELEG is the large light-brown foreground leg attached to the shoulder on the RIGHT side of the chest. Keep that leg PLANTED ahead to LEFT, slightly less extended than reference, gently flexed taking weight. The FAR foreleg behind it must be AIRBORNE folded backward to RIGHT. Near hindleg supports behind rump, far hindleg begins reaching forward. Exactly four naturally jointed legs, no extra hooves. Maintain leg lengths, same body scale and placement; full transparent background, no floor/shadow/text. Do not repeat the existing pose.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/Animals/walk-review/deer/source/01.png",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-ec1b2063-4087-495f-ba29-2789d0e5b145.png"
+  },
+  {
+    "id": "03",
+    "prompt": "Edit this exact stag sprite. Preserve its head, antlers, torso, camera, colors, short tail and exact pixel-art style. Change leg pose ONLY. NEAR FORELEG (large foreground right-side shoulder) must be STRAIGHT DOWN, hoof PLANTED directly below its shoulder. FAR FORELEG is behind it, knee bent FORWARD LEFT, hoof AIRBORNE forward of the planted hoof. Near hind hoof planted behind rump, far hind hoof just contacting ahead. This is near foreleg MIDSTANCE, not a bent airborne foreground leg. Exactly four naturally jointed legs, no extra hooves. Maintain leg lengths, same body scale and placement; full transparent background, no floor/shadow/text. Do not repeat the existing pose.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/Animals/walk-review/deer/source/01.png",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-842bc452-fcea-4797-9713-b2e9774a037d.png"
+  },
+  {
+    "id": "04",
+    "prompt": "Edit this exact stag sprite. Preserve its head, antlers, torso, camera, colors, short tail and exact pixel-art style. Change leg pose ONLY. NEAR FORELEG (foreground right-side shoulder) extends BACKWARDS diagonally RIGHT, hoof planted behind chest on toes. FAR FORELEG behind it extends FORWARD LEFT, hoof planted ahead. Both forehooves on ground, foreground hoof distinctly to RIGHT of far hoof. Near hindleg begins lifting behind, far hind supports. Exactly four naturally jointed legs, no extra hooves. Maintain leg lengths, same body scale and placement; full transparent background, no floor/shadow/text. Do not repeat the existing pose.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/Animals/walk-review/deer/source/01.png",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c2db3a69-40e5-44ed-a994-4bb5a6f3d801.png"
+  },
+  {
+    "id": "08",
+    "prompt": "Edit this exact stag sprite. Preserve its head, antlers, torso, camera, colors, short tail and exact pixel-art style. Change leg pose ONLY. NEAR FORELEG (foreground right-side shoulder) extends FORWARD LEFT, hoof visibly AIRBORNE reaching before contact. FAR FORELEG behind it angles backward RIGHT, hoof on ground supporting. Foreground reaching leg must OVERLAP the far leg, not be hidden behind. Near hind supports, far hind lifted. Exactly four naturally jointed legs, no extra hooves. Maintain leg lengths, same body scale and placement; full transparent background, no floor/shadow/text. Do not repeat the existing pose.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/Animals/walk-review/deer/source/07.png",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-8d4c578e-74f8-4c01-b790-a4ecf8841729.png"
+  }
+]

@@ -1,0 +1,180 @@
+{
+  "direction": "left",
+  "frames": [
+    {
+      "id": "01",
+      "role": "Near contact: foreground leg forward planted heel, far leg behind on toe; foreground arm back, far arm forward.",
+      "source": "source/01.png",
+      "sourceFlipped": false,
+      "sourceHash": "593beeb27e1d401d8d400fc6c292187897d61dadba72a729763196a5cda017d8",
+      "waist": 555,
+      "scale": 0.44,
+      "translation": [
+        11.800000000000011,
+        37.120000000000005
+      ],
+      "bounds": [
+        74,
+        128,
+        437,
+        609
+      ],
+      "pixelHash": "b9046f10c4396fa16bef883864e849ccd304d28ebc3176bdfa59db1d0aba5e77"
+    },
+    {
+      "id": "02",
+      "role": "Near settle: foreground knee flexed taking weight; far trailing heel lifting.",
+      "source": "source/02.png",
+      "sourceFlipped": false,
+      "sourceHash": "bbfb287526df9ab63b5f823893279e726391f5121679cc6132b2adb53e2916a0",
+      "waist": 560,
+      "scale": 0.43269709543568463,
+      "translation": [
+        13.689626556016606,
+        46.62838174273861
+      ],
+      "bounds": [
+        68,
+        136,
+        431,
+        609
+      ],
+      "pixelHash": "9633007f8035bffdb1da099d9035c9c7fb419f31eb898b748fec0ea668b846b0"
+    },
+    {
+      "id": "03",
+      "role": "Far passing: foreground leg supports under pelvis; far knee passes with boot airborne; arms near neutral.",
+      "source": "source/03.png",
+      "sourceFlipped": false,
+      "sourceHash": "76f4f500c7db573cce7cbcf5753f25ceb5b9bec9b80c323f2caa01268271fc0c",
+      "waist": 560,
+      "scale": 0.4131297709923664,
+      "translation": [
+        24.647328244274803,
+        65.49496183206111
+      ],
+      "bounds": [
+        92,
+        118,
+        427,
+        609
+      ],
+      "pixelHash": "5ba8c02d4d1fbe42bcf8258c25b6784e72445d79dec97d0505dfaab4965c5e62"
+    },
+    {
+      "id": "04",
+      "role": "Far reach: foreground leg behind on toe support; far leg reaches forward airborne; foreground arm forward.",
+      "source": "source/04.png",
+      "sourceFlipped": false,
+      "sourceHash": "cabb83debe0c6a39ebc3448b9c4b1f8a7adb3b10db89337c6ea0307d0e23b350",
+      "waist": 560,
+      "scale": 0.42944,
+      "translation": [
+        15.513599999999997,
+        52.586880000000065
+      ],
+      "bounds": [
+        80,
+        122,
+        443,
+        609
+      ],
+      "pixelHash": "8f8b47003f3ac200cd4e02c745f182a765d4a8f434d5dad60567a49ea4d66f3c"
+    },
+    {
+      "id": "05",
+      "role": "Far contact: far leg forward planted, foreground leg behind on toe; foreground arm forward.",
+      "source": "source/05.png",
+      "sourceFlipped": false,
+      "sourceHash": "6e3816f890374ab646f5d63e2f6085df9dee198f93b5de4cc1583b24657b2660",
+      "waist": 540,
+      "scale": 0.4258634538152611,
+      "translation": [
+        26.03373493975903,
+        51.69301204819271
+      ],
+      "bounds": [
+        106,
+        128,
+        443,
+        609
+      ],
+      "pixelHash": "9b6e387705ea403216990468fc3f2339f3c1fa949cd01d3fe4adba0b56d685c1"
+    },
+    {
+      "id": "06",
+      "role": "Far settle: far knee flexes supporting, foreground trailing heel lifting.",
+      "source": "source/06.png",
+      "sourceFlipped": false,
+      "sourceHash": "d09a22d0a3b8ad345e82e545b228eeceb98ab83e98013269b8dbca90622e70bf",
+      "waist": 555,
+      "scale": 0.45938325991189427,
+      "translation": [
+        1.0422907488986937,
+        11.42361233480176
+      ],
+      "bounds": [
+        132,
+        136,
+        425,
+        609
+      ],
+      "pixelHash": "7349ae1c78e87196b85ea3d0c1d4c0861d8e625806ef78b23dd976eafcc74e45"
+    },
+    {
+      "id": "07",
+      "role": "Near passing: far leg supports, foreground knee passes with boot airborne; arms neutral.",
+      "source": "source/07.png",
+      "sourceFlipped": false,
+      "sourceHash": "fb07019a84314b6c8f00706d9bea171c779eb0ab60252a0c801014d290db9d5e",
+      "waist": 560,
+      "scale": 0.40845283018867923,
+      "translation": [
+        27.266415094339635,
+        72.4760754716981
+      ],
+      "bounds": [
+        146,
+        118,
+        397,
+        609
+      ],
+      "pixelHash": "37974175372242f1fcd81918075d473cc833a4d2a585c29a8b9096fc471ef550"
+    },
+    {
+      "id": "08",
+      "role": "Near reach: far leg behind on toe support, foreground leg reaches forward airborne; foreground arm back.",
+      "source": "source/08.png",
+      "sourceFlipped": false,
+      "sourceHash": "6966752c9957b44da39e328758f2db94de46e7ad485e9408b9b47ed184d7786c",
+      "waist": 550,
+      "scale": 0.4667826086956522,
+      "translation": [
+        -0.730434782608711,
+        17.652869565217316
+      ],
+      "bounds": [
+        86,
+        122,
+        443,
+        609
+      ],
+      "pixelHash": "a26fe6eafe79a4ed630944e1122617d02f3f9fd13452b081fad11c8c6287b0b0"
+    }
+  ],
+  "ground": 610,
+  "uniformScale": null,
+  "perFrameUniformScales": [
+    0.44,
+    0.43269709543568463,
+    0.4131297709923664,
+    0.42944,
+    0.4258634538152611,
+    0.45938325991189427,
+    0.40845283018867923,
+    0.4667826086956522
+  ],
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "gifFrames": 8
+}

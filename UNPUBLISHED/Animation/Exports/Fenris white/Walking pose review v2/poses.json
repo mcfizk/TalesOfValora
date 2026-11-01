@@ -1,0 +1,104 @@
+{
+  "status": "eight-pose animation preview; revised frame 06",
+  "direction": "left",
+  "method": "built-in image generation; individual pose edits",
+  "nearLegDefinition": "Leg on the viewer-facing side, identified by the large visible shorts panel; its screen position changes through the stride.",
+  "frames": [
+    {
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-6942d530-a2db-4237-8773-1fa630cc186e.png",
+      "role": "near-leg contact",
+      "prompt": "Use case: stylized-concept. Create ONE isolated pixel-art animation key pose of Fenris, on a truly transparent background, full body completely visible, no labels or other images. Portrait canvas 1024x1280.\nReference image 1 is the exact character identity, proportions, white and grey fur, blue eye, brown ragged shorts, bushy short tail, pixel-art outlines and shading to preserve. Reference image 2 clarifies which leg belongs to the visible near hip: the near leg is on the RIGHT side of that pelvis and currently supporting him. Keep the camera locked to the same three-quarter LEFT-facing view. Do not mirror the character or turn his head.\nThis requested pose is the OPPOSITE FOOT CONTACT, frame 05 of a leftward walk. This is deliberately NOT reference 1's leg arrangement.\nThe FAR leg (behind the pelvis, partially occluded at the hip) reaches forward toward screen LEFT; its foot has just planted far left ahead of the pelvis. The NEAR leg (the large visible thigh on the screen RIGHT side of the shorts) extends BACKWARD toward screen RIGHT, its heel/hock raised and toes contacting the ground behind the pelvis. Show the large NEAR THIGH as the rear/right thigh, with its shorts panel continuing into that rear leg. Make it completely clear that the foreground near leg trails and the background far leg leads.\nThe NEAR ARM swings FORWARD toward screen LEFT, and the far arm swings back toward screen RIGHT. Upright torso, relaxed walking, not running or fighting. Both legs separated in a moderate long contact stride, coherent pelvis and knees, identical limb lengths and body mass to references, grounded feet. Fenris has wolf feet and hocks; preserve their original anatomy. Consistent face and hair, no blue fur above the eye, no lip color. Pixel-art detail, crisp contours, original palette, no blur, no ground shadow. Center him with both feet around 94% canvas height and ear tips around 12%; leave clear padding. Anatomical leg assignment is the highest priority.",
+      "review": "Generated while requesting opposite contact; retained as near-leg contact because that is the actual pose.",
+      "id": "01",
+      "file": "Fenris_walk_left_01_contact-near.png"
+    },
+    {
+      "id": "02",
+      "ref": "01",
+      "role": "near-leg weight settling",
+      "prompt": "Edit this EXACT Fenris sprite into the NEXT leftward walking key pose: weight settling / down position immediately after this contact. Keep this exact identity, pixel art, white-grey fur, blue eye, brown shorts, face, tail and LEFT-facing three-quarter camera. The NEAR leg is the large visible thigh on the LEFT/front, and remains the leading supporting leg. Bend that near knee to absorb weight and bring its planted paw slightly back toward the pelvis; the paw sole stays flat on the ground. Lower the pelvis, torso, and head slightly as that knee flexes. The FAR leg still trails screen RIGHT, but its heel/hock is higher and only the toes are touching the ground, about to leave it. The near arm remains behind/right, starting to swing toward neutral; far arm is forward/left. Do not swap legs, do not repeat the straight contact pose, do not crouch deeply. Natural walking weight transfer, moderate stride narrower than the reference. Full body, same scale and limb lengths, crisp pixel edges, truly transparent background, no shadows, no labels, no extra objects.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a5fdc7af-a262-4607-867b-aab1a2085195.png",
+      "hint": "Generated images are saved to C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1 as C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a5fdc7af-a262-4607-867b-aab1a2085195.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "file": "Fenris_walk_left_02_settle-near.png"
+    },
+    {
+      "id": "03",
+      "ref": "05",
+      "role": "near-leg support, far-leg passing",
+      "prompt": "Edit this Fenris sprite to a distinctly NARROW PASSING POSE in a LEFTWARD WALK. Preserve exact character, face, muscular white/grey anatomy, shorts, tail, camera and crisp pixel-art style. NEAR LEG (large visible shorts panel on screen RIGHT in the input): bring this leg directly UNDER the pelvis; it is the single straight weight-bearing leg and its paw is flat on the ground directly under the body. FAR LEG (left/background thigh in input): lift this foot COMPLETELY OFF the ground, bend its knee, and carry the knee modestly forward toward screen LEFT; the bent lower leg and paw hang just beside the supporting shin. Neither foot is stretched far forward/back: the silhouette of the legs must be narrow. This is an ordinary low walking step, not a high-knee march. The NEAR ARM is passing vertically beside the body, hand by upper thigh, and far arm similarly near neutral with a slight opposite swing. Upright torso; normal body height, fixed limb lengths, no squashing. Keep the supporting near thigh in front of the lifted far thigh where they overlap. One flat planted paw and one clearly airborne paw. Full body transparent PNG, no ground shadow, no labels.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-ce3a123b-b956-4a45-b4be-70a9a54e69e0.png",
+      "file": "Fenris_walk_left_03_passing-far.png"
+    },
+    {
+      "id": "04",
+      "ref": "03",
+      "role": "near-leg push-off, far-leg reaching",
+      "prompt": "Edit this exact Fenris sprite into the NEXT phase of its leftward walk: UP / PUSH-OFF, just BEFORE the far foot lands. Keep the character identity, proportions, white-grey fur, brown shorts, tail and crisp pixel style. Preserve which leg is which: the large visible NEAR thigh on the RIGHT remains the supporting leg, while the FAR thigh on the LEFT is airborne. Shift the planted NEAR leg BEHIND the pelvis toward screen RIGHT, raise its heel/hock so ONLY its toe tips touch the ground. The pelvis/head rise slightly on this toe support. Swing the FAR leg FORWARD toward screen LEFT and unfold its knee so the far paw reaches forward and DOWN, hovering a small distance above the ground, ready to land. Unlike the input, both legs must now be separated in a forward-reaching stride, not a narrow bent-knee passing pose. The NEAR arm swings forward LEFT; far arm backward RIGHT. Exactly TWO arms and TWO legs; the forearm in front of the chest replaces the vertical near arm, do not leave an extra hanging arm. The near thigh and its shorts panel stay on the rear/right; the extended far thigh stays behind it on the forward/left. Full body, true transparency, no text or shadow.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-80ec91c2-b18f-42e6-974a-e28f2d7a0c42.png",
+      "file": "Fenris_walk_left_04_reach-far.png"
+    },
+    {
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-236c16d7-3089-4f3b-b6bd-965d07deb443.png",
+      "role": "far-leg contact",
+      "prompt": "Edit the attached Fenris sprite into the NEXT walking pose. Preserve the head, torso, arms, shorts style, tail, pixel-art rendering, and left-facing camera. Change ONLY the legs and the shorts folds needed for the new leg positions. The currently RAISED BACKGROUND LEG on the LEFT must extend forward/down until its foot plants on the ground far to the LEFT. The currently STRAIGHT FOREGROUND LEG on the RIGHT must angle backward to the RIGHT, ending behind the pelvis on its toes with heel lifted. This produces far-leg-forward contact, near-leg-behind push-off. Keep the large visible near thigh on the RIGHT behind the other thigh, not pointing left. The near arm remains extended forward LEFT exactly as in the input. Two anatomically distinct legs of equal length, no extra limbs, no mirroring, no turn, no typography. Full body isolated on transparent background, same proportions and framing as the attached image.",
+      "review": "Far thigh leads left, large near shorts panel and thigh trail right. Near arm forward.",
+      "id": "05",
+      "file": "Fenris_walk_left_05_contact-far.png"
+    },
+    {
+      "id": "06",
+      "ref": "05",
+      "role": "far-leg weight settling",
+      "prompt": "Correct FRAME 06 of this Fenris walk. The input is frame 05 CONTACT. Create a visibly different DOWN / WEIGHT-ABSORPTION pose, NOT another long-stride contact. Keep the exact left-facing character, camera, white-grey fur, blue eye, brown shorts and pixel-art style. FAR/background leg is the leading leg on the LEFT; NEAR/foreground thigh is the large shorts panel on the RIGHT. Keep those identities. Move the planted FAR paw BACK toward the pelvis until it is almost beneath the front of the torso, and bend the far knee substantially to bear weight: thigh slopes forward-left, shin returns down-right to the flat planted paw. LOWER the pelvis, torso and head by about 65 pixels relative to the fixed ground level, using knee flexion, never shrinking bones. The NEAR leg on the RIGHT trails behind: bend its knee and hock and lift its paw JUST CLEAR of the ground behind the pelvis, toes pointing down as it begins recovery. It must no longer be a second flat planted paw. The stride is distinctly narrower than the input. Near arm is still forward but moving back toward neutral, far arm still behind. Exactly two arms and two legs. A readable small downward weight shift, not a deep squat, not a high-knee march. Full body transparent PNG, same canvas and drawing scale, same grounded left-paw baseline. Preserve Fenris identity and anatomy. The difference in weight transfer and foot placement must be unmistakable when compared side-by-side with the input.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-2f98c203-c53a-48e4-afaf-2df1e277b5bf.png",
+      "hint": "Generated images are saved to C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1 as C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-dc511270-1de8-4952-acbe-3ce14efa031f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "file": "Fenris_walk_left_06_settle-far-v2.png",
+      "review": "User identified insufficient distinction between frames 05 and 06. New frame visibly bends the supporting far knee, narrows the stride, and lifts the trailing near paw."
+    },
+    {
+      "id": "07",
+      "ref": "07",
+      "role": "far-leg support, near-leg passing",
+      "prompt": "Precise correction to this sprite: it has an EXTRA THIRD ARM. Remove the extra backward arm and black-clawed hand on the FAR RIGHT, immediately ABOVE the tail, behind the long foreground hanging arm. Replace that extra limb with transparency or the correct small back/hip contour. Keep exactly TWO arms: the long foreground arm hanging vertically down beside the near thigh, and the partly hidden far arm down the LEFT side of the torso. Do NOT add any new arms. Preserve ALL leg positions exactly: near knee lifted in front, far foot planted under body. Keep the rest of the sprite unchanged: face, proportions, fur, shorts, tail, view and pixel rendering. Transparent background.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-bc16c5d2-f7fe-42aa-bf79-6c97217603c2.png",
+      "file": "Fenris_walk_left_07_passing-near.png"
+    },
+    {
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-ff8b9d58-c5d2-4b87-ba77-a46cc29056ee.png",
+      "role": "far-leg push-off, near-leg reaching",
+      "prompt": "Make one precise pose correction to this LEFT-facing Fenris sprite. It is the frame just BEFORE the front paw lands. Lift the large FOREGROUND paw on the LEFT completely OFF the ground: bend that near knee a little and keep the paw reaching forward, but leave a clearly visible transparent gap below ALL of its claws and sole. That gap should be about one claw-height, roughly 60 pixels on this image. The small background paw on the RIGHT remains at the current lowest baseline, planted on its toes and supporting him; do not move it up. Preserve the torso, head, arms, shorts identity, tail and proportions; do not shrink the leg to lift the paw. This must read as one airborne reaching paw on the LEFT and one grounded supporting paw on the RIGHT, not two planted paws. Same crisp pixel art, same transparent canvas, no lines, no labels, no additional limbs.",
+      "id": "08",
+      "file": "Fenris_walk_left_08_reach-near.png"
+    }
+  ],
+  "notes": [
+    "Eight distinct phase roles, not an animation timing export.",
+    "Original artwork and game files were not overwritten.",
+    "Source PNGs retain generated transparency and native dimensions.",
+    "Contact sheet uses one uniform scale for all poses; no limb warping."
+  ],
+  "discardedAttempts": [
+    {
+      "id": "07",
+      "ref": "01",
+      "role": "far-leg support, near-leg passing",
+      "prompt": "Edit this Fenris sprite to the OPPOSITE NARROW PASSING POSE in a LEFTWARD WALK. Preserve exact character, face, muscular white/grey anatomy, shorts, tail, camera and crisp pixel-art style. FAR LEG (the darker background leg currently trailing screen RIGHT): bring it directly UNDER the pelvis; it is the single straight weight-bearing leg and its paw is flat on the ground directly under the body. NEAR LEG (the large visible shorts panel and thigh currently leading screen LEFT): lift this paw COMPLETELY OFF the ground, bend its knee, and carry that near knee modestly forward toward screen LEFT; its bent lower leg and paw hang just in front of the supporting shin. Neither foot is stretched far forward/back: leg silhouette is narrow. This is an ordinary low walking step, not a high-knee march. The NEAR ARM passes vertically beside the body, hand by upper thigh, far arm similarly near neutral with slight opposite swing. Upright torso, normal body height, unchanged limb lengths. The lifted near thigh and calf must overlap IN FRONT of the supporting far leg where they cross. One flat planted paw and one clearly airborne paw. Full body transparent PNG, no shadows, no labels.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-50dc1e69-e2d6-4190-8016-e6aec966e20b.png"
+    },
+    {
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-d7f7d296-0bdb-4c8d-8aa5-31e9924b7bc5.png",
+      "role": "far-leg push-off, near-leg reaching",
+      "prompt": "Edit this exact Fenris sprite into the NEXT LEFTWARD walking phase: UP / PUSH-OFF immediately before the NEAR foot lands. Preserve the character identity, camera, pixel-art style, fur, shorts, tail, and limb lengths. The large visible NEAR thigh on the LEFT is the airborne leg: unfold its bent knee and reach this near paw FORWARD toward screen LEFT and DOWN until it hovers just above ground, ready to plant. The FAR background leg that is currently supporting him under the body must now extend BEHIND the pelvis toward screen RIGHT, heel/hock raised, only its TOES touching the ground. Raise the pelvis/head slightly on that far toe support. This should be a wider reaching stride, clearly different from the narrow passing pose in the input. The NEAR ARM swings BACKWARD toward screen RIGHT; the FAR ARM swings FORWARD toward screen LEFT, opposite the legs. Exactly TWO arms and TWO legs: replace the hanging near arm with the backward arm, do not retain it as a third arm. Keep the leading near thigh visibly in front of the trailing far thigh at their overlap. No horizontal mirroring, no turn, no new clothes, no background, no ground shadow, no text. Full character fully visible on genuine transparency."
+    },
+    {
+      "id": "06",
+      "ref": "05",
+      "role": "far-leg weight settling",
+      "prompt": "Edit this EXACT Fenris sprite into the NEXT leftward walking key pose: weight settling / down position immediately after this far-foot contact. Keep the exact identity, white-grey fur, blue eye, brown shorts, face, tail, pixel art, and LEFT-facing three-quarter camera. Keep the leg identities from the input: the FAR background leg on the LEFT is forward and supporting; the NEAR foreground thigh is the large shorts panel on the RIGHT and trails behind. Bend the FAR supporting knee to absorb weight and bring its planted paw slightly back toward the pelvis; the paw sole stays flat on the ground. Lower pelvis, torso, and head slightly as that knee flexes. The NEAR leg still trails screen RIGHT, but its heel/hock is higher and only its toes touch the ground, about to lift. Near arm stays forward/left starting toward neutral, far arm back/right. Do not exchange the two shorts panels or swap the leg identities. Do not repeat the straight contact pose. Moderate narrower stride, relaxed walk, no deep crouch. Full body, unchanged limb lengths, crisp pixel edges, truly transparent background, no shadows, no labels.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-dc511270-1de8-4952-acbe-3ce14efa031f.png",
+      "hint": "Generated images are saved to C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1 as C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-dc511270-1de8-4952-acbe-3ce14efa031f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "file": "Fenris_walk_left_06_settle-far.png",
+      "reason": "User identified insufficient distinction between frames 05 and 06. New frame visibly bends the supporting far knee, narrows the stride, and lifts the trailing near paw."
+    }
+  ]
+}

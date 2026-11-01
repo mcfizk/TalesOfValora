@@ -1,0 +1,34 @@
+[
+  {
+    "file": "pose-01.png",
+    "x": 25,
+    "y": 112,
+    "width": 832,
+    "height": 310,
+    "opaque_pixels": 184757
+  },
+  {
+    "file": "pose-02.png",
+    "x": 913,
+    "y": 112,
+    "width": 832,
+    "height": 310,
+    "opaque_pixels": 184869
+  },
+  {
+    "file": "pose-03.png",
+    "x": 26,
+    "y": 517,
+    "width": 831,
+    "height": 311,
+    "opaque_pixels": 185267
+  },
+  {
+    "file": "pose-04.png",
+    "x": 913,
+    "y": 517,
+    "width": 831,
+    "height": 311,
+    "opaque_pixels": 184760
+  }
+]

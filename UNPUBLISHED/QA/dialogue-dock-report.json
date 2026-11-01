@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "harl has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "edra has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "woodcutter has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "farmer has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "resident has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "washer has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "vendor has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "innkeeper has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "trader has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "blacksmith has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "herbalist has a cropped portrait beside Fenris in a bottom non-modal conversation",
+    "Fenris choice is retained next to his portrait",
+    "Checks still use live stats and pause the world clock",
+    "Escape closes conversation and restores play",
+    "Journal now uses a non-modal side dock",
+    "Landscape conversation stays docked and scrolls within the screen",
+    "Phone conversation leaves the upper world visible without horizontal overflow",
+    "Keyboard Space activates a focused dialogue choice",
+    "Phone Leave action closes the conversation",
+    "No browser errors"
+  ],
+  "errors": []
+}

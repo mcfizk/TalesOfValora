@@ -1,0 +1,27 @@
+{
+  "method": "Built-in image generation",
+  "purpose": "Static animal sprite review; not integrated or animated",
+  "images": [
+    {
+      "id": "deer",
+      "design": "An adult red deer stag, natural quadruped anatomy, elegant long slim legs with cloven hooves, reddish brown coat, cream belly and rump, dark nose, alert ears, modest branching antlers fully visible. Calm standing idle pose, all four legs anatomically connected and distinguishable.",
+      "prompt": "Create ONE static full-body animal sprite for BookOfFenris. The two supplied game sprites are STYLE REFERENCES ONLY, not anatomical references. Match their detailed fantasy RPG pixel-art rendering: crisp stepped pixels, dark thin outlines, warm earthy restrained palette, clustered hard-edged shading, upper-left light, same rendering quality. An adult red deer stag, natural quadruped anatomy, elegant long slim legs with cloven hooves, reddish brown coat, cream belly and rump, dark nose, alert ears, modest branching antlers fully visible. Calm standing idle pose, all four legs anatomically connected and distinguishable. Three-quarter LEFT-facing view, mostly side silhouette with a little front visible, matching the camera of the references. Believable animal anatomy. No accessories, armor, weapons, people, text, border, scenery, floor or cast shadow. Fully transparent background. Entire animal including ears/antlers/tail/feet inside canvas with padding. Single isolated still pose, NOT a sprite sheet, no animation. Use deliberate pixel clusters, not smooth digital painting or blurred antialiasing.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-43c3c185-1911-4e8f-a71e-6d1721b1ce85.png",
+      "file": "deer-idle.png"
+    },
+    {
+      "id": "wolf",
+      "design": "An ordinary wild grey wolf, NOT a werewolf or anthropomorphic character. Natural quadruped canine anatomy, long horizontal torso, strong chest, four slender digitigrade legs with paws, pointed ears, long muzzle, bushy downward relaxed tail. Grey-brown guard fur, pale cream muzzle/belly, muted amber eyes, closed mouth. Calm alert standing idle pose. No clothing, no human hands.",
+      "prompt": "Create ONE static full-body animal sprite for BookOfFenris. The two supplied game sprites are STYLE REFERENCES ONLY, not anatomical references. Match their detailed fantasy RPG pixel-art rendering: crisp stepped pixels, dark thin outlines, warm earthy restrained palette, clustered hard-edged shading, upper-left light, same rendering quality. An ordinary wild grey wolf, NOT a werewolf or anthropomorphic character. Natural quadruped canine anatomy, long horizontal torso, strong chest, four slender digitigrade legs with paws, pointed ears, long muzzle, bushy downward relaxed tail. Grey-brown guard fur, pale cream muzzle/belly, muted amber eyes, closed mouth. Calm alert standing idle pose. No clothing, no human hands. Three-quarter LEFT-facing view, mostly side silhouette with a little front visible, matching the camera of the references. Believable animal anatomy. No accessories, armor, weapons, people, text, border, scenery, floor or cast shadow. Fully transparent background. Entire animal including ears/antlers/tail/feet inside canvas with padding. Single isolated still pose, NOT a sprite sheet, no animation. Use deliberate pixel clusters, not smooth digital painting or blurred antialiasing.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-b286c22e-600a-45ae-ac54-bb1eaf956442.png",
+      "file": "wolf-idle.png"
+    },
+    {
+      "id": "hare",
+      "design": "An adult European brown hare, distinctly a HARE with very long upright black-tipped ears, lean elongated body, long powerful hind legs, narrower face than a rabbit, short pale tail, tawny brown mottled fur and cream belly. Natural relaxed alert crouch, forepaws planted, hind feet visible. Mature wild animal, not a baby bunny or mascot.",
+      "prompt": "Create ONE static full-body animal sprite for BookOfFenris. The two supplied game sprites are STYLE REFERENCES ONLY, not anatomical references. Match their detailed fantasy RPG pixel-art rendering: crisp stepped pixels, dark thin outlines, warm earthy restrained palette, clustered hard-edged shading, upper-left light, same rendering quality. An adult European brown hare, distinctly a HARE with very long upright black-tipped ears, lean elongated body, long powerful hind legs, narrower face than a rabbit, short pale tail, tawny brown mottled fur and cream belly. Natural relaxed alert crouch, forepaws planted, hind feet visible. Mature wild animal, not a baby bunny or mascot. Three-quarter LEFT-facing view, mostly side silhouette with a little front visible, matching the camera of the references. Believable animal anatomy. No accessories, armor, weapons, people, text, border, scenery, floor or cast shadow. Fully transparent background. Entire animal including ears/antlers/tail/feet inside canvas with padding. Single isolated still pose, NOT a sprite sheet, no animation. Use deliberate pixel clusters, not smooth digital painting or blurred antialiasing.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-ea564bfd-fea7-45f6-8718-6e149646d506.png",
+      "file": "hare-idle.png"
+    }
+  ]
+}

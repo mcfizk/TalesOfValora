@@ -1,0 +1,162 @@
+{
+  "direction": "up-left",
+  "frames": [
+    {
+      "id": "01",
+      "role": "Near-leg contact",
+      "source": "source/01.png",
+      "sourceHash": "868e5dcdfe8d60f9395931937d7647e36c1403f27bc5ea4ff893adb930723f9a",
+      "waist": 574.45,
+      "scale": 0.44,
+      "translation": [
+        3.2419999999999902,
+        43.72000000000003
+      ],
+      "bounds": [
+        104,
+        92,
+        411,
+        609
+      ],
+      "pixelHash": "a380affe6d9dd631867a22e19d1b46a82e239bf59b723dbbddf407b287d2bbe9"
+    },
+    {
+      "id": "02",
+      "role": "Near-leg settle",
+      "source": "source/02.png",
+      "sourceHash": "cbf512e933bdd965f53b59fa893384df62eff5d7f290fb26e2a7201036527077",
+      "waist": 585.7833333333333,
+      "scale": 0.44,
+      "translation": [
+        -1.7446666666666601,
+        47.67999999999995
+      ],
+      "bounds": [
+        122,
+        102,
+        413,
+        609
+      ],
+      "pixelHash": "ea141753058a652c217cca65dc39ed264113977350c99667b9c543ed88f42143"
+    },
+    {
+      "id": "03",
+      "role": "Far-leg passing",
+      "source": "source/03.png",
+      "sourceHash": "15d9936e2fe33e138eb8af5cfc74704014c24508bf8bee0e9a28c4e4f6dee69e",
+      "waist": 580.45,
+      "scale": 0.44,
+      "translation": [
+        0.6019999999999754,
+        35.360000000000014
+      ],
+      "bounds": [
+        100,
+        84,
+        403,
+        609
+      ],
+      "pixelHash": "fb9dc2279903667a6025432fb571bd47feceac904e11dec22a76260e3b2c3054"
+    },
+    {
+      "id": "04",
+      "role": "Far-leg reach",
+      "source": "source/04.png",
+      "sourceHash": "6e572a7bb3861a4238927f8330436946f614f6631c7fae7eba948814ac7e70fa",
+      "waist": 583.0166666666667,
+      "scale": 0.44,
+      "translation": [
+        -0.5273333333333312,
+        34.91999999999996
+      ],
+      "bounds": [
+        88,
+        86,
+        423,
+        609
+      ],
+      "pixelHash": "0f055e507a4272e6a9f9dd24190de5dcd3a533dd0b571edba09474c93ed1ce40"
+    },
+    {
+      "id": "05",
+      "role": "Far-leg contact",
+      "source": "source/05.png",
+      "sourceHash": "a7f7bf9af19911713a933a43c066b4c560c8c3f2f3210b2b66edc8b1409d2bb2",
+      "waist": 589.2666666666667,
+      "scale": 0.44,
+      "translation": [
+        -3.277333333333331,
+        31.399999999999977
+      ],
+      "bounds": [
+        88,
+        80,
+        423,
+        609
+      ],
+      "pixelHash": "3448d9c515f19ea62fe43ebbc1c7228ceb2aa24b499cda1c155b20eaad04b6f6"
+    },
+    {
+      "id": "06",
+      "role": "Far-leg settle",
+      "source": "source/06.png",
+      "sourceHash": "b4da18d76372a77ff9bb3fe19ee7ba6ff3c3afc76e232210bf0311eface1c53a",
+      "waist": 580.9166666666666,
+      "scale": 0.44,
+      "translation": [
+        0.3966666666666754,
+        38.43999999999994
+      ],
+      "bounds": [
+        84,
+        88,
+        409,
+        609
+      ],
+      "pixelHash": "88de2ed23cdfe3b6bfa8c5a5a7d03d8d4db75e7fa229391b0c8cab94a75acaf0"
+    },
+    {
+      "id": "07",
+      "role": "Near-leg passing",
+      "source": "source/07.png",
+      "sourceHash": "cd1563fec164641137dbb165599850c6ff9edd2a81d46d92f0c34d00794d5372",
+      "waist": 573.05,
+      "scale": 0.44,
+      "translation": [
+        3.8580000000000325,
+        29.200000000000045
+      ],
+      "bounds": [
+        102,
+        76,
+        409,
+        609
+      ],
+      "pixelHash": "d4b212a70f07bdf730e183cf3e354665d489988a9a3aafc3997ade3b9db315a8"
+    },
+    {
+      "id": "08",
+      "role": "Near-leg reach",
+      "source": "source/08.png",
+      "sourceHash": "f8fa8fcf4904cdbc9276c40cfb93e0548480ecf5c4edfdf8d24bfa06fe9c0cf8",
+      "waist": 596.8166666666667,
+      "scale": 0.44,
+      "translation": [
+        -6.599333333333334,
+        26.120000000000005
+      ],
+      "bounds": [
+        76,
+        74,
+        417,
+        609
+      ],
+      "pixelHash": "1315fec120845d57597ab70d156389942953e15136e81116209f83d4fde65967"
+    }
+  ],
+  "ground": 610,
+  "uniformScale": 0.44,
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "gifFrames": 8
+}

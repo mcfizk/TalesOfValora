@@ -1,0 +1,21 @@
+{
+  "checks": [
+    "Continue is disabled with no saves",
+    "New Game offers exactly three slots",
+    "Cancelling slot selection leaves the title intact",
+    "A selected slot is saved with the full journey",
+    "Continue is enabled after a reload",
+    "Empty slots cannot be continued",
+    "Continue restores forest seed, interior, position and game clock",
+    "Continue restores health, inventory, shop stock, journal and memories",
+    "A second slot starts a fresh independent game",
+    "Starting slot two preserves slot one",
+    "An occupied slot requires explicit replacement",
+    "Cancelling replacement preserves both the running game and saved slot",
+    "Confirmed replacement resets only the chosen slot",
+    "A damaged slot does not block valid saves",
+    "Mobile slot selection fits the viewport",
+    "No browser errors"
+  ],
+  "errors": []
+}

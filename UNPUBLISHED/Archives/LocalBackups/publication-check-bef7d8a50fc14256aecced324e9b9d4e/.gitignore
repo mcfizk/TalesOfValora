@@ -1,0 +1,13 @@
+/backups/
+/node_modules/
+/*.png
+/test-results.json
+/live-verification.json
+*.log
+.env
+.env.*
+!.env.example
+
+# Generated captures and reports; keep the output directory for browser checks.
+/private-opening/qa/*
+!/private-opening/qa/.gitkeep

@@ -1,0 +1,5 @@
+{
+  "id": "06",
+  "prompt": "Precise pose correction of this exact Rixa sprite. Preserve face/hair/body/proportions/clothing/camera/tail, barefoot anatomy and right-facing orientation. Change ONLY leg and arm articulation into this phase: OPPOSITE settle. The foreground RIGHT leg with BOTH large square thigh patch and lower shin patch trails BACKWARD screen LEFT, knee bends and foot lifts just above ground behind pelvis. The far LEFT leg has NO large square patches: forward screen RIGHT and supports weight with bent knee and foot FLAT PLANTED. Body a little lower than contact. Foreground patched RIGHT sleeve/arm swings FORWARD screen RIGHT; far LEFT arm BACK LEFT. This must reverse source limb positions, not repeat source. Keep the LARGE PATCHES attached to the foreground RIGHT leg to make limb identity unambiguous. Exactly two arms/two legs. Keep torso/head scale unchanged. Full figure, genuine transparent background NO halo/shadow/floor/text, crisp pixel-art edges.",
+  "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a1863f-3647-7cc1-8b04-f73f0c6ce61a\\exec-c0e79010-a353-4531-ac2c-a4d817238013.png"
+}

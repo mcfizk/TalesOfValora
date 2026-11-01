@@ -1,0 +1,77 @@
+{
+  "direction": "left",
+  "frames": [
+    {
+      "id": "01",
+      "direction": "left",
+      "role": "Near-leg contact",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-01.png",
+      "prompt": "Image 1 supplies ONLY the EXACT approved walking POSE, limb overlap and frame timing. Image 2 supplies the HUMAN MAN's identity, clothing, proportions and pixel-art rendering. Replace the woman in image1 with the man in image2, keeping image1's exact limb assignment and gesture. Normal adult HUMAN man, brown tousled hair, short full brown beard and moustache, olive tunic with cream V-neck and rolled cuffs, brown buckle belt with hanging strap, brown trousers and brown boots. Preserve image2's face, adult build, male shoulders and design. No ponytail or feminine face, no armor/weapons. LEFT-facing three-quarter walk, not direction change. Phase 01: near leg reaches forward into heel/paw contact; far leg trails on toes; near arm swings backward, far arm forward. Near limb means viewer-facing thigh and arm, not always screen-left! COPY image1's near/far overlap precisely. Full body genuinely transparent background, same anatomical scale, crisp stepped pixel-art edges and shading, no smoothing, no text or ground shadow. Exactly two arms/two legs, no extra limbs. Do not copy the idle pose of image2.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-55ca7cc5-2cc3-49a4-a990-0c1cbf1a3edc.png",
+      "file": "source/01.png"
+    },
+    {
+      "id": "02",
+      "direction": "left",
+      "role": "Near-leg settle",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-02.png",
+      "prompt": "Image 1 supplies ONLY the EXACT approved walking POSE, limb overlap and frame timing. Image 2 supplies the HUMAN MAN's identity, clothing, proportions and pixel-art rendering. Replace the woman in image1 with the man in image2, keeping image1's exact limb assignment and gesture. Normal adult HUMAN man, brown tousled hair, short full brown beard and moustache, olive tunic with cream V-neck and rolled cuffs, brown buckle belt with hanging strap, brown trousers and brown boots. Preserve image2's face, adult build, male shoulders and design. No ponytail or feminine face, no armor/weapons. LEFT-facing three-quarter walk, not direction change. Phase 02: near knee bends taking weight on planted paw; far trailing paw begins lifting; near arm back approaches neutral; pelvis slightly lower. Near limb means viewer-facing thigh and arm, not always screen-left! COPY image1's near/far overlap precisely. Full body genuinely transparent background, same anatomical scale, crisp stepped pixel-art edges and shading, no smoothing, no text or ground shadow. Exactly two arms/two legs, no extra limbs. Do not copy the idle pose of image2.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a72a32d9-0d48-4bef-a71e-0d83e91e335c.png",
+      "file": "source/02.png"
+    },
+    {
+      "id": "03",
+      "direction": "left",
+      "role": "Far-leg passing",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-03.png",
+      "prompt": "Image 1 supplies ONLY the EXACT approved walking POSE, limb overlap and frame timing. Image 2 supplies the HUMAN MAN's identity, clothing, proportions and pixel-art rendering. Replace the woman in image1 with the man in image2, keeping image1's exact limb assignment and gesture. Normal adult HUMAN man, brown tousled hair, short full brown beard and moustache, olive tunic with cream V-neck and rolled cuffs, brown buckle belt with hanging strap, brown trousers and brown boots. Preserve image2's face, adult build, male shoulders and design. No ponytail or feminine face, no armor/weapons. LEFT-facing three-quarter walk, not direction change. Phase 03: near leg supports upright under pelvis; far knee bends and passes forward with paw clearly airborne near supporting calf; arms close to neutral. Near limb means viewer-facing thigh and arm, not always screen-left! COPY image1's near/far overlap precisely. Full body genuinely transparent background, same anatomical scale, crisp stepped pixel-art edges and shading, no smoothing, no text or ground shadow. Exactly two arms/two legs, no extra limbs. Do not copy the idle pose of image2.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-2b769b2b-b172-484b-9a80-52ded931f5a2.png",
+      "file": "source/03.png"
+    },
+    {
+      "id": "04",
+      "direction": "left",
+      "role": "Far-leg reach",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-04.png",
+      "prompt": "Image 1 supplies ONLY the EXACT approved walking POSE, limb overlap and frame timing. Image 2 supplies the HUMAN MAN's identity, clothing, proportions and pixel-art rendering. Replace the woman in image1 with the man in image2, keeping image1's exact limb assignment and gesture. Normal adult HUMAN man, brown tousled hair, short full brown beard and moustache, olive tunic with cream V-neck and rolled cuffs, brown buckle belt with hanging strap, brown trousers and brown boots. Preserve image2's face, adult build, male shoulders and design. No ponytail or feminine face, no armor/weapons. LEFT-facing three-quarter walk, not direction change. Phase 04: near leg extends behind on toe support; far leg extends forward airborne just before contact; near arm swings forward, far arm backward. Near limb means viewer-facing thigh and arm, not always screen-left! COPY image1's near/far overlap precisely. Full body genuinely transparent background, same anatomical scale, crisp stepped pixel-art edges and shading, no smoothing, no text or ground shadow. Exactly two arms/two legs, no extra limbs. Do not copy the idle pose of image2.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-0fbab11d-7972-4f8e-8b74-5519ecdd3187.png",
+      "file": "source/04.png"
+    },
+    {
+      "id": "05",
+      "direction": "left",
+      "role": "Far-leg contact",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-05.png",
+      "prompt": "Image 1 supplies ONLY the EXACT approved walking POSE, limb overlap and frame timing. Image 2 supplies the HUMAN MAN's identity, clothing, proportions and pixel-art rendering. Replace the woman in image1 with the man in image2, keeping image1's exact limb assignment and gesture. Normal adult HUMAN man, brown tousled hair, short full brown beard and moustache, olive tunic with cream V-neck and rolled cuffs, brown buckle belt with hanging strap, brown trousers and brown boots. Preserve image2's face, adult build, male shoulders and design. No ponytail or feminine face, no armor/weapons. LEFT-facing three-quarter walk, not direction change. Phase 05: far leg reaches forward into paw contact; near leg trails on toes; near arm forward, far arm backward. Near limb means viewer-facing thigh and arm, not always screen-left! COPY image1's near/far overlap precisely. Full body genuinely transparent background, same anatomical scale, crisp stepped pixel-art edges and shading, no smoothing, no text or ground shadow. Exactly two arms/two legs, no extra limbs. Do not copy the idle pose of image2.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-2948a576-d975-490a-bf67-07ce80eec5a3.png",
+      "file": "source/05.png"
+    },
+    {
+      "id": "06",
+      "direction": "left",
+      "role": "Far-leg settle",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-06.png",
+      "prompt": "Image 1 supplies ONLY the EXACT approved walking POSE, limb overlap and frame timing. Image 2 supplies the HUMAN MAN's identity, clothing, proportions and pixel-art rendering. Replace the woman in image1 with the man in image2, keeping image1's exact limb assignment and gesture. Normal adult HUMAN man, brown tousled hair, short full brown beard and moustache, olive tunic with cream V-neck and rolled cuffs, brown buckle belt with hanging strap, brown trousers and brown boots. Preserve image2's face, adult build, male shoulders and design. No ponytail or feminine face, no armor/weapons. LEFT-facing three-quarter walk, not direction change. Phase 06: far knee bends taking weight on planted paw; near trailing paw begins lifting; near arm forward approaches neutral; pelvis slightly lower. Near limb means viewer-facing thigh and arm, not always screen-left! COPY image1's near/far overlap precisely. Full body genuinely transparent background, same anatomical scale, crisp stepped pixel-art edges and shading, no smoothing, no text or ground shadow. Exactly two arms/two legs, no extra limbs. Do not copy the idle pose of image2.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-3ce0de18-6a3d-4e7e-acdc-f533e5f8cdd6.png",
+      "file": "source/06.png"
+    },
+    {
+      "id": "07",
+      "direction": "left",
+      "role": "Near-leg passing",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-07.png",
+      "prompt": "Image 1 supplies ONLY the EXACT approved walking POSE, limb overlap and frame timing. Image 2 supplies the HUMAN MAN's identity, clothing, proportions and pixel-art rendering. Replace the woman in image1 with the man in image2, keeping image1's exact limb assignment and gesture. Normal adult HUMAN man, brown tousled hair, short full brown beard and moustache, olive tunic with cream V-neck and rolled cuffs, brown buckle belt with hanging strap, brown trousers and brown boots. Preserve image2's face, adult build, male shoulders and design. No ponytail or feminine face, no armor/weapons. LEFT-facing three-quarter walk, not direction change. Phase 07: far leg supports upright under pelvis; near knee bends and passes forward with paw clearly airborne near supporting calf; arms close to neutral. Near limb means viewer-facing thigh and arm, not always screen-left! COPY image1's near/far overlap precisely. Full body genuinely transparent background, same anatomical scale, crisp stepped pixel-art edges and shading, no smoothing, no text or ground shadow. Exactly two arms/two legs, no extra limbs. Do not copy the idle pose of image2.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-42bfbdc2-83c4-4329-88d5-45910fd9b1a3.png",
+      "file": "source/07.png"
+    },
+    {
+      "id": "08",
+      "direction": "left",
+      "role": "Near-leg reach",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-08.png",
+      "prompt": "Image 1 supplies ONLY the EXACT approved walking POSE, limb overlap and frame timing. Image 2 supplies the HUMAN MAN's identity, clothing, proportions and pixel-art rendering. Replace the woman in image1 with the man in image2, keeping image1's exact limb assignment and gesture. Normal adult HUMAN man, brown tousled hair, short full brown beard and moustache, olive tunic with cream V-neck and rolled cuffs, brown buckle belt with hanging strap, brown trousers and brown boots. Preserve image2's face, adult build, male shoulders and design. No ponytail or feminine face, no armor/weapons. LEFT-facing three-quarter walk, not direction change. Phase 08: far leg extends behind on toe support; near leg extends forward airborne before contact; near arm backward, far arm forward. Near limb means viewer-facing thigh and arm, not always screen-left! COPY image1's near/far overlap precisely. Full body genuinely transparent background, same anatomical scale, crisp stepped pixel-art edges and shading, no smoothing, no text or ground shadow. Exactly two arms/two legs, no extra limbs. Do not copy the idle pose of image2.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a8a53ec9-61a5-4b2b-af6e-2a2a6f160977.png",
+      "file": "source/08.png"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "clip": "sitToStand",
+    "id": "05",
+    "prompt": "Create ONE RIGHT-facing Rixa sit-to-stand frame. Image1 supplies the precise intermediate pose stage but facesleft; redraw that stage facingRIGHT. Image2 is Rixa RIGHT-facing standingidentity. Stage: Low squat on both planted feet, knees deeply bent, torso leaning forward, hands on thighs. Keep same slenderadult darkfeline anatomy greeneyes pale muzzle short tousledhair, vest/tunic patchedtrousers BAREfeet sheathedknife and paletiptail. Head andfeet faceRIGHT, tailbalancesLEFT. Preserve headsize/bodybuild and natural twoarms/twolegs. KnifeLEFT hip mostlyhidden far side, no near duplicate. Crisp pixelart and transparent background NO floor/shadow/glow/text. Fullfigure generouslypadded. Change pose not bodyproportions.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-d02725ba-3593-479d-8278-2e44ea52bb4c.png"
+  },
+  {
+    "clip": "sitToStand",
+    "id": "06",
+    "prompt": "Create ONE RIGHT-facing Rixa sit-to-stand frame. Image1 supplies the precise intermediate pose stage but facesleft; redraw that stage facingRIGHT. Image2 is Rixa RIGHT-facing standingidentity. Stage: Nearly risen: knees moderately bent, back straightens, hands release thighs and lower. Keep same slenderadult darkfeline anatomy greeneyes pale muzzle short tousledhair, vest/tunic patchedtrousers BAREfeet sheathedknife and paletiptail. Head andfeet faceRIGHT, tailbalancesLEFT. Preserve headsize/bodybuild and natural twoarms/twolegs. KnifeLEFT hip mostlyhidden far side, no near duplicate. Crisp pixelart and transparent background NO floor/shadow/glow/text. Fullfigure generouslypadded. Change pose not bodyproportions.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-5f93fc57-b22f-45d1-aaac-e925c5a02a44.png"
+  },
+  {
+    "clip": "sitToStand",
+    "id": "07",
+    "prompt": "Create ONE RIGHT-facing Rixa sit-to-stand frame. Image1 supplies the precise intermediate pose stage but facesleft; redraw that stage facingRIGHT. Image2 is Rixa RIGHT-facing standingidentity. Stage: Almost upright relaxed stance, knees slightlysoft, hands near sides, shoulders settling. Keep same slenderadult darkfeline anatomy greeneyes pale muzzle short tousledhair, vest/tunic patchedtrousers BAREfeet sheathedknife and paletiptail. Head andfeet faceRIGHT, tailbalancesLEFT. Preserve headsize/bodybuild and natural twoarms/twolegs. KnifeLEFT hip mostlyhidden far side, no near duplicate. Crisp pixelart and transparent background NO floor/shadow/glow/text. Fullfigure generouslypadded. Change pose not bodyproportions.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-1c3abe60-926d-4120-b61b-47c6c8d8a7bc.png"
+  },
+  {
+    "id": "02",
+    "prompt": "Edit this EXACT seated Rixa. Keep her hips ON THE GROUND and knees drawn up exactly as reference. Change ONLY leaning torso slightly FORWARD over knees, lowering the hand from knee toward ground beside feet, as first preparation to rise. Remain SEATED; do NOT crouch, squat, kneel or stand yet. Preserve face, RIGHT-facing camera, clothes, tail, body/head proportions, both barefeet, pixelart. Fullbody transparentbackground, no floor/glow/text.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-94cd37f6-525a-43b3-b18c-0266ad94f01e.png"
+  }
+]

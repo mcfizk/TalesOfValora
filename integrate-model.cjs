@@ -1,1 +1,0 @@
-const fs=require('fs');let s=fs.readFileSync('visuals.js','utf8');s=s.replace('return {fur,ground,bark};',"const response=await fetch('./assets/fenris-sculpt.json');if(!response.ok)throw new Error('Character model failed to load');const model=await response.json();return {fur,ground,bark,model};");fs.writeFileSync('visuals.js',s);

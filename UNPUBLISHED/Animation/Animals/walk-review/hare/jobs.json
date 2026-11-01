@@ -1,0 +1,42 @@
+[
+  {
+    "id": "01",
+    "phase": 0,
+    "prompt": "Create ONE frame of this exact adult brown hare making a gentle hop LEFT. Preserve identity, tawny coat and cream underside, long black-tipped ears, long hind feet, compact natural hare anatomy and three-quarter LEFT camera. Frame 1 of8: Ready/recovery: body supported with hind legs folded beneath haunches, both long hind feet grounded, forepaws grounded beneath chest, chest moderately raised. Calm forward intent. Exactly two forelegs and two hindlegs with natural joints, two ears and short tail. Maintain consistent torso/head size and limb lengths across cycle; change pose, not age or species. Pixel-art game sprite with same crisp stepped outlines and clustered shading as reference. Full animal inside transparent canvas with padding. No text, floor, cast shadow, motion blur or extra animals."
+  },
+  {
+    "id": "02",
+    "phase": 1,
+    "prompt": "Create ONE frame of this exact adult brown hare making a gentle hop LEFT. Preserve identity, tawny coat and cream underside, long black-tipped ears, long hind feet, compact natural hare anatomy and three-quarter LEFT camera. Frame 2 of8: Compression: crouch LOW, knees deeply folded, haunches lowered, long hind feet flat under rump, forepaws grounded, body compact and leaning slightly forward. Head lower than ready pose. Exactly two forelegs and two hindlegs with natural joints, two ears and short tail. Maintain consistent torso/head size and limb lengths across cycle; change pose, not age or species. Pixel-art game sprite with same crisp stepped outlines and clustered shading as reference. Full animal inside transparent canvas with padding. No text, floor, cast shadow, motion blur or extra animals."
+  },
+  {
+    "id": "03",
+    "phase": 2,
+    "prompt": "Create ONE frame of this exact adult brown hare making a gentle hop LEFT. Preserve identity, tawny coat and cream underside, long black-tipped ears, long hind feet, compact natural hare anatomy and three-quarter LEFT camera. Frame 3 of8: Push-off: both powerful hind legs extending BACK RIGHT with hind toes still contacting ground; chest rising forward LEFT, forepaws lifting and tucking. Body beginning to elongate diagonally, not yet fully airborne. Exactly two forelegs and two hindlegs with natural joints, two ears and short tail. Maintain consistent torso/head size and limb lengths across cycle; change pose, not age or species. Pixel-art game sprite with same crisp stepped outlines and clustered shading as reference. Full animal inside transparent canvas with padding. No text, floor, cast shadow, motion blur or extra animals."
+  },
+  {
+    "id": "04",
+    "phase": 3,
+    "prompt": "Create ONE frame of this exact adult brown hare making a gentle hop LEFT. Preserve identity, tawny coat and cream underside, long black-tipped ears, long hind feet, compact natural hare anatomy and three-quarter LEFT camera. Frame 4 of8: Early flight: ALL FOUR FEET AIRBORNE. Body extended nearly horizontal LEFT, both hind legs stretched trailing RIGHT, forelegs reaching forward LEFT but slightly bent. Ears angled back only slightly. Low gentle bound, not huge leap. Exactly two forelegs and two hindlegs with natural joints, two ears and short tail. Maintain consistent torso/head size and limb lengths across cycle; change pose, not age or species. Pixel-art game sprite with same crisp stepped outlines and clustered shading as reference. Full animal inside transparent canvas with padding. No text, floor, cast shadow, motion blur or extra animals."
+  },
+  {
+    "id": "05",
+    "phase": 4,
+    "prompt": "Create ONE frame of this exact adult brown hare making a gentle hop LEFT. Preserve identity, tawny coat and cream underside, long black-tipped ears, long hind feet, compact natural hare anatomy and three-quarter LEFT camera. Frame 5 of8: Mid-flight gather: ALL FOUR FEET AIRBORNE. Hind legs fold and swing FORWARD beneath belly, forelegs extended forward and down LEFT, body rounded moderately. Head steady looking LEFT. Exactly two forelegs and two hindlegs with natural joints, two ears and short tail. Maintain consistent torso/head size and limb lengths across cycle; change pose, not age or species. Pixel-art game sprite with same crisp stepped outlines and clustered shading as reference. Full animal inside transparent canvas with padding. No text, floor, cast shadow, motion blur or extra animals."
+  },
+  {
+    "id": "06",
+    "phase": 5,
+    "prompt": "Create ONE frame of this exact adult brown hare making a gentle hop LEFT. Preserve identity, tawny coat and cream underside, long black-tipped ears, long hind feet, compact natural hare anatomy and three-quarter LEFT camera. Frame 6 of8: Late flight before landing: ALL FOUR FEET still airborne, front toes approaching ground, both forelegs reaching DOWN LEFT, chest tilted slightly down, hind legs tucked forward beneath belly. This is NOT the stretched early-flight pose. Exactly two forelegs and two hindlegs with natural joints, two ears and short tail. Maintain consistent torso/head size and limb lengths across cycle; change pose, not age or species. Pixel-art game sprite with same crisp stepped outlines and clustered shading as reference. Full animal inside transparent canvas with padding. No text, floor, cast shadow, motion blur or extra animals."
+  },
+  {
+    "id": "07",
+    "phase": 6,
+    "prompt": "Create ONE frame of this exact adult brown hare making a gentle hop LEFT. Preserve identity, tawny coat and cream underside, long black-tipped ears, long hind feet, compact natural hare anatomy and three-quarter LEFT camera. Frame 7 of8: Landing/compression: both forepaws grounded beneath chest, hind feet come down forward beneath body alongside forepaws, haunches lowered, back gently rounded. All weight close to ground; no airborne feet. Exactly two forelegs and two hindlegs with natural joints, two ears and short tail. Maintain consistent torso/head size and limb lengths across cycle; change pose, not age or species. Pixel-art game sprite with same crisp stepped outlines and clustered shading as reference. Full animal inside transparent canvas with padding. No text, floor, cast shadow, motion blur or extra animals."
+  },
+  {
+    "id": "08",
+    "phase": 7,
+    "prompt": "Create ONE frame of this exact adult brown hare making a gentle hop LEFT. Preserve identity, tawny coat and cream underside, long black-tipped ears, long hind feet, compact natural hare anatomy and three-quarter LEFT camera. Frame 8 of8: Recovery: hind feet grounded under rump, hind knees folded, forepaws beneath chest, chest rising back toward upright starting pose. Less compressed than landing, same adult proportions. Exactly two forelegs and two hindlegs with natural joints, two ears and short tail. Maintain consistent torso/head size and limb lengths across cycle; change pose, not age or species. Pixel-art game sprite with same crisp stepped outlines and clustered shading as reference. Full animal inside transparent canvas with padding. No text, floor, cast shadow, motion blur or extra animals."
+  }
+]

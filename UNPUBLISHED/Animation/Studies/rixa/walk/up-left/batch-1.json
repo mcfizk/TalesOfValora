@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01",
+    "role": "Near leg CONTACT forward planted, far leg trailing on toes. Near arm back/far arm ahead.",
+    "guide": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/01.png",
+    "prompt": "Image1 is ONLY exact walk pose and leg-overlap guide; Image2 is Rixa identity and camera. Transfer that gesture to Rixa, NOT wolf anatomy. Rixa is a slender adult female dark-grey feline humanoid with green eyes, pale muzzle, short tousled charcoal hair, upright feline ears, whiskers and long dark tail with pale tip; worn charcoal tunic with rolled sleeves, plain brown vest, patched brown trousers, belt and SHEATHED knife, BARE furry feline feet. No boots, crown, armor, wolf face or bulky muscles. REAR THREE-QUARTER UP-LEFT view: back of vest dominates, only slight side muzzle, NO chest. Near leg CONTACT forward planted, far leg trailing on toes. Near arm back/far arm ahead. Match guide's planted vs airborne foot and opposite arm swing. Preserve camera throughcycle, anatomical LEFT hip knife/LEFT ear hoop, RIGHT trouser patches, tail attached sacrum and not coveringfeet. Stable face/head/torso dimensions, natural joints, twoarms twolegs. Detailed crisp pixelart, fullbody and tail withpadding, transparent background, no text/glow/shadow/floor.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-2ed32737-ee0d-4594-900e-3688221ccd46.png"
+  },
+  {
+    "id": "02",
+    "role": "Near leg SETTLE forward knee flexes weight, far heel lifts behind; near arm back/far ahead.",
+    "guide": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/02.png",
+    "prompt": "Image1 is ONLY exact walk pose and leg-overlap guide; Image2 is Rixa identity and camera. Transfer that gesture to Rixa, NOT wolf anatomy. Rixa is a slender adult female dark-grey feline humanoid with green eyes, pale muzzle, short tousled charcoal hair, upright feline ears, whiskers and long dark tail with pale tip; worn charcoal tunic with rolled sleeves, plain brown vest, patched brown trousers, belt and SHEATHED knife, BARE furry feline feet. No boots, crown, armor, wolf face or bulky muscles. REAR THREE-QUARTER UP-LEFT view: back of vest dominates, only slight side muzzle, NO chest. Near leg SETTLE forward knee flexes weight, far heel lifts behind; near arm back/far ahead. Match guide's planted vs airborne foot and opposite arm swing. Preserve camera throughcycle, anatomical LEFT hip knife/LEFT ear hoop, RIGHT trouser patches, tail attached sacrum and not coveringfeet. Stable face/head/torso dimensions, natural joints, twoarms twolegs. Detailed crisp pixelart, fullbody and tail withpadding, transparent background, no text/glow/shadow/floor.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-bbb93717-567d-4cdc-b679-3e73f439a395.png"
+  },
+  {
+    "id": "03",
+    "role": "Near leg SUPPORT vertical, far leg PASSING bent knee clearly AIRBORNE, arms neutral.",
+    "guide": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/03.png",
+    "prompt": "Image1 is ONLY exact walk pose and leg-overlap guide; Image2 is Rixa identity and camera. Transfer that gesture to Rixa, NOT wolf anatomy. Rixa is a slender adult female dark-grey feline humanoid with green eyes, pale muzzle, short tousled charcoal hair, upright feline ears, whiskers and long dark tail with pale tip; worn charcoal tunic with rolled sleeves, plain brown vest, patched brown trousers, belt and SHEATHED knife, BARE furry feline feet. No boots, crown, armor, wolf face or bulky muscles. REAR THREE-QUARTER UP-LEFT view: back of vest dominates, only slight side muzzle, NO chest. Near leg SUPPORT vertical, far leg PASSING bent knee clearly AIRBORNE, arms neutral. Match guide's planted vs airborne foot and opposite arm swing. Preserve camera throughcycle, anatomical LEFT hip knife/LEFT ear hoop, RIGHT trouser patches, tail attached sacrum and not coveringfeet. Stable face/head/torso dimensions, natural joints, twoarms twolegs. Detailed crisp pixelart, fullbody and tail withpadding, transparent background, no text/glow/shadow/floor.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-cb5ae2b4-58c6-4a93-9c65-09dd3aea04b5.png"
+  },
+  {
+    "id": "04",
+    "role": "Near leg PUSH-OFF behind, far leg REACHING forward clearly AIRBORNE before contact; near arm forward/far back.",
+    "guide": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/fenris/up-left/source/04.png",
+    "prompt": "Image1 is ONLY exact walk pose and leg-overlap guide; Image2 is Rixa identity and camera. Transfer that gesture to Rixa, NOT wolf anatomy. Rixa is a slender adult female dark-grey feline humanoid with green eyes, pale muzzle, short tousled charcoal hair, upright feline ears, whiskers and long dark tail with pale tip; worn charcoal tunic with rolled sleeves, plain brown vest, patched brown trousers, belt and SHEATHED knife, BARE furry feline feet. No boots, crown, armor, wolf face or bulky muscles. REAR THREE-QUARTER UP-LEFT view: back of vest dominates, only slight side muzzle, NO chest. Near leg PUSH-OFF behind, far leg REACHING forward clearly AIRBORNE before contact; near arm forward/far back. Match guide's planted vs airborne foot and opposite arm swing. Preserve camera throughcycle, anatomical LEFT hip knife/LEFT ear hoop, RIGHT trouser patches, tail attached sacrum and not coveringfeet. Stable face/head/torso dimensions, natural joints, twoarms twolegs. Detailed crisp pixelart, fullbody and tail withpadding, transparent background, no text/glow/shadow/floor.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-18093e02-ce00-44f7-84be-9588e45d3acb.png"
+  }
+]

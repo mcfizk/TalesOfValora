@@ -1,0 +1,14 @@
+{
+  "directions": [
+    "left",
+    "up-left",
+    "right",
+    "up-right",
+    "up",
+    "down"
+  ],
+  "allFramesReachable": true,
+  "wraparound": true,
+  "playbackAdvances": true,
+  "pageErrors": []
+}

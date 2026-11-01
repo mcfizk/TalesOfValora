@@ -1,0 +1,153 @@
+{
+  "direction": "down",
+  "frames": [
+    {
+      "id": "01",
+      "role": "Near-leg contact",
+      "source": "source/01.png",
+      "sourceHash": "ed26bef672c81ebb44b7086b919a0612912abbc3d3819ec2aa4176da08932acb",
+      "waist": 560.55,
+      "scale": 0.44,
+      "translation": [
+        9.358000000000033,
+        14.67999999999995
+      ],
+      "bounds": [
+        100,
+        48,
+        411,
+        609
+      ],
+      "pixelHash": "7072102ea0ee797c0840a7f62953e20bdbb544fa15a04cf5dc5a1b51f3790eb1"
+    },
+    {
+      "id": "02",
+      "role": "Near-leg settle",
+      "source": "source/02.png",
+      "sourceHash": "939c6303a4d7045cf2fdba88b9a00d5683d1f2549caada58b9dca98d4c2c0c06",
+      "waist": 561.9333333333333,
+      "scale": 0.44,
+      "translation": [
+        8.749333333333368,
+        30.08000000000004
+      ],
+      "bounds": [
+        100,
+        78,
+        407,
+        609
+      ],
+      "pixelHash": "51029a7423a60423b7a668801a8fe840aaa8d8c07e9281393c06919ac416978b"
+    },
+    {
+      "id": "03",
+      "role": "Opposite leg passing",
+      "source": "source/03.png",
+      "sourceHash": "f49bd77f199b4e32a3d433657d3c6eda378feda2508f50068d48c293b7f1d2a2",
+      "waist": 555.7166666666667,
+      "scale": 0.44,
+      "translation": [
+        11.48466666666664,
+        20.399999999999977
+      ],
+      "bounds": [
+        100,
+        56,
+        413,
+        609
+      ],
+      "pixelHash": "071ad85b840b9c27d35120b6291d6e745ea8043c76d2688ac174f6d694b17111"
+    },
+    {
+      "id": "04",
+      "source": "source/04.png",
+      "sourceHash": "46f4ef041ff91df06a18de2f1ce26f1528d5715814173e25be7164277af12720",
+      "waist": 565.2666666666667,
+      "scale": 0.44,
+      "translation": [
+        7.282666666666671,
+        5.8799999999999955
+      ],
+      "bounds": [
+        78,
+        34,
+        439,
+        609
+      ],
+      "pixelHash": "2dc8afbc423004cd01bbc94f948eae2f0bdbf482dfe3c58adc146a2a5c24083d"
+    },
+    {
+      "id": "05",
+      "role": "Opposite Near-leg contact",
+      "mirrorOf": "01",
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        100,
+        48,
+        411,
+        609
+      ],
+      "pixelHash": "64c1f228e114fcb00874fa542eb359c7966b50ec99e4cbd0d4c4914908f51d23"
+    },
+    {
+      "id": "06",
+      "role": "Opposite Near-leg settle",
+      "mirrorOf": "02",
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        104,
+        78,
+        411,
+        609
+      ],
+      "pixelHash": "41ef306507f1c04eb98960f9ddf0b5bda75a0cbb91907322ed98bf8734927e28"
+    },
+    {
+      "id": "07",
+      "role": "Opposite Opposite leg passing",
+      "mirrorOf": "03",
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        98,
+        56,
+        411,
+        609
+      ],
+      "pixelHash": "ad399a41e07a93dcf389a99777b06c3d4a5b0ec4ae7998177cf52a3173d291dc"
+    },
+    {
+      "id": "08",
+      "role": "Opposite undefined",
+      "mirrorOf": "04",
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        72,
+        34,
+        433,
+        609
+      ],
+      "pixelHash": "c24775e09852a581a7e769ec7013f32e76c76a30b1b15577f36d0c4b6da83612"
+    }
+  ],
+  "ground": 610,
+  "uniformScale": 0.44,
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "gifFrames": 8
+}

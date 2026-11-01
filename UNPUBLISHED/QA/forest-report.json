@@ -1,0 +1,56 @@
+{
+  "checks": [
+    "Voices begin while Fenris is still asleep",
+    "Opening subtitle is above the waking veil",
+    "First objective seeks the voices",
+    "Floating E prompt and object label are removed",
+    "Clicking a bauble shows object text without a dialog",
+    "A generated forest object shows inline text",
+    "Journal retains the generated discovery",
+    "Discoveries do not complete the search",
+    "Spirit identity is not revealed in visible text",
+    "Actual keyboard movement wades at 20.4 pixels per second",
+    "Wading is shown in the character state",
+    "Fenris exits the stream on the opposite bank",
+    "Camera follows beyond old bounds and into negative coordinates",
+    "Terrain and texture caches remain bounded over long travel",
+    "Returning to a distant area renders identically",
+    "Wading renderer uses the same water mask",
+    "No browser errors"
+  ],
+  "errors": [],
+  "wadingSpeed": 20.400000000000283,
+  "streaming": {
+    "first": {
+      "view": {
+        "width": 576,
+        "height": 360,
+        "zoom": 1,
+        "camera": {
+          "x": -5000,
+          "y": -4028
+        },
+        "groundTiles": 2
+      },
+      "chunks": 16,
+      "trees": 451
+    },
+    "last": {
+      "view": {
+        "width": 576,
+        "height": 360,
+        "zoom": 1,
+        "camera": {
+          "x": -5000,
+          "y": -4028
+        },
+        "groundTiles": 2
+      },
+      "chunks": 16,
+      "trees": 451
+    },
+    "maxChunks": 25,
+    "maxTiles": 6,
+    "identical": true
+  }
+}

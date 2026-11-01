@@ -1,0 +1,86 @@
+{
+  "direction": "left",
+  "scale": 0.44,
+  "frames": [
+    {
+      "id": "01",
+      "role": "NEAR CONTACT: near thigh overlaps far thigh and reaches left planted; far leg trails right on toes. Near arm (screen-right shoulder) back on right; far arm forward left.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/01.png",
+      "prompt": "Image1 supplies ONLY the EXACT approved walking pose, limb assignment, overlap, timing and left-facing three-quarter camera. Image2 supplies the character identity, anatomy, clothing and pixel art. Draw image2 character in image1 pose; DO NOT adopt image1 race, sex, clothing or limb lengths. Adult HALFLING man, small stature with compact lighter torso, short limbs, mature face, proportionate head, large BARE hairy feet with visible toes. Tousled chestnut hair, NO beard, olive rumpled tunic with cream V-neck/rolled cuffs, simple cord belt, loose brown cropped trousers. NO boots/shoes/buckles. No child or chibi proportions. Preserve selected identity. Phase 1: NEAR CONTACT: near thigh overlaps far thigh and reaches left planted; far leg trails right on toes. Near arm (screen-right shoulder) back on right; far arm forward left. Near means viewer-facing limb, not screen-left. Exactly two arms/two legs with natural joints. Keep same head/torso/limb proportions and anatomical size as image2 in every frame. Full visible body transparent PNG, crisp stepped pixel edges, same palette and upper-left lighting, no smoothing, text, props or ground shadow. Pose reference is not an idle reference. Preserve compact small-adult anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c5d4fb83-7985-4146-b212-1d0ec8b0cba3.png",
+      "file": "source/01.png",
+      "waist": 561,
+      "scale": 0.35874439461883406
+    },
+    {
+      "id": "02",
+      "role": "NEAR SETTLE: near leading knee flexes supporting weight, far heel lifts behind. Near arm still back, easing neutral.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/02.png",
+      "prompt": "Image1 supplies ONLY the EXACT approved walking pose, limb assignment, overlap, timing and left-facing three-quarter camera. Image2 supplies the character identity, anatomy, clothing and pixel art. Draw image2 character in image1 pose; DO NOT adopt image1 race, sex, clothing or limb lengths. Adult HALFLING man, small stature with compact lighter torso, short limbs, mature face, proportionate head, large BARE hairy feet with visible toes. Tousled chestnut hair, NO beard, olive rumpled tunic with cream V-neck/rolled cuffs, simple cord belt, loose brown cropped trousers. NO boots/shoes/buckles. No child or chibi proportions. Preserve selected identity. Phase 2: NEAR SETTLE: near leading knee flexes supporting weight, far heel lifts behind. Near arm still back, easing neutral. Near means viewer-facing limb, not screen-left. Exactly two arms/two legs with natural joints. Keep same head/torso/limb proportions and anatomical size as image2 in every frame. Full visible body transparent PNG, crisp stepped pixel edges, same palette and upper-left lighting, no smoothing, text, props or ground shadow. Pose reference is not an idle reference. Preserve compact small-adult anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-39688dd9-2eaa-4129-b976-91010d00ef2a.png",
+      "file": "source/02.png",
+      "waist": 551.5,
+      "scale": 0.32666666666666666
+    },
+    {
+      "id": "03",
+      "role": "FAR PASSING: near leg supports straight beneath hip on screen right; FAR knee bends forward to LEFT, far foot airborne LEFT of support shin, NOT trailing behind. Arms neutral.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/03.png",
+      "prompt": "Image1 supplies ONLY the EXACT approved walking pose, limb assignment, overlap, timing and left-facing three-quarter camera. Image2 supplies the character identity, anatomy, clothing and pixel art. Draw image2 character in image1 pose; DO NOT adopt image1 race, sex, clothing or limb lengths. Adult HALFLING man, small stature with compact lighter torso, short limbs, mature face, proportionate head, large BARE hairy feet with visible toes. Tousled chestnut hair, NO beard, olive rumpled tunic with cream V-neck/rolled cuffs, simple cord belt, loose brown cropped trousers. NO boots/shoes/buckles. No child or chibi proportions. Preserve selected identity. Phase 3: FAR PASSING: near leg supports straight beneath hip on screen right; FAR knee bends forward to LEFT, far foot airborne LEFT of support shin, NOT trailing behind. Arms neutral. Near means viewer-facing limb, not screen-left. Exactly two arms/two legs with natural joints. Keep same head/torso/limb proportions and anatomical size as image2 in every frame. Full visible body transparent PNG, crisp stepped pixel edges, same palette and upper-left lighting, no smoothing, text, props or ground shadow. Pose reference is not an idle reference. Preserve compact small-adult anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-b8988414-e441-4699-9282-b556347a9e62.png",
+      "file": "source/03.png",
+      "waist": 561,
+      "scale": 0.3408146300914381
+    },
+    {
+      "id": "04",
+      "role": "FAR REACH: FAR leg extends LEFT airborne before heel contact, near leg trails RIGHT toe support. NEAR arm from screen-right shoulder swings LEFT ACROSS belt, far arm trails right.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/04.png",
+      "prompt": "Image1 supplies ONLY the EXACT approved walking pose, limb assignment, overlap, timing and left-facing three-quarter camera. Image2 supplies the character identity, anatomy, clothing and pixel art. Draw image2 character in image1 pose; DO NOT adopt image1 race, sex, clothing or limb lengths. Adult HALFLING man, small stature with compact lighter torso, short limbs, mature face, proportionate head, large BARE hairy feet with visible toes. Tousled chestnut hair, NO beard, olive rumpled tunic with cream V-neck/rolled cuffs, simple cord belt, loose brown cropped trousers. NO boots/shoes/buckles. No child or chibi proportions. Preserve selected identity. Phase 4: FAR REACH: FAR leg extends LEFT airborne before heel contact, near leg trails RIGHT toe support. NEAR arm from screen-right shoulder swings LEFT ACROSS belt, far arm trails right. Near means viewer-facing limb, not screen-left. Exactly two arms/two legs with natural joints. Keep same head/torso/limb proportions and anatomical size as image2 in every frame. Full visible body transparent PNG, crisp stepped pixel edges, same palette and upper-left lighting, no smoothing, text, props or ground shadow. Pose reference is not an idle reference. Preserve compact small-adult anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-56984105-d14d-4833-a8ab-1647f1e25158.png",
+      "file": "source/04.png",
+      "waist": 561,
+      "scale": 0.3411764705882353
+    },
+    {
+      "id": "05",
+      "role": "FAR CONTACT: far leg leading LEFT planted, near thigh overlaps it but angles RIGHT trailing. Near arm from screen-right shoulder swings LEFT across waist; far arm back.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/05.png",
+      "prompt": "Image1 supplies ONLY the EXACT approved walking pose, limb assignment, overlap, timing and left-facing three-quarter camera. Image2 supplies the character identity, anatomy, clothing and pixel art. Draw image2 character in image1 pose; DO NOT adopt image1 race, sex, clothing or limb lengths. Adult HALFLING man, small stature with compact lighter torso, short limbs, mature face, proportionate head, large BARE hairy feet with visible toes. Tousled chestnut hair, NO beard, olive rumpled tunic with cream V-neck/rolled cuffs, simple cord belt, loose brown cropped trousers. NO boots/shoes/buckles. No child or chibi proportions. Preserve selected identity. Phase 5: FAR CONTACT: far leg leading LEFT planted, near thigh overlaps it but angles RIGHT trailing. Near arm from screen-right shoulder swings LEFT across waist; far arm back. Near means viewer-facing limb, not screen-left. Exactly two arms/two legs with natural joints. Keep same head/torso/limb proportions and anatomical size as image2 in every frame. Full visible body transparent PNG, crisp stepped pixel edges, same palette and upper-left lighting, no smoothing, text, props or ground shadow. Pose reference is not an idle reference. Preserve compact small-adult anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-8c334f35-eab9-4a92-8187-ae22a7c4d211.png",
+      "file": "source/05.png",
+      "waist": 561,
+      "scale": 0.3415883859948762
+    },
+    {
+      "id": "06",
+      "role": "FAR SETTLE: far leading knee bends supporting weight, near trailing heel lifts. Near arm forward across waist easing neutral.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/06.png",
+      "prompt": "Image1 supplies ONLY the EXACT approved walking pose, limb assignment, overlap, timing and left-facing three-quarter camera. Image2 supplies the character identity, anatomy, clothing and pixel art. Draw image2 character in image1 pose; DO NOT adopt image1 race, sex, clothing or limb lengths. Adult HALFLING man, small stature with compact lighter torso, short limbs, mature face, proportionate head, large BARE hairy feet with visible toes. Tousled chestnut hair, NO beard, olive rumpled tunic with cream V-neck/rolled cuffs, simple cord belt, loose brown cropped trousers. NO boots/shoes/buckles. No child or chibi proportions. Preserve selected identity. Phase 6: FAR SETTLE: far leading knee bends supporting weight, near trailing heel lifts. Near arm forward across waist easing neutral. Near means viewer-facing limb, not screen-left. Exactly two arms/two legs with natural joints. Keep same head/torso/limb proportions and anatomical size as image2 in every frame. Full visible body transparent PNG, crisp stepped pixel edges, same palette and upper-left lighting, no smoothing, text, props or ground shadow. Pose reference is not an idle reference. Preserve compact small-adult anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-0b6379de-23e5-4624-bc69-e72159644d8a.png",
+      "file": "source/06.png",
+      "waist": 561,
+      "scale": 0.3361921097770154
+    },
+    {
+      "id": "07",
+      "role": "NEAR PASSING: far leg supports beneath pelvis on screen RIGHT; NEAR thigh overlaps it and bends LEFT, near foot airborne LEFT of support shin. Arms neutral.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/07.png",
+      "prompt": "Image1 supplies ONLY the EXACT approved walking pose, limb assignment, overlap, timing and left-facing three-quarter camera. Image2 supplies the character identity, anatomy, clothing and pixel art. Draw image2 character in image1 pose; DO NOT adopt image1 race, sex, clothing or limb lengths. Adult HALFLING man, small stature with compact lighter torso, short limbs, mature face, proportionate head, large BARE hairy feet with visible toes. Tousled chestnut hair, NO beard, olive rumpled tunic with cream V-neck/rolled cuffs, simple cord belt, loose brown cropped trousers. NO boots/shoes/buckles. No child or chibi proportions. Preserve selected identity. Phase 7: NEAR PASSING: far leg supports beneath pelvis on screen RIGHT; NEAR thigh overlaps it and bends LEFT, near foot airborne LEFT of support shin. Arms neutral. Near means viewer-facing limb, not screen-left. Exactly two arms/two legs with natural joints. Keep same head/torso/limb proportions and anatomical size as image2 in every frame. Full visible body transparent PNG, crisp stepped pixel edges, same palette and upper-left lighting, no smoothing, text, props or ground shadow. Pose reference is not an idle reference. Preserve compact small-adult anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-393ce928-876c-4fe4-b656-9e153c65abc2.png",
+      "file": "source/07.png",
+      "waist": 561,
+      "scale": 0.32878909382518046
+    },
+    {
+      "id": "08",
+      "role": "NEAR REACH: near leg extends LEFT airborne before heel contact, far leg behind RIGHT on toes. Near arm swings BACK to right, far arm forward left.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/08.png",
+      "prompt": "Image1 supplies ONLY the EXACT approved walking pose, limb assignment, overlap, timing and left-facing three-quarter camera. Image2 supplies the character identity, anatomy, clothing and pixel art. Draw image2 character in image1 pose; DO NOT adopt image1 race, sex, clothing or limb lengths. Adult HALFLING man, small stature with compact lighter torso, short limbs, mature face, proportionate head, large BARE hairy feet with visible toes. Tousled chestnut hair, NO beard, olive rumpled tunic with cream V-neck/rolled cuffs, simple cord belt, loose brown cropped trousers. NO boots/shoes/buckles. No child or chibi proportions. Preserve selected identity. Phase 8: NEAR REACH: near leg extends LEFT airborne before heel contact, far leg behind RIGHT on toes. Near arm swings BACK to right, far arm forward left. Near means viewer-facing limb, not screen-left. Exactly two arms/two legs with natural joints. Keep same head/torso/limb proportions and anatomical size as image2 in every frame. Full visible body transparent PNG, crisp stepped pixel edges, same palette and upper-left lighting, no smoothing, text, props or ground shadow. Pose reference is not an idle reference. Preserve compact small-adult anatomy.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-89a14776-62e9-4ba3-9607-45ba4f959d81.png",
+      "file": "source/08.png",
+      "waist": 561,
+      "scale": 0.345531914893617
+    }
+  ]
+}

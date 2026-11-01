@@ -1,0 +1,152 @@
+{
+  "direction": "up",
+  "frames": [
+    {
+      "id": "01",
+      "source": "source/01.png",
+      "sourceHash": "95300bc0c6210ff255b2488b73fd39dedc57aeee58ca89f0128c3b8e2d51b5be",
+      "waist": 560.4666666666667,
+      "scale": 0.44,
+      "translation": [
+        9.394666666666666,
+        30.960000000000036
+      ],
+      "bounds": [
+        122,
+        74,
+        383,
+        609
+      ],
+      "pixelHash": "3bc0182f62a5fdf66fb291d8895b7e1d1b37836c9698f740f9889d26c739f2a5"
+    },
+    {
+      "id": "02",
+      "source": "source/02.png",
+      "sourceHash": "c4e75aa1700c91ed21d779de6febeb44d7d4597d408f69f7e7056493735ea3bd",
+      "waist": 561.05,
+      "scale": 0.44,
+      "translation": [
+        9.138000000000005,
+        42.84000000000003
+      ],
+      "bounds": [
+        116,
+        96,
+        405,
+        609
+      ],
+      "pixelHash": "378b50ac8dd3b6bd1e357ced4cf3111cd8189063e6748ff236bf3f58456ec88a"
+    },
+    {
+      "id": "03",
+      "role": "Far-leg passing",
+      "source": "source/03.png",
+      "sourceHash": "26b5d0c563c95b806d8f2c8c59f8c07acb93baaea43effcba2b3e136a6e262f3",
+      "waist": 558.8166666666667,
+      "scale": 0.44,
+      "translation": [
+        10.120666666666637,
+        30.960000000000036
+      ],
+      "bounds": [
+        112,
+        82,
+        401,
+        609
+      ],
+      "pixelHash": "3ee6d82d0b9b7ef93c418adb81d357c4cce2a13742c49e5966141c8d7115e152"
+    },
+    {
+      "id": "04",
+      "role": "Far-leg reach",
+      "source": "source/04.png",
+      "sourceHash": "0e0e3b00216bcf96e2c879ded3a932905aa7d226a3e41fe8cf3a4724e65169f9",
+      "waist": 561.7833333333333,
+      "scale": 0.44,
+      "translation": [
+        8.815333333333342,
+        36.67999999999995
+      ],
+      "bounds": [
+        130,
+        80,
+        405,
+        609
+      ],
+      "pixelHash": "61f17406eb1a58c2db3cb0ebce12a29f56f573e88039f1a1ee197c363181bb16"
+    },
+    {
+      "id": "05",
+      "role": "Opposite undefined",
+      "mirrorOf": "01",
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        128,
+        74,
+        389,
+        609
+      ],
+      "pixelHash": "57891afb5ac3e5f53d725f0e1a9af00420428b6a5c13da0faba132d5880edc11"
+    },
+    {
+      "id": "06",
+      "role": "Opposite undefined",
+      "mirrorOf": "02",
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        106,
+        96,
+        395,
+        609
+      ],
+      "pixelHash": "978b7c98f67566ae8d2d8b37320097a568114faceef1a8e3f1d92f22334066db"
+    },
+    {
+      "id": "07",
+      "role": "Opposite Far-leg passing",
+      "mirrorOf": "03",
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        110,
+        82,
+        399,
+        609
+      ],
+      "pixelHash": "92364af66cd0a0d90b0615faf28fa71edaee974b6925b1b7567953112d486361"
+    },
+    {
+      "id": "08",
+      "role": "Opposite Far-leg reach",
+      "mirrorOf": "04",
+      "scale": 0.44,
+      "translation": [
+        null,
+        null
+      ],
+      "bounds": [
+        106,
+        80,
+        381,
+        609
+      ],
+      "pixelHash": "0062a1ffe60ca51d92a0846c47c28ef0c7819e04f029f2b7cc505b5b39dc8b99"
+    }
+  ],
+  "ground": 610,
+  "uniformScale": 0.44,
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "gifFrames": 8
+}

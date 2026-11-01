@@ -1,0 +1,22 @@
+[
+  {
+    "id": "03",
+    "prompt": "Edit this exact wolf sprite, preserving head, torso, fur markings, tail, size, camera and crisp pixel-art style. Change ONLY the four leg positions into this walk phase: The LIGHT FOREGROUND FRONT LEG, attached to the large near shoulder, is STRAIGHT VERTICAL DOWN, paw planted directly beneath shoulder. Dark far front leg lifted and reaching forward LEFT. Near hind foot planted behind hip; far hind foot forward contact. Near legs are the large light foreground limbs and MUST retain that identity. Natural canine elbows and hocks. Exactly four legs with four paws, no extra limbs. Full body, transparent background, no shadow or text.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-4f43a614-8e9f-4959-867a-14e994aba512.png"
+  },
+  {
+    "id": "04",
+    "prompt": "Edit this exact wolf sprite, preserving head, torso, fur markings, tail, size, camera and crisp pixel-art style. Change ONLY the four leg positions into this walk phase: The LIGHT FOREGROUND FRONT LEG extends diagonally BACKWARD to screen RIGHT from its shoulder, paw planted behind shoulder under belly. The dark far front leg extends forward LEFT, planted. Near front paw must be to the RIGHT of far front paw. Near hind lifts behind, far hind supports. Near legs are the large light foreground limbs and MUST retain that identity. Natural canine elbows and hocks. Exactly four legs with four paws, no extra limbs. Full body, transparent background, no shadow or text.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a3da7f67-6d55-4b7b-a574-f79c728579b2.png"
+  },
+  {
+    "id": "05",
+    "prompt": "Edit this exact wolf sprite, preserving head, torso, fur markings, tail, size, camera and crisp pixel-art style. Change ONLY the four leg positions into this walk phase: The LIGHT FOREGROUND FRONT LEG is far BACK under belly toward screen RIGHT, toe just leaving ground, wrist curling. Dark far front leg reaches LEFT and bears weight. Near hind foot forward planted; far hind foot lifting behind. Near legs are the large light foreground limbs and MUST retain that identity. Natural canine elbows and hocks. Exactly four legs with four paws, no extra limbs. Full body, transparent background, no shadow or text.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-4a891676-0514-4c21-8375-8d2128f0c37b.png"
+  },
+  {
+    "id": "08",
+    "prompt": "Edit this exact wolf sprite, preserving head, torso, fur markings, tail, size, camera and crisp pixel-art style. Change ONLY the four leg positions into this walk phase: The LIGHT FOREGROUND FRONT LEG reaches far FORWARD screen LEFT, wrist slightly curled and paw clearly AIRBORNE just above ground preparing contact. Dark far front leg planted behind shoulder to RIGHT. Near hind supports, far hind lifts. Near legs are the large light foreground limbs and MUST retain that identity. Natural canine elbows and hocks. Exactly four legs with four paws, no extra limbs. Full body, transparent background, no shadow or text.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-ec08f084-7df7-4beb-9b1b-2e17dd42098e.png"
+  }
+]

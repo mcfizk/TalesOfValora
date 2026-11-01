@@ -1,0 +1,65 @@
+[
+  {
+    "id": "idle",
+    "cols": 4,
+    "rows": 2,
+    "frames": 8,
+    "description": "Eight-frame seamless STANDING IDLE breathing loop, reading order left-to-right then second row. Keep the approved three-quarter LEFT-facing stance and feet exactly planted. Gentle chest expansion and release, 1–2 pixel shoulder rise and beard or hair secondary movement. Frames 0 neutral exhale, 1 beginning inhale, 2 rising, 3 near peak, 4 peak inhale, 5 release, 6 lower, 7 approaching neutral. Body mass and face must not change. No walking or foot movement."
+  },
+  {
+    "id": "rest",
+    "cols": 3,
+    "rows": 3,
+    "frames": 9,
+    "description": "NINE cells in reading order. Cell 0: the approved STANDING idle reference at full fixed scale for calibration. Cells 1,2,3,4: four frames of a seamless SLEEP breathing loop, character lying naturally on their side on the ground, head on screen LEFT resting on bent forearm, feet on screen RIGHT, eyes CLOSED, knees slightly bent; gentle torso breath, no relocation. Cells 5,6,7,8: four frames of a seamless SITTING breathing loop, sitting on the GROUND facing left-three-quarter, knees comfortably bent, feet toward screen left, one hand resting on knee, other hand braced naturally; eyes open, no chair or prop. Preserve the SAME anatomical head size and limb lengths as standing cell0, sleeping and seated poses are lower, NOT enlarged to fill their cells. Standing head-to-sole height is 420 pixels per512cell; resting body length and limb lengths keep that exact physical scale. Every pose's lowest ground contact is local y480. No floor drawn."
+  },
+  {
+    "id": "walk-left",
+    "cols": 4,
+    "rows": 2,
+    "frames": 8,
+    "description": "Eight-frame seamless WALK-IN-PLACE loop facing LEFT. Near side/profile view moving toward screen LEFT, visible left-facing face and beard/hair, same slight overhead camera. Eight actual alternating gait phases in reading order: 0 left-foot forward contact/right-foot back; 1 left-foot weight down; 2 right-foot passing under hips; 3 right leg swinging forward; 4 right-foot forward contact/left-foot back; 5 right-foot weight down; 6 left-foot passing under hips; 7 left leg swinging forward into frame0. Opposing arm swing, modest grounded stride, subtle hips and torso rise, believable heel/toe contact, loose hands, preserve commoner character. Keep the root centered in every cell, no horizontal travel across the sheet. Both legs and feet must change poses, not just upper-body bobbing. Do not duplicate eight standing poses. CRITICAL: ALL EIGHT frames face LEFT, nose pointing toward the LEFT edge in BOTH rows. The bottom row is the SECOND HALF of the SAME left-facing gait, never a right-facing copy. Alternate NEAR LEG and FAR LEG forward while keeping the entire character's facing fixed. No direction reversal anywhere."
+  },
+  {
+    "id": "walk-up-left",
+    "cols": 4,
+    "rows": 2,
+    "frames": 8,
+    "description": "Eight-frame seamless WALK-IN-PLACE loop facing UP-LEFT. Back three-quarter view moving toward upper LEFT: mostly back of head, back of tunic, back of shoulders, with only a slight left side of face. Do not show a front-facing chest or full beard pasted on back. Eight actual alternating gait phases in reading order: 0 left-foot forward contact/right-foot back; 1 left-foot weight down; 2 right-foot passing under hips; 3 right leg swinging forward; 4 right-foot forward contact/left-foot back; 5 right-foot weight down; 6 left-foot passing under hips; 7 left leg swinging forward into frame0. Opposing arm swing, modest grounded stride, subtle hips and torso rise, believable heel/toe contact, loose hands, preserve commoner character. Keep the root centered in every cell, no horizontal travel across the sheet. Both legs and feet must change poses, not just upper-body bobbing. Do not duplicate eight standing poses."
+  },
+  {
+    "id": "walk-up",
+    "cols": 4,
+    "rows": 2,
+    "frames": 8,
+    "description": "Eight-frame seamless WALK-IN-PLACE loop facing UP. DIRECT REAR view moving toward top of screen. Show back of head, hairstyle, back of tunic and heels; NO eyes, nose or front beard visible. Eight actual alternating gait phases in reading order: 0 left-foot forward contact/right-foot back; 1 left-foot weight down; 2 right-foot passing under hips; 3 right leg swinging forward; 4 right-foot forward contact/left-foot back; 5 right-foot weight down; 6 left-foot passing under hips; 7 left leg swinging forward into frame0. Opposing arm swing, modest grounded stride, subtle hips and torso rise, believable heel/toe contact, loose hands, preserve commoner character. Keep the root centered in every cell, no horizontal travel across the sheet. Both legs and feet must change poses, not just upper-body bobbing. Do not duplicate eight standing poses."
+  },
+  {
+    "id": "walk-down-left",
+    "cols": 4,
+    "rows": 2,
+    "frames": 8,
+    "description": "Eight-frame seamless WALK-IN-PLACE loop facing DOWN-LEFT. Front three-quarter view moving toward lower LEFT, chest and left-facing face visible, consistent slight overhead RPG camera. Eight actual alternating gait phases in reading order: 0 left-foot forward contact/right-foot back; 1 left-foot weight down; 2 right-foot passing under hips; 3 right leg swinging forward; 4 right-foot forward contact/left-foot back; 5 right-foot weight down; 6 left-foot passing under hips; 7 left leg swinging forward into frame0. Opposing arm swing, modest grounded stride, subtle hips and torso rise, believable heel/toe contact, loose hands, preserve commoner character. Keep the root centered in every cell, no horizontal travel across the sheet. Both legs and feet must change poses, not just upper-body bobbing. Do not duplicate eight standing poses."
+  },
+  {
+    "id": "walk-down",
+    "cols": 4,
+    "rows": 2,
+    "frames": 8,
+    "description": "Eight-frame seamless WALK-IN-PLACE loop facing DOWN. DIRECT FRONT view moving toward bottom of screen, face and chest visible, both shoulders balanced; preserve slight overhead RPG camera. Eight actual alternating gait phases in reading order: 0 left-foot forward contact/right-foot back; 1 left-foot weight down; 2 right-foot passing under hips; 3 right leg swinging forward; 4 right-foot forward contact/left-foot back; 5 right-foot weight down; 6 left-foot passing under hips; 7 left leg swinging forward into frame0. Opposing arm swing, modest grounded stride, subtle hips and torso rise, believable heel/toe contact, loose hands, preserve commoner character. Keep the root centered in every cell, no horizontal travel across the sheet. Both legs and feet must change poses, not just upper-body bobbing. Do not duplicate eight standing poses."
+  },
+  {
+    "id": "sleepToSit",
+    "cols": 3,
+    "rows": 2,
+    "frames": 6,
+    "description": "SIX cells in reading order. Cell0: approved STANDING reference for scale calibration ONLY. Cells1–5: five progressive unique frames of waking from SLEEP to sitting on the ground. Cell1 lying on side, head LEFT on forearm, feet RIGHT, eyes closed; cell2 eyes open and head lifts, upper elbow props torso; cell3 pushes upper body upright with supporting hand, knees draw in; cell4 nearly seated with weight settling onto hips; cell5 fully stable seated three-quarter LEFT pose with bent knees and feet forward. The other supplied rest sheet shows exact sleep and seated endpoint poses; match those endpoints. Maintain physical scale from standing cell0: rest characters do NOT expand to fill cells. Natural sequential body mechanics, no floating or jumping to standing. Same lowest ground-contact baseline y480 in each512cell."
+  },
+  {
+    "id": "sitToStand",
+    "cols": 4,
+    "rows": 2,
+    "frames": 8,
+    "description": "EIGHT progressive frames from ground sitting to standing, left-three-quarter orientation. Frame0 fully seated matching supplied rest sheet, frame1 leans torso forward and brings feet under, frame2 one knee under torso one foot planted, frame3 stable half-kneel with hand pressing thigh, frame4 low squat with hips rising, frame5 knees extending and trunk lifting, frame6 almost upright, frame7 approved full upright idle stance. Believable weight transfer, fixed head size and limb lengths, no levitation. Last standing frame is scale calibration, 420pixels tall per512cell. All lower poses must be drawn at this same physical scale and stay smaller in height than standing. Groundcontact y480 throughout."
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "assets": [
+    {
+      "file": "assets/fur.png"
+    },
+    {
+      "file": "assets/forest-floor.png"
+    },
+    {
+      "file": "assets/bark.png"
+    }
+  ]
+}

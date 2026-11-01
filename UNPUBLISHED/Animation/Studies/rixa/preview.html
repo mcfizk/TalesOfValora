@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rixa — animation review</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#15252d;color:#e6ece9;font:16px/1.5 system-ui,sans-serif}header,main,footer{max-width:1160px;margin:auto;padding:20px 28px}h1{font:36px/1.2 Georgia,serif;margin:4px 0 8px}h2{font-size:18px;margin:0 0 12px}p{margin:6px 0;color:#b7c9cb}nav{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin-top:20px}label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:#b7c9cb}select,button{font:inherit;padding:8px 12px;border:1px solid #557077;border-radius:5px;background:#243e48;color:#fff}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}.views{display:grid;grid-template-columns:minmax(320px,560px) 1fr;gap:24px}.panel{padding:18px;background:#20353f;border-radius:8px}.detail{display:block;width:100%;max-width:640px;height:auto;background:#1c3039;image-rendering:pixelated}.game{display:block;width:160px;height:180px;background:#1c3039;image-rendering:pixelated}.muted,small{color:#aac0c3}#notice{min-height:24px;color:#e3c995}#phase{min-width:120px}.inline{display:flex;flex-direction:row;align-items:center}details{margin-top:20px}table{border-collapse:collapse;width:100%;font-size:13px}td,th{padding:7px;border-bottom:1px solid #3b535a;text-align:left}a{color:#a8dfcb}code{font-size:12px}#meta{white-space:pre-line}footer{font-size:13px}@media(max-width:760px){.views{grid-template-columns:1fr}header,main,footer{padding:16px}}
+</style></head><body>
+<header><h1>Rixa</h1><p>Animation review · barefoot 1470 design</p>
+<nav>
+<label>Action<select id="action"></select></label>
+<label>Direction<select id="direction"></select></label>
+<button id="play">Pause</button><button id="prev">Previous</button><button id="next">Next</button>
+<label>Speed<select id="speed"><option value=".25">¼ speed</option><option value=".5">½ speed</option><option value="1" selected>Normal</option><option value="1.5">1½ speed</option></select></label>
+<label class="inline"><input type="checkbox" id="onion">Previous pose overlay</label><span id="phase"></span>
+</nav><p id="notice"></p></header>
+<main><div class="views">
+<section class="panel"><h2>Detail</h2><canvas class="detail" id="detail" width="640" height="640"></canvas></section>
+<section class="panel"><h2>Game scale</h2><canvas class="game" id="game" width="160" height="180"></canvas>
+<p>28-world-pixel reference height, unless overridden in registration.</p><p id="meta"></p>
+<p><a id="sheet" href="#">PNG sheet</a> · <a id="gif" href="#">GIF preview</a></p>
+<p><small>Use single-frame stepping and the previous-pose overlay to check foot contact, limb identity and body registration. A unique-file check alone does not establish a correct gait.</small></p></section>
+</div>
+<details><summary id="summary">Source and export status</summary><table><thead><tr><th>Clip</th><th>Direction</th><th>Sources</th><th>Status</th></tr></thead><tbody id="status"></tbody></table></details>
+</main><footer>Review assets only. Original generated sources are retained. No game installation, rig deformation, interpolation or automatic mirroring.</footer>
+<script src="review-data.js"></script><script>
+const data=window.RIXA_REVIEW||{clips:[],directions:[],status:[]},labels={stand:'Standing',walk:'Walking',idle:'Idle',sit:'Sitting',sleep:'Sleeping',sleepToSit:'Sleep → sit',sitToStand:'Sit → stand',sitToSleep:'Sit → sleep',standToSit:'Stand → sit'};
+const action=document.querySelector('#action'),direction=document.querySelector('#direction'),phase=document.querySelector('#phase'),notice=document.querySelector('#notice');
+for(const [key,label] of Object.entries(labels)){const option=new Option(label,key);action.add(option)}
+for(const d of data.directions)direction.add(new Option(d,d));
+action.value=data.clips.some(c=>c.action==='walk')?'walk':'stand';direction.value='left';
+let current=null,frame=0,playing=true,elapsed=0,last=performance.now(),images=new Map();
+for(const clip of data.clips){const im=new Image();im.onload=draw;im.src=clip.file;images.set(clip.key,im)}
+function choose(){current=data.clips.find(c=>c.action===action.value&&c.direction===direction.value)||null;frame=0;elapsed=0;
+notice.textContent=current?'':('This '+action.value+' / '+direction.value+' clip has not been exported.');
+for(const id of ['play','prev','next'])document.querySelector('#'+id).disabled=!current;
+document.querySelector('#meta').textContent=current?current.frames+' frames · '+current.fps+' fps · '+(current.loop?'Loop':'One-shot')+'\n640 × 640 cells · anchor (320, 610)':'';
+document.querySelector('#sheet').href=current?.file||'#';document.querySelector('#gif').href=current?.file.replace('sheet.png','preview.gif')||'#';
+document.querySelector('#gif').hidden=!current||current.frames===1;draw()}
+function paint(canvas,k){const c=canvas.getContext('2d');c.imageSmoothingEnabled=false;c.clearRect(0,0,canvas.width,canvas.height);const ground=canvas.id==='game'?150:610,cx=canvas.width/2;
+c.strokeStyle='#526e76';c.beginPath();c.moveTo(0,ground+.5);c.lineTo(canvas.width,ground+.5);c.stroke();if(!current)return;
+const image=images.get(current.key);if(!image?.complete||!image.naturalWidth)return;
+const render=(i,alpha)=>{c.globalAlpha=alpha;c.drawImage(image,i%current.columns*640,Math.floor(i/current.columns)*640,640,640,cx-320*k,ground-610*k,640*k,640*k);c.globalAlpha=1};
+if(document.querySelector('#onion').checked&&current.frames>1)render((frame+current.frames-1)%current.frames,.22);render(frame,1)}
+function draw(){phase.textContent=current?'Frame '+(frame+1)+' / '+current.frames:'No clip';paint(document.querySelector('#detail'),1);paint(document.querySelector('#game'),current?current.displayHeight/current.bodyHeight:1)}
+function seek(i){if(!current)return;playing=false;document.querySelector('#play').textContent='Play';frame=(i+current.frames)%current.frames;elapsed=0;draw()}
+action.onchange=direction.onchange=choose;document.querySelector('#onion').onchange=draw;
+document.querySelector('#prev').onclick=()=>seek(frame-1);document.querySelector('#next').onclick=()=>seek(frame+1);
+document.querySelector('#play').onclick=()=>{playing=!playing;if(playing&&current&&!current.loop&&frame===current.frames-1)frame=0;document.querySelector('#play').textContent=playing?'Pause':'Play'};
+function tick(now){const dt=Math.min(.1,(now-last)/1000);last=now;if(playing&&current){elapsed+=dt*Number(document.querySelector('#speed').value);while(elapsed>=1/current.fps){elapsed-=1/current.fps;if(current.loop)frame=(frame+1)%current.frames;else if(frame<current.frames-1)frame++;else{playing=false;document.querySelector('#play').textContent='Play';break}}}draw();requestAnimationFrame(tick)}
+for(const row of data.status){const tr=document.createElement('tr');for(const value of [row.action||row.key,row.direction||'left',row.sourceFrames+' / '+row.expectedFrames,row.error||row.state]){const td=document.createElement('td');td.textContent=value;tr.append(td)}document.querySelector('#status').append(tr)}
+document.querySelector('#summary').textContent='Source and export status · '+data.clips.length+' / '+data.status.length+' clips exported';
+window.review={data,seek,get current(){return current},get frame(){return frame},get ready(){return [...images.values()].every(im=>im.complete&&im.naturalWidth)},select(a,d){action.value=a;direction.value=d;choose()}};
+choose();requestAnimationFrame(tick);
+</script></body></html>

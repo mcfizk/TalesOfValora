@@ -1,0 +1,14 @@
+{
+  "url": "https://ulfheim.dk/games/FenrisAwakening/",
+  "version": "353a5de92829",
+  "checks": [
+    "Public release version matches the tested build",
+    "Public title and Continue/New Game load",
+    "Recorded wind and Fenris reaction play on the public site",
+    "Half-volume wind and three-slot saving are active",
+    "Recorded forest footsteps load during movement",
+    "Public creature stats preserve the JSON armour and hit dice",
+    "Public Save/Continue works after reload"
+  ],
+  "errors": []
+}

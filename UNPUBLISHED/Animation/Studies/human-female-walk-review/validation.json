@@ -1,0 +1,214 @@
+{
+  "uniformScale": 0.44,
+  "limbDeformation": false,
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "ground": 610,
+  "frames": [
+    {
+      "id": "01",
+      "file": "human-female_walk_left_01.png",
+      "role": "near-leg contact",
+      "source": "source/human-female-left-01.png",
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "sourceHash": "772698cce958d3b5b5c15b8f8402b417a31bc30917425b61023c8ca0990c960b",
+      "waistX": 555,
+      "translation": [
+        11.800000000000011,
+        24.360000000000014
+      ],
+      "scale": 0.44,
+      "bounds": [
+        88,
+        82,
+        433,
+        609
+      ],
+      "pixelHash": "6cd0e0ff7f9b612b997a3c9ea85aa4026c9394c05d1c110b07ac441bd5f8c25e"
+    },
+    {
+      "id": "02",
+      "file": "human-female_walk_left_02.png",
+      "role": "settle onto near leg",
+      "source": "source/human-female-left-02.png",
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "sourceHash": "6808e97d752ae041e1aeda51d74ee40cf51f697f7a1613f954cf6056037b7fcc",
+      "waistX": 555,
+      "translation": [
+        11.800000000000011,
+        28.75999999999999
+      ],
+      "scale": 0.44,
+      "bounds": [
+        80,
+        106,
+        427,
+        609
+      ],
+      "pixelHash": "bd89d4b1416e40f13529c1e9611170ff7d9b4157bbfecf4f262b57c08cdb08b2"
+    },
+    {
+      "id": "03",
+      "file": "human-female_walk_left_03.png",
+      "role": "near-leg support, far-leg passing",
+      "source": "source/human-female-left-03.png",
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "sourceHash": "fbfda4a10ba1110d0d9a5516220b5485fbfd3c0e227965fa565d09625025d7d6",
+      "waistX": 563,
+      "translation": [
+        8.280000000000001,
+        20.840000000000032
+      ],
+      "scale": 0.44,
+      "bounds": [
+        144,
+        60,
+        363,
+        609
+      ],
+      "pixelHash": "761cc13e108570436512d233e771752598826d2d989b7252081dbed02e6635ff"
+    },
+    {
+      "id": "04",
+      "file": "human-female_walk_left_04.png",
+      "role": "far leg reaches, near toe support",
+      "source": "source/human-female-left-04.png",
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "sourceHash": "fa9fb58a166d33b33f1c51481618fb25599133d42fc872829032daf959995493",
+      "waistX": 560,
+      "translation": [
+        9.599999999999994,
+        18.200000000000045
+      ],
+      "scale": 0.44,
+      "bounds": [
+        76,
+        58,
+        413,
+        609
+      ],
+      "pixelHash": "e9abd28dbbdad6cbab50873e5a39463aec28745916183d87c5102047287fa734"
+    },
+    {
+      "id": "05",
+      "file": "human-female_walk_left_05.png",
+      "role": "far-leg contact",
+      "source": "source/human-female-left-05.png",
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "sourceHash": "f4851b391918f772a64855c5a2bd8d262149386439a904df8b322df62300413c",
+      "waistX": 557,
+      "translation": [
+        10.919999999999987,
+        25.24000000000001
+      ],
+      "scale": 0.44,
+      "bounds": [
+        92,
+        78,
+        433,
+        609
+      ],
+      "pixelHash": "930c7e3fe805ce07abae0fd96ad34b943076c9ace961f9329b6d7874b1d83c4b"
+    },
+    {
+      "id": "06",
+      "file": "human-female_walk_left_06.png",
+      "role": "settle onto far leg",
+      "source": "source/human-female-left-06.png",
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "sourceHash": "f265d59319eab11742b40b28ef36d5eeb3e80c8262aa7c548fcedf93e4871cfb",
+      "waistX": 557,
+      "translation": [
+        10.919999999999987,
+        30.519999999999982
+      ],
+      "scale": 0.44,
+      "bounds": [
+        98,
+        82,
+        415,
+        609
+      ],
+      "pixelHash": "84ce78d07493268e86c61d949105e420ab26dfb2e500d69a105595cbcd66d6a0"
+    },
+    {
+      "id": "07",
+      "file": "human-female_walk_left_07.png",
+      "role": "far leg support, near leg passes",
+      "source": "source/human-female-left-07.png",
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "sourceHash": "7d14f02058897fb9684f10ac05e24bacb2745ca484dc9d3c8944ad57e0662b2a",
+      "waistX": 558,
+      "translation": [
+        10.47999999999999,
+        19.08000000000004
+      ],
+      "scale": 0.44,
+      "bounds": [
+        164,
+        50,
+        353,
+        609
+      ],
+      "pixelHash": "493b48cc38a7a3955d33308d14ec27a0d8b0d887e04fac5f9cd2a83e01e03a42"
+    },
+    {
+      "id": "08",
+      "file": "human-female_walk_left_08.png",
+      "role": "near leg reaches, far toe support",
+      "source": "source/human-female-left-08.png",
+      "sourceDimensions": [
+        1122,
+        1402
+      ],
+      "sourceHash": "a64e161b68deb25acbcf85234e01bff0ab8ef6bbfae5e632212f34d29ff27ac3",
+      "waistX": 558,
+      "translation": [
+        10.47999999999999,
+        31.399999999999977
+      ],
+      "scale": 0.44,
+      "bounds": [
+        88,
+        78,
+        435,
+        609
+      ],
+      "pixelHash": "fcbf1c981c3036a6c187ada5e9b368b09f76099261dafd5d73e4c999f5dfe39f"
+    }
+  ],
+  "gif": {
+    "frames": 8,
+    "delay": [
+      120,
+      130,
+      120,
+      130,
+      120,
+      130,
+      120,
+      130
+    ]
+  }
+}

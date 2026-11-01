@@ -1,0 +1,49 @@
+import * as T from './vendor/three.module.js';
+import {loft,curveTube,groom} from './visuals.js?v=3';
+// Continuous sculpted skin and a 17-bone skeleton; the author owns all story decisions.
+export function createFenris(assets,{clay=false}={}){
+ const data=assets.model,root=new T.Group(),body=new T.Group();root.name='Fenris — continuous Lupera sculpt';root.add(body);
+ const skinMaterial=new T.MeshStandardMaterial({color:clay?'#aaa6a0':'#ece8df',vertexColors:!clay,roughness:.91,bumpMap:clay?null:assets.fur,bumpScale:.003});
+ const dark=new T.MeshStandardMaterial({color:'#17191a',roughness:.67}),cloth=new T.MeshStandardMaterial({color:'#614c36',roughness:1}),rope=new T.MeshStandardMaterial({color:'#9d8660',roughness:1});
+ const bones=data.bones.map(b=>{const bone=new T.Bone();bone.name=b.name;bone.position.fromArray(b.p);if(b.parent>=0)bone.position.sub(new T.Vector3(...data.bones[b.parent].p));return bone;});data.bones.forEach((b,i)=>{if(b.parent>=0)bones[b.parent].add(bones[i]);});body.add(bones[0]);body.updateMatrixWorld(true);const skeleton=new T.Skeleton(bones),byName=Object.fromEntries(bones.map(b=>[b.name,b]));
+ const geometry=new T.BufferGeometry();for(const [name,size]of [['position',3],['normal',3],['uv',2],['skinWeight',4]])geometry.setAttribute(name,new T.Float32BufferAttribute(data[name],size));geometry.setAttribute('skinIndex',new T.Uint16BufferAttribute(data.skinIndex,4));geometry.setIndex(data.index);
+ const colors=[],color=new T.Color(),white=new T.Color('#ebe7dd'),grey=new T.Color('#929b9b');for(let i=0;i<data.position.length;i+=3){const x=data.position[i],y=data.position[i+1],z=data.position[i+2];const back=T.MathUtils.smoothstep(-z,-.08,.25),scalp=T.MathUtils.smoothstep(y,3.66,3.9)*.25; color.copy(white).lerp(grey,Math.min(.5,back*.35+scalp));colors.push(color.r,color.g,color.b);}geometry.setAttribute('color',new T.Float32BufferAttribute(colors,3));
+ function skinned(geo,material){const mesh=new T.SkinnedMesh(geo,material);body.add(mesh);mesh.bind(skeleton);mesh.castShadow=true;mesh.receiveShadow=true;mesh.frustumCulled=false;return mesh;}
+ skinned(geometry,skinMaterial);
+ const smooth=(a,b,x)=>T.MathUtils.smoothstep(x,a,b);
+ function weightsFor(x,y){const out=[],put=(i,w)=>{if(w>0)out.push([i,w]);},blend=(a,b,t,m=1)=>{put(a,(1-t)*m);put(b,t*m);},o=x<0?5:11,ax=Math.abs(x);
+ if(y<1.95&&ax<.57){const hip=smooth(1.65,1.96,y);put(0,hip);if(y>.95)blend(o+4,o+3,smooth(.91,1.16,y),1-hip);else blend(o+5,o+4,smooth(.22,.48,y),1-hip);}
+ else if(ax>.48&&y<3.25){const arm=smooth(.43,.64,ax);put(2,1-arm);if(y>2.28)blend(o+1,o,smooth(2.28,2.58,y),arm);else blend(o+2,o+1,smooth(1.71,1.92,y),arm);}
+ else if(y>3.15)blend(3,4,smooth(3.26,3.49,y));else if(y>2.8)blend(2,3,smooth(3.03,3.25,y));else if(y>2.25)blend(1,2,smooth(2.3,2.75,y));else blend(0,1,smooth(1.95,2.3,y));out.sort((a,b)=>b[1]-a[1]);while(out.length<4)out.push([0,0]);const sum=out.slice(0,4).reduce((n,e)=>n+e[1],0);return out.slice(0,4).map(e=>[e[0],e[1]/sum]);}
+ function weightGeometry(g){const p=g.attributes.position,si=[],sw=[];for(let i=0;i<p.count;i++)for(const [index,w]of weightsFor(p.getX(i),p.getY(i))){si.push(index);sw.push(w);}g.setAttribute('skinIndex',new T.Uint16BufferAttribute(si,4));g.setAttribute('skinWeight',new T.Float32BufferAttribute(sw,4));return g;}
+ function accessory(geo,mat,boneName,pos=[0,0,0],scale=[1,1,1],rotation=[0,0,0]){const mesh=new T.Mesh(geo,mat),i=data.bones.findIndex(b=>b.name===boneName);mesh.position.set(...pos).sub(new T.Vector3(...data.bones[i].p));mesh.scale.set(...scale);mesh.rotation.set(...rotation);bones[i].add(mesh);mesh.castShadow=true;mesh.receiveShadow=true;return mesh;}
+ const sphere=new T.SphereGeometry(1,24,16),fur=skinMaterial.clone();fur.vertexColors=false;fur.color.set('#d9d9d1');
+ // Small almond eyes sit inside the brow instead of projecting from the skull.
+ for(const s of [-1,1]){
+  const eye=new T.Group();eye.position.set(s*.184,.13,.18);eye.rotation.y=s*.55;byName.head.add(eye);
+  function eyePart(mat,pos,scale){const m=new T.Mesh(sphere,mat);m.position.set(...pos);m.scale.set(...scale);eye.add(m);}
+  const sclera=new T.MeshStandardMaterial({color:'#b9c6c7',roughness:.32}),iris=new T.MeshStandardMaterial({color:'#8ebbd0',roughness:.26});
+  eyePart(dark,[0,0,0],[.069,.028,.025]);eyePart(sclera,[0,0,.014],[.056,.020,.014]);eyePart(iris,[-s*.008,0,.025],[.022,.021,.008]);eyePart(dark,[-s*.008,0,.032],[.008,.017,.004]);eyePart(new T.MeshBasicMaterial({color:'#f3f3e7'}),[-s*.013,.008,.036],[.003,.003,.002]);
+  // Curved cartilage shell, with a recessed warm inner surface and a furry rim.
+  const ep=[],ei=[],euv=[],width=.13;for(let face=0;face<2;face++)for(let row=0;row<=12;row++){const t=row/12,w=width*Math.pow(1-t,.7)+.002;for(let col=0;col<=12;col++){const u=col/6-1;ep.push(s*(.185+t*.065)+u*w,3.82+t*.32,-.065+.055*t+(face===0?.045-.06*(1-u*u)*Math.sin(Math.PI*t):-.045));euv.push(col/12,t);if(row<12&&col<12){const a=face*169+row*13+col,b=a+13;if(face===0)ei.push(a,a+1,b,a+1,b+1,b);else ei.push(a,b,a+1,a+1,b,b+1);}}}
+  const earGeo=new T.BufferGeometry();earGeo.setAttribute('position',new T.Float32BufferAttribute(ep,3));earGeo.setAttribute('uv',new T.Float32BufferAttribute(euv,2));earGeo.setIndex(ei);earGeo.computeVertexNormals();const earMat=fur.clone();earMat.side=T.DoubleSide;accessory(earGeo,earMat,'head');
+  const inner=earGeo.clone();inner.setIndex(ei.slice(0,864));const ip=inner.attributes.position;for(let i=0;i<ip.count;i++){const y=ip.getY(i),t=(y-3.82)/.32,c=s*(.185+t*.065);ip.setXYZ(i,c+(ip.getX(i)-c)*.68,3.86+(y-3.82)*.79,ip.getZ(i)+.008);}inner.computeVertexNormals();const innerMat=new T.MeshStandardMaterial({color:clay?'#aaa6a0':'#79695f',roughness:1,side:T.DoubleSide});accessory(inner,innerMat,'head');
+  accessory(curveTube([[s*.17,3.47,.18],[s*.16,3.455,.34],[s*.11,3.46,.52],[0,3.46,.57]],.004,24),dark,'head');
+ }
+ accessory(sphere,dark,'head',[0,3.54,.566],[.085,.054,.055]);for(const s of [-1,1])accessory(sphere,new T.MeshStandardMaterial({color:'#050607'}),'head',[s*.052,3.552,.607],[.021,.012,.009]);
+ // Two trouser legs meet under a continuous waistband; folds are in the mesh.
+ const waistband=loft([[1.52,.47,.295],[1.70,.50,.32],[1.82,.49,.32],[1.91,.47,.31],[1.97,.443,.296]],48);skinned(weightGeometry(waistband),cloth);
+ for(const s of [-1,1]){const pants=loft([[1.28,.244,.258],[1.34,.25,.265],[1.52,.268,.275],[1.76,.266,.285],[1.88,.235,.27]],48);pants.translate(s*.235,0,0);const p=pants.attributes.position;for(let i=0;i<p.count;i++){const a=Math.atan2(p.getX(i)-s*.235,p.getZ(i)),y=p.getY(i),r=.007*Math.sin(a*9+y*12);p.setXYZ(i,p.getX(i)+Math.sin(a)*r,p.getY(i)+(i<49?.012*Math.sin(a*13):0),p.getZ(i)+Math.cos(a)*r);}pants.computeVertexNormals();skinned(weightGeometry(pants),cloth);}
+ for(const phase of [0,Math.PI]){const pts=[];for(let i=0;i<=96;i++){const a=i/96*Math.PI*2;pts.push([Math.sin(a)*(.463+Math.sin(a*28+phase)*.005),1.925+Math.cos(a*28+phase)*.005,Math.cos(a)*(.313+Math.sin(a*28+phase)*.005)]);}accessory(curveTube(pts,.011,110),rope,'hips');}
+ accessory(sphere,rope,'hips',[0,1.915,.325],[.035,.025,.022]);for(const s of [-1,1])accessory(curveTube([[0,1.92,.33],[s*.045,1.87,.345],[s*.035,1.73,.36],[s*.065,1.66,.33]],.01,24),rope,'hips');
+ // Nails follow the hand and foot bones, preserving their alignment during motion.
+ for(const s of [-1,1]){const suffix=s<0?'L':'R';for(let f=0;f<4;f++){const x=s*.86+(f-1.5)*.053,tip=1.475+Math.abs(f-1.5)*.027;accessory(curveTube([[x,tip+.015,.105],[x,tip-.035,.12],[x,tip-.06,.085]],.012,10,true),dark,'hand'+suffix);const tx=s*.25+(f-1.5)*.082;accessory(curveTube([[tx,.12,.442],[tx,.10,.51],[tx,.045,.53]],.021,12,true),dark,'foot'+suffix);}}
+ const tail=new T.Group();tail.position.set(0,-.04,-.22);byName.hips.add(tail);const tailGeo=curveTube([[0,0,0],[0,-.24,-.23],[0,-.56,-.35],[0,-.87,-.30],[0,-1.04,-.15]],.12,36,true);const tp=tailGeo.attributes.position;const tc=new T.CatmullRomCurve3([[0,0,0],[0,-.24,-.23],[0,-.56,-.35],[0,-.87,-.30],[0,-1.04,-.15]].map(p=>new T.Vector3(...p)));for(let row=0;row<=36;row++){const t=row/36,c=tc.getPointAt(t),original=.12*(1-t*.95),radius=.08*(1-t)+.15*Math.sin(Math.PI*t)+.008;for(let k=0;k<8;k++){const i=row*8+k,v=new T.Vector3().fromBufferAttribute(tp,i).sub(c).multiplyScalar(radius/original).add(c);tp.setXYZ(i,v.x,v.y,v.z);}}tailGeo.computeVertexNormals();const tailMesh=new T.Mesh(tailGeo,fur);tail.add(tailMesh);tailMesh.castShadow=true;
+ if(!clay){const hairMat=new T.MeshStandardMaterial({vertexColors:true,roughness:1,side:T.DoubleSide});const hairs=groom(geometry,14000,.075,hairMat,83);const coat=skinned(weightGeometry(hairs.geometry),hairMat);coat.castShadow=false;tail.add(groom(tailGeo,1200,.12,hairMat,79));}
+ let phase=0;return {root,animate(dt,t,wake,moving,running){
+  for(const bone of bones)bone.rotation.set(0,0,0);if(wake<3){const p=T.MathUtils.smoothstep(wake,.5,3);body.rotation.z=-1.48*(1-p);body.position.set(0,.34*(1-p),0);return;}
+  body.rotation.z=0;body.rotation.x=moving&&running?.06:0;body.position.y=moving?Math.abs(Math.sin(phase))*.025:Math.sin(t*1.5)*.008;if(moving)phase+=dt*(running?10:6.7);const swing=moving?Math.sin(phase)*(running?.5:.30):0;
+  byName.thighL.rotation.x=swing;byName.thighR.rotation.x=-swing;byName.shinL.rotation.x=moving?Math.max(0,-Math.sin(phase))*.38:0;byName.shinR.rotation.x=moving?Math.max(0,Math.sin(phase))*.38:0;byName.footL.rotation.x=-byName.shinL.rotation.x*.4;byName.footR.rotation.x=-byName.shinR.rotation.x*.4;
+  byName.upperArmL.rotation.x=-swing*.6;byName.upperArmR.rotation.x=swing*.6;byName.forearmL.rotation.x=byName.forearmR.rotation.x=running?-.35:-.05;byName.chest.rotation.y=moving?Math.sin(phase)*.025:0;byName.head.rotation.y=moving?0:Math.sin(t*.35)*.05;tail.rotation.z=Math.sin(t*1.5)*.07;
+ }};
+}

@@ -1,0 +1,6 @@
+{
+  "clip": "sitToStand",
+  "id": "07",
+  "prompt": "Create ONE RIGHT-facing Rixa sit-to-stand frame. Image1 supplies the precise intermediate pose stage but facesleft; redraw that stage facingRIGHT. Image2 is Rixa RIGHT-facing standingidentity. Stage: Almost upright relaxed stance, knees slightlysoft, hands near sides, shoulders settling. Keep same slenderadult darkfeline anatomy greeneyes pale muzzle short tousledhair, vest/tunic patchedtrousers BAREfeet sheathedknife and paletiptail. Head andfeet faceRIGHT, tailbalancesLEFT. Preserve headsize/bodybuild and natural twoarms/twolegs. KnifeLEFT hip mostlyhidden far side, no near duplicate. Crisp pixelart and transparent background NO floor/shadow/glow/text. Fullfigure generouslypadded. Change pose not bodyproportions.",
+  "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-1c3abe60-926d-4120-b61b-47c6c8d8a7bc.png"
+}

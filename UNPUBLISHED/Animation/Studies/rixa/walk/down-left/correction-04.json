@@ -1,0 +1,5 @@
+{
+  "id": "04",
+  "prompt": "Correct Rixa's pose to match Image1's exact limb assignment, using Image2 ONLY for Rixa identity. KEEP FRONT three-quarter DOWN-LEFT camera. The LARGE FOREGROUND ARM must swing FORWARD across waist toward lower LEFT, hand visible LEFT of belt. The foreground NEAR THIGH must slope BACK toward screen RIGHT, its foot behind hip to RIGHT. Background FAR leg reaches lower LEFT AIRBORNE with toes raised BEFORE heel contact. Do NOT repeat Image2's near thigh leading pose. Exactly two arms/two legs. Same Rixa face, greeneyes, hair, vest, patchedtrousers, barefeet, sheathedknife LEFT hip, pale tailtip. Fullbody, transparent nofloor/glow/text, crisp pixelart, no changes to anatomy/proportions.",
+  "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-d8f8e8c3-91ae-469a-800c-f54d4d5db661.png"
+}

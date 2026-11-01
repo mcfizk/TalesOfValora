@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "Village carries the full authored world demographic baseline",
+    "Both minority villagers appear in the live village with matching stats",
+    "Standing and walking use the installed art at ancestry-specific heights",
+    "Save and Continue retain stable villagers with the updated identities",
+    "No browser errors"
+  ],
+  "errors": [],
+  "art": [
+    {
+      "id": "harl",
+      "species": "human",
+      "height": 28
+    },
+    {
+      "id": "resident",
+      "species": "dwarf",
+      "height": 21
+    },
+    {
+      "id": "farmer",
+      "species": "halfling",
+      "height": 16.8
+    }
+  ]
+}

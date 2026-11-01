@@ -1,0 +1,65 @@
+{
+  "variants": [
+    {
+      "facialHair": "full beard",
+      "height": 1442,
+      "clothes": "olive",
+      "hair": "brown",
+      "file": "base.png",
+      "width": 1091
+    },
+    {
+      "facialHair": "clean-shaven",
+      "height": 1442,
+      "clothes": "navy blue",
+      "hair": "blond",
+      "file": "blond-blue.png",
+      "width": 1091
+    },
+    {
+      "facialHair": "short beard",
+      "height": 1442,
+      "clothes": "burgundy",
+      "hair": "black",
+      "file": "black-burgundy.png",
+      "width": 1091
+    },
+    {
+      "facialHair": "moustache",
+      "height": 1442,
+      "clothes": "ochre",
+      "hair": "auburn",
+      "file": "auburn-ochre.png",
+      "width": 1091
+    },
+    {
+      "facialHair": "short beard",
+      "height": 1442,
+      "clothes": "slate blue",
+      "hair": "grey",
+      "file": "grey-slate.png",
+      "width": 1091
+    },
+    {
+      "facialHair": "stubble",
+      "height": 1442,
+      "clothes": "rust",
+      "hair": "dark brown",
+      "file": "brown-rust.png",
+      "width": 1091
+    },
+    {
+      "facialHair": "goatee and moustache",
+      "height": 1442,
+      "clothes": "teal",
+      "hair": "chestnut",
+      "file": "chestnut-teal.png",
+      "width": 1091
+    }
+  ],
+  "stage": "single-pose appearance variants",
+  "base": "base.png",
+  "displayHeight": 28,
+  "id": "human-male",
+  "pose": "left-facing three-quarter idle"
+}

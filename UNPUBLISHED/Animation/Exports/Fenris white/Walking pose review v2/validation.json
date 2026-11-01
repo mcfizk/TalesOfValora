@@ -1,0 +1,134 @@
+{
+  "frames": [
+    {
+      "id": "01",
+      "file": "Fenris_walk_left_01_contact-near.png",
+      "width": 1122,
+      "height": 1402,
+      "transparentPixels": 1037914,
+      "partialAlphaPixels": 534643,
+      "alphaPreserved": true,
+      "bounds": {
+        "x": 123,
+        "y": 157,
+        "width": 902,
+        "height": 1186
+      },
+      "sha256": "89ae7213bc409221b86e73722e602f3a44cdd8e99c5a6bb8cf49ba74879d9948"
+    },
+    {
+      "id": "02",
+      "file": "Fenris_walk_left_02_settle-near.png",
+      "width": 1122,
+      "height": 1402,
+      "transparentPixels": 1039765,
+      "partialAlphaPixels": 532557,
+      "alphaPreserved": true,
+      "bounds": {
+        "x": 117,
+        "y": 166,
+        "width": 916,
+        "height": 1177
+      },
+      "sha256": "065d7805718333ae16a90a1ce203ec42b155472bc06c33016e1ef3cdd5d6298b"
+    },
+    {
+      "id": "03",
+      "file": "Fenris_walk_left_03_passing-far.png",
+      "width": 1122,
+      "height": 1402,
+      "transparentPixels": 1139916,
+      "partialAlphaPixels": 432456,
+      "alphaPreserved": true,
+      "bounds": {
+        "x": 229,
+        "y": 116,
+        "width": 764,
+        "height": 1234
+      },
+      "sha256": "6a6da0f9872870e520706c819b7ced37fb4733fe3afa47e5b406db82d07c8554"
+    },
+    {
+      "id": "04",
+      "file": "Fenris_walk_left_04_reach-far.png",
+      "width": 1122,
+      "height": 1402,
+      "transparentPixels": 1105367,
+      "partialAlphaPixels": 466954,
+      "alphaPreserved": true,
+      "bounds": {
+        "x": 148,
+        "y": 107,
+        "width": 867,
+        "height": 1229
+      },
+      "sha256": "51e370a14c1ae92338331dd7ad5f303275af9288822d58786d80f6c0f0ddf2fb"
+    },
+    {
+      "id": "05",
+      "file": "Fenris_walk_left_05_contact-far.png",
+      "width": 1122,
+      "height": 1402,
+      "transparentPixels": 1072655,
+      "partialAlphaPixels": 499720,
+      "alphaPreserved": true,
+      "bounds": {
+        "x": 120,
+        "y": 166,
+        "width": 875,
+        "height": 1152
+      },
+      "sha256": "d07821c8e2a2510729eb6a31b6827ae63e59171aec66f5eb95697d90211f32cc"
+    },
+    {
+      "id": "06",
+      "file": "Fenris_walk_left_06_settle-far-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "transparentPixels": 1093358,
+      "partialAlphaPixels": 479000,
+      "alphaPreserved": true,
+      "bounds": {
+        "x": 185,
+        "y": 211,
+        "width": 831,
+        "height": 1108
+      },
+      "sha256": "67d1d73795a131cb1077bba14eed792b672dc57932ecef3237082d5bd1048d1a"
+    },
+    {
+      "id": "07",
+      "file": "Fenris_walk_left_07_passing-near.png",
+      "width": 1122,
+      "height": 1402,
+      "transparentPixels": 1161077,
+      "partialAlphaPixels": 411154,
+      "alphaPreserved": true,
+      "bounds": {
+        "x": 261,
+        "y": 119,
+        "width": 734,
+        "height": 1223
+      },
+      "sha256": "f56fad4b81bc00f1e2def5850595c2c4b5ce8996cafdca4cedc2a23dbf68a827"
+    },
+    {
+      "id": "08",
+      "file": "Fenris_walk_left_08_reach-near.png",
+      "width": 1122,
+      "height": 1402,
+      "transparentPixels": 1094316,
+      "partialAlphaPixels": 477431,
+      "alphaPreserved": true,
+      "bounds": {
+        "x": 159,
+        "y": 125,
+        "width": 869,
+        "height": 1205
+      },
+      "sha256": "2a5941e2f3536f59491ad8d38a7eacbc01635f1f5145e353475166aed1c21423"
+    }
+  ],
+  "sameScale": 0.3333333333333333,
+  "animationCreated": false
+}

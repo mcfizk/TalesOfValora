@@ -1,0 +1,4 @@
+Mode: built-in image_gen edit
+Source: Fenris_idle_frames.png
+Output: Fenris_white_idle_preview.png
+Use case: precise-object-edit. Edit target: the supplied four-frame pixel-art Fenris werewolf sprite strip. Recolor the brown fur to white fur with neutral grey accents consistently across all four frames. Use bright ivory-free white and pale neutral grey for lit fur, medium neutral grey for shaded fur and accents on the back, shoulders, forearms, legs, and tail, dark charcoal for deepest shadows. Preserve existing black outlines, blue/cyan eye pixels, nose, claws, anatomy, silhouette, precise pixel clusters, each of the four original poses, spacing, frame order, and flat dark background. This is strictly a palette swap: no redesign, no added detail, no smoothing, no antialiasing, no new poses, no text, no cropping. Keep the native chunky pixel art. Return the same four-frame horizontal strip.

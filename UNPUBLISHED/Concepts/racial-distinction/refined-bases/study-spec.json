@@ -1,0 +1,34 @@
+[
+  {
+    "id": "dwarf-male-base-selected",
+    "source": "dwarf-male-a",
+    "sex": "Male",
+    "race": "Dwarf",
+    "ratio": 0.75,
+    "description": "Preserve the exact broad stocky anatomy, face, head size, short powerful legs, arm thickness and relaxed stance of selected dwarf male A. CLOTHING: a well-fitted dark muted slate-blue WOOL work tunic, plain cloth seams defining a structured front, narrow understated ochre stitch edging at collar and cuffs, neatly finished straight hip-length hem with small side vents, broad brown leather belt with a modest square brass buckle and tucked belt end. Plain sturdy charcoal-brown trousers and well-maintained substantial brown leather boots, no steel toes. Cloth is clearly soft woven textile despite neat tailoring; no armored paneling, padded armor or leather cuirass. GROOMING: grow a LONG full brown beard reaching the lower chest, neatly combed and shaped into two restrained sections with slim cord ties and one or two tiny bronze beard rings, one small simple geometric charm. Long beard is unmistakable. Brown head hair neatly combed back and secured in a short practical tie rather than wild spiky hair. Maintain mature strong face. Ordinary craftsman's pride and care, not noble luxury."
+  },
+  {
+    "id": "dwarf-female-base-selected",
+    "source": "dwarf-female-c",
+    "sex": "Female",
+    "race": "Dwarf",
+    "ratio": 0.7,
+    "description": "Preserve EXACTLY selected dwarf female C's compact rugged broad anatomy: thick short limbs, wide waist and strong torso, low center of gravity, broad adult face, strong jaw, substantial hands and boots. Do NOT slim her waist or make her taller. CLOTHING: neatly tailored muted deep burgundy WOOL work tunic with understated ochre seam stitching, structured modest collar and clean cuff edging, straight practical hip-length hem with side vents, broad brown leather belt with a modest square brass buckle and tucked end, plain dark brown sturdy trousers, neatly maintained heavy brown leather boots without metal toe plates. Clear textile work clothing, no armor construction. GROOMING: replace short bob with LONG brown hair retaining a few grey streaks, neatly swept back into a thick long braid laid behind the shoulder and visible extending to mid-back/waist, secured with plain cord ties and a small bronze fastening. No short hairstyle, no loose bob, no facial hair. Keep the rugged mature face. Ordinary professional craftswoman, modest and practical, not noble."
+  },
+  {
+    "id": "halfling-male-base-selected",
+    "source": "halfling-male-a",
+    "sex": "Male",
+    "race": "Halfling",
+    "ratio": 0.6,
+    "description": "Preserve EXACTLY selected halfling male A's balanced small-adult anatomy: relatively narrow shoulders, light short limbs, mature face, normal-size adult eyes, subtly pointed ears, broad large bare feet and same stance. GROOMING: remove the moustache and heavy sideburns completely, clean-shaven adult face, same mature nose/jaw rather than childlike features; brown curls slightly tousled and ruffled, clean not neglected. CLOTHING: loose soft muted moss-green linen overshirt with rumpled folds and relaxed sleeves, a modest off-white undershirt visible at simple open neckline, softly uneven but intact hem; simple thin tan CORD tied at the waist with a small knot and two short ends, NO buckle or broad leather belt. Required loose comfortable russet-brown trousers with room at hips and knees, gently gathered or loosely rolled at mid-calf. ALL feet completely bare, toes and broad hairy insteps clearly visible. No shoes, boots, sandals, armor, gear or stiff tailoring. Soft ordinary village/travel-ready casual attire, neither dirty nor ragged, not a farmer costume."
+  },
+  {
+    "id": "halfling-female-base-selected",
+    "source": "halfling-female-a",
+    "sex": "Female",
+    "race": "Halfling",
+    "ratio": 0.6,
+    "description": "Preserve EXACTLY selected halfling female A's balanced small-adult anatomy, mature face and normal-size eyes, narrow shoulders, light arms, adult hips, subtly pointed ears, broad bare feet and same stance. GROOMING: brown curls loosely gathered at the back with a plain cloth tie, a few escaping curls, relaxed and slightly ruffled but clean. CLOTHING: a simple soft dusty-teal linen everyday DRESS, one continuous gathered skirt down to the lower calf, relaxed elbow-length sleeves with lightly rumpled folds, modest round neckline with a hint of cream underlayer, plain tan cord loosely tied at waist, NO formal buckle or stiff bodice. No trousers, no divided skirt, no high slit, no corset. Skirt has a modest practical flare, not a broad ballgown; keep body light and adult, not childlike. ALL feet entirely bare, both sets of toes and broad insteps clearly visible below the hem, no footwear of any kind. Casual lived-in but intact commoner clothing, no luxury embroidery, armor or adventurer gear."
+  }
+]

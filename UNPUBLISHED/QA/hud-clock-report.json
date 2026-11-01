@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "Correct AC and HP reach the game",
+    "Both resource bars are present with no active class power",
+    "Health bar shows 13 of 13",
+    "Party portrait is anchored bottom-right",
+    "Awakening leaves the clock at 22:00",
+    "Idle does not advance the clock",
+    "Actual movement advances game minutes",
+    "Paused input cannot advance time",
+    "Holding a movement key against an obstacle does not tick time",
+    "Future party cards independently display health and power",
+    "Village is hidden before morning",
+    "Morning reveals a tracked village destination",
+    "Sun replaces moon at morning",
+    "Village discovery does not reveal spirits or finish the search",
+    "Village tracking can be toggled",
+    "Tracking can be restored",
+    "Restart resets time, resources and destination discovery",
+    "Touch movement advances time and reveals the village",
+    "Mobile portrait clears touch controls and fits viewport",
+    "No browser errors"
+  ],
+  "errors": []
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "dwarf-male-a",
+    "race": "Dwarves",
+    "sex": "Male",
+    "variant": "A",
+    "name": "Traditional stocky",
+    "ratio": 0.75,
+    "anatomy": "A naturally stout mature man: deep rounded barrel ribcage, very broad horizontal shoulders, thick waist, powerful thighs and short shins, thick neck, huge working hands, heavy broad feet. About 4.8 heads tall, overall hands-to-hands silhouette width about 80% of standing height. Broad adult face, strong nose, pronounced jaw, full short brown beard that DOES NOT conceal the torso, short brown hair."
+  },
+  {
+    "id": "dwarf-male-b",
+    "race": "Dwarves",
+    "sex": "Male",
+    "variant": "B",
+    "name": "Broad and muscular",
+    "ratio": 0.78,
+    "anatomy": "A mature CLEAN-SHAVEN man, deliberately expose the wide square jaw and thick neck. An exceptionally broad muscular shoulder girdle and deep pectoral chest, angular thick arms and big forearms, slightly tapered but still substantial waist, short powerful thighs and calves, large broad hands and boots. About 5 heads tall, hands-to-hands silhouette width about 90% of standing height. Distinct triangular upper torso rather than round belly. Broad strong nose, heavy eyebrows, short swept-back brown hair. No bodybuilder veins or exaggerated bulging."
+  },
+  {
+    "id": "dwarf-male-c",
+    "race": "Dwarves",
+    "sex": "Male",
+    "variant": "C",
+    "name": "Compact and rugged",
+    "ratio": 0.7,
+    "anatomy": "An older mature man with the LOWEST center of gravity: squat block-shaped ribcage and broad pelvis, nearly equal shoulder and waist breadth, very short thick legs, naturally broad sturdy torso, thick weathered forearms and big hands, thick neck. About 4.5 heads tall, silhouette width about 85% of standing height. Broad weathered face, prominent nose and square jaw, salt-and-pepper cropped hair and short stubble. No long beard hiding the body."
+  },
+  {
+    "id": "dwarf-female-a",
+    "race": "Dwarves",
+    "sex": "Female",
+    "variant": "A",
+    "name": "Traditional stocky",
+    "ratio": 0.75,
+    "anatomy": "A mature naturally stocky dwarf woman, same racial skeleton as stocky male dwarves: very broad shoulders, deep rounded barrel ribcage, thick waist and broad pelvis, short muscular thighs and shins, thick arms with substantial hands, broad sturdy neck, broad heavy boots. About 4.8 heads tall, overall silhouette width about 80% of standing height. Broad adult female face with strong cheekbones, pronounced square jaw, substantial nose and eyebrows. Brown hair in low braid. No tiny waist, slender human limbs, dainty hands or facial hair."
+  },
+  {
+    "id": "dwarf-female-b",
+    "race": "Dwarves",
+    "sex": "Female",
+    "variant": "B",
+    "name": "Broad and athletic",
+    "ratio": 0.78,
+    "anatomy": "A mature powerful athletic dwarf woman with remarkably wide shoulder girdle and deep ribcage, broad back, slightly tapered but thick waist, sturdy pelvis, angular muscular forearms and substantial hands, short powerful legs and broad heavy boots, thick neck. About 5 heads tall, overall silhouette width about 90% of standing height. Upper body has broad athletic trapezoid outline, not an hourglass. Strong broad female face, defined nose, heavy eyebrows, pronounced jaw. Brown hair tied into a small practical bun. No narrow delicate human anatomy or facial hair."
+  },
+  {
+    "id": "dwarf-female-c",
+    "race": "Dwarves",
+    "sex": "Female",
+    "variant": "C",
+    "name": "Compact and rugged",
+    "ratio": 0.7,
+    "anatomy": "An older mature dwarf woman with a very squat rectangular body, broad ribcage and pelvis of nearly equal width, thick waist, shortest robust legs, thick neck, strong heavy forearms and large working hands and broad boots. About 4.5 heads tall, overall silhouette width about 85% of standing height. Broad adult weathered face, strong nose, wide jaw, expressive brow, short salt-and-pepper brown bob. The design must share the male dwarf skeletal solidity and low center of gravity. No tiny waist, delicate arms or facial hair."
+  },
+  {
+    "id": "halfling-male-a",
+    "race": "Halflings",
+    "sex": "Male",
+    "variant": "A",
+    "name": "Balanced proportions",
+    "ratio": 0.6,
+    "anatomy": "A balanced small ADULT halfling man about 35, compact comparatively slim torso, rounded but mature face, modest narrow shoulders, short light limbs, small adult hands, broad bare feet visibly larger in proportion to body than human feet. About 5.5 heads tall, silhouette width about 53% of height. Head a little larger in proportion than human, but eyes NORMAL ADULT SIZE and features mature, defined adult nose, small moustache and sideburns. Curly short brown hair, subtly pointed small ears. Comfortable brown cropped trousers. No chibi, babyface, potbelly, dwarf musculature or boots."
+  },
+  {
+    "id": "halfling-male-b",
+    "race": "Halflings",
+    "sex": "Male",
+    "variant": "B",
+    "name": "Slender and agile",
+    "ratio": 0.64,
+    "anatomy": "A slender agile small ADULT halfling man about 30, narrow shoulders, trim elongated small ribcage and waist, light wiry arms and calves, slightly longer legs than halfling A but still a small humanoid, balanced relaxed stance, long broad soft-soled low shoes that show his relatively large feet. About 6 heads tall, overall silhouette width about 45% of height. Mature face with soft jaw but adult nose, normal-size eyes and short brown swept hair, faint stubble, subtly pointed small ears. No pointed elven beauty, child proportions or oversized head."
+  },
+  {
+    "id": "halfling-male-c",
+    "race": "Halflings",
+    "sex": "Male",
+    "variant": "C",
+    "name": "Compact and sturdy",
+    "ratio": 0.54,
+    "anatomy": "A compact sturdy small ADULT halfling man about 45: shortened rounded torso, moderate waist thickness and softly rounded abdomen but narrow shoulders compared with dwarves, short light limbs, small hands, oversized broad bare feet. About 5.2 heads tall, silhouette width about 60% of height. Sturdy but NOT barrel-chested, massive or muscular like a dwarf. Mature rounded face with a clear adult nose and small neat goatee, normal-size eyes, wavy short brown hair and subtly pointed ears. Comfortable cropped brown trousers. No babyface, chibi or infant proportions."
+  },
+  {
+    "id": "halfling-female-a",
+    "race": "Halflings",
+    "sex": "Female",
+    "variant": "A",
+    "name": "Balanced proportions",
+    "ratio": 0.6,
+    "anatomy": "A balanced small ADULT halfling woman about 35, compact relatively slim ribcage, modest narrow shoulders, natural adult waist and hips, short light limbs, small adult hands, broad bare feet visibly larger relative to body than human feet. About 5.5 heads tall, silhouette width about 53% of height. Soft rounded but mature adult face with clear adult nose and NORMAL-SIZED eyes, slightly pointed small ears, curly brown hair gathered behind head. No facial hair, chibi, babyface, large innocent eyes, doll anatomy or dwarf musculature. Comfortable brown cropped trousers."
+  },
+  {
+    "id": "halfling-female-b",
+    "race": "Halflings",
+    "sex": "Female",
+    "variant": "B",
+    "name": "Slender and agile",
+    "ratio": 0.64,
+    "anatomy": "A slender agile small ADULT halfling woman about 30, narrow shoulder girdle, trim small ribcage and waist, natural adult pelvis, light wiry arms and calves, slightly longer legs than halfling A, long broad low soft shoes to fit proportionally large feet. About 6 heads tall, silhouette width about 45% of height. Mature feminine face with soft jaw and clear adult nose, normal-size expressive eyes, brown short practical hair tucked behind small subtly pointed ears. No facial hair, child anatomy, chibi, pointed elven beauty or exaggerated hourglass."
+  },
+  {
+    "id": "halfling-female-c",
+    "race": "Halflings",
+    "sex": "Female",
+    "variant": "C",
+    "name": "Compact and sturdy",
+    "ratio": 0.54,
+    "anatomy": "A compact sturdy small ADULT halfling woman about 45: shortened rounded ribcage, moderate waist thickness and natural broad hips, shoulders much narrower than dwarves, short lightweight limbs, small adult hands, oversized broad bare feet. About 5.2 heads tall, silhouette width about 60% of height. Sturdy but NOT barrel-chested or massive like a dwarf. Mature round face with clear adult nose, normal-size eyes and soft jaw, wavy brown hair in a low bun, subtly pointed small ears. No facial hair, infantile features or chibi anatomy. Comfortable brown cropped trousers."
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "frame_size": [
+    512,
+    640
+  ],
+  "fps": 8,
+  "loop_duration_ms": 1000,
+  "directions": [
+    {
+      "direction": "left",
+      "source": "generated",
+      "scale": 1.146919431279621,
+      "frame_count": 8
+    },
+    {
+      "direction": "up-left",
+      "source": "generated",
+      "scale": 1.1627906976744187,
+      "frame_count": 8
+    },
+    {
+      "direction": "up",
+      "source": "generated",
+      "scale": 1.1506276150627615,
+      "frame_count": 8
+    },
+    {
+      "direction": "down-left",
+      "source": "generated",
+      "scale": 1.1506276150627615,
+      "frame_count": 8
+    },
+    {
+      "direction": "down",
+      "source": "generated",
+      "scale": 1.1554621848739495,
+      "frame_count": 8
+    },
+    {
+      "direction": "right",
+      "source": "exact horizontal mirror",
+      "mirrored_from": "left",
+      "frame_count": 8
+    },
+    {
+      "direction": "up-right",
+      "source": "exact horizontal mirror",
+      "mirrored_from": "up-left",
+      "frame_count": 8
+    },
+    {
+      "direction": "down-right",
+      "source": "exact horizontal mirror",
+      "mirrored_from": "down-left",
+      "frame_count": 8
+    }
+  ],
+  "validation": [
+    {
+      "direction": "up-left",
+      "unique_frames": 8,
+      "clipped": false,
+      "transparent": true
+    },
+    {
+      "direction": "right",
+      "unique_frames": 8,
+      "clipped": false,
+      "transparent": true
+    },
+    {
+      "direction": "down-right",
+      "unique_frames": 8,
+      "clipped": false,
+      "transparent": true
+    },
+    {
+      "direction": "up-right",
+      "unique_frames": 8,
+      "clipped": false,
+      "transparent": true
+    },
+    {
+      "direction": "left",
+      "unique_frames": 8,
+      "clipped": false,
+      "transparent": true
+    },
+    {
+      "direction": "up",
+      "unique_frames": 8,
+      "clipped": false,
+      "transparent": true
+    },
+    {
+      "direction": "down-left",
+      "unique_frames": 8,
+      "clipped": false,
+      "transparent": true
+    },
+    {
+      "direction": "down",
+      "unique_frames": 8,
+      "clipped": false,
+      "transparent": true
+    }
+  ],
+  "mirror_pairs_verified": 24,
+  "source_notes": "AI-generated pose sequences, uniformly scaled per direction with nearest-neighbor sampling, aligned by shorts center and ground contact."
+}

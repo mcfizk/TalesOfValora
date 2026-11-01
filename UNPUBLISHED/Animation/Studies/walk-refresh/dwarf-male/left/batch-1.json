@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01",
+    "role": "Near contact: foreground leg forward planted heel, far leg behind on toe; foreground arm back, far arm forward.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/01.png",
+    "prompt": "Image1 is ONLY a walking pose and limb overlap guide. Image2 is the approved DWARF male identity and anatomy; preserve it exactly. Draw this dwarf in the eight-phase walk pose 1: Near contact: foreground leg forward planted heel, far leg behind on toe; foreground arm back, far arm forward. Left-facing three-quarter side walking camera matching image1. Adapt the gesture to the dwarf's short powerful legs and short thick arms, wide deep torso and broad shoulders. Do NOT adopt human height or slender anatomy or compress a human. Long brown maintained beard with gold braid rings and charm, tied-back brown hair, structured navy tunic with cream trimmed rolled cuffs, buckled brown belt, brown trousers and sturdy boots, as image2. No armor or weapons. Exactly two arms/two legs, natural joints, opposite arm/leg swing. Full body transparent PNG, crisp stepped pixel-art edges, same palette/shading/lighting as image2. Keep dwarf's visible height and padding as image2, consistent size across frames. No shadow, no text. Copy limb assignment from image1, not image2's idle pose.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-aa830249-5851-4c71-bb6f-147127775291.png"
+  },
+  {
+    "id": "02",
+    "role": "Near settle: foreground knee flexed taking weight; far trailing heel lifting.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/02.png",
+    "prompt": "Image1 is ONLY a walking pose and limb overlap guide. Image2 is the approved DWARF male identity and anatomy; preserve it exactly. Draw this dwarf in the eight-phase walk pose 2: Near settle: foreground knee flexed taking weight; far trailing heel lifting. Left-facing three-quarter side walking camera matching image1. Adapt the gesture to the dwarf's short powerful legs and short thick arms, wide deep torso and broad shoulders. Do NOT adopt human height or slender anatomy or compress a human. Long brown maintained beard with gold braid rings and charm, tied-back brown hair, structured navy tunic with cream trimmed rolled cuffs, buckled brown belt, brown trousers and sturdy boots, as image2. No armor or weapons. Exactly two arms/two legs, natural joints, opposite arm/leg swing. Full body transparent PNG, crisp stepped pixel-art edges, same palette/shading/lighting as image2. Keep dwarf's visible height and padding as image2, consistent size across frames. No shadow, no text. Copy limb assignment from image1, not image2's idle pose.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-6cac50f6-54a7-4bf4-ae3d-16ded2f8d3a9.png"
+  },
+  {
+    "id": "03",
+    "role": "Far passing: foreground leg supports under pelvis; far knee passes with boot airborne; arms near neutral.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/03.png",
+    "prompt": "Image1 is ONLY a walking pose and limb overlap guide. Image2 is the approved DWARF male identity and anatomy; preserve it exactly. Draw this dwarf in the eight-phase walk pose 3: Far passing: foreground leg supports under pelvis; far knee passes with boot airborne; arms near neutral. Left-facing three-quarter side walking camera matching image1. Adapt the gesture to the dwarf's short powerful legs and short thick arms, wide deep torso and broad shoulders. Do NOT adopt human height or slender anatomy or compress a human. Long brown maintained beard with gold braid rings and charm, tied-back brown hair, structured navy tunic with cream trimmed rolled cuffs, buckled brown belt, brown trousers and sturdy boots, as image2. No armor or weapons. Exactly two arms/two legs, natural joints, opposite arm/leg swing. Full body transparent PNG, crisp stepped pixel-art edges, same palette/shading/lighting as image2. Keep dwarf's visible height and padding as image2, consistent size across frames. No shadow, no text. Copy limb assignment from image1, not image2's idle pose.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-0d229e5f-cf77-4c49-b6dd-3970da61a5ad.png"
+  },
+  {
+    "id": "04",
+    "role": "Far reach: foreground leg behind on toe support; far leg reaches forward airborne; foreground arm forward.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/04.png",
+    "prompt": "Image1 is ONLY a walking pose and limb overlap guide. Image2 is the approved DWARF male identity and anatomy; preserve it exactly. Draw this dwarf in the eight-phase walk pose 4: Far reach: foreground leg behind on toe support; far leg reaches forward airborne; foreground arm forward. Left-facing three-quarter side walking camera matching image1. Adapt the gesture to the dwarf's short powerful legs and short thick arms, wide deep torso and broad shoulders. Do NOT adopt human height or slender anatomy or compress a human. Long brown maintained beard with gold braid rings and charm, tied-back brown hair, structured navy tunic with cream trimmed rolled cuffs, buckled brown belt, brown trousers and sturdy boots, as image2. No armor or weapons. Exactly two arms/two legs, natural joints, opposite arm/leg swing. Full body transparent PNG, crisp stepped pixel-art edges, same palette/shading/lighting as image2. Keep dwarf's visible height and padding as image2, consistent size across frames. No shadow, no text. Copy limb assignment from image1, not image2's idle pose.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-471541bd-be8e-415d-bede-94418865c40a.png"
+  }
+]

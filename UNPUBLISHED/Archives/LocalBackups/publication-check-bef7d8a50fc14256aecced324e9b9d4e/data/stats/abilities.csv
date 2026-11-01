@@ -1,0 +1,7 @@
+id,name,description
+str,Strength,Physical power: Athletics and Strength saves
+dex,Dexterity,Agility and reflexes: AC and initiative when unarmored
+con,Constitution,Health and stamina: hit points
+int,Intelligence,Reasoning and memory
+wis,Wisdom,Perception and insight
+cha,Charisma,Force of personality

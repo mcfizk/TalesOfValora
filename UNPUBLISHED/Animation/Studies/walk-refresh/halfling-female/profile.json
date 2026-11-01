@@ -1,0 +1,5 @@
+{
+  "bodyHeight": 400,
+  "worldHeight": 16.8,
+  "notes": "Uniform whole-image scale corrects generator framing drift, with phase rise/fall. No limb warping."
+}

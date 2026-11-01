@@ -1,0 +1,12 @@
+[
+  {
+    "id": "05",
+    "prompt": "Correct this Rixa animation frame using Image1 as POSE ONLY and Image2 as exact character identity. COPY Image1's opposite-leg CONTACT pose. CRITICAL: the large FOREGROUND arm must swing FORWARD to screen LEFT, forearm/hand visibly IN FRONT OF WAIST. The foreground NEAR LEG trails BACK RIGHT, BEHIND the hip. Background FAR LEG extends FORWARD LEFT, bears weight with flat heel contact, near foot on toe behind. This must be the OPPOSITE of Image2's near leg forward / near arm back pose. Preserve Rixa face darkfur greeneyes, charcoalhair, brown vest and patched trousers, barefeet, sheathedknife, paletiptail and LEFT-facing camera. Twoarms twolegs, naturaljoints, fullbody, transparentbackground, nofloor/text. Do not copy Image2's leg positions.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-7c8410eb-b15d-43af-ba55-edaba6d3babe.png"
+  },
+  {
+    "id": "06",
+    "prompt": "Correct this Rixa animation frame using Image1 as POSE ONLY and Image2 as exact character identity. COPY Image1's opposite-leg SETTLING pose. CRITICAL: the large FOREGROUND arm must swing FORWARD to screen LEFT, forearm/hand visibly IN FRONT OF WAIST. The foreground NEAR LEG trails BACK RIGHT, BEHIND the hip. Background FAR LEG extends FORWARD LEFT, bears weight with knee bent, while near foot lifts completely behind. This must be the OPPOSITE of Image2's near leg forward / near arm back pose. Preserve Rixa face darkfur greeneyes, charcoalhair, brown vest and patched trousers, barefeet, sheathedknife, paletiptail and LEFT-facing camera. Twoarms twolegs, naturaljoints, fullbody, transparentbackground, nofloor/text. Do not copy Image2's leg positions.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c4c5e410-e8b5-427f-8773-ddfac9957f5f.png"
+  }
+]

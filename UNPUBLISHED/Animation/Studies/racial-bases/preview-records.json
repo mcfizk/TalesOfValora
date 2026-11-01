@@ -1,0 +1,1735 @@
+[
+  {
+    "id": "fenris",
+    "label": "Fenris",
+    "ratio": 1.2857142857142858,
+    "displayHeight": 36,
+    "sourceNote": "Existing game animations",
+    "meta": {
+      "idle": {
+        "file": "../../../../private-opening/assets/fenris/idle.png",
+        "frameWidth": 400,
+        "frameHeight": 528,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": true,
+        "anchor": [
+          200,
+          500
+        ],
+        "bodyHeight": 466
+      },
+      "sleep": {
+        "file": "../../../../private-opening/assets/fenris/sleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true,
+        "anchor": [
+          320,
+          610
+        ],
+        "bodyHeight": 550
+      },
+      "sit": {
+        "file": "../../../../private-opening/assets/fenris/sit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true,
+        "anchor": [
+          320,
+          610
+        ],
+        "bodyHeight": 550
+      },
+      "sleepToSit": {
+        "file": "../../../../private-opening/assets/fenris/sleepToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 4,
+        "loop": false,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true,
+        "anchor": [
+          320,
+          610
+        ],
+        "bodyHeight": 550
+      },
+      "sitToStand": {
+        "file": "../../../../private-opening/assets/fenris/sitToStand.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 6,
+        "fps": 4,
+        "loop": false,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true,
+        "anchor": [
+          320,
+          610
+        ],
+        "bodyHeight": 550
+      },
+      "walk-left": {
+        "files": {
+          "left": "fenris/walk-left.png",
+          "right": "fenris/walk-right.png",
+          "up-left": "fenris/walk-up-left.png",
+          "up-right": "fenris/walk-up-right.png",
+          "up": "fenris/walk-up.png",
+          "down-left": "fenris/walk-down-left.png",
+          "down-right": "fenris/walk-down-right.png",
+          "down": "fenris/walk-down.png"
+        },
+        "frameWidth": 512,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 8,
+        "loop": true,
+        "anchor": [
+          256,
+          610
+        ],
+        "bodyHeight": 550,
+        "file": "../../../../private-opening/assets/fenris/walk-left.png"
+      },
+      "walk-right": {
+        "files": {
+          "left": "fenris/walk-left.png",
+          "right": "fenris/walk-right.png",
+          "up-left": "fenris/walk-up-left.png",
+          "up-right": "fenris/walk-up-right.png",
+          "up": "fenris/walk-up.png",
+          "down-left": "fenris/walk-down-left.png",
+          "down-right": "fenris/walk-down-right.png",
+          "down": "fenris/walk-down.png"
+        },
+        "frameWidth": 512,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 8,
+        "loop": true,
+        "anchor": [
+          256,
+          610
+        ],
+        "bodyHeight": 550,
+        "file": "../../../../private-opening/assets/fenris/walk-right.png"
+      },
+      "walk-up-left": {
+        "files": {
+          "left": "fenris/walk-left.png",
+          "right": "fenris/walk-right.png",
+          "up-left": "fenris/walk-up-left.png",
+          "up-right": "fenris/walk-up-right.png",
+          "up": "fenris/walk-up.png",
+          "down-left": "fenris/walk-down-left.png",
+          "down-right": "fenris/walk-down-right.png",
+          "down": "fenris/walk-down.png"
+        },
+        "frameWidth": 512,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 8,
+        "loop": true,
+        "anchor": [
+          256,
+          610
+        ],
+        "bodyHeight": 550,
+        "file": "../../../../private-opening/assets/fenris/walk-up-left.png"
+      },
+      "walk-up-right": {
+        "files": {
+          "left": "fenris/walk-left.png",
+          "right": "fenris/walk-right.png",
+          "up-left": "fenris/walk-up-left.png",
+          "up-right": "fenris/walk-up-right.png",
+          "up": "fenris/walk-up.png",
+          "down-left": "fenris/walk-down-left.png",
+          "down-right": "fenris/walk-down-right.png",
+          "down": "fenris/walk-down.png"
+        },
+        "frameWidth": 512,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 8,
+        "loop": true,
+        "anchor": [
+          256,
+          610
+        ],
+        "bodyHeight": 550,
+        "file": "../../../../private-opening/assets/fenris/walk-up-right.png"
+      },
+      "walk-up": {
+        "files": {
+          "left": "fenris/walk-left.png",
+          "right": "fenris/walk-right.png",
+          "up-left": "fenris/walk-up-left.png",
+          "up-right": "fenris/walk-up-right.png",
+          "up": "fenris/walk-up.png",
+          "down-left": "fenris/walk-down-left.png",
+          "down-right": "fenris/walk-down-right.png",
+          "down": "fenris/walk-down.png"
+        },
+        "frameWidth": 512,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 8,
+        "loop": true,
+        "anchor": [
+          256,
+          610
+        ],
+        "bodyHeight": 550,
+        "file": "../../../../private-opening/assets/fenris/walk-up.png"
+      },
+      "walk-down-left": {
+        "files": {
+          "left": "fenris/walk-left.png",
+          "right": "fenris/walk-right.png",
+          "up-left": "fenris/walk-up-left.png",
+          "up-right": "fenris/walk-up-right.png",
+          "up": "fenris/walk-up.png",
+          "down-left": "fenris/walk-down-left.png",
+          "down-right": "fenris/walk-down-right.png",
+          "down": "fenris/walk-down.png"
+        },
+        "frameWidth": 512,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 8,
+        "loop": true,
+        "anchor": [
+          256,
+          610
+        ],
+        "bodyHeight": 550,
+        "file": "../../../../private-opening/assets/fenris/walk-down-left.png"
+      },
+      "walk-down-right": {
+        "files": {
+          "left": "fenris/walk-left.png",
+          "right": "fenris/walk-right.png",
+          "up-left": "fenris/walk-up-left.png",
+          "up-right": "fenris/walk-up-right.png",
+          "up": "fenris/walk-up.png",
+          "down-left": "fenris/walk-down-left.png",
+          "down-right": "fenris/walk-down-right.png",
+          "down": "fenris/walk-down.png"
+        },
+        "frameWidth": 512,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 8,
+        "loop": true,
+        "anchor": [
+          256,
+          610
+        ],
+        "bodyHeight": 550,
+        "file": "../../../../private-opening/assets/fenris/walk-down-right.png"
+      },
+      "walk-down": {
+        "files": {
+          "left": "fenris/walk-left.png",
+          "right": "fenris/walk-right.png",
+          "up-left": "fenris/walk-up-left.png",
+          "up-right": "fenris/walk-up-right.png",
+          "up": "fenris/walk-up.png",
+          "down-left": "fenris/walk-down-left.png",
+          "down-right": "fenris/walk-down-right.png",
+          "down": "fenris/walk-down.png"
+        },
+        "frameWidth": 512,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 8,
+        "loop": true,
+        "anchor": [
+          256,
+          610
+        ],
+        "bodyHeight": 550,
+        "file": "../../../../private-opening/assets/fenris/walk-down.png"
+      },
+      "standToSit": {
+        "file": "../../../../private-opening/assets/fenris/sitToStand.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 6,
+        "fps": 4,
+        "loop": false,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true,
+        "anchor": [
+          320,
+          610
+        ],
+        "bodyHeight": 550,
+        "reverse": true,
+        "derived": true
+      },
+      "sitToSleep": {
+        "file": "../../../../private-opening/assets/fenris/sleepToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 4,
+        "loop": false,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true,
+        "anchor": [
+          320,
+          610
+        ],
+        "bodyHeight": 550,
+        "reverse": true,
+        "derived": true
+      }
+    }
+  },
+  {
+    "id": "human-male",
+    "label": "Human male",
+    "ratio": 1,
+    "displayHeight": 28,
+    "static": true,
+    "sourceNote": "Approved base · static reference",
+    "meta": {
+      "idle": {
+        "file": "../../Humans/Male/base.png",
+        "frameWidth": 1091,
+        "frameHeight": 1442,
+        "columns": 1,
+        "frames": 1,
+        "fps": 1,
+        "loop": true,
+        "anchor": [
+          545,
+          1383
+        ],
+        "bodyHeight": 1291
+      }
+    }
+  },
+  {
+    "id": "human-female",
+    "label": "Human female",
+    "ratio": 1,
+    "displayHeight": 28,
+    "static": true,
+    "sourceNote": "Approved base · static reference",
+    "meta": {
+      "idle": {
+        "file": "../../Humans/Female/base.png",
+        "frameWidth": 1090,
+        "frameHeight": 1443,
+        "columns": 1,
+        "frames": 1,
+        "fps": 1,
+        "loop": true,
+        "anchor": [
+          548.5,
+          1367
+        ],
+        "bodyHeight": 1268
+      }
+    }
+  },
+  {
+    "id": "dwarf-male",
+    "label": "Dwarf male",
+    "ratio": 0.75,
+    "meta": {
+      "idle": {
+        "file": "dwarf-male/idle.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480
+      },
+      "sleep": {
+        "file": "dwarf-male/sleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sit": {
+        "file": "dwarf-male/sit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sleepToSit": {
+        "file": "dwarf-male/sleepToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 5,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sitToStand": {
+        "file": "dwarf-male/sitToStand.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "standToSit": {
+        "file": "dwarf-male/standToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sitToSleep": {
+        "file": "dwarf-male/sitToSleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 5,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "walk-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-male/walk-left.png"
+      },
+      "walk-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-male/walk-right.png"
+      },
+      "walk-up-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-male/walk-up-left.png"
+      },
+      "walk-up-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-male/walk-up-right.png"
+      },
+      "walk-up": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-male/walk-up.png"
+      },
+      "walk-down-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-male/walk-down-left.png"
+      },
+      "walk-down-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-male/walk-down-right.png"
+      },
+      "walk-down": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 480,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-male/walk-down.png"
+      }
+    },
+    "displayHeight": 21,
+    "sourceNote": "Rigged walks · 16 frames",
+    "gallery": "dwarf-male/preview.html"
+  },
+  {
+    "id": "dwarf-female",
+    "label": "Dwarf female",
+    "ratio": 0.7,
+    "meta": {
+      "idle": {
+        "file": "dwarf-female/idle.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448
+      },
+      "sleep": {
+        "file": "dwarf-female/sleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sit": {
+        "file": "dwarf-female/sit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sleepToSit": {
+        "file": "dwarf-female/sleepToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 5,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sitToStand": {
+        "file": "dwarf-female/sitToStand.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "standToSit": {
+        "file": "dwarf-female/standToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sitToSleep": {
+        "file": "dwarf-female/sitToSleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 5,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "walk-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-female/walk-left.png"
+      },
+      "walk-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-female/walk-right.png"
+      },
+      "walk-up-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-female/walk-up-left.png"
+      },
+      "walk-up-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-female/walk-up-right.png"
+      },
+      "walk-up": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-female/walk-up.png"
+      },
+      "walk-down-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-female/walk-down-left.png"
+      },
+      "walk-down-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-female/walk-down-right.png"
+      },
+      "walk-down": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 448,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "dwarf-female/walk-down.png"
+      }
+    },
+    "displayHeight": 19.599999999999998,
+    "sourceNote": "Rigged walks · 16 frames",
+    "gallery": "dwarf-female/preview.html"
+  },
+  {
+    "id": "halfling-male",
+    "label": "Halfling male",
+    "ratio": 0.6,
+    "meta": {
+      "idle": {
+        "file": "halfling-male/idle.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384
+      },
+      "sleep": {
+        "file": "halfling-male/sleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sit": {
+        "file": "halfling-male/sit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sleepToSit": {
+        "file": "halfling-male/sleepToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 5,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sitToStand": {
+        "file": "halfling-male/sitToStand.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "standToSit": {
+        "file": "halfling-male/standToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sitToSleep": {
+        "file": "halfling-male/sitToSleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 5,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "walk-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-male/walk-left.png"
+      },
+      "walk-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-male/walk-right.png"
+      },
+      "walk-up-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-male/walk-up-left.png"
+      },
+      "walk-up-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-male/walk-up-right.png"
+      },
+      "walk-up": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-male/walk-up.png"
+      },
+      "walk-down-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-male/walk-down-left.png"
+      },
+      "walk-down-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-male/walk-down-right.png"
+      },
+      "walk-down": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-male/walk-down.png"
+      }
+    },
+    "displayHeight": 16.8,
+    "sourceNote": "Rigged walks · 16 frames",
+    "gallery": "halfling-male/preview.html"
+  },
+  {
+    "id": "halfling-female",
+    "label": "Halfling female",
+    "ratio": 0.6,
+    "meta": {
+      "idle": {
+        "file": "halfling-female/idle.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384
+      },
+      "sleep": {
+        "file": "halfling-female/sleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sit": {
+        "file": "halfling-female/sit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 2,
+        "frames": 4,
+        "fps": 2,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sleepToSit": {
+        "file": "halfling-female/sleepToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 5,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sitToStand": {
+        "file": "halfling-female/sitToStand.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "standToSit": {
+        "file": "halfling-female/standToSit.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 8,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "sitToSleep": {
+        "file": "halfling-female/sitToSleep.png",
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 3,
+        "frames": 5,
+        "fps": 4,
+        "loop": false,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "directions": [
+          "left",
+          "right"
+        ],
+        "mirrorRight": true
+      },
+      "walk-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-female/walk-left.png"
+      },
+      "walk-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-female/walk-right.png"
+      },
+      "walk-up-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-female/walk-up-left.png"
+      },
+      "walk-up-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-female/walk-up-right.png"
+      },
+      "walk-up": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-female/walk-up.png"
+      },
+      "walk-down-left": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-female/walk-down-left.png"
+      },
+      "walk-down-right": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-female/walk-down-right.png"
+      },
+      "walk-down": {
+        "frameWidth": 640,
+        "frameHeight": 640,
+        "columns": 4,
+        "frames": 16,
+        "fps": 16,
+        "loop": true,
+        "anchor": [
+          320,
+          600
+        ],
+        "bodyHeight": 384,
+        "files": {
+          "left": "walk-left.png",
+          "right": "walk-right.png",
+          "up-left": "walk-up-left.png",
+          "up-right": "walk-up-right.png",
+          "up": "walk-up.png",
+          "down-left": "walk-down-left.png",
+          "down-right": "walk-down-right.png",
+          "down": "walk-down.png"
+        },
+        "revision": "painted-rig-v1",
+        "file": "halfling-female/walk-down.png"
+      }
+    },
+    "displayHeight": 16.8,
+    "sourceNote": "Rigged walks · 16 frames",
+    "gallery": "halfling-female/preview.html"
+  }
+]

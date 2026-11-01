@@ -1,0 +1,183 @@
+{
+  "checks": [
+    "Real game loads recorded wind and Fenris discovery voice",
+    "Recorded footsteps follow actual movement and stop at rest",
+    "All 42 MP3 files serve correctly and decode as playable audio",
+    "Voice captions match the clip; cooldown prevents overlap and repetition",
+    "Pause clears active loops",
+    "A pending sound cannot start after pause",
+    "Mute blocks recorded sounds",
+    "No browser errors"
+  ],
+  "errors": [],
+  "clips": [
+    {
+      "id": "hmm",
+      "seconds": 1.04
+    },
+    {
+      "id": "curious",
+      "seconds": 1.28
+    },
+    {
+      "id": "easy-easy",
+      "seconds": 2.32
+    },
+    {
+      "id": "got-it",
+      "seconds": 0.96
+    },
+    {
+      "id": "huh-thats-new",
+      "seconds": 1.68
+    },
+    {
+      "id": "let-me-look",
+      "seconds": 1.28
+    },
+    {
+      "id": "listen",
+      "seconds": 0.96
+    },
+    {
+      "id": "stand-back",
+      "seconds": 1.36
+    },
+    {
+      "id": "this-way",
+      "seconds": 1.12
+    },
+    {
+      "id": "what-the",
+      "seconds": 1.12
+    },
+    {
+      "id": "fenris-curiosity",
+      "seconds": 3.52
+    },
+    {
+      "id": "wind",
+      "seconds": 10
+    },
+    {
+      "id": "footsteps",
+      "seconds": 5
+    },
+    {
+      "id": "twig-snap",
+      "seconds": 2
+    },
+    {
+      "id": "creaking",
+      "seconds": 5
+    },
+    {
+      "id": "crows",
+      "seconds": 4
+    },
+    {
+      "id": "wings",
+      "seconds": 3
+    },
+    {
+      "id": "howl",
+      "seconds": 6
+    },
+    {
+      "id": "whistle",
+      "seconds": 6
+    },
+    {
+      "id": "growl",
+      "seconds": 4
+    },
+    {
+      "id": "heavy-steps",
+      "seconds": 5
+    },
+    {
+      "id": "rixa-come-here",
+      "seconds": 4.24
+    },
+    {
+      "id": "rixa-mostly",
+      "seconds": 2.8
+    },
+    {
+      "id": "rixa-performance",
+      "seconds": 4.56
+    },
+    {
+      "id": "rixa-stronger",
+      "seconds": 4.64
+    },
+    {
+      "id": "rixa-terrible-idea",
+      "seconds": 2.56
+    },
+    {
+      "id": "rixa-call-me",
+      "seconds": 3.6
+    },
+    {
+      "id": "deer-noticed",
+      "seconds": 3
+    },
+    {
+      "id": "deer-fleeing",
+      "seconds": 3
+    },
+    {
+      "id": "deer-warning",
+      "seconds": 2
+    },
+    {
+      "id": "deer-hurt",
+      "seconds": 2
+    },
+    {
+      "id": "wolf-noticed",
+      "seconds": 5
+    },
+    {
+      "id": "wolf-warning",
+      "seconds": 2
+    },
+    {
+      "id": "wolf-threat",
+      "seconds": 3
+    },
+    {
+      "id": "wolf-hurt",
+      "seconds": 2
+    },
+    {
+      "id": "hare-noticed",
+      "seconds": 2
+    },
+    {
+      "id": "hare-fleeing",
+      "seconds": 2
+    },
+    {
+      "id": "hare-hurt",
+      "seconds": 2
+    },
+    {
+      "id": "owl-noticed",
+      "seconds": 4
+    },
+    {
+      "id": "owl-fleeing",
+      "seconds": 2
+    },
+    {
+      "id": "owl-warning",
+      "seconds": 2
+    },
+    {
+      "id": "owl-threat",
+      "seconds": 2
+    }
+  ]
+}

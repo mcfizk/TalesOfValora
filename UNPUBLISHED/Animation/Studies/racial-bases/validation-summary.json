@@ -1,0 +1,130 @@
+{
+  "characters": [
+    {
+      "id": "dwarf-male",
+      "sheets": 15,
+      "frameCount": 170,
+      "frameSize": [
+        640,
+        640
+      ],
+      "binaryAlpha": true,
+      "exactMirrors": true,
+      "sharedEndpoints": true,
+      "exactReverseTransitions": true,
+      "contractValid": true,
+      "fileHashes": {
+        "idle.png": "b92c3a5233f26c07f2ba527011c0bbbceac4fc801ddef2bed35ca842ddea702d",
+        "sleep.png": "a757ea92d5196bc9e5685d399d27e44a64a82948d05501f3a197c4264c011007",
+        "sit.png": "3a7ef9a27be1eb0e2ee82bde78b2145efba038d516154471f4fc1a1cd7647ea4",
+        "sleepToSit.png": "435e77208d4ce8f0d4b96c5d8ce41d7cce763e389a915623d0a7b1e2e0021baa",
+        "sitToStand.png": "6656c850a8eee279c9b0ec190ec20255245b18537665b0af5ae76b7345746fc5",
+        "standToSit.png": "2c59f962d97da43d861e88ce577d5a24ae9e31e47140c8ca5b2136d260c9d331",
+        "sitToSleep.png": "b63c07c1421b84f0bdd3a23bc411c01bfd0fa8d4c1066f6bb72f8851b413b624",
+        "walk-left.png": "4e70f7321443cd35b5ee1cbe5fb2ac87dc1c926fa29a31d252fa3b48599e5559",
+        "walk-right.png": "1c66d2257ea9dfa463e7f9b392e8fa93fa4e7adb27289a6d05c3d72dea5cd052",
+        "walk-up-left.png": "3a7d88c9c0b662ef99d038baad3ebe7060b9c24afde9a752506d7273ab2afef6",
+        "walk-up-right.png": "c2cd2e2beb2df83f08a3eb4c28d4a00c7a07c19a1ecf93de11a88568302b13ec",
+        "walk-up.png": "d616a6f07bcb9aa22aa058d20ce55205968ff4d948d8945aa46443fcea4c7def",
+        "walk-down-left.png": "1d11c66e7790a1491f5a2a2d47f254801aa6ef2e04bea3a456cf008a076640ad",
+        "walk-down-right.png": "79289e78ddbad5e97ccbab0b013f31f4d95dbd0d2577807db45808665d74e695",
+        "walk-down.png": "dee893b6dbe274e1db590d2b622b94243f15832df840ba9f36f5434555caf20c"
+      }
+    },
+    {
+      "id": "dwarf-female",
+      "sheets": 15,
+      "frameCount": 170,
+      "frameSize": [
+        640,
+        640
+      ],
+      "binaryAlpha": true,
+      "exactMirrors": true,
+      "sharedEndpoints": true,
+      "exactReverseTransitions": true,
+      "contractValid": true,
+      "fileHashes": {
+        "idle.png": "f19416a5b1d36c9740f8b5f4985a24d72cc6b2dd39a00fa4bebdb9d5ee47cdad",
+        "sleep.png": "e054eefb09de6ebb7b1fe85ba6d3c90278d442a317acc408937a79f12117a106",
+        "sit.png": "05ce3d32104737514b8462e7e75a76d9ecce952f9f51152a941c37872c7717c9",
+        "sleepToSit.png": "af4e43cc908f29ce06429814ebc0d034393e2e052a74624a924a9f4a0b254a1b",
+        "sitToStand.png": "a5bd5f18015236d300bf08470909127a7b8380332c1874905ddcf6ba791990c8",
+        "standToSit.png": "3abef59f31d93c12c9752394c4d8a4db2b893facfe9737ee9441c2adc68ea78e",
+        "sitToSleep.png": "62e37eb966db208a8416a843a6d291bae3e269ffdaaf675e47e4a4fa61172c6e",
+        "walk-left.png": "743523f8820bba6d148783f2e574eb95b3321e2b8051fe29650810c25ca77557",
+        "walk-right.png": "0490e1356b213bb638aa1c8a7dbe41e2988a38e1cb7093db24dc9e9512fd7739",
+        "walk-up-left.png": "42250c29d87976b25036a474cb1efc202fae0c8f1eef4d46eec3ac80e52f16aa",
+        "walk-up-right.png": "3842810321fc2c27b5d474a925cfc7b52fb4599d617c8f4d4d0291ad90c39e8e",
+        "walk-up.png": "67bf24d646dc0c6680b39eda27e5c102db882e3e966232fd8f30ef90df7d04ed",
+        "walk-down-left.png": "ef357662704376420769e913cf8e300eecaee3db443891010ee76fd63566272a",
+        "walk-down-right.png": "98f44d5f83c8c7fcebed18130001ba6b1c5bfcd1139ae645020f92ba73fa0b48",
+        "walk-down.png": "43d18292756577ccdd84d17292448b6d6df50d45255066f9ec618fc975696877"
+      }
+    },
+    {
+      "id": "halfling-male",
+      "sheets": 15,
+      "frameCount": 170,
+      "frameSize": [
+        640,
+        640
+      ],
+      "binaryAlpha": true,
+      "exactMirrors": true,
+      "sharedEndpoints": true,
+      "exactReverseTransitions": true,
+      "contractValid": true,
+      "fileHashes": {
+        "idle.png": "cb010c3c986bbc12bb1b15de72842f80f9fa7ae384ceb588714fcb4869b30c12",
+        "sleep.png": "37b713d953c1074ce331323e943f83ff6ad01b354c63d97345afe006f3e93170",
+        "sit.png": "eeaccafe7cc4796cd96ad7f8e6ab997ee688ad01482cad68afed06da37bb520f",
+        "sleepToSit.png": "ff3366911acaa9bff0aee9b79d1b363f33ae8b4eb41ccc3f57a5548bb1ac9555",
+        "sitToStand.png": "00d13e131ff3f1e1955bf27a0aa74fd2768e723564c99e6d7b9a76be544df65f",
+        "standToSit.png": "30f60843aef382a71938526c6d882e6641470769e0add261214d3b472357ec1f",
+        "sitToSleep.png": "12f16300d99e6d65e69828f9e56e4cf736a4c60f6aa9afb357b80e421418d835",
+        "walk-left.png": "a420ca3d4060981490c168ac2397a0820f9f69d3c0eff3ce9a0e26830a25a61f",
+        "walk-right.png": "6e4f6698d16622571e7d304f9d84f5d59414dba76a7663030a891a217f335e05",
+        "walk-up-left.png": "464d6e2271ca5fd25ab163e73b91fa2e180c3010df4ff0975cdd631ff84809dd",
+        "walk-up-right.png": "a3d5289e271d9b066240f6e0fccd68f65733b43430c34a8ccb8783a38320424e",
+        "walk-up.png": "b711a50e2b1f6462bce3e8524709855212578bfc0c5458eb33f2090a5f1b6c36",
+        "walk-down-left.png": "ff3d1484ab9a7438b7d786e72a563bc445fb6b50543dfd669a6db75cf802e891",
+        "walk-down-right.png": "29b9e217b5e40dfe32e7360e2de83f4651748e4bc91b36ebae8b0529f09cc11a",
+        "walk-down.png": "7c311e1e6b9d975cfe106c7a69344cd23eff2a2cdf437de4d2a8218187141053"
+      }
+    },
+    {
+      "id": "halfling-female",
+      "sheets": 15,
+      "frameCount": 170,
+      "frameSize": [
+        640,
+        640
+      ],
+      "binaryAlpha": true,
+      "exactMirrors": true,
+      "sharedEndpoints": true,
+      "exactReverseTransitions": true,
+      "contractValid": true,
+      "fileHashes": {
+        "idle.png": "dcfb7bc2c7589269d139f94b48b79b971794184b6800fb2a24dd11b4c375d76f",
+        "sleep.png": "256630ee1cc2dd6e8d3c8c88c25d9796600152eb4a88dd9d0e5137f31bb9d87a",
+        "sit.png": "dcb0007e99c850a7646d88abebc7b611ba45c2be105473564bab2a46c03e2881",
+        "sleepToSit.png": "f05e02f34364f569b6940ceacfdca43207396f20e57591d8e085c9736e639dfc",
+        "sitToStand.png": "9d217c782d5e54d904d4d9b5c2d817938a253f372d14f7c0f6362e94b093e80f",
+        "standToSit.png": "a9021db9b6951b20669b325ad4425f4937fbf43cf3244ba0e0edca9e742bc1a5",
+        "sitToSleep.png": "9038bfc315e0b69061e744a7d5cdfa80a5ff31808712f909c74e236a46f82f55",
+        "walk-left.png": "110c67c4d0f4cc4a466711fd363f2ecbd8b326e9800fd61a1e457bc5a40db753",
+        "walk-right.png": "5c11a6234a6c35e8fa27313c72b3b98af5010672d2c3889bd8f0caf7a9f097d1",
+        "walk-up-left.png": "ba306923c9ae581e86f8c41c30455c433939f93b763a09de312eeef8d838a0f6",
+        "walk-up-right.png": "52ce9bec71a1a50a636ac70bb572f205c1314eb14ac54b8f32b9dee190865bf9",
+        "walk-up.png": "e812603911b4a2387fe19bbca3847601606f68b3d77ddc975de47cd6b168216b",
+        "walk-down-left.png": "b0d3b554e5235d361f229882416809aee254798064bc5e327d3fac60ff7a28e7",
+        "walk-down-right.png": "0d88ba8681f1684c871033fc278cda0ff38dc2321e9db5eccd0d78465ef50802",
+        "walk-down.png": "7361311470d5faac995aa8d3b68a94224be317239550322c825d1d1b3f8da22b"
+      }
+    }
+  ],
+  "totalSheets": 60,
+  "totalFrames": 680
+}

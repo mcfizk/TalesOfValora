@@ -1,0 +1,23 @@
+[
+  {
+    "id": "03",
+    "role": "Far passing: foreground leg supports under pelvis; far knee passes with boot airborne; arms near neutral.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/03.png",
+    "prompt": "Image1 is the REQUIRED POSE. Image2 is the dwarf to redraw in that pose. Preserve dwarf build, broad short torso, short thick legs, face, long tied beard, navy tunic, cream cuffs, belt and boots of image2. Far PASSING: foreground leg on screen RIGHT planted straight beneath hip. Far leg must bend with knee projecting LEFT, boot clearly airborne LEFT of the supporting shin. NOT a trailing boot on screen right. Match image1 limb assignment precisely. Same camera left-facing three-quarter, full body, same scale and placement as image2. Transparent background, crisp pixel art, no extra arms/legs, no text.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c8992e37-9b0e-4bd9-8251-78473f31b3e7.png"
+  },
+  {
+    "id": "04",
+    "role": "Far reach: foreground leg behind on toe support; far leg reaches forward airborne; foreground arm forward.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/04.png",
+    "prompt": "Image1 is the REQUIRED POSE. Image2 is the dwarf to redraw in that pose. Preserve dwarf build, broad short torso, short thick legs, face, long tied beard, navy tunic, cream cuffs, belt and boots of image2. Far REACH: far boot airborne extending LEFT, foreground boot trails RIGHT on toe. Foreground arm from screen RIGHT shoulder must bend and reach LEFT ACROSS the front of belt; far arm trails on right behind torso. Exactly two arms. Match image1 limb assignment precisely. Same camera left-facing three-quarter, full body, same scale and placement as image2. Transparent background, crisp pixel art, no extra arms/legs, no text.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c40b4115-7bd8-47cd-9ace-792025928cc0.png"
+  },
+  {
+    "id": "07",
+    "role": "Near passing: far leg supports, foreground knee passes with boot airborne; arms neutral.",
+    "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/animations/walk-refresh/human-male/left/source/07.png",
+    "prompt": "Image1 is the REQUIRED POSE. Image2 is the dwarf to redraw in that pose. Preserve dwarf build, broad short torso, short thick legs, face, long tied beard, navy tunic, cream cuffs, belt and boots of image2. Near PASSING: foreground thigh must angle LEFT, bent knee in front; its boot airborne LEFT of the far supporting shin. Far leg on screen RIGHT bears weight. Follow EXACT visible thigh overlap from image1; opposite leg from far passing. Match image1 limb assignment precisely. Same camera left-facing three-quarter, full body, same scale and placement as image2. Transparent background, crisp pixel art, no extra arms/legs, no text.",
+    "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-88b9d813-5b90-4195-8dd7-4dc7c8a089bc.png"
+  }
+]

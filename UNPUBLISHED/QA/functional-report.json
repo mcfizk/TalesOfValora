@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "Default local URL opens private scene",
+    "Opening triggers first voice and supports muted audio",
+    "Keyboard movement changes position",
+    "Pause freezes world movement",
+    "Examine embers shows inline text without pausing",
+    "Examine water shows inline text without pausing",
+    "Examine trail shows inline text without pausing",
+    "Observations preserve the ongoing search",
+    "Journal contains all three observations",
+    "Audio starts through user action",
+    "Restart resets discoveries",
+    "Mobile controls visible",
+    "Mobile fits screen",
+    "Touch joystick moves Fenris"
+  ],
+  "errors": []
+}

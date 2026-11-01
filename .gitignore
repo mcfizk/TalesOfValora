@@ -1,13 +1,8 @@
-/backups/
-/node_modules/
-/*.png
-/test-results.json
-/live-verification.json
-*.log
+# RELEASE and UNPUBLISHED (including drafts, QA and archives) are versioned.
+# Only installed dependencies, caches and local secrets stay outside Git.
+node_modules/
+__pycache__/
+*.pyc
 .env
 .env.*
 !.env.example
-
-# Generated captures and reports; keep the output directory for browser checks.
-/private-opening/qa/*
-!/private-opening/qa/.gitkeep

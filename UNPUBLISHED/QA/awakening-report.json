@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "Title scene shows sleeping Fenris",
+    "Movement is blocked during awakening",
+    "Pause freezes the transition frame and clock",
+    "Sitting is a distinct resting state",
+    "Awakening finishes in standing idle",
+    "Awakening preserves the ground position",
+    "Movement unlocks after standing",
+    "Restart begins asleep again",
+    "Mobile reduced-motion awakening reaches standing",
+    "No browser or asset errors"
+  ],
+  "errors": []
+}

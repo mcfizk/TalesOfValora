@@ -1,0 +1,230 @@
+[
+  {
+    "sha256": "02E00878DD2FAF5C90A8BDCE7C97A5CE7C7A7A9E0A814624EF55E7A167A97B28",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\rest-sequence-review.png"
+  },
+  {
+    "sha256": "F19416A5B1D36C9740F8B5F4985A24D72CC6B2DD39A00FA4BEBDB9D5EE47CDAD",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\idle.png"
+  },
+  {
+    "sha256": "05CE3D32104737514B8462E7E75A76D9ECCE952F9F51152A941C37872C7717C9",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\sit.png"
+  },
+  {
+    "sha256": "62E37EB966DB208A8416A843A6D291BAE3E269FFDAAF675E47E4A4FA61172C6E",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\sitToSleep.png"
+  },
+  {
+    "sha256": "A5BD5F18015236D300BF08470909127A7B8380332C1874905DDCF6BA791990C8",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\sitToStand.png"
+  },
+  {
+    "sha256": "E054EEFB09DE6EBB7B1FE85BA6D3C90278D442A317ACC408937A79F12117A106",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\sleep.png"
+  },
+  {
+    "sha256": "AF4E43CC908F29CE06429814EBC0D034393E2E052A74624A924A9F4A0B254A1B",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\sleepToSit.png"
+  },
+  {
+    "sha256": "3ABEF59F31D93C12C9752394C4D8A4DB2B893FACFE9737EE9441C2ADC68EA78E",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\standToSit.png"
+  },
+  {
+    "sha256": "707AA8FA776DE9B321C4622FD19C42286496DEC6798B7F2AAC49873A521585B3",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\generation\\idle.png"
+  },
+  {
+    "sha256": "C6BECFDDA2BB0BDBDD433279D73F7A7C0C90FF808966FEB50E0096A73EFF0D4D",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\generation\\rest.png"
+  },
+  {
+    "sha256": "DF30619F129BCF13C6A5B18D854196BDB557F2F7AE456CC69DFB06B5D2C6D918",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\generation\\sitToStand.png"
+  },
+  {
+    "sha256": "BB22190757F61E76FD8F1C10897C7788F1F008F7512E5342C417BFA7AC08DDBD",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-female\\generation\\sleepToSit.png"
+  },
+  {
+    "sha256": "B92C3A5233F26C07F2BA527011C0BBBCEAC4FC801DDEF2BED35CA842DDEA702D",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\idle.png"
+  },
+  {
+    "sha256": "3A7EF9A27BE1EB0E2EE82BDE78B2145EFBA038D516154471F4FC1A1CD7647EA4",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\sit.png"
+  },
+  {
+    "sha256": "B63C07C1421B84F0BDD3A23BC411C01BFD0FA8D4C1066F6BB72F8851B413B624",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\sitToSleep.png"
+  },
+  {
+    "sha256": "6656C850A8EEE279C9B0EC190EC20255245B18537665B0AF5AE76B7345746FC5",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\sitToStand.png"
+  },
+  {
+    "sha256": "A757EA92D5196BC9E5685D399D27E44A64A82948D05501F3A197C4264C011007",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\sleep.png"
+  },
+  {
+    "sha256": "435E77208D4CE8F0D4B96C5D8CE41D7CCE763E389A915623D0A7B1E2E0021BAA",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\sleepToSit.png"
+  },
+  {
+    "sha256": "2C59F962D97DA43D861E88CE577D5A24AE9E31E47140C8CA5B2136D260C9D331",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\standToSit.png"
+  },
+  {
+    "sha256": "8B92F61E882ECEEB407D366953844802D2233E27080DAE79AD453734F46FCE1E",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\generation\\idle.png"
+  },
+  {
+    "sha256": "54FAB9B3B8EF6B1582B2861ADDFD3946763A493B17B63CB7FE3F800327CF0D23",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\generation\\rest.png"
+  },
+  {
+    "sha256": "228882BDC1FBE90D0D24713E3CC69B6E48CCF9D0FA2924C648F2D03019A6DBE1",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\generation\\sitToStand.png"
+  },
+  {
+    "sha256": "4C50CB874EC45A066C1A89BB59975FCD9539CDC1DB67B5B1427E1794FEF65DCA",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\dwarf-male\\generation\\sleepToSit.png"
+  },
+  {
+    "sha256": "DCFB7BC2C7589269D139F94B48B79B971794184B6800FB2A24DD11B4C375D76F",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\idle.png"
+  },
+  {
+    "sha256": "DCB0007E99C850A7646D88ABEBC7B611BA45C2BE105473564BAB2A46C03E2881",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\sit.png"
+  },
+  {
+    "sha256": "9038BFC315E0B69061E744A7D5CDFA80A5FF31808712F909C74E236A46F82F55",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\sitToSleep.png"
+  },
+  {
+    "sha256": "9D217C782D5E54D904D4D9B5C2D817938A253F372D14F7C0F6362E94B093E80F",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\sitToStand.png"
+  },
+  {
+    "sha256": "256630EE1CC2DD6E8D3C8C88C25D9796600152EB4A88DD9D0E5137F31BB9D87A",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\sleep.png"
+  },
+  {
+    "sha256": "F05E02F34364F569B6940CEACFDCA43207396F20E57591D8E085C9736E639DFC",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\sleepToSit.png"
+  },
+  {
+    "sha256": "A9021DB9B6951B20669B325AD4425F4937FBF43CF3244BA0E0EDCA9E742BC1A5",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\standToSit.png"
+  },
+  {
+    "sha256": "B4EC65153E39A697CB8454391A5BF75E9696F66D9A58E909ECF1A73BA361F860",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\generation\\idle.png"
+  },
+  {
+    "sha256": "4C30DED52AAB7293A49F8DE616B37E33BDDB8FC7C99D4C25DCB24D70CC65BCAB",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\generation\\rest.png"
+  },
+  {
+    "sha256": "8582010BE952D2513BF3C5B895F06A11B6FC2E3D930B12A30DD758A2C43D8D42",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\generation\\sitToStand.png"
+  },
+  {
+    "sha256": "B547BB1551CE9A63D2EF9E64D6935ECB44DE629AD162FE5AD76CF1EDA46BF599",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-female\\generation\\sleepToSit.png"
+  },
+  {
+    "sha256": "CB010C3C986BBC12BB1B15DE72842F80F9FA7AE384CEB588714FCB4869B30C12",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\idle.png"
+  },
+  {
+    "sha256": "EEACCAFE7CC4796CD96AD7F8E6AB997EE688AD01482CAD68AFED06DA37BB520F",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\sit.png"
+  },
+  {
+    "sha256": "12F16300D99E6D65E69828F9E56E4CF736A4C60F6AA9AFB357B80E421418D835",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\sitToSleep.png"
+  },
+  {
+    "sha256": "00D13E131FF3F1E1955BF27A0AA74FD2768E723564C99E6D7B9A76BE544DF65F",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\sitToStand.png"
+  },
+  {
+    "sha256": "37B713D953C1074CE331323E943F83FF6AD01B354C63D97345AFE006F3E93170",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\sleep.png"
+  },
+  {
+    "sha256": "FF3366911ACAA9BFF0AEE9B79D1B363F33AE8B4EB41CCC3F57A5548BB1AC9555",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\sleepToSit.png"
+  },
+  {
+    "sha256": "30F60843AEF382A71938526C6D882E6641470769E0ADD261214D3B472357EC1F",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\standToSit.png"
+  },
+  {
+    "sha256": "DD750FF12E360277DC2D91E907C93F137988F1CAD934E6D296650DF809DAED78",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\generation\\idle.png"
+  },
+  {
+    "sha256": "5B1D6FAF26A9D33070945D4384552DE2A5AAE16E8211AE8402F65B122C4F0D24",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\generation\\rest.png"
+  },
+  {
+    "sha256": "C5B0477A3D1E486FD56F28FCC1B31B5EEAF0860DA3EC8BF5DF33DB2B7C3A591F",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\generation\\sitToStand.png"
+  },
+  {
+    "sha256": "4265691C50C2BB62831968E3D66707ED9BAFF1D6977C15D16E2FA62056A2845A",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\racial-bases\\halfling-male\\generation\\sleepToSit.png"
+  },
+  {
+    "sha256": "BEB4A934C21FF8CB219AB3051B6F291F3A8666EE721A55E4519EA87B68429D72",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\Dwarves\\Female\\base.png"
+  },
+  {
+    "sha256": "4472AF49C651FB88FAEB40E6FB25BDABEFC93EFAB7AE28BE38DB3984635C2A5E",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\Dwarves\\Male\\base.png"
+  },
+  {
+    "sha256": "885373F72EAA44EBF3840205AE701D7CB186A84171506EEB67CBCC3A968E5B75",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\Halflings\\Female\\base.png"
+  },
+  {
+    "sha256": "FA6C65FB88A8280DB609FBA40C591B0E5372B4B3E4E3A9900ADAAD5B031F7D32",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\Halflings\\Male\\base.png"
+  },
+  {
+    "sha256": "9370A4E934C9801974D82BB6164D07C91772F75537B8F69DB439A5AD235F232A",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\Humans\\Female\\base.png"
+  },
+  {
+    "sha256": "36823F9C4983C7A4DE36A449DD86C4D063759AB68D7A19089F871639278BCB20",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\Humans\\Male\\base.png"
+  },
+  {
+    "sha256": "E75F37301FDC063FA266B492C5AFD9EA4674C633A9797405340AE6A3C8631CDF",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\private-opening\\assets\\fenris\\idle.png"
+  },
+  {
+    "sha256": "2A181B5F5CE6E1D6EFE053A031E7F3BD40830048B7927712B526E1E735212385",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\private-opening\\assets\\fenris\\portrait.png"
+  },
+  {
+    "sha256": "A95D90E077E801885E610F1FCDF85D7B7529F70810E1494ABD054DD4DB1A8834",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\private-opening\\assets\\fenris\\sit.png"
+  },
+  {
+    "sha256": "D9FFCD6C6005CA59F6474648A22DD2ADD23B093FDA8B7EBEC6EBFA929D6B47B4",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\private-opening\\assets\\fenris\\sitToStand.png"
+  },
+  {
+    "sha256": "E9484747FA6503885AEACBE29F323950183A057FE2209FDF5A2C324404D95E8B",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\private-opening\\assets\\fenris\\sleep.png"
+  },
+  {
+    "sha256": "64DC869F17B0AD04CA06E9DE0FB57773A995BA59769C076C6F65824492DEFAA6",
+    "path": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\private-opening\\assets\\fenris\\sleepToSit.png"
+  }
+]

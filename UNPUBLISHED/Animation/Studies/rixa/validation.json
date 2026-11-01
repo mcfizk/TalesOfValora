@@ -1,0 +1,283 @@
+{
+  "checkedAt": "2026-10-29T21:30:27.911Z",
+  "clips": [
+    {
+      "key": "stand/left",
+      "frames": 1,
+      "uniqueFrames": 1,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "stand/up-left",
+      "frames": 1,
+      "uniqueFrames": 1,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "stand/up",
+      "frames": 1,
+      "uniqueFrames": 1,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "stand/up-right",
+      "frames": 1,
+      "uniqueFrames": 1,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "stand/right",
+      "frames": 1,
+      "uniqueFrames": 1,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "stand/down-right",
+      "frames": 1,
+      "uniqueFrames": 1,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "stand/down",
+      "frames": 1,
+      "uniqueFrames": 1,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "stand/down-left",
+      "frames": 1,
+      "uniqueFrames": 1,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "walk/left",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "walk/up-left",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "walk/up",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "walk/up-right",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "walk/right",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "walk/down-right",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "walk/down",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "walk/down-left",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/left/idle",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/left/sit",
+      "frames": 4,
+      "uniqueFrames": 4,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/left/sleep",
+      "frames": 4,
+      "uniqueFrames": 4,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/left/sleepToSit",
+      "frames": 5,
+      "uniqueFrames": 5,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/left/sitToStand",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/left/sitToSleep",
+      "frames": 5,
+      "uniqueFrames": 5,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/left/standToSit",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/right/idle",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/right/sit",
+      "frames": 4,
+      "uniqueFrames": 4,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/right/sleep",
+      "frames": 4,
+      "uniqueFrames": 4,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/right/sleepToSit",
+      "frames": 5,
+      "uniqueFrames": 5,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/right/sitToStand",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/right/sitToSleep",
+      "frames": 5,
+      "uniqueFrames": 5,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    },
+    {
+      "key": "rest/right/standToSit",
+      "frames": 8,
+      "uniqueFrames": 8,
+      "pngIntegrity": true,
+      "sourceUnchanged": true,
+      "binaryAlpha": true,
+      "atlasMatchesFrames": true
+    }
+  ],
+  "complete": true,
+  "missing": [],
+  "browser": {
+    "ready": true,
+    "frameStepping": true,
+    "playback": true,
+    "pageErrors": []
+  }
+}

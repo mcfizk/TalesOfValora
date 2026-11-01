@@ -1,0 +1,34 @@
+[
+  {
+    "id": "deer",
+    "frames": 8,
+    "pngCRC": true,
+    "transparent": true,
+    "exactMirrors": true,
+    "gifFrames": 8
+  },
+  {
+    "id": "doe",
+    "frames": 8,
+    "pngCRC": true,
+    "transparent": true,
+    "exactMirrors": true,
+    "gifFrames": 8
+  },
+  {
+    "id": "wolf",
+    "frames": 8,
+    "pngCRC": true,
+    "transparent": true,
+    "exactMirrors": true,
+    "gifFrames": 8
+  },
+  {
+    "id": "hare",
+    "frames": 8,
+    "pngCRC": true,
+    "transparent": true,
+    "exactMirrors": true,
+    "gifFrames": 8
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "Waiting unavailable during awakening",
+    "T opens duration choices and pauses time",
+    "One hour passes exactly with Fenris sitting in place",
+    "Pause freezes accelerated time",
+    "Stop preserves elapsed time and cancels the remainder",
+    "Movement interrupts waiting and starts standing up",
+    "Until morning stops at dawn and reveals the village",
+    "Reload preserves elapsed time and sitting without resuming acceleration",
+    "Reloaded clock stays still",
+    "Duration choices fit a phone viewport",
+    "No browser errors"
+  ],
+  "errors": []
+}

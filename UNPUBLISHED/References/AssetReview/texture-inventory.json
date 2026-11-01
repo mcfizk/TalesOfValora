@@ -1,0 +1,2396 @@
+[
+  {
+    "name": "",
+    "width": 2048,
+    "height": 1152,
+    "source": "globalgamemanagers.assets",
+    "path_id": 13
+  },
+  {
+    "name": "",
+    "width": 1394,
+    "height": 2048,
+    "source": "globalgamemanagers.assets",
+    "path_id": 14
+  },
+  {
+    "name": "LDR_LLL1_9",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 15
+  },
+  {
+    "name": "Medium01",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 16
+  },
+  {
+    "name": "LDR_LLL1_23",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 17
+  },
+  {
+    "name": "LDR_LLL1_2",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 18
+  },
+  {
+    "name": "LDR_LLL1_17",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 19
+  },
+  {
+    "name": "LDR_LLL1_31",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 20
+  },
+  {
+    "name": "LDR_LLL1_25",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 21
+  },
+  {
+    "name": "DebugFont",
+    "width": 256,
+    "height": 128,
+    "source": "globalgamemanagers.assets",
+    "path_id": 22
+  },
+  {
+    "name": "LDR_LLL1_4",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 23
+  },
+  {
+    "name": "LDR_LLL1_6",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 24
+  },
+  {
+    "name": "LDR_LLL1_14",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 25
+  },
+  {
+    "name": "LDR_LLL1_15",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 26
+  },
+  {
+    "name": "Medium05",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 27
+  },
+  {
+    "name": "SearchTex",
+    "width": 64,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 28
+  },
+  {
+    "name": "FalloffLookupTexture",
+    "width": 2048,
+    "height": 128,
+    "source": "globalgamemanagers.assets",
+    "path_id": 29
+  },
+  {
+    "name": "Large02",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 30
+  },
+  {
+    "name": "Thin01",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 31
+  },
+  {
+    "name": "LDR_LLL1_3",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 32
+  },
+  {
+    "name": "LDR_LLL1_0",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 33
+  },
+  {
+    "name": "LDR_LLL1_30",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 34
+  },
+  {
+    "name": "CastlevaniaSOTNGroundCloud_D",
+    "width": 124,
+    "height": 60,
+    "source": "globalgamemanagers.assets",
+    "path_id": 35
+  },
+  {
+    "name": "LDR_LLL1_10",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 36
+  },
+  {
+    "name": "Medium03",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 37
+  },
+  {
+    "name": "LDR_LLL1_16",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 38
+  },
+  {
+    "name": "LDR_LLL1_24",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 39
+  },
+  {
+    "name": "Medium06",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 40
+  },
+  {
+    "name": "Medium04",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 41
+  },
+  {
+    "name": "LDR_LLL1_12",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 42
+  },
+  {
+    "name": "LDR_LLL1_7",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 43
+  },
+  {
+    "name": "LDR_LLL1_27",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 44
+  },
+  {
+    "name": "LDR_LLL1_20",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 45
+  },
+  {
+    "name": "Logo_bordered_-_1080X1080",
+    "width": 1080,
+    "height": 1080,
+    "source": "globalgamemanagers.assets",
+    "path_id": 46
+  },
+  {
+    "name": "LDR_LLL1_26",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 47
+  },
+  {
+    "name": "AreaTex",
+    "width": 160,
+    "height": 560,
+    "source": "globalgamemanagers.assets",
+    "path_id": 48
+  },
+  {
+    "name": "LDR_LLL1_18",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 49
+  },
+  {
+    "name": "LDR_LLL1_19",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 50
+  },
+  {
+    "name": "LDR_LLL1_1",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 51
+  },
+  {
+    "name": "LDR_LLL1_13",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 52
+  },
+  {
+    "name": "LDR_LLL1_21",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 53
+  },
+  {
+    "name": "CastlevaniaSOTNSky_D",
+    "width": 256,
+    "height": 128,
+    "source": "globalgamemanagers.assets",
+    "path_id": 54
+  },
+  {
+    "name": "Thin02",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 55
+  },
+  {
+    "name": "LDR_LLL1_0",
+    "width": 64,
+    "height": 64,
+    "source": "globalgamemanagers.assets",
+    "path_id": 56
+  },
+  {
+    "name": "LDR_LLL1_5",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 57
+  },
+  {
+    "name": "LDR_LLL1_8",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 58
+  },
+  {
+    "name": "Medium02",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 59
+  },
+  {
+    "name": "LDR_LLL1_22",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 60
+  },
+  {
+    "name": "BayerMatrix",
+    "width": 4,
+    "height": 4,
+    "source": "globalgamemanagers.assets",
+    "path_id": 61
+  },
+  {
+    "name": "LDR_LLL1_29",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 62
+  },
+  {
+    "name": "LDR_LLL1_11",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 63
+  },
+  {
+    "name": "Large01",
+    "width": 512,
+    "height": 512,
+    "source": "globalgamemanagers.assets",
+    "path_id": 64
+  },
+  {
+    "name": "LDR_LLL1_28",
+    "width": 16,
+    "height": 16,
+    "source": "globalgamemanagers.assets",
+    "path_id": 65
+  },
+  {
+    "name": "Arial Unicode MS Font SDF 6000-6FFF Atlas",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 86
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 5",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 87
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 12",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 88
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 18",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 89
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 15",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 90
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 40",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 91
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 23",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 92
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 35",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 93
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 50",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 94
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 46",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 95
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 24",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 96
+  },
+  {
+    "name": "LanaPixel SDF 9000-9FFF Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 97
+  },
+  {
+    "name": "Arial Unicode MS Font SDF 8000-8FFF Atlas",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 98
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 10",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 99
+  },
+  {
+    "name": "LanaPixel SDF 7000-7FFF Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 100
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 25",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 101
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 28",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 102
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 1",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 103
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 27",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 104
+  },
+  {
+    "name": "LanaPixel SDF 8000-8FFF Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 105
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 52",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 106
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 6",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 107
+  },
+  {
+    "name": "LanaPixel SDF 6000-6FFF Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 108
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 32",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 109
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 47",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 110
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 2",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 111
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 31",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 112
+  },
+  {
+    "name": "UISprite",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 113
+  },
+  {
+    "name": "Background",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 114
+  },
+  {
+    "name": "InputFieldBackground",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 115
+  },
+  {
+    "name": "UIMask",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 116
+  },
+  {
+    "name": "about",
+    "width": 14,
+    "height": 18,
+    "source": "resources.assets",
+    "path_id": 117
+  },
+  {
+    "name": "tps_props",
+    "width": 512,
+    "height": 1024,
+    "source": "resources.assets",
+    "path_id": 118
+  },
+  {
+    "name": "bg_null",
+    "width": 128,
+    "height": 128,
+    "source": "resources.assets",
+    "path_id": 119
+  },
+  {
+    "name": "IconWarning",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 120
+  },
+  {
+    "name": "IconSnapToBottom",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 121
+  },
+  {
+    "name": "SlicedBackground",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 122
+  },
+  {
+    "name": "VS_InGame_Album_Moonspell",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 123
+  },
+  {
+    "name": "guns",
+    "width": 64,
+    "height": 64,
+    "source": "resources.assets",
+    "path_id": 124
+  },
+  {
+    "name": "AdventurePanelEmpty",
+    "width": 50,
+    "height": 50,
+    "source": "resources.assets",
+    "path_id": 125
+  },
+  {
+    "name": "angel",
+    "width": 422,
+    "height": 124,
+    "source": "resources.assets",
+    "path_id": 126
+  },
+  {
+    "name": "character_antonio",
+    "width": 128,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 127
+  },
+  {
+    "name": "noise3",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 128
+  },
+  {
+    "name": "White1px",
+    "width": 1,
+    "height": 1,
+    "source": "resources.assets",
+    "path_id": 129
+  },
+  {
+    "name": "BMN_BackgroundStars",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 130
+  },
+  {
+    "name": "privacy-policy-qr",
+    "width": 200,
+    "height": 200,
+    "source": "resources.assets",
+    "path_id": 131
+  },
+  {
+    "name": "cheats",
+    "width": 16,
+    "height": 16,
+    "source": "resources.assets",
+    "path_id": 132
+  },
+  {
+    "name": "ADV_Title_EmergencyMeeting",
+    "width": 450,
+    "height": 60,
+    "source": "resources.assets",
+    "path_id": 133
+  },
+  {
+    "name": "WaterTile",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 134
+  },
+  {
+    "name": "cloud6",
+    "width": 20,
+    "height": 20,
+    "source": "resources.assets",
+    "path_id": 135
+  },
+  {
+    "name": "UIBackground_Border10pxNone",
+    "width": 64,
+    "height": 64,
+    "source": "resources.assets",
+    "path_id": 136
+  },
+  {
+    "name": "sound",
+    "width": 14,
+    "height": 16,
+    "source": "resources.assets",
+    "path_id": 137
+  },
+  {
+    "name": "IconInfoHighRes",
+    "width": 64,
+    "height": 64,
+    "source": "resources.assets",
+    "path_id": 138
+  },
+  {
+    "name": "tps_lossless_icons",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 139
+  },
+  {
+    "name": "question_mark",
+    "width": 17,
+    "height": 9,
+    "source": "resources.assets",
+    "path_id": 140
+  },
+  {
+    "name": "Default-Transition",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 141
+  },
+  {
+    "name": "EditionsMask_Center",
+    "width": 51,
+    "height": 73,
+    "source": "resources.assets",
+    "path_id": 142
+  },
+  {
+    "name": "ADV_Title_AGarlicParadise",
+    "width": 450,
+    "height": 60,
+    "source": "resources.assets",
+    "path_id": 143
+  },
+  {
+    "name": "account-help-qr",
+    "width": 200,
+    "height": 200,
+    "source": "resources.assets",
+    "path_id": 144
+  },
+  {
+    "name": "VS_InGame_Album_EmeraldDiorama",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 145
+  },
+  {
+    "name": "goldBG2",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 146
+  },
+  {
+    "name": "eye_open",
+    "width": 17,
+    "height": 9,
+    "source": "resources.assets",
+    "path_id": 147
+  },
+  {
+    "name": "ButtonShadow",
+    "width": 48,
+    "height": 33,
+    "source": "resources.assets",
+    "path_id": 148
+  },
+  {
+    "name": "CoffinRezBarSpritesheet",
+    "width": 832,
+    "height": 64,
+    "source": "resources.assets",
+    "path_id": 149
+  },
+  {
+    "name": "UISquare",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 150
+  },
+  {
+    "name": "IconInfo",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 151
+  },
+  {
+    "name": "display",
+    "width": 16,
+    "height": 18,
+    "source": "resources.assets",
+    "path_id": 152
+  },
+  {
+    "name": "D20Texture_2",
+    "width": 64,
+    "height": 64,
+    "source": "resources.assets",
+    "path_id": 153
+  },
+  {
+    "name": "VS_InGame_Album_OperationGuns",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 154
+  },
+  {
+    "name": "IconError",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 155
+  },
+  {
+    "name": "dlc-help-qr",
+    "width": 200,
+    "height": 200,
+    "source": "resources.assets",
+    "path_id": 156
+  },
+  {
+    "name": "_gaea_vfx",
+    "width": 128,
+    "height": 128,
+    "source": "resources.assets",
+    "path_id": 157
+  },
+  {
+    "name": "logoAnimation",
+    "width": 1024,
+    "height": 2048,
+    "source": "resources.assets",
+    "path_id": 158
+  },
+  {
+    "name": "EditionsMask",
+    "width": 51,
+    "height": 73,
+    "source": "resources.assets",
+    "path_id": 159
+  },
+  {
+    "name": "Font Texture",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 160
+  },
+  {
+    "name": "Font Texture",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 161
+  },
+  {
+    "name": "UIFoldoutClosed",
+    "width": 11,
+    "height": 11,
+    "source": "resources.assets",
+    "path_id": 162
+  },
+  {
+    "name": "IconClear",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 163
+  },
+  {
+    "name": "goldTileBG",
+    "width": 99,
+    "height": 84,
+    "source": "resources.assets",
+    "path_id": 164
+  },
+  {
+    "name": "IconResizeAllDirections",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 165
+  },
+  {
+    "name": "gameplay",
+    "width": 18,
+    "height": 18,
+    "source": "resources.assets",
+    "path_id": 166
+  },
+  {
+    "name": "characters",
+    "width": 4,
+    "height": 8,
+    "source": "resources.assets",
+    "path_id": 167
+  },
+  {
+    "name": "AdventurePanel",
+    "width": 50,
+    "height": 50,
+    "source": "resources.assets",
+    "path_id": 168
+  },
+  {
+    "name": "dk_bloodTrail",
+    "width": 143,
+    "height": 31,
+    "source": "resources.assets",
+    "path_id": 169
+  },
+  {
+    "name": "Font Texture",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 170
+  },
+  {
+    "name": "Multiplayer",
+    "width": 18,
+    "height": 18,
+    "source": "resources.assets",
+    "path_id": 171
+  },
+  {
+    "name": "quickaccess",
+    "width": 17,
+    "height": 16,
+    "source": "resources.assets",
+    "path_id": 172
+  },
+  {
+    "name": "ADV_Title_Opration Guns",
+    "width": 450,
+    "height": 60,
+    "source": "resources.assets",
+    "path_id": 173
+  },
+  {
+    "name": "Font Texture",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 174
+  },
+  {
+    "name": "AdventureStar",
+    "width": 50,
+    "height": 50,
+    "source": "resources.assets",
+    "path_id": 175
+  },
+  {
+    "name": "SlicedBackground2",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 176
+  },
+  {
+    "name": "VS_InGame_Album_Lemon",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 177
+  },
+  {
+    "name": "AdventureFrame",
+    "width": 50,
+    "height": 50,
+    "source": "resources.assets",
+    "path_id": 178
+  },
+  {
+    "name": "MS01",
+    "width": 450,
+    "height": 60,
+    "source": "resources.assets",
+    "path_id": 179
+  },
+  {
+    "name": "saveIcon_16",
+    "width": 16,
+    "height": 16,
+    "source": "resources.assets",
+    "path_id": 180
+  },
+  {
+    "name": "runeFont-export 1",
+    "width": 110,
+    "height": 108,
+    "source": "resources.assets",
+    "path_id": 181
+  },
+  {
+    "name": "vfx",
+    "width": 1024,
+    "height": 2048,
+    "source": "resources.assets",
+    "path_id": 182
+  },
+  {
+    "name": "UIFoldoutOpened",
+    "width": 11,
+    "height": 11,
+    "source": "resources.assets",
+    "path_id": 183
+  },
+  {
+    "name": "IconResizeVertialOnly",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 184
+  },
+  {
+    "name": "VS_InGame_Album_Foscari",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 185
+  },
+  {
+    "name": "ADV_Title_ToEndAnIceAge",
+    "width": 450,
+    "height": 60,
+    "source": "resources.assets",
+    "path_id": 186
+  },
+  {
+    "name": "PoncleLines",
+    "width": 256,
+    "height": 16,
+    "source": "resources.assets",
+    "path_id": 187
+  },
+  {
+    "name": "2x2_Texture",
+    "width": 2,
+    "height": 2,
+    "source": "resources.assets",
+    "path_id": 188
+  },
+  {
+    "name": "enemies",
+    "width": 2048,
+    "height": 2048,
+    "source": "resources.assets",
+    "path_id": 189
+  },
+  {
+    "name": "UICheckMark",
+    "width": 11,
+    "height": 11,
+    "source": "resources.assets",
+    "path_id": 190
+  },
+  {
+    "name": "IconHide",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 191
+  },
+  {
+    "name": "SlicedBackground3",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 192
+  },
+  {
+    "name": "VS_InGame_Album_Bloodmoon",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 193
+  },
+  {
+    "name": "IconSnapToBottomBg",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 194
+  },
+  {
+    "name": "randomazzo",
+    "width": 512,
+    "height": 1024,
+    "source": "resources.assets",
+    "path_id": 195
+  },
+  {
+    "name": "Rounded_Rect_10px",
+    "width": 20,
+    "height": 20,
+    "source": "resources.assets",
+    "path_id": 196
+  },
+  {
+    "name": "tps_stageHero_BaseGame",
+    "width": 256,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 197
+  },
+  {
+    "name": "_CoffinGreyscale",
+    "width": 32,
+    "height": 64,
+    "source": "resources.assets",
+    "path_id": 198
+  },
+  {
+    "name": "ADV_Title_BMN",
+    "width": 450,
+    "height": 60,
+    "source": "resources.assets",
+    "path_id": 199
+  },
+  {
+    "name": "ADV_Title_WorldOfLightAndDark",
+    "width": 450,
+    "height": 60,
+    "source": "resources.assets",
+    "path_id": 200
+  },
+  {
+    "name": "IconCollapse",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 201
+  },
+  {
+    "name": "UIElement8px",
+    "width": 8,
+    "height": 8,
+    "source": "resources.assets",
+    "path_id": 202
+  },
+  {
+    "name": "darkana_card",
+    "width": 58,
+    "height": 82,
+    "source": "resources.assets",
+    "path_id": 203
+  },
+  {
+    "name": "UnityCircle",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 204
+  },
+  {
+    "name": "ingame",
+    "width": 17,
+    "height": 16,
+    "source": "resources.assets",
+    "path_id": 205
+  },
+  {
+    "name": "goldBG1",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 206
+  },
+  {
+    "name": "EmojiOne",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 207
+  },
+  {
+    "name": "SearchIcon",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 208
+  },
+  {
+    "name": "VS_InGame_Album_OdeToCastlevania",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 209
+  },
+  {
+    "name": "Font Texture",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 210
+  },
+  {
+    "name": "shop",
+    "width": 1024,
+    "height": 1024,
+    "source": "resources.assets",
+    "path_id": 211
+  },
+  {
+    "name": "coopFrame",
+    "width": 48,
+    "height": 48,
+    "source": "resources.assets",
+    "path_id": 212
+  },
+  {
+    "name": "1f44b",
+    "width": 158,
+    "height": 158,
+    "source": "resources.assets",
+    "path_id": 213
+  },
+  {
+    "name": "DarkanaFrame",
+    "width": 48,
+    "height": 48,
+    "source": "resources.assets",
+    "path_id": 214
+  },
+  {
+    "name": "dialog illustration-1",
+    "width": 360,
+    "height": 240,
+    "source": "resources.assets",
+    "path_id": 215
+  },
+  {
+    "name": "Square",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 216
+  },
+  {
+    "name": "FS01",
+    "width": 327,
+    "height": 57,
+    "source": "resources.assets",
+    "path_id": 217
+  },
+  {
+    "name": "VS_InGame_Album_EmergencyMeeting",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 218
+  },
+  {
+    "name": "AlbumFrame",
+    "width": 32,
+    "height": 32,
+    "source": "resources.assets",
+    "path_id": 219
+  },
+  {
+    "name": "user",
+    "width": 14,
+    "height": 18,
+    "source": "resources.assets",
+    "path_id": 220
+  },
+  {
+    "name": "Circle",
+    "width": 256,
+    "height": 256,
+    "source": "resources.assets",
+    "path_id": 221
+  },
+  {
+    "name": "LiberationSans SDF Atlas",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 222
+  },
+  {
+    "name": "LiberationSans SDF Atlas",
+    "width": 1024,
+    "height": 1024,
+    "source": "resources.assets",
+    "path_id": 223
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 34",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 224
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 38",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 225
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 11",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 226
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 39",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 227
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 29",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 228
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 41",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 229
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 53",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 230
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 3",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 231
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 36",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 232
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 54",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 233
+  },
+  {
+    "name": "Arial Unicode MS Font SDF 2000-3FFF Atlas",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 234
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 4",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 235
+  },
+  {
+    "name": "Arial Unicode MS Font SDF 7000-7FFF Atlas",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 236
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 20",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 237
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 13",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 238
+  },
+  {
+    "name": "LanaPixel SDF Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 239
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 30",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 240
+  },
+  {
+    "name": "LanaPixel SDF ExtendedAscii Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 241
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 48",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 242
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 21",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 243
+  },
+  {
+    "name": "LanaPixel SDF 4E00-5FFF Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 244
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 49",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 245
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 26",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 246
+  },
+  {
+    "name": "Arial Unicode MS Font SDF 4E00-5FFF Atlas",
+    "width": 0,
+    "height": 0,
+    "source": "resources.assets",
+    "path_id": 247
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 45",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 248
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 44",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 249
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 14",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 250
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 22",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 251
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 51",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 252
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 8",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 253
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 7",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 254
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 255
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 37",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 256
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 9",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 257
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 17",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 258
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 42",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 259
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 33",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 260
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 19",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 261
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 16",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 262
+  },
+  {
+    "name": "Arial Unicode MS Font SDF Atlas 43",
+    "width": 512,
+    "height": 512,
+    "source": "resources.assets",
+    "path_id": 263
+  },
+  {
+    "name": "Courier_HintedSmooth SDF8 Atlas",
+    "width": 512,
+    "height": 512,
+    "source": "sharedassets0.assets",
+    "path_id": 4
+  },
+  {
+    "name": "Courier_HintedSmooth SDF8 Atlas 1",
+    "width": 512,
+    "height": 512,
+    "source": "sharedassets0.assets",
+    "path_id": 5
+  },
+  {
+    "name": "Font Texture",
+    "width": 0,
+    "height": 0,
+    "source": "sharedassets0.assets",
+    "path_id": 6
+  },
+  {
+    "name": "UI",
+    "width": 1024,
+    "height": 1024,
+    "source": "sharedassets0.assets",
+    "path_id": 7
+  },
+  {
+    "name": "Courier_HintedSmooth SDF8 Atlas 2",
+    "width": 512,
+    "height": 512,
+    "source": "sharedassets0.assets",
+    "path_id": 8
+  },
+  {
+    "name": "Courier_HintedSmooth SDF8 Atlas 3",
+    "width": 512,
+    "height": 512,
+    "source": "sharedassets0.assets",
+    "path_id": 9
+  },
+  {
+    "name": "NowLoading_VS",
+    "width": 512,
+    "height": 74,
+    "source": "sharedassets1.assets",
+    "path_id": 10
+  },
+  {
+    "name": "Joystickcircle",
+    "width": 183,
+    "height": 183,
+    "source": "sharedassets1.assets",
+    "path_id": 11
+  },
+  {
+    "name": "enemies2",
+    "width": 2048,
+    "height": 2048,
+    "source": "sharedassets1.assets",
+    "path_id": 12
+  },
+  {
+    "name": "WhiteDot",
+    "width": 256,
+    "height": 256,
+    "source": "sharedassets1.assets",
+    "path_id": 13
+  },
+  {
+    "name": "doi01",
+    "width": 128,
+    "height": 128,
+    "source": "sharedassets1.assets",
+    "path_id": 14
+  },
+  {
+    "name": "runeFont-export",
+    "width": 110,
+    "height": 108,
+    "source": "sharedassets1.assets",
+    "path_id": 15
+  },
+  {
+    "name": "doi09",
+    "width": 256,
+    "height": 256,
+    "source": "sharedassets1.assets",
+    "path_id": 16
+  },
+  {
+    "name": "boss_handtakemyhand6",
+    "width": 48,
+    "height": 48,
+    "source": "sharedassets1.assets",
+    "path_id": 17
+  },
+  {
+    "name": "doi02",
+    "width": 144,
+    "height": 144,
+    "source": "sharedassets1.assets",
+    "path_id": 18
+  },
+  {
+    "name": "boss_handtakemyhand4",
+    "width": 48,
+    "height": 48,
+    "source": "sharedassets1.assets",
+    "path_id": 19
+  },
+  {
+    "name": "UI_Menu",
+    "width": 1024,
+    "height": 1024,
+    "source": "sharedassets1.assets",
+    "path_id": 20
+  },
+  {
+    "name": "titleDivider",
+    "width": 390,
+    "height": 5,
+    "source": "sharedassets1.assets",
+    "path_id": 21
+  },
+  {
+    "name": "secretsPortrait",
+    "width": 237,
+    "height": 512,
+    "source": "sharedassets1.assets",
+    "path_id": 22
+  },
+  {
+    "name": "boss_handtakemyhand5",
+    "width": 48,
+    "height": 48,
+    "source": "sharedassets1.assets",
+    "path_id": 23
+  },
+  {
+    "name": "boss_handtakemyhand3",
+    "width": 48,
+    "height": 48,
+    "source": "sharedassets1.assets",
+    "path_id": 24
+  },
+  {
+    "name": "sun_gradient",
+    "width": 828,
+    "height": 828,
+    "source": "sharedassets1.assets",
+    "path_id": 25
+  },
+  {
+    "name": "doi04",
+    "width": 176,
+    "height": 176,
+    "source": "sharedassets1.assets",
+    "path_id": 26
+  },
+  {
+    "name": "doi07",
+    "width": 224,
+    "height": 223,
+    "source": "sharedassets1.assets",
+    "path_id": 27
+  },
+  {
+    "name": "doi08",
+    "width": 240,
+    "height": 239,
+    "source": "sharedassets1.assets",
+    "path_id": 28
+  },
+  {
+    "name": "doit05",
+    "width": 192,
+    "height": 192,
+    "source": "sharedassets1.assets",
+    "path_id": 29
+  },
+  {
+    "name": "Skullboy-export2x",
+    "width": 281,
+    "height": 281,
+    "source": "sharedassets1.assets",
+    "path_id": 30
+  },
+  {
+    "name": "demonSkull",
+    "width": 147,
+    "height": 108,
+    "source": "sharedassets1.assets",
+    "path_id": 31
+  },
+  {
+    "name": "darkasso_secrets_overlay",
+    "width": 32,
+    "height": 32,
+    "source": "sharedassets1.assets",
+    "path_id": 32
+  },
+  {
+    "name": "doi06",
+    "width": 208,
+    "height": 208,
+    "source": "sharedassets1.assets",
+    "path_id": 33
+  },
+  {
+    "name": "world_gradient",
+    "width": 380,
+    "height": 380,
+    "source": "sharedassets1.assets",
+    "path_id": 34
+  },
+  {
+    "name": "Stars1",
+    "width": 512,
+    "height": 512,
+    "source": "sharedassets1.assets",
+    "path_id": 35
+  },
+  {
+    "name": "titleSurvivaton",
+    "width": 319,
+    "height": 37,
+    "source": "sharedassets1.assets",
+    "path_id": 36
+  },
+  {
+    "name": "introBG",
+    "width": 400,
+    "height": 300,
+    "source": "sharedassets1.assets",
+    "path_id": 37
+  },
+  {
+    "name": "doi03",
+    "width": 160,
+    "height": 160,
+    "source": "sharedassets1.assets",
+    "path_id": 38
+  },
+  {
+    "name": "SECRETS",
+    "width": 512,
+    "height": 320,
+    "source": "sharedassets1.assets",
+    "path_id": 39
+  },
+  {
+    "name": "doi05",
+    "width": 192,
+    "height": 192,
+    "source": "sharedassets1.assets",
+    "path_id": 40
+  },
+  {
+    "name": "title",
+    "width": 332,
+    "height": 133,
+    "source": "sharedassets1.assets",
+    "path_id": 41
+  },
+  {
+    "name": "boss_handtakemyhand1",
+    "width": 48,
+    "height": 48,
+    "source": "sharedassets1.assets",
+    "path_id": 42
+  },
+  {
+    "name": "boss_handtakemyhand2",
+    "width": 48,
+    "height": 48,
+    "source": "sharedassets1.assets",
+    "path_id": 43
+  },
+  {
+    "name": "illustrations",
+    "width": 413,
+    "height": 477,
+    "source": "sharedassets1.assets",
+    "path_id": 44
+  },
+  {
+    "name": "Triangle",
+    "width": 32,
+    "height": 32,
+    "source": "sharedassets1.assets",
+    "path_id": 45
+  },
+  {
+    "name": "moon_gradient",
+    "width": 604,
+    "height": 604,
+    "source": "sharedassets1.assets",
+    "path_id": 46
+  },
+  {
+    "name": "enemiesM",
+    "width": 2048,
+    "height": 2048,
+    "source": "sharedassets1.assets",
+    "path_id": 47
+  },
+  {
+    "name": "Stars2",
+    "width": 512,
+    "height": 512,
+    "source": "sharedassets1.assets",
+    "path_id": 48
+  },
+  {
+    "name": "doi01",
+    "width": 128,
+    "height": 128,
+    "source": "sharedassets1.assets",
+    "path_id": 49
+  },
+  {
+    "name": "Default-Particle",
+    "width": 64,
+    "height": 64,
+    "source": "sharedassets3.assets",
+    "path_id": 45
+  },
+  {
+    "name": "Knob",
+    "width": 64,
+    "height": 64,
+    "source": "sharedassets3.assets",
+    "path_id": 46
+  },
+  {
+    "name": "Magistone_Gems_D",
+    "width": 256,
+    "height": 256,
+    "source": "sharedassets3.assets",
+    "path_id": 47
+  },
+  {
+    "name": "titleFont-white",
+    "width": 144,
+    "height": 148,
+    "source": "sharedassets3.assets",
+    "path_id": 48
+  },
+  {
+    "name": "CardEditions_Holographic_N",
+    "width": 128,
+    "height": 128,
+    "source": "sharedassets3.assets",
+    "path_id": 49
+  },
+  {
+    "name": "tentacleSegment",
+    "width": 128,
+    "height": 128,
+    "source": "sharedassets3.assets",
+    "path_id": 50
+  },
+  {
+    "name": "character_chulareh",
+    "width": 128,
+    "height": 256,
+    "source": "sharedassets3.assets",
+    "path_id": 51
+  },
+  {
+    "name": "stageComplete",
+    "width": 380,
+    "height": 133,
+    "source": "sharedassets3.assets",
+    "path_id": 52
+  },
+  {
+    "name": "icons8-left-click-80",
+    "width": 80,
+    "height": 80,
+    "source": "sharedassets3.assets",
+    "path_id": 53
+  },
+  {
+    "name": "DamageNumbers Atlas",
+    "width": 24,
+    "height": 27,
+    "source": "sharedassets3.assets",
+    "path_id": 54
+  },
+  {
+    "name": "Square",
+    "width": 256,
+    "height": 256,
+    "source": "sharedassets3.assets",
+    "path_id": 55
+  },
+  {
+    "name": "tentactle_ring",
+    "width": 48,
+    "height": 5,
+    "source": "sharedassets3.assets",
+    "path_id": 56
+  },
+  {
+    "name": "dk_eye1",
+    "width": 78,
+    "height": 70,
+    "source": "sharedassets3.assets",
+    "path_id": 57
+  },
+  {
+    "name": "CardEditions_Firework",
+    "width": 256,
+    "height": 256,
+    "source": "sharedassets3.assets",
+    "path_id": 58
+  },
+  {
+    "name": "bg_white",
+    "width": 128,
+    "height": 128,
+    "source": "sharedassets3.assets",
+    "path_id": 59
+  },
+  {
+    "name": "dk_eye2",
+    "width": 82,
+    "height": 69,
+    "source": "sharedassets3.assets",
+    "path_id": 60
+  },
+  {
+    "name": "tentacleShadowOverlay",
+    "width": 128,
+    "height": 128,
+    "source": "sharedassets3.assets",
+    "path_id": 61
+  },
+  {
+    "name": "Darkana_Frame_D_Texture",
+    "width": 32,
+    "height": 32,
+    "source": "sharedassets3.assets",
+    "path_id": 62
+  },
+  {
+    "name": "eyeTexture",
+    "width": 64,
+    "height": 64,
+    "source": "sharedassets3.assets",
+    "path_id": 63
+  },
+  {
+    "name": "weapon_robba",
+    "width": 128,
+    "height": 256,
+    "source": "sharedassets3.assets",
+    "path_id": 64
+  },
+  {
+    "name": "BlueStars3",
+    "width": 512,
+    "height": 512,
+    "source": "sharedassets3.assets",
+    "path_id": 65
+  },
+  {
+    "name": "Rounded01",
+    "width": 64,
+    "height": 64,
+    "source": "sharedassets3.assets",
+    "path_id": 66
+  },
+  {
+    "name": "titleFont-export",
+    "width": 144,
+    "height": 148,
+    "source": "sharedassets3.assets",
+    "path_id": 67
+  },
+  {
+    "name": "Circle",
+    "width": 256,
+    "height": 256,
+    "source": "sharedassets3.assets",
+    "path_id": 68
+  },
+  {
+    "name": "Ribbon1",
+    "width": 30,
+    "height": 18,
+    "source": "sharedassets3.assets",
+    "path_id": 69
+  },
+  {
+    "name": "gameOver",
+    "width": 332,
+    "height": 133,
+    "source": "sharedassets3.assets",
+    "path_id": 70
+  },
+  {
+    "name": "weapon_nofuture",
+    "width": 256,
+    "height": 512,
+    "source": "sharedassets3.assets",
+    "path_id": 71
+  },
+  {
+    "name": "eyeTexture2",
+    "width": 64,
+    "height": 64,
+    "source": "sharedassets3.assets",
+    "path_id": 72
+  },
+  {
+    "name": "Soft",
+    "width": 128,
+    "height": 128,
+    "source": "unity default resources",
+    "path_id": 10001
+  },
+  {
+    "name": "Font Texture",
+    "width": 0,
+    "height": 0,
+    "source": "unity default resources",
+    "path_id": 10103
+  },
+  {
+    "name": "EscToExit_back",
+    "width": 74,
+    "height": 71,
+    "source": "unity default resources",
+    "path_id": 10401
+  },
+  {
+    "name": "EscToExit_Text",
+    "width": 267,
+    "height": 20,
+    "source": "unity default resources",
+    "path_id": 10402
+  },
+  {
+    "name": "UnityWatermark-trial-big",
+    "width": 512,
+    "height": 94,
+    "source": "unity default resources",
+    "path_id": 10406
+  },
+  {
+    "name": "UnityWatermark-trial",
+    "width": 76,
+    "height": 14,
+    "source": "unity default resources",
+    "path_id": 10407
+  },
+  {
+    "name": "UnityWatermark-edu",
+    "width": 148,
+    "height": 17,
+    "source": "unity default resources",
+    "path_id": 10409
+  },
+  {
+    "name": "UnityWatermark-dev",
+    "width": 115,
+    "height": 17,
+    "source": "unity default resources",
+    "path_id": 10410
+  },
+  {
+    "name": "WarningSign",
+    "width": 64,
+    "height": 64,
+    "source": "unity default resources",
+    "path_id": 10411
+  },
+  {
+    "name": "UnityWatermark-proto",
+    "width": 87,
+    "height": 13,
+    "source": "unity default resources",
+    "path_id": 10413
+  },
+  {
+    "name": "box",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11001
+  },
+  {
+    "name": "button active",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11002
+  },
+  {
+    "name": "button hover",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11003
+  },
+  {
+    "name": "button on hover",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11004
+  },
+  {
+    "name": "button on",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11005
+  },
+  {
+    "name": "button",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11006
+  },
+  {
+    "name": "horizontal scrollbar thumb",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11007
+  },
+  {
+    "name": "horizontal scrollbar",
+    "width": 18,
+    "height": 15,
+    "source": "unity default resources",
+    "path_id": 11008
+  },
+  {
+    "name": "horizontalslider",
+    "width": 8,
+    "height": 7,
+    "source": "unity default resources",
+    "path_id": 11009
+  },
+  {
+    "name": "slider thumb active",
+    "width": 8,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11010
+  },
+  {
+    "name": "slider thumb",
+    "width": 8,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11011
+  },
+  {
+    "name": "slidert humb hover",
+    "width": 8,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11012
+  },
+  {
+    "name": "toggle active",
+    "width": 14,
+    "height": 14,
+    "source": "unity default resources",
+    "path_id": 11013
+  },
+  {
+    "name": "toggle hover",
+    "width": 14,
+    "height": 14,
+    "source": "unity default resources",
+    "path_id": 11014
+  },
+  {
+    "name": "toggle on hover",
+    "width": 14,
+    "height": 14,
+    "source": "unity default resources",
+    "path_id": 11015
+  },
+  {
+    "name": "toggle on",
+    "width": 14,
+    "height": 14,
+    "source": "unity default resources",
+    "path_id": 11016
+  },
+  {
+    "name": "toggle on active",
+    "width": 14,
+    "height": 14,
+    "source": "unity default resources",
+    "path_id": 11017
+  },
+  {
+    "name": "toggle",
+    "width": 14,
+    "height": 14,
+    "source": "unity default resources",
+    "path_id": 11018
+  },
+  {
+    "name": "vertical scrollbar thumb",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11019
+  },
+  {
+    "name": "vertical scrollbar",
+    "width": 15,
+    "height": 18,
+    "source": "unity default resources",
+    "path_id": 11020
+  },
+  {
+    "name": "verticalslider",
+    "width": 7,
+    "height": 8,
+    "source": "unity default resources",
+    "path_id": 11021
+  },
+  {
+    "name": "window on",
+    "width": 17,
+    "height": 27,
+    "source": "unity default resources",
+    "path_id": 11022
+  },
+  {
+    "name": "window",
+    "width": 17,
+    "height": 27,
+    "source": "unity default resources",
+    "path_id": 11023
+  },
+  {
+    "name": "textfield",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11024
+  },
+  {
+    "name": "textfield on",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11025
+  },
+  {
+    "name": "textfield hover",
+    "width": 12,
+    "height": 12,
+    "source": "unity default resources",
+    "path_id": 11026
+  },
+  {
+    "name": "UnitySplash-HolographicTrackingLoss",
+    "width": 32,
+    "height": 32,
+    "source": "unity default resources",
+    "path_id": 15000
+  }
+]

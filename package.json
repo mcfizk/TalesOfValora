@@ -1,16 +1,16 @@
 {
-  "name": "fenris-awakening",
+  "name": "tales-of-valora",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "start": "node serve.cjs",
-    "test": "node --test tests/world.test.mjs tests/stats.test.mjs tests/world-characters.test.mjs tests/audio.test.mjs",
+    "start": "node RELEASE/serve.cjs",
+    "test": "node --test RELEASE/tests/stats.test.mjs RELEASE/tests/world-characters.test.mjs RELEASE/tests/audio.test.mjs UNPUBLISHED/Legacy3D/tests/world.test.mjs",
+    "test:game": "npm --prefix RELEASE run test:game",
     "test:private": "npm run test:game",
-    "stats": "node build-stats.cjs",
-    "test:game": "node --test private-opening/world.test.mjs private-opening/fenris-animation.test.mjs private-opening/npc-walks.test.mjs private-opening/population.test.mjs private-opening/clock-navigation.test.mjs private-opening/resting.test.mjs private-opening/village.test.mjs private-opening/conversations.test.mjs private-opening/perception.test.mjs private-opening/saves.test.mjs private-opening/event-overlay.test.mjs",
-    "build:site": "node build-site.cjs",
-    "test:site": "node site-build-check.cjs"
+    "stats": "node RELEASE/build-stats.cjs",
+    "build:site": "node RELEASE/build-site.cjs",
+    "test:site": "node RELEASE/site-build-check.cjs"
   },
-  "description": "Fenris Awakening: a playable pixel-art opening, with the earlier 3D prototype retained."
+  "description": "Tales of Valora: RELEASE contains the supported game; UNPUBLISHED preserves development work."
 }

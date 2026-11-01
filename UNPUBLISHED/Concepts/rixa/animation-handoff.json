@@ -1,0 +1,19 @@
+{
+  "character": "Rixa",
+  "era": "1470 DR",
+  "status": "Appearance approved; animation pending in another session",
+  "approvedReference": "rixa-1470-common-clothes-v2-barefoot.png",
+  "referenceMetadata": "rixa-1470-common-clothes-v2-barefoot.json",
+  "originalPrompt": "rixa-1470-common-clothes-v2-barefoot.prompt.txt",
+  "preserve": [
+    "Younger and less established appearance; no exact age assigned",
+    "Feline face, green eyes, short tousled dark hair, upright ears and whiskers",
+    "Dark fur with pale muzzle accents and a lighter tail tip",
+    "Worn everyday tunic, plain brown vest and patched trousers; exposed furry ankles and bare feline feet, no boots or footwear",
+    "Simple belt and sheathed knife; no full-body armor or royal equipment"
+  ],
+  "separateDesign": "queen-rixa-pixel-concept-v1.png is Queen Rixa, not the 1470 appearance. Preserve both designs.",
+  "nextWork": "Create animation assets from the approved 1470 reference using the established character animation contract. This handoff does not choose an animation batch or authorize adding Rixa to a scene.",
+  "integration": "Concept only; not installed in the running game.",
+  "latestAuthorChange": "Remove the boots: Rixa goes barefoot. Use v2-barefoot for animation, not the older booted concept. Queen Rixa remains unchanged. This visual choice does not grant a numerical stealth bonus."
+}

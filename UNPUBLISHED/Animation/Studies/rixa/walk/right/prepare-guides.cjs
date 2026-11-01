@@ -1,0 +1,2 @@
+const fs=require('fs'),path=require('path'),sharp=require('C:/Users/Mcfiz/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+(async()=>{fs.mkdirSync(path.join(__dirname,'guides'),{recursive:true});for(let n=1;n<=8;n++){const id=String(n).padStart(2,'0');await sharp(path.resolve(__dirname,'../../../walk-refresh/fenris/left/Fenris_walk_left_'+id+'.png')).flop().toFile(path.join(__dirname,'guides',id+'.png'));}})();

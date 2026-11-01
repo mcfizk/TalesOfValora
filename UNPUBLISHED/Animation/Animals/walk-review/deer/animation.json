@@ -1,0 +1,93 @@
+{
+  "id": "deer",
+  "frames": 8,
+  "columns": 4,
+  "frameWidth": 640,
+  "frameHeight": 640,
+  "fps": 8,
+  "anchor": [
+    320,
+    600
+  ],
+  "bodyHeight": 550,
+  "displayHeight": 44,
+  "files": {
+    "left": "walk-left.png",
+    "right": "walk-right.png"
+  },
+  "method": "Individually generated poses, whole-image uniform scaling and nearest-neighbor assembly. Right is exact frame mirror.",
+  "records": [
+    {
+      "id": "01",
+      "phase": 0,
+      "prompt": "Draw ONE animation frame of this exact stag, walking slowly LEFT in same three-quarter side camera. Preserve deer face, antler topology, fur colors, head/torso size, leg lengths and pixel-art shading. Exactly FOUR naturally connected legs: two forelegs below chest LEFT, two hindlegs below rump RIGHT. Foreground/near legs overlap and are lighter; far legs slightly darker and visibly behind. True four-beat grounded walk, NOT trot, hop, run or biped. Phase 1 of8: NEAR FORELEG extended forward LEFT, hoof planted in initial contact; FAR FORELEG extended backward RIGHT, heel raised on toe-off; NEAR HINDLEG planted nearly vertical under its shoulder/hip; FAR HINDLEG bent passing under body, hoof CLEARLY AIRBORNE. These are four separate named limbs; do not repeat idle stance. Knees/hocks bend naturally; shoulders/hips remain fixed. Gentle body weight shift, almost stable head and antlers, relaxed ears/tail. Full body and all antlers/hooves visible, same apparent body scale and canvas framing as reference, transparent background, no shadow or text. Crisp stepped pixel art, no smoothing or motion blur.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-6f29b651-d6c6-484e-af26-c54d26f30167.png",
+      "scale": 0.4192073170731707,
+      "lift": 0,
+      "hash": "5dc36c0c705204389d0553a6a2b1451dc7986611aa44c1256f8923ca020eaaad"
+    },
+    {
+      "id": "02",
+      "prompt": "Edit this exact stag sprite. Preserve its head, antlers, torso, camera, colors, short tail and exact pixel-art style. Change leg pose ONLY. The NEAR FORELEG is the large light-brown foreground leg attached to the shoulder on the RIGHT side of the chest. Keep that leg PLANTED ahead to LEFT, slightly less extended than reference, gently flexed taking weight. The FAR foreleg behind it must be AIRBORNE folded backward to RIGHT. Near hindleg supports behind rump, far hindleg begins reaching forward. Exactly four naturally jointed legs, no extra hooves. Maintain leg lengths, same body scale and placement; full transparent background, no floor/shadow/text. Do not repeat the existing pose.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/Animals/walk-review/deer/source/01.png",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-ec1b2063-4087-495f-ba29-2789d0e5b145.png",
+      "scale": 0.4155251141552511,
+      "lift": 0,
+      "hash": "924b09418c27764164fc962466d285621d43eb481c3414bff17033fd69da7b79"
+    },
+    {
+      "id": "03",
+      "prompt": "Edit this exact stag sprite. Preserve its head, antlers, torso, camera, colors, short tail and exact pixel-art style. Change leg pose ONLY. NEAR FORELEG (large foreground right-side shoulder) must be STRAIGHT DOWN, hoof PLANTED directly below its shoulder. FAR FORELEG is behind it, knee bent FORWARD LEFT, hoof AIRBORNE forward of the planted hoof. Near hind hoof planted behind rump, far hind hoof just contacting ahead. This is near foreleg MIDSTANCE, not a bent airborne foreground leg. Exactly four naturally jointed legs, no extra hooves. Maintain leg lengths, same body scale and placement; full transparent background, no floor/shadow/text. Do not repeat the existing pose.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/Animals/walk-review/deer/source/01.png",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-842bc452-fcea-4797-9713-b2e9774a037d.png",
+      "scale": 0.42016806722689076,
+      "lift": 0,
+      "hash": "5ba399f14475b40dbc66783e978ca4874dca8072b847fa5d728b3a91a806906a"
+    },
+    {
+      "id": "04",
+      "prompt": "Edit this exact stag sprite. Preserve its head, antlers, torso, camera, colors, short tail and exact pixel-art style. Change leg pose ONLY. NEAR FORELEG (foreground right-side shoulder) extends BACKWARDS diagonally RIGHT, hoof planted behind chest on toes. FAR FORELEG behind it extends FORWARD LEFT, hoof planted ahead. Both forehooves on ground, foreground hoof distinctly to RIGHT of far hoof. Near hindleg begins lifting behind, far hind supports. Exactly four naturally jointed legs, no extra hooves. Maintain leg lengths, same body scale and placement; full transparent background, no floor/shadow/text. Do not repeat the existing pose.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/Animals/walk-review/deer/source/01.png",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c2db3a69-40e5-44ed-a994-4bb5a6f3d801.png",
+      "scale": 0.4232238349885409,
+      "lift": 0,
+      "hash": "6f22e0387ec8101ac66756d4196f7db0869f65ee0bfe98e3079b0739a2c9b7ed"
+    },
+    {
+      "id": "05",
+      "phase": 4,
+      "prompt": "Draw ONE animation frame of this exact stag, walking slowly LEFT in same three-quarter side camera. Preserve deer face, antler topology, fur colors, head/torso size, leg lengths and pixel-art shading. Exactly FOUR naturally connected legs: two forelegs below chest LEFT, two hindlegs below rump RIGHT. Foreground/near legs overlap and are lighter; far legs slightly darker and visibly behind. True four-beat grounded walk, NOT trot, hop, run or biped. Phase 5 of8: NEAR FORELEG extended backward RIGHT, heel raised on toe-off; FAR FORELEG extended forward LEFT, hoof planted in initial contact; NEAR HINDLEG bent passing under body, hoof CLEARLY AIRBORNE; FAR HINDLEG planted nearly vertical under its shoulder/hip. These are four separate named limbs; do not repeat idle stance. Knees/hocks bend naturally; shoulders/hips remain fixed. Gentle body weight shift, almost stable head and antlers, relaxed ears/tail. Full body and all antlers/hooves visible, same apparent body scale and canvas framing as reference, transparent background, no shadow or text. Crisp stepped pixel art, no smoothing or motion blur.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-c84c871a-5def-4180-9e77-1840ff052a70.png",
+      "scale": 0.41952707856598015,
+      "lift": 0,
+      "hash": "be23458dcc0fb4939b08120e996ce89b72b965866ff32f3c01b56b90990dfeed"
+    },
+    {
+      "id": "06",
+      "phase": 5,
+      "prompt": "Draw ONE animation frame of this exact stag, walking slowly LEFT in same three-quarter side camera. Preserve deer face, antler topology, fur colors, head/torso size, leg lengths and pixel-art shading. Exactly FOUR naturally connected legs: two forelegs below chest LEFT, two hindlegs below rump RIGHT. Foreground/near legs overlap and are lighter; far legs slightly darker and visibly behind. True four-beat grounded walk, NOT trot, hop, run or biped. Phase 6 of8: NEAR FORELEG lifted behind RIGHT, lower leg folded; FAR FORELEG planted ahead, bearing weight; NEAR HINDLEG reaching forward LEFT, hoof airborne just before contact; FAR HINDLEG planted behind its shoulder/hip toward RIGHT. These are four separate named limbs; do not repeat idle stance. Knees/hocks bend naturally; shoulders/hips remain fixed. Gentle body weight shift, almost stable head and antlers, relaxed ears/tail. Full body and all antlers/hooves visible, same apparent body scale and canvas framing as reference, transparent background, no shadow or text. Crisp stepped pixel art, no smoothing or motion blur.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-214becef-7eac-4b4a-a59a-84f3629397df.png",
+      "scale": 0.41615853658536583,
+      "lift": 0,
+      "hash": "294f3a697578423cf5c7fbf5eccac588d3c7c5e28670340b0b2a0178c515dbf8"
+    },
+    {
+      "id": "07",
+      "phase": 6,
+      "prompt": "Draw ONE animation frame of this exact stag, walking slowly LEFT in same three-quarter side camera. Preserve deer face, antler topology, fur colors, head/torso size, leg lengths and pixel-art shading. Exactly FOUR naturally connected legs: two forelegs below chest LEFT, two hindlegs below rump RIGHT. Foreground/near legs overlap and are lighter; far legs slightly darker and visibly behind. True four-beat grounded walk, NOT trot, hop, run or biped. Phase 7 of8: NEAR FORELEG bent passing under body, hoof CLEARLY AIRBORNE; FAR FORELEG planted nearly vertical under its shoulder/hip; NEAR HINDLEG extended forward LEFT, hoof planted in initial contact; FAR HINDLEG extended backward RIGHT, heel raised on toe-off. These are four separate named limbs; do not repeat idle stance. Knees/hocks bend naturally; shoulders/hips remain fixed. Gentle body weight shift, almost stable head and antlers, relaxed ears/tail. Full body and all antlers/hooves visible, same apparent body scale and canvas framing as reference, transparent background, no shadow or text. Crisp stepped pixel art, no smoothing or motion blur.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-7fd725f9-7fa8-47ef-98d9-3599ca1a18c5.png",
+      "scale": 0.4198473282442748,
+      "lift": 0,
+      "hash": "d7a9b13d7b8989085e35ec11fb9cf7e9360a37cf081c0ec06e27a503c687ad03"
+    },
+    {
+      "id": "08",
+      "prompt": "Edit this exact stag sprite. Preserve its head, antlers, torso, camera, colors, short tail and exact pixel-art style. Change leg pose ONLY. NEAR FORELEG (foreground right-side shoulder) extends FORWARD LEFT, hoof visibly AIRBORNE reaching before contact. FAR FORELEG behind it angles backward RIGHT, hoof on ground supporting. Foreground reaching leg must OVERLAP the far leg, not be hidden behind. Near hind supports, far hind lifted. Exactly four naturally jointed legs, no extra hooves. Maintain leg lengths, same body scale and placement; full transparent background, no floor/shadow/text. Do not repeat the existing pose.",
+      "ref": "C:/Users/Mcfiz/OneDrive/_Projects/Games/Tales of Valora/BookOfFenris/assets/sprites/Animals/walk-review/deer/source/07.png",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-8d4c578e-74f8-4c01-b790-a4ecf8841729.png",
+      "scale": 0.4225781845919146,
+      "lift": 0,
+      "hash": "86f4de0367dfcbe3c51e1245ee800109b3aae25256d611d6064bfcbce655cfc2"
+    }
+  ]
+}

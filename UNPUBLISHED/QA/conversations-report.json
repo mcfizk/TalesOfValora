@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "Dialogue presents several responses and transparent skill difficulty",
+    "Success displays the real d20, modifier, total and DC",
+    "Successful Athletics changes the agreed job pay",
+    "Conversation belongs to both participants and affinity is directed",
+    "Uninvolved villagers do not acquire the conversation",
+    "The attempted check is disabled",
+    "Conversations and checks do not advance the movement clock",
+    "Negotiated pay is actually awarded",
+    "Insight opens a contextual easier bargain",
+    "Negotiation changes this shop’s prices",
+    "Trade UI uses negotiated prices",
+    "Purchase debits the negotiated amount",
+    "Alternative bargains cannot reroll the resolved negotiation",
+    "Journal records conversations and check outcomes",
+    "Restart clears conversation history, rewards and terms",
+    "Failed Intimidation changes prices and alarms the villagers",
+    "Failure displays the rolled result",
+    "Failure still leaves trading available",
+    "Mobile conversation fits its dialog without horizontal scrolling",
+    "Outcome opens at the top and receives keyboard focus",
+    "Spreading alarm increases subsequent Persuasion DC",
+    "A peaceful reply offers a no-roll follow-up",
+    "Ordinary answers remain available after a failed check",
+    "No browser errors"
+  ],
+  "errors": []
+}

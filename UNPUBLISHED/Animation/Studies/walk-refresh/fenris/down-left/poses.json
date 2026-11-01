@@ -1,0 +1,78 @@
+{
+  "direction": "down-left",
+  "frames": [
+    {
+      "id": "01",
+      "direction": "down-left",
+      "role": "Near-leg contact",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\..\\Sprites\\Fenris white\\Walking pose review v2\\Fenris_walk_left_01_contact-near.png",
+      "second": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\..\\Sprites\\Fenris white\\Walking direction review\\Fenris_walk_down-left.png",
+      "prompt": "Create ONE full-body Fenris pixel-art pose on transparent background. Image1 gives the exact LEG and ARM gait assignment and identity; image2 gives the required FRONT THREE-QUARTER DOWN-LEFT camera. Rotate image1 into image2's camera, without changing which leg leads. Show chest and left-facing muzzle, moving diagonally toward bottom-left, not pure side view. Phase 01: near leg reaches forward into heel/paw contact; far leg trails on toes; near arm swings backward, far arm forward. Foreground near thigh must remain the same near thigh through the viewpoint change. Preserve broad upright white-grey muscular wolf anatomy, blue eyes, neutral closed black mouth line, brown ragged shorts, short bushy tail, hocks and paws, crisp pixel-art rendering. Modest relaxed stride, complete body, exactly two legs and arms, no clothes from other characters, no text/shadow/floor.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a9a5a33d-357e-42e9-bdb4-9fab294b2071.png",
+      "file": "source/01.png"
+    },
+    {
+      "id": "02",
+      "direction": "down-left",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a9a5a33d-357e-42e9-bdb4-9fab294b2071.png",
+      "prompt": "Edit this exact Fenris sprite, preserving identity, muscular white-grey fur, brown shorts, bushy tail, wolf paws/hocks, full-body proportions and crisp pixel-art. Keep this exact FRONT THREE-QUARTER DOWN-LEFT camera and transparent background. Exactly two arms and two legs. NEAR leg is the big foreground shorts panel continuing into the leading paw at bottom LEFT. Keep this near leg supporting, bend its knee to absorb weight and draw the planted paw slightly under pelvis. Far leg remains trailing back RIGHT, lift heel/paw slightly. Lower pelvis/head subtly. Near arm on right remains back, starts moving toward neutral; far arm on left remains forward. Settling phase, distinct from straight contact.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-0e8d2da7-84f0-4e81-870f-12e5f0ca6aeb.png",
+      "file": "source/02.png",
+      "role": "Near-leg settle"
+    },
+    {
+      "id": "03",
+      "direction": "down-left",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a9a5a33d-357e-42e9-bdb4-9fab294b2071.png",
+      "prompt": "Edit this exact Fenris sprite, preserving identity, muscular white-grey fur, brown shorts, bushy tail, wolf paws/hocks, full-body proportions and crisp pixel-art. Keep this exact FRONT THREE-QUARTER DOWN-LEFT camera and transparent background. Exactly two arms and two legs. PASSING phase: the NEAR foreground leg from the large shorts panel on screen RIGHT must stand nearly VERTICAL under the pelvis, planted paw around lower-center RIGHT. FAR background leg on LEFT bends knee and swings forward with its paw clearly AIRBORNE beside the supporting calf. Near thigh must overlap IN FRONT of bent far thigh. Arms close to neutral beside torso. Narrow stance, not wide contact.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-eb58d80b-1ef0-40c3-8ab8-62cfcc776027.png",
+      "file": "source/03.png",
+      "role": "Far-leg passing"
+    },
+    {
+      "id": "04",
+      "direction": "down-left",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-426a82ab-da6d-49c8-8e23-b44a37da7d76.png",
+      "prompt": "Edit this exact Fenris image. REMOVE THE ENTIRE EXTRA ARM ON THE OUTER RIGHT EDGE, from the white upper-arm shape behind the main RIGHT shoulder down to its black-clawed hand immediately ABOVE the tail. That outer-right rear arm is a third arm and must disappear completely to TRANSPARENCY. Keep the large main foreground arm crossing the chest toward the LEFT hand; keep the partially concealed arm underneath the LEFT chest. Exactly TWO arms total. Preserve tail and torso outline beneath removed arm. Do not change legs, shorts, head, pose, scale or anything else. Transparent background, crisp pixel art.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-7d423643-0c0e-4a1f-b7b4-570d7cfad1a2.png",
+      "file": "source/04.png",
+      "role": "Far-leg reach"
+    },
+    {
+      "id": "05",
+      "direction": "down-left",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-7d423643-0c0e-4a1f-b7b4-570d7cfad1a2.png",
+      "prompt": "Edit this EXACT PIXEL ART Fenris. Preserve the crisp stepped pixel blocks and LIMITED flat pixel shading; do NOT smooth, vectorize, airbrush or anti-alias. Preserve EXACTLY these two arms, entire head, torso, shorts, tail, and DOWN-LEFT camera. Change ONLY the leading background LEFT paw: lower and flatten it into ground contact. Same near RIGHT thigh trailing right; same far LEFT thigh leading left. Small edit, not a redraw. Transparent full body.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-cb7de94e-88fe-4e9a-b995-ec706119e16d.png",
+      "file": "source/05.png",
+      "role": "Far-leg contact"
+    },
+    {
+      "id": "06",
+      "direction": "down-left",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-7d423643-0c0e-4a1f-b7b4-570d7cfad1a2.png",
+      "prompt": "Edit this EXACT PIXEL ART Fenris into far-leg weight SETTLE. Preserve crisp stepped pixel blocks and limited flat pixel shading, not vector/smooth painting. Keep EXACTLY these TWO arms and their connections, head, torso, shorts, tail and DOWN-LEFT view. Keep FAR background LEFT leg leading: lower its paw flat to ground and bend that knee to absorb weight, narrow stride slightly. NEAR foreground RIGHT leg still trails, bend its knee and lift trailing paw slightly. Pelvis/head lower subtly. Same leg identity, natural articulation, do not shorten body. Full body transparent PNG.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-f48facef-7a2e-409b-ae7e-902f75af9a4a.png",
+      "file": "source/06.png",
+      "role": "Far-leg settle"
+    },
+    {
+      "id": "07",
+      "direction": "down-left",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-a9a5a33d-357e-42e9-bdb4-9fab294b2071.png",
+      "prompt": "Edit this exact Fenris sprite, preserving identity, muscular white-grey fur, brown shorts, bushy tail, wolf paws/hocks, full-body proportions and crisp pixel-art. Keep this exact FRONT THREE-QUARTER DOWN-LEFT camera and transparent background. Exactly two arms and two legs. OPPOSITE PASSING phase: the NEAR foreground thigh from the large shorts panel swings FORWARD LEFT with knee raised and bent, paw clearly AIRBORNE beside supporting shin. FAR BACKGROUND leg on RIGHT is straight under pelvis, planted and supporting. Raised near thigh visibly overlaps in FRONT of supporting far thigh. Both arms close to neutral. Keep lifted leg full length with natural bent knee/hock. Narrow walking stance.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-4282e94b-f240-409a-87ec-3c4925f5d135.png",
+      "file": "source/07.png",
+      "role": "Near-leg passing"
+    },
+    {
+      "id": "08",
+      "direction": "down-left",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-4282e94b-f240-409a-87ec-3c4925f5d135.png",
+      "prompt": "Edit this EXACT front-three-quarter DOWN-LEFT Fenris. Preserve camera, identity, proportions, white-grey fur, brown shorts, short bushy tail, wolf hocks/paws, crisp pixel art and transparency. Full body, exactly two arms and legs. Next phase NEAR REACH: unfold the raised near foreground knee and extend its paw forward toward bottom-left, hovering just above its landing position. Far BACKGROUND RIGHT leg extends behind on toe support with heel raised. Leading near foreground thigh overlaps IN FRONT of trailing far thigh. Near arm from right shoulder swings back RIGHT, far arm forward LEFT. Moderate reach, not a kick, preserve limb lengths. No third arm.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-d1aa65cb-3929-48e9-bce0-817969aa05b7.png",
+      "file": "source/08.png",
+      "role": "Near-leg reach"
+    }
+  ]
+}

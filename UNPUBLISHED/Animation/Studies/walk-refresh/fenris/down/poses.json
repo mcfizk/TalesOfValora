@@ -1,0 +1,60 @@
+{
+  "direction": "down",
+  "frames": [
+    {
+      "id": "01",
+      "direction": "down",
+      "role": "Near-leg contact",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-01.png",
+      "prompt": "ONE transparent full-body pixel-art Fenris walk frame, DIRECT FRONT VIEW walking DOWN towards viewer. Image1 provides only walking phase; image2 defines the exact FRONT camera and wolf identity. Broad white-grey muscular Lupera, blue eyes only inside eyes, black mouth line without colored lips, brown ragged shorts, short bushy tail behind hip, wolf paws and hocks. screen-LEFT leg reaches toward viewer and plants its paw LOWER on canvas; screen-RIGHT leg trails away, paw higher on canvas. LEFT arm swings back away from viewer, RIGHT arm forward toward viewer. Keep head and chest directly facing viewer, no diagonal turn. Stride into depth, not sideways, do not cross knees laterally. Relaxed walking, not fighting. Exactly two arms and legs. Keep scale and anatomy consistent, crisp pixel outlines and shading. One isolated character, no ground shadow/text/background.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-cc057148-e2bd-403b-9ab9-78a49e43ebca.png",
+      "file": "source/01.png"
+    },
+    {
+      "id": "02",
+      "direction": "down",
+      "role": "Near-leg settle",
+      "ref": "C:\\Users\\Mcfiz\\OneDrive\\_Projects\\Games\\Tales of Valora\\BookOfFenris\\assets\\sprites\\animations\\human-female-walk-review\\source\\human-female-left-02.png",
+      "prompt": "ONE transparent full-body pixel-art Fenris walk frame, DIRECT FRONT VIEW walking DOWN towards viewer. Image1 provides only walking phase; image2 defines the exact FRONT camera and wolf identity. Broad white-grey muscular Lupera, blue eyes only inside eyes, black mouth line without colored lips, brown ragged shorts, short bushy tail behind hip, wolf paws and hocks. screen-LEFT leg bears weight with bent knee and planted paw moving back beneath pelvis; screen-RIGHT trailing leg bends and paw begins lifting. Body slightly lowered. Left arm starts returning from back toward neutral, right arm starts returning from forward toward neutral. Keep head and chest directly facing viewer, no diagonal turn. Stride into depth, not sideways, do not cross knees laterally. Relaxed walking, not fighting. Exactly two arms and legs. Keep scale and anatomy consistent, crisp pixel outlines and shading. One isolated character, no ground shadow/text/background.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-51154df0-5570-4043-aa1b-780313bb55f6.png",
+      "file": "source/02.png"
+    },
+    {
+      "id": "03",
+      "direction": "down",
+      "role": "Opposite leg passing",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-51154df0-5570-4043-aa1b-780313bb55f6.png",
+      "prompt": "Edit this EXACT Fenris sprite; keep DIRECT FRONT/DOWN facing camera, face, white-grey fur, muscular anatomy, brown shorts, wolf paws and hocks, full body scale and crisp pixel art. Genuine transparent background. Exactly two arms/legs. Next walking pose is PASSING: the SCREEN-RIGHT leg is the supporting leg and should be upright under the pelvis with paw flat planted. Bend and lift the SCREEN-LEFT knee forward toward viewer; its paw is CLEARLY AIRBORNE just beside the supporting shin. Show natural knee bending, not a tiny shortened leg. Arms pass close to neutral. Body rises slightly from settling. Keep mouth closed simple black line.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-99bb704d-df3f-4035-93e4-2b5c13e7d788.png",
+      "file": "source/03.png"
+    },
+    {
+      "id": "04",
+      "direction": "down",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-99bb704d-df3f-4035-93e4-2b5c13e7d788.png",
+      "prompt": "Edit this EXACT directly front-facing Fenris. Keep every aspect of identity and DIRECT FRONT camera. Change the legs to next phase: the SCREEN-LEFT knee currently raised must UNFOLD, reaching its left paw TOWARD VIEWER AND DOWN until hovering just before contact, larger and LOWER on canvas than the right paw. SCREEN-RIGHT supporting leg must extend backward away from viewer, its heel lifting and foot now HIGHER in image. LEFT paw MUST be the lower, forward-reaching paw. Right arm swings forward toward viewer, left arm backward. Keep face closed neutral mouth, white-grey fur, brown shorts, full body wolf anatomy, transparent pixel art. Do NOT retain right paw lower and ahead.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-6cb373af-b131-426b-8246-3a5780a38257.png",
+      "file": "source/04.png"
+    },
+    {
+      "id": "05",
+      "mirrorOf": "01",
+      "role": "Opposite Near-leg contact"
+    },
+    {
+      "id": "06",
+      "mirrorOf": "02",
+      "role": "Opposite Near-leg settle"
+    },
+    {
+      "id": "07",
+      "mirrorOf": "03",
+      "role": "Opposite Opposite leg passing"
+    },
+    {
+      "id": "08",
+      "mirrorOf": "04",
+      "role": "Opposite undefined"
+    }
+  ]
+}

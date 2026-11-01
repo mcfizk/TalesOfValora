@@ -1,0 +1,183 @@
+{
+  "sourceFilesUnchanged": true,
+  "uniformScale": 0.44,
+  "limbDeformation": false,
+  "binaryAlpha": true,
+  "pixelGrid": 2,
+  "ground": 610,
+  "frames": [
+    {
+      "id": "01",
+      "file": "Fenris_walk_left_01.png",
+      "role": "near-leg contact",
+      "source": "Fenris_walk_left_01_contact-near.png",
+      "sourceHash": "89ae7213bc409221b86e73722e602f3a44cdd8e99c5a6bb8cf49ba74879d9948",
+      "waistX": 542.1833333333333,
+      "translation": [
+        17.439333333333366,
+        19.08000000000004
+      ],
+      "scale": 0.44,
+      "bounds": {
+        "x": 72,
+        "y": 88,
+        "width": 396,
+        "height": 522
+      },
+      "pixelHash": "6b6699b7fc10c951ba22be84b5b46a2eaf21e78ded5a9890fe93cf97f2d2463f"
+    },
+    {
+      "id": "02",
+      "file": "Fenris_walk_left_02.png",
+      "role": "near-leg weight settling",
+      "source": "Fenris_walk_left_02_settle-near.png",
+      "sourceHash": "065d7805718333ae16a90a1ce203ec42b155472bc06c33016e1ef3cdd5d6298b",
+      "waistX": 543.9166666666666,
+      "translation": [
+        16.676666666666677,
+        19.08000000000004
+      ],
+      "scale": 0.44,
+      "bounds": {
+        "x": 68,
+        "y": 94,
+        "width": 404,
+        "height": 516
+      },
+      "pixelHash": "8b9cc657e8e011ad29599f04603d14278706fc19f8c6e4f309d0f340604b0975"
+    },
+    {
+      "id": "03",
+      "file": "Fenris_walk_left_03.png",
+      "role": "near-leg support, far-leg passing",
+      "source": "Fenris_walk_left_03_passing-far.png",
+      "sourceHash": "6a6da0f9872870e520706c819b7ced37fb4733fe3afa47e5b406db82d07c8554",
+      "waistX": 539.1666666666666,
+      "translation": [
+        18.76666666666668,
+        16
+      ],
+      "scale": 0.44,
+      "bounds": {
+        "x": 120,
+        "y": 68,
+        "width": 336,
+        "height": 542
+      },
+      "pixelHash": "54c689618be6d5dd9fe5ee2accbba3ee3e70a838a77d794dcf3e8d323f2e9001"
+    },
+    {
+      "id": "04",
+      "file": "Fenris_walk_left_04.png",
+      "role": "near-leg push-off, far-leg reaching",
+      "source": "Fenris_walk_left_04_reach-far.png",
+      "sourceHash": "51e370a14c1ae92338331dd7ad5f303275af9288822d58786d80f6c0f0ddf2fb",
+      "waistX": 551.5833333333334,
+      "translation": [
+        13.303333333333313,
+        22.159999999999968
+      ],
+      "scale": 0.44,
+      "bounds": {
+        "x": 78,
+        "y": 70,
+        "width": 382,
+        "height": 540
+      },
+      "pixelHash": "af6ab384a1f99623b490191fd62175b0d707dae4e78f24ad3fc8a0f3777d8958"
+    },
+    {
+      "id": "05",
+      "file": "Fenris_walk_left_05.png",
+      "role": "far-leg contact",
+      "source": "Fenris_walk_left_05_contact-far.png",
+      "sourceHash": "d07821c8e2a2510729eb6a31b6827ae63e59171aec66f5eb95697d90211f32cc",
+      "waistX": 517.0166666666667,
+      "translation": [
+        28.51266666666666,
+        30.08000000000004
+      ],
+      "scale": 0.44,
+      "bounds": {
+        "x": 82,
+        "y": 104,
+        "width": 384,
+        "height": 506
+      },
+      "pixelHash": "9994e181f185c4a24d54c73a6b204c5138949da68e91636e0d38da3e6d3b83d0"
+    },
+    {
+      "id": "06",
+      "file": "Fenris_walk_left_06.png",
+      "role": "far-leg weight settling",
+      "source": "Fenris_walk_left_06_settle-far-v2.png",
+      "sourceHash": "67d1d73795a131cb1077bba14eed792b672dc57932ecef3237082d5bd1048d1a",
+      "waistX": 547.5166666666667,
+      "translation": [
+        15.092666666666673,
+        29.639999999999986
+      ],
+      "scale": 0.44,
+      "bounds": {
+        "x": 96,
+        "y": 122,
+        "width": 366,
+        "height": 488
+      },
+      "pixelHash": "89f954c8f0f041ec600028d5900ee572ec1585dec8fc8ecc8fed8d5b9635298f"
+    },
+    {
+      "id": "07",
+      "file": "Fenris_walk_left_07.png",
+      "role": "far-leg support, near-leg passing",
+      "source": "Fenris_walk_left_07_passing-near.png",
+      "sourceHash": "f56fad4b81bc00f1e2def5850595c2c4b5ce8996cafdca4cedc2a23dbf68a827",
+      "waistX": 512.1333333333333,
+      "translation": [
+        30.661333333333346,
+        19.519999999999982
+      ],
+      "scale": 0.44,
+      "bounds": {
+        "x": 146,
+        "y": 72,
+        "width": 322,
+        "height": 538
+      },
+      "pixelHash": "2ae1ef1b99833573493bbb115389b44af747874f725398e9c44463a61e7c18b3"
+    },
+    {
+      "id": "08",
+      "file": "Fenris_walk_left_08.png",
+      "role": "far-leg push-off, near-leg reaching",
+      "source": "Fenris_walk_left_08_reach-near.png",
+      "sourceHash": "2a5941e2f3536f59491ad8d38a7eacbc01635f1f5145e353475166aed1c21423",
+      "waistX": 551.7666666666667,
+      "translation": [
+        13.222666666666669,
+        24.799999999999955
+      ],
+      "scale": 0.44,
+      "bounds": {
+        "x": 84,
+        "y": 80,
+        "width": 382,
+        "height": 530
+      },
+      "pixelHash": "37a6ed16c1de9cb36d22f1babab442844e5079014fae0e5988f4e481952381a9"
+    }
+  ],
+  "gif": {
+    "frames": 8,
+    "delay": [
+      120,
+      130,
+      120,
+      130,
+      120,
+      130,
+      120,
+      130
+    ]
+  }
+}

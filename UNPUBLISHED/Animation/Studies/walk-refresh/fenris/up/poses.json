@@ -1,0 +1,59 @@
+{
+  "direction": "up",
+  "frames": [
+    {
+      "id": "01",
+      "direction": "up",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-60cf7b28-266c-452c-ac1b-d5335a796d29.png",
+      "prompt": "Create the DIRECT REAR camera view of image 1's exact Fenris walking phase. Image 2 gives the direct-back character appearance and camera only. Keep the gait from image 1, rotated to walk away straight UP, NO left turn or visible face/chest. Same white and grey muscular wolf, brown shorts, bushy tail, digitigrade paws, pixel art. Phase 01: screen-LEFT leg forward into depth planted higher, screen-RIGHT leg trailing toward viewer, paw toe contact; left arm back toward viewer, right arm forward. Do not cross the legs sideways. Keep both feet readable on opposite sides of body center. Tail centered behind pelvis with subtle curve, avoid covering both legs. Exactly two arms and legs, no extra limbs. Full body, consistent proportions, crisp pixel edges, transparent background, no text or ground.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-9a578417-8173-45c7-b80f-b21726b8a3fd.png",
+      "file": "source/01.png"
+    },
+    {
+      "id": "02",
+      "direction": "up",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-5e539242-dd1e-4629-81ab-87d7dfb30400.png",
+      "prompt": "Create the DIRECT REAR camera view of image 1's exact Fenris walking phase. Image 2 gives the direct-back character appearance and camera only. Keep the gait from image 1, rotated to walk away straight UP, NO left turn or visible face/chest. Same white and grey muscular wolf, brown shorts, bushy tail, digitigrade paws, pixel art. Phase 02: screen-LEFT supporting knee flexes and paw plants under hip; screen-RIGHT trailing paw lifting with sole visible; body slightly lower. Do not cross the legs sideways. Keep both feet readable on opposite sides of body center. Tail centered behind pelvis with subtle curve, avoid covering both legs. Exactly two arms and legs, no extra limbs. Full body, consistent proportions, crisp pixel edges, transparent background, no text or ground.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-419ec8d4-e5a2-4aa2-a7af-5394217dab5d.png",
+      "file": "source/02.png"
+    },
+    {
+      "id": "03",
+      "direction": "up",
+      "role": "Far-leg passing",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-f52608da-5bec-4bff-b76e-51622688ab98.png",
+      "prompt": "Create the DIRECT REAR camera view of image 1's exact Fenris walking phase. Image 2 gives the direct-back character appearance and camera only. Keep the gait from image 1, rotated to walk away straight UP, NO left turn or visible face/chest. Same white and grey muscular wolf, brown shorts, bushy tail, digitigrade paws, pixel art. Phase 03: screen-LEFT leg planted under pelvis; screen-RIGHT leg bent knee passing airborne, paw sole visible and lifted; arms neutral. Do not cross the legs sideways. Keep both feet readable on opposite sides of body center. Tail centered behind pelvis with subtle curve, avoid covering both legs. Exactly two arms and legs, no extra limbs. Full body, consistent proportions, crisp pixel edges, transparent background, no text or ground.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-3b0c8c07-7aa8-4341-99f0-1c3356258fcc.png",
+      "file": "source/03.png"
+    },
+    {
+      "id": "04",
+      "direction": "up",
+      "role": "Far-leg reach",
+      "ref": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-adcf5823-de0e-41cb-86e1-98e8e1ee009f.png",
+      "prompt": "Create the DIRECT REAR camera view of image 1's exact Fenris walking phase. Image 2 gives the direct-back character appearance and camera only. Keep the gait from image 1, rotated to walk away straight UP, NO left turn or visible face/chest. Same white and grey muscular wolf, brown shorts, bushy tail, digitigrade paws, pixel art. Phase 04: screen-LEFT leg trailing toward viewer on toe support; screen-RIGHT leg reaches forward into depth, paw airborne before landing; left arm swings forward, right arm back. Do not cross the legs sideways. Keep both feet readable on opposite sides of body center. Tail centered behind pelvis with subtle curve, avoid covering both legs. Exactly two arms and legs, no extra limbs. Full body, consistent proportions, crisp pixel edges, transparent background, no text or ground.",
+      "source": "C:\\Users\\Mcfiz\\.codex\\generated_images\\01a17347-ac19-7f63-8253-914ffa9edac1\\exec-ed19f2fd-9e4d-492a-a9f2-839cad5ec021.png",
+      "file": "source/04.png"
+    },
+    {
+      "id": "05",
+      "mirrorOf": "01",
+      "role": "Opposite undefined"
+    },
+    {
+      "id": "06",
+      "mirrorOf": "02",
+      "role": "Opposite undefined"
+    },
+    {
+      "id": "07",
+      "mirrorOf": "03",
+      "role": "Opposite Far-leg passing"
+    },
+    {
+      "id": "08",
+      "mirrorOf": "04",
+      "role": "Opposite Far-leg reach"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "runtimeFiles": 187,
+  "beforeVersion": "15b14ca2ba09",
+  "afterVersion": "15b14ca2ba09",
+  "runtimeByteForByteUnchanged": true,
+  "originalFilesDeleted": false,
+  "filesPreservedAndAdded": 26978,
+  "oversizeFiles": 0,
+  "nestedRepositories": 0,
+  "updatedScriptSyntaxChecked": true,
+  "unitTestsPassed": 98,
+  "localDialogueChecksPassed": true,
+  "allArchivedReleaseHashesVerified": true
+}
